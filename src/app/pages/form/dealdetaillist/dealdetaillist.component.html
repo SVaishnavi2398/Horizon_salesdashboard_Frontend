@@ -1,0 +1,136 @@
+<div class="container-fluid">
+    <!-- <app-page-title title="Teams List"></app-page-title> -->
+    <form [formGroup]="myForm">
+        <div class="row">
+            <div class="col-md-6">
+                <app-page-title title="Employee Performance"></app-page-title>
+            </div>
+            <div class="col-md-6">
+                <ngb-pagination class="d-flex justify-content-center" [(page)]="page" [maxSize]="4" [collectionSize]="userdata.length" [boundaryLinks]="true" style="justify-content: right!important;"></ngb-pagination>
+            </div>
+
+            <div class="col-md-3">
+
+                <label for="example-text-input" class="col-form-label"> Team Leader</label>
+                <select formControlName="name" class="form-control" name="user_id" (change)="getState1($event)" placeholder="-- Select Client Name --">
+            <option>Select</option>
+                <option *ngFor="let cl of teamdetails"  value="{{cl.team_leader_name}}">
+                    {{cl.team_leader_name}}
+                </option>
+            </select>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <label for="example-text-input" class="col-form-label"> User Name</label>
+                <select formControlName="name" class="form-control" name="user_id" (change)="getState2($event)" placeholder="-- Select Client Name --">
+            <option>Select</option>
+                <option *ngFor="let cl of userDetails"  value="{{cl.user_id}}">
+                    {{cl.firstname}}  {{cl.lastname}}
+                </option>
+            </select>
+
+            </div>
+
+            <div class="col-md-3">
+                <label for="example-text-input" class="col-form-label">From Date</label>
+                <input formControlName="name" class="form-control" type="date" value="{{from_date}}" id="from_date" name="from_date" (change)="getstate5($event)">
+                <!-- <span class="text-danger" [hidden]="!error.from_date">{{error.from_date}}</span> -->
+            </div>
+
+            <div class="col-md-3">
+                <label for="example-text-input" class="col-form-label">To Date</label>
+                <input formControlName="name" class="form-control" type="date" value="{{to_date}}" id="to_date" name="to_date" (change)="getstate6($event)">
+                <!-- <span class="text-danger" [hidden]="!error.to_date">{{error.to_date}}</span> -->
+            </div>
+            <div class="col-md-4"></div>
+            <div class="col-md-8 pt-2" style="text-align: right;">
+                <button type="reset " (click)="resetForm()" class="btn btn-primary ">Reset</button>
+            </div>
+
+            <div class="col-md-4"></div>
+            <div class="col-md-8 pt-2" style="text-align: right;">
+                <button type="Download" (click)="exportAsXLSX()" class="btn btn-primary ">Download Excel</button>
+            </div>
+
+
+            <!-- Search -->
+
+            <!-- End search -->
+            <!-- <div class="col-md-4 ">
+            <ngb-pagination class="d-flex justify-content-center " [(page)]="page " [maxSize]="4 " [collectionSize]="salesdetailsList.length " [boundaryLinks]="true " style="justify-content: right!important; "></ngb-pagination>
+        </div> -->
+
+
+        </div>
+    </form>
+    <div class="col-md-8">
+        <div id="tickets-table_filter" class="dataTables_length "><label class="d-inline-flex align-items-center ">Search:
+            <input type="text " name="searchdealdetaillist" class="form-control form-control-sm ms-2 "
+                aria-controls="tickets-table " [(ngModel)]="searchdealdetaillist "></label>
+        </div>
+    </div>
+    <div class="row pt-2 ">
+        <div class="col-lg-12 ">
+            <div class="card ">
+                <div class="card-body " style="padding: 0 10px 0 10px; ">
+                    <!-- <h4 class="card-title ">Registered Roles</h4> -->
+
+                    <!-- <button (click)="exportAsXLSX()">
+                        <i class="fa fa-file-excel-o" style="font-size:48px;color:blue"></i></button> -->
+                    <div class="table-responsive ">
+                        <table class="table mb-0 ">
+                            <thead>
+                                <tr>
+                                    <th>User Name</th>
+                                    <th>Salary Justify</th>
+                                    <th>Lead Source</th>
+                                    <th>Business Target</th>
+                                    <th>Attented Day</th>
+                                    <th>Walking Sourcing</th>
+                                    <th>Walking Closing</th>
+                                    <th>Leads Given</th>
+                                    <th>Deal Sourcing</th>
+                                    <th>Deal Closing</th>
+                                    <th>Status of Target</th>
+                                    <th>From Date</th>
+                                    <th>To Date</th>
+                                    <th>Business Value</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody formControlName="name">
+                                <tr *ngFor="let dealdetails of userdata| searchdealdetaillist:searchdealdetaillist | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+                                    <!-- <th scope=" row ">{{salesdetails.sales_id}}</th> -->
+                                    <td>{{dealdetails.firstname}} {{dealdetails.lastname}}</td>
+                                    <td>{{dealdetails.salary_justify}}</td>
+                                    <td>{{dealdetails.leadsource}}</td>
+                                    <td>{{dealdetails.business_target}}</td>
+                                    <td>{{dealdetails.attented_day}}</td>
+                                    <td>{{dealdetails.walking_sourcing}}</td>
+                                    <td>{{dealdetails.walking_closing}}</td>
+                                    <td>{{dealdetails.leads_given}}</td>
+                                    <td>{{dealdetails.deal_sourcing}}</td>
+                                    <td>{{dealdetails.deal_closing}}</td>
+                                    <td [ngClass]="{ ct: dealdetails.deal_status !='Yes' } ">{{dealdetails.deal_status}}</td>
+                                    <td>{{dealdetails.from_date}}</td>
+                                    <td>{{dealdetails.to_date}}</td>
+                                    <td>{{dealdetails.business_value}}</td>
+                                    <td>
+                                        <button type="button " class="btn btn-danger " (click)="deleteDeal(dealdetails.deal_id ) "><i class="uil-trash-alt "></i></button> &nbsp;&nbsp;
+                                        <button type="button " class="btn btn-success " routerLink="/form/editdealdetails/{{dealdetails.deal_id}} "><i
+                                                class="uil-eye "></i></button>
+
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

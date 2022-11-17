@@ -1,0 +1,4218 @@
+{
+    "gstin": "27AAFCH2102Q1ZI",
+    "fp": "122021",
+    "filing_typ": "Q",
+    "gt": 0.0,
+    "cur_gt": 0.0,
+    "b2b": [
+        {
+            "ctin": "27AAACC4889L1Z1",
+            "cfs": "N",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 9241.11,
+                                "rt": 18,
+                                "txval": 102679,
+                                "camt": 9241.11
+                            }
+                        }
+                    ],
+                    "val": 121161,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "29-11-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/37b",
+                    "chksum": "d830165f830c3a7e0f2fe1fc9914fe7c23ffd2cea135fc288240680f7c3c5a01"
+                }
+            ]
+        },
+        {
+            "ctin": "27AAACF1765A1Z3",
+            "cfs": "N",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 51024.78,
+                                "rt": 18,
+                                "txval": 566942,
+                                "camt": 51024.78
+                            }
+                        }
+                    ],
+                    "val": 668992,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "17-11-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/364",
+                    "chksum": "86f7326fc26f7e9b58c61fbdce3cec4fa42aeca09e6b868bf9ba6dbd3481ac2b"
+                }
+            ]
+        },
+        {
+            "ctin": "27AAACH0997E1ZL",
+            "cfs": "N",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 3527.73,
+                                "rt": 18,
+                                "txval": 39197,
+                                "camt": 3527.73
+                            }
+                        }
+                    ],
+                    "val": 46252,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "12-11-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/351",
+                    "chksum": "7db2a1e1029752403dff45585db815d11247e0cf8e8c6c60c8ca56cf035fb13f"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 1874.79,
+                                "rt": 18,
+                                "txval": 20831,
+                                "camt": 1874.79
+                            }
+                        }
+                    ],
+                    "val": 24581,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "09-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/419",
+                    "chksum": "9f2436830fa0fb7a63015042720e5a2d583d8ac7038c70f279113c1d027560d1"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 1902.87,
+                                "rt": 18,
+                                "txval": 21143,
+                                "camt": 1902.87
+                            }
+                        }
+                    ],
+                    "val": 24949,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "11-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/294",
+                    "chksum": "03f104324e56809ccdc1c4e936daa5fae4d5eafdc42e878c9b8b932906ee97c2"
+                }
+            ]
+        },
+        {
+            "ctin": "27AAACL1490J1ZG",
+            "cfs": "N",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 3892.5,
+                                "rt": 18,
+                                "txval": 43250,
+                                "camt": 3892.5
+                            }
+                        }
+                    ],
+                    "val": 51035,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "15-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/327",
+                    "chksum": "46b86a83719f378c9b7fd88bf43bffa392985861e8cf7237ccfe4b1352899b11"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 13333.14,
+                                "rt": 18,
+                                "txval": 148146,
+                                "camt": 13333.14
+                            }
+                        }
+                    ],
+                    "val": 174812,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/404",
+                    "chksum": "e0f1758fda54cb84f0bd4526586b24f27d6398949a59a599ffdb0c3803e05082"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 3967.47,
+                                "rt": 18,
+                                "txval": 44083,
+                                "camt": 3967.47
+                            }
+                        }
+                    ],
+                    "val": 52018,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "15-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/326",
+                    "chksum": "6c3e1f14e3f0693c06921b0ded09eeaf071e111187242a51ea657c6146e71372"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 4444.38,
+                                "rt": 18,
+                                "txval": 49382,
+                                "camt": 4444.38
+                            }
+                        }
+                    ],
+                    "val": 58271,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/403",
+                    "chksum": "2c11891ddd00da89ae9d838da409f20bddb7b3b5e1ffbc5eae8f82c8b6f88423"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 4132.98,
+                                "rt": 18,
+                                "txval": 45922,
+                                "camt": 4132.98
+                            }
+                        }
+                    ],
+                    "val": 54188,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "27-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/447",
+                    "chksum": "bc0e238572411cbb035d2334e70fdb84bb0cd55587e8b9495d2d49a5895e1b7e"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 9752.49,
+                                "rt": 18,
+                                "txval": 108361,
+                                "camt": 9752.49
+                            }
+                        }
+                    ],
+                    "val": 127866,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "20-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/329",
+                    "chksum": "0870d88ec2626c6c77eeed6f7c161e0b9d18cb893ffdeca344221e8b4ce9ad82"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 9789.57,
+                                "rt": 18,
+                                "txval": 108773,
+                                "camt": 9789.57
+                            }
+                        }
+                    ],
+                    "val": 128352,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/406",
+                    "chksum": "42bf6985a1c0c6ab738e558d0db6631e5495b9d0cfbdf441735ef59cc4129568"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 11902.41,
+                                "rt": 18,
+                                "txval": 132249,
+                                "camt": 11902.41
+                            }
+                        }
+                    ],
+                    "val": 156054,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/405",
+                    "chksum": "266196928e4aca7d48296d17b57a743e9755d53c2d92580823a16d45453c1a2f"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 3224.16,
+                                "rt": 18,
+                                "txval": 35824,
+                                "camt": 3224.16
+                            }
+                        }
+                    ],
+                    "val": 42272,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "15-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/323",
+                    "chksum": "afcfdd40ea7079205218e453e7809c52444391bcb5f9f02aa8619416a62033a9"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 13333.14,
+                                "rt": 18,
+                                "txval": 148146,
+                                "camt": 13333.14
+                            }
+                        }
+                    ],
+                    "val": 174812,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/400",
+                    "chksum": "d7ed445be6ad62a38f3f839db94bf5e9513fc3eef28f98c3c126bf0b155493a6"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 4229.46,
+                                "rt": 18,
+                                "txval": 46994,
+                                "camt": 4229.46
+                            }
+                        }
+                    ],
+                    "val": 55453,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "15-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/322",
+                    "chksum": "c0ae65640cc659e3f8cacbe1fef60581a689e7115e7121c07a4f1649c5a5bca1"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 3205.17,
+                                "rt": 18,
+                                "txval": 35613,
+                                "camt": 3205.17
+                            }
+                        }
+                    ],
+                    "val": 42023,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "15-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/325",
+                    "chksum": "dfc2d6e2142d7fba237a64847c8dadd534f673f99d884d75a9c53a917e997f51"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 9789.57,
+                                "rt": 18,
+                                "txval": 108773,
+                                "camt": 9789.57
+                            }
+                        }
+                    ],
+                    "val": 128352,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/402",
+                    "chksum": "ca8fce5da95810d966b64e4dd00e355cd46ec18f9e78abab44697dbc4bdbc9c6"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 13110.3,
+                                "rt": 18,
+                                "txval": 145670,
+                                "camt": 13110.3
+                            }
+                        }
+                    ],
+                    "val": 171891,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "27-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/446",
+                    "chksum": "bc46deffd90768989b3cbbc16ff7417e71f64c6425bfc0e73fa3122e714ebbf2"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 3892.5,
+                                "rt": 18,
+                                "txval": 43250,
+                                "camt": 3892.5
+                            }
+                        }
+                    ],
+                    "val": 51035,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "15-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/324",
+                    "chksum": "467f4749dd97a4401e827ef4f20bcfffde560095edb51f2597cdefaedebe41d8"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 13333.14,
+                                "rt": 18,
+                                "txval": 148146,
+                                "camt": 13333.14
+                            }
+                        }
+                    ],
+                    "val": 174812,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/401",
+                    "chksum": "9098325c757f310da05af498d9728ab8c1e36ef1041898c3774efd0e2043f952"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 9615.51,
+                                "rt": 18,
+                                "txval": 106839,
+                                "camt": 9615.51
+                            }
+                        }
+                    ],
+                    "val": 126070,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "28-08-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/209",
+                    "chksum": "221b842b014ba1535bf6991c8fb64088a207a6e3fe9a6bc6131aeea1941f5c46"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 11835.27,
+                                "rt": 18,
+                                "txval": 131503,
+                                "camt": 11835.27
+                            }
+                        }
+                    ],
+                    "val": 155174,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/409",
+                    "chksum": "4852d5bbdcd0ebcc9dc0ce14385e382b2c1939f3c3993c564be837576e567cc9"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 13257.63,
+                                "rt": 18,
+                                "txval": 147307,
+                                "camt": 13257.63
+                            }
+                        }
+                    ],
+                    "val": 173822,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "15-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/321",
+                    "chksum": "cdbb91558b106182657e6395853f9ec6d878cc49fa581304af8b37cd6b96dab2"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 11835.27,
+                                "rt": 18,
+                                "txval": 131503,
+                                "camt": 11835.27
+                            }
+                        }
+                    ],
+                    "val": 155174,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "15-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/320",
+                    "chksum": "281036e9b223bf768440c03e96653bccb42e77bb68411a2c19cef7c332509c6c"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 6605.55,
+                                "rt": 18,
+                                "txval": 73395,
+                                "camt": 6605.55
+                            }
+                        }
+                    ],
+                    "val": 86606,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "16-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/441",
+                    "chksum": "dae86ad9b812309a0b9896208c4ded4990e015912b652a6380288b006ef43a45"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 12071.97,
+                                "rt": 18,
+                                "txval": 134133,
+                                "camt": 12071.97
+                            }
+                        }
+                    ],
+                    "val": 158277,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/378",
+                    "chksum": "aedaa4ebeac1db0862def57290cee0644dd530c7f7795f87e1c69b7336fd8932"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 9343.08,
+                                "rt": 18,
+                                "txval": 103812,
+                                "camt": 9343.08
+                            }
+                        }
+                    ],
+                    "val": 122498,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "28-08-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/212",
+                    "chksum": "fb9e21bdc57ec6192436bbb0b1b0dbbc166104c0e1c882d56b43c8ff94ce9551"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 13557.42,
+                                "rt": 18,
+                                "txval": 150638,
+                                "camt": 13557.42
+                            }
+                        }
+                    ],
+                    "val": 177753,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/377",
+                    "chksum": "31faffd1611bfc8d913157d0407649e05a0753e9be790337091d462b3a6f6b21"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 13257.81,
+                                "rt": 18,
+                                "txval": 147309,
+                                "camt": 13257.81
+                            }
+                        }
+                    ],
+                    "val": 173825,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/259",
+                    "chksum": "d370d442b3abf41295d7317a5b2a683027a7a72ef39741641bf2d219a3452eb0"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 13110.3,
+                                "rt": 18,
+                                "txval": 145670,
+                                "camt": 13110.3
+                            }
+                        }
+                    ],
+                    "val": 171891,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "23-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/335",
+                    "chksum": "1e2d01fc3374f6abc1d4362610bf0a324b0d238f5cea2300277eb2f6b5600451"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 9789.57,
+                                "rt": 18,
+                                "txval": 108773,
+                                "camt": 9789.57
+                            }
+                        }
+                    ],
+                    "val": 128352,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/379",
+                    "chksum": "bf7f7b4283e996b2dc5c26aa32e840079fbdaf67bcd7d9381b43fd20bd995706"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 12904.11,
+                                "rt": 18,
+                                "txval": 143379,
+                                "camt": 12904.11
+                            }
+                        }
+                    ],
+                    "val": 169187,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/253",
+                    "chksum": "58658ca4d9dcc927084076e0e45deb0a0feb3018b0c66ec052844619ff1f9f76"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 5059.71,
+                                "rt": 18,
+                                "txval": 56219,
+                                "camt": 5059.71
+                            }
+                        }
+                    ],
+                    "val": 66338,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "20-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/330",
+                    "chksum": "728e56fd8b1c331a12f4adb7ae50095a6e7fa3f3339ffc6ae102712dbfa9a118"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 4419,
+                                "rt": 18,
+                                "txval": 49100,
+                                "camt": 4419
+                            }
+                        }
+                    ],
+                    "val": 57938,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/374",
+                    "chksum": "e382a2ffad5101503c13a7b43400f6b2072bbbafe84b9e521b46d0cc5dc26622"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 11592.9,
+                                "rt": 18,
+                                "txval": 128810,
+                                "camt": 11592.9
+                            }
+                        }
+                    ],
+                    "val": 151996,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "15-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/296",
+                    "chksum": "3166b8fca7ac5b989dcc3df2012099183458debea07a6fe768806061c48ec2bb"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 13257,
+                                "rt": 18,
+                                "txval": 147300,
+                                "camt": 13257
+                            }
+                        }
+                    ],
+                    "val": 173814,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/373",
+                    "chksum": "22377e1a99929f68b3fe850419fa90b59d03ad958ef1b7b88e4c3c171cc4c010"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 13333.14,
+                                "rt": 18,
+                                "txval": 148146,
+                                "camt": 13333.14
+                            }
+                        }
+                    ],
+                    "val": 174812,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "28-08-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/211",
+                    "chksum": "dbbc70d8cfc32399aef59b319a16de3dcd0dedd3ad68952d49274144f56f67fc"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 13557.42,
+                                "rt": 18,
+                                "txval": 150638,
+                                "camt": 13557.42
+                            }
+                        }
+                    ],
+                    "val": 177753,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/376",
+                    "chksum": "6340e264c7b7d397e0a84fe24698a2465373d1cb98ae924e46835cc98c3f94fd"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 13333.14,
+                                "rt": 18,
+                                "txval": 148146,
+                                "camt": 13333.14
+                            }
+                        }
+                    ],
+                    "val": 174812,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "28-08-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/210",
+                    "chksum": "b9138fb10aceeca3a2381e078430258766ad85fc58c9849704d14463683314ba"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 13557.42,
+                                "rt": 18,
+                                "txval": 150638,
+                                "camt": 13557.42
+                            }
+                        }
+                    ],
+                    "val": 177753,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/375",
+                    "chksum": "5b0d3a805eb5c9e18e3bb29c5b249507b0574f3b4cff16394d1b4c3927032e78"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 20479.68,
+                                "rt": 18,
+                                "txval": 227552,
+                                "camt": 20479.68
+                            }
+                        }
+                    ],
+                    "val": 268511,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "29-11-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/371",
+                    "chksum": "392e7f97259f62feed2159e80dc23a167160624bebdf0927ed12f63f25678311"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 11902.41,
+                                "rt": 18,
+                                "txval": 132249,
+                                "camt": 11902.41
+                            }
+                        }
+                    ],
+                    "val": 156054,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "15-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/305",
+                    "chksum": "dd52efb84bf36b93c7950ea7870ca15e47151cba288fa43831e06aef2fd44076"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 11902.41,
+                                "rt": 18,
+                                "txval": 132249,
+                                "camt": 11902.41
+                            }
+                        }
+                    ],
+                    "val": 156054,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "15-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/304",
+                    "chksum": "a1a832e8b44130838f18acd56d705857ae023fb7f818b69dcdae948bcc56b389"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 3753.27,
+                                "rt": 18,
+                                "txval": 41703,
+                                "camt": 3753.27
+                            }
+                        }
+                    ],
+                    "val": 49210,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "03-11-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/348",
+                    "chksum": "450ebe28f77a2d16d6edef609e6d32b23a3be4e42fcadf3c451eb117afd7257d"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 12995.28,
+                                "rt": 18,
+                                "txval": 144392,
+                                "camt": 12995.28
+                            }
+                        }
+                    ],
+                    "val": 170383,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "15-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/307",
+                    "chksum": "96aeb69b86060fda3ce84d3bfc689c8d4a4d363493d3ef29de0017951d6d8c5c"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 13333.14,
+                                "rt": 18,
+                                "txval": 148146,
+                                "camt": 13333.14
+                            }
+                        }
+                    ],
+                    "val": 174812,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "15-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/306",
+                    "chksum": "4823325750f25b3f4a3e951777a0dd6c7111cb16ffc13a4e644f85704374e808"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 13481.82,
+                                "rt": 18,
+                                "txval": 149798,
+                                "camt": 13481.82
+                            }
+                        }
+                    ],
+                    "val": 176762,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "15-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/301",
+                    "chksum": "95e136c87eff6ecfb6ce4c1ec75ec3010c5d73888e7f0ba1505228e1e0a8db30"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 13257.63,
+                                "rt": 18,
+                                "txval": 147307,
+                                "camt": 13257.63
+                            }
+                        }
+                    ],
+                    "val": 173822,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/389",
+                    "chksum": "42351e63ea491ed498a01d0bdd7235c77763a592726525a68a217951b7519ab6"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 11609.1,
+                                "rt": 18,
+                                "txval": 128990,
+                                "camt": 11609.1
+                            }
+                        }
+                    ],
+                    "val": 152208,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "15-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/300",
+                    "chksum": "5746790cd98b3ebc2883e570394b5056e69b43a5b7c3b2b1be5da219014d0a6d"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 13557.42,
+                                "rt": 18,
+                                "txval": 150638,
+                                "camt": 13557.42
+                            }
+                        }
+                    ],
+                    "val": 177753,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/388",
+                    "chksum": "30448bedfb981f68aff2cb50375858bea090e9fd2c60d7df3e33cd5614cc70e4"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 13333.14,
+                                "rt": 18,
+                                "txval": 148146,
+                                "camt": 13333.14
+                            }
+                        }
+                    ],
+                    "val": 174812,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "15-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/303",
+                    "chksum": "e0699f32226ee4ac03e1bc5e2f4f7db903e0ced67e1393beb776280afdecbeae"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 11902.41,
+                                "rt": 18,
+                                "txval": 132249,
+                                "camt": 11902.41
+                            }
+                        }
+                    ],
+                    "val": 156054,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "15-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/302",
+                    "chksum": "ca989f96c10a0226f4dfe9c961b9bb04b45ab71c72f0d56e63c38d1ec90d1c33"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 6605.55,
+                                "rt": 18,
+                                "txval": 73395,
+                                "camt": 6605.55
+                            }
+                        }
+                    ],
+                    "val": 86606,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "30-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/346",
+                    "chksum": "fd34f1ef9973ab46b0f3f129ef9293edfd3b771f2d99d49099f71ecb9b83e329"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 11834.91,
+                                "rt": 18,
+                                "txval": 131499,
+                                "camt": 11834.91
+                            }
+                        }
+                    ],
+                    "val": 155169,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "15-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/309",
+                    "chksum": "41db9ac0750162b779a61aefe79f232bec1d19e6a85c0a5ffcba068644242a7a"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 9789.57,
+                                "rt": 18,
+                                "txval": 108773,
+                                "camt": 9789.57
+                            }
+                        }
+                    ],
+                    "val": 128352,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/385",
+                    "chksum": "12d1d6c1631c2ec224de7d0a30ba0f026a64dff94908f8c6a4bff9eb4e08c838"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 9406.26,
+                                "rt": 18,
+                                "txval": 104514,
+                                "camt": 9406.26
+                            }
+                        }
+                    ],
+                    "val": 123327,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/263",
+                    "chksum": "25e4c18d50fc54969a39179fb8cad68e55597e1800c5be8a5ee22ecc52007070"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 13333.14,
+                                "rt": 18,
+                                "txval": 148146,
+                                "camt": 13333.14
+                            }
+                        }
+                    ],
+                    "val": 174812,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/384",
+                    "chksum": "1eaeb854347388a86490b3240f0c8792749ef3aea4d54f2a3b718a0c4bab5b1c"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 9672.57,
+                                "rt": 18,
+                                "txval": 107473,
+                                "camt": 9672.57
+                            }
+                        }
+                    ],
+                    "val": 126818,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/387",
+                    "chksum": "51fc9ae4b9ce223bc8a6b897ea504def9bbde8b37ea5948e270d4a7157404eb4"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 9497.25,
+                                "rt": 18,
+                                "txval": 105525,
+                                "camt": 9497.25
+                            }
+                        }
+                    ],
+                    "val": 124520,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/386",
+                    "chksum": "d86a42189a80fba338f8813ab1c81facbf8547f3d15a78a7115ddeeddc7d600b"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 3263.22,
+                                "rt": 18,
+                                "txval": 36258,
+                                "camt": 3263.22
+                            }
+                        }
+                    ],
+                    "val": 42784,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/381",
+                    "chksum": "932fca8416cc643ed91fcc649e3710e24eabd8895c90c98bd57d4f7cc969d457"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 9789.57,
+                                "rt": 18,
+                                "txval": 108773,
+                                "camt": 9789.57
+                            }
+                        }
+                    ],
+                    "val": 128352,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/380",
+                    "chksum": "7da8a4adc2644b27e8418fc2d762f48fba5a5836cde6e16416448476ff65a8d8"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 13557.42,
+                                "rt": 18,
+                                "txval": 150638,
+                                "camt": 13557.42
+                            }
+                        }
+                    ],
+                    "val": 177753,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/383",
+                    "chksum": "d7f0a2c5af8cf820cd20eb5e837caf39d3ad11eee156523bc79a0e83bab96339"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 9497.25,
+                                "rt": 18,
+                                "txval": 105525,
+                                "camt": 9497.25
+                            }
+                        }
+                    ],
+                    "val": 124520,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/382",
+                    "chksum": "e68394e661a1142075637d2a66dfa2d7a7efdaf1bb9611eadcf29bdb127e0489"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 11902.41,
+                                "rt": 18,
+                                "txval": 132249,
+                                "camt": 11902.41
+                            }
+                        }
+                    ],
+                    "val": 156054,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "15-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/316",
+                    "chksum": "4e21de6484e29c54662603c1db635ec6cfb62c02172fcf3876072cf932e464d1"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 6247.26,
+                                "rt": 18,
+                                "txval": 69414,
+                                "camt": 6247.26
+                            }
+                        }
+                    ],
+                    "val": 81909,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "16-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/437",
+                    "chksum": "273cae6bb8b71e63498063cf156b7aa27a243eb052810f04f2983344d508c1c6"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 9672.57,
+                                "rt": 18,
+                                "txval": 107473,
+                                "camt": 9672.57
+                            }
+                        }
+                    ],
+                    "val": 126818,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "15-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/315",
+                    "chksum": "e83ef5664b6cf402c8d4aa6aa903c6681b6af917b69378383496101e4693319c"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 9954.99,
+                                "rt": 18,
+                                "txval": 110611,
+                                "camt": 9954.99
+                            }
+                        }
+                    ],
+                    "val": 130521,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "16-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/436",
+                    "chksum": "6a1fa003c34151f8ce99ba064675a14491cd614f1e86d4d58986b48c1a51eeb8"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 13557.42,
+                                "rt": 18,
+                                "txval": 150638,
+                                "camt": 13557.42
+                            }
+                        }
+                    ],
+                    "val": 177753,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "15-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/318",
+                    "chksum": "fac316e67df36a0a44f3af0b7b0fbfbfdf6ea49d7d2ccc686bbd51d53d927626"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 7677.99,
+                                "rt": 18,
+                                "txval": 85311,
+                                "camt": 7677.99
+                            }
+                        }
+                    ],
+                    "val": 100667,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "16-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/439",
+                    "chksum": "b640380627da3ceec734d2499eb15be5e983d5c0222d7452435a79e075c07e49"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 13108.23,
+                                "rt": 18,
+                                "txval": 145647,
+                                "camt": 13108.23
+                            }
+                        }
+                    ],
+                    "val": 171863,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "15-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/317",
+                    "chksum": "8209585801c35264a8a8ac71f7a1b3a7accc9089c5ceeaeeec5f3b338d7605fc"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 5425.65,
+                                "rt": 18,
+                                "txval": 60285,
+                                "camt": 5425.65
+                            }
+                        }
+                    ],
+                    "val": 71136,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "16-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/438",
+                    "chksum": "fe794a4eb535a8b26177632a021024531aa4a886297599849704e095dbb0685a"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 3133.71,
+                                "rt": 18,
+                                "txval": 34819,
+                                "camt": 3133.71
+                            }
+                        }
+                    ],
+                    "val": 41086,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "15-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/312",
+                    "chksum": "f651f122e51d6b75f153b9a62d563e2c311634711a462fc1765c35bd77d2664c"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 13557.42,
+                                "rt": 18,
+                                "txval": 150638,
+                                "camt": 13557.42
+                            }
+                        }
+                    ],
+                    "val": 177753,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "15-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/311",
+                    "chksum": "01f6090da29a475f23957a2dece05e3f24999d7a8b86f177c15087be9a2f580a"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 11902.41,
+                                "rt": 18,
+                                "txval": 132249,
+                                "camt": 11902.41
+                            }
+                        }
+                    ],
+                    "val": 156054,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/399",
+                    "chksum": "f5263765361fb898c21e6765ae4ece986a0f6c4d4b425db9cd258f089dae7214"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 12903.84,
+                                "rt": 18,
+                                "txval": 143376,
+                                "camt": 12903.84
+                            }
+                        }
+                    ],
+                    "val": 169184,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "15-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/313",
+                    "chksum": "c40fcc6be5a01026a3ae75f14f63036284ceb31ef1a11b8cf6ff1d984c56ef65"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 9615.78,
+                                "rt": 18,
+                                "txval": 106842,
+                                "camt": 9615.78
+                            }
+                        }
+                    ],
+                    "val": 126074,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "15-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/319",
+                    "chksum": "9fe4f6a630697bbdc8a2b4adcf29c4caee02dc0d5528ff09e0f314ff3b5e42a8"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 11834.01,
+                                "rt": 18,
+                                "txval": 131489,
+                                "camt": 11834.01
+                            }
+                        }
+                    ],
+                    "val": 155157,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/390",
+                    "chksum": "9d54cba7ea01eee2ed4fc9adc9749d1c63ce590aedf2517f290ebf4af4c49a9f"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 11902.41,
+                                "rt": 18,
+                                "txval": 132249,
+                                "camt": 11902.41
+                            }
+                        }
+                    ],
+                    "val": 156054,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/396",
+                    "chksum": "dc944766c27513af851b26f985696e950a5f3f484842843d534920d185e0b679"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 3967.47,
+                                "rt": 18,
+                                "txval": 44083,
+                                "camt": 3967.47
+                            }
+                        }
+                    ],
+                    "val": 52018,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/395",
+                    "chksum": "a573eb773066694d251c0ebd0dc47bbcc3771bf6c2f3eb0272797e08a10d8c73"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 13333.14,
+                                "rt": 18,
+                                "txval": 148146,
+                                "camt": 13333.14
+                            }
+                        }
+                    ],
+                    "val": 174812,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/398",
+                    "chksum": "697ee0d7280a367132db4b52b8784a5d1f308bc9b21c10d877205694f32aac68"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 13333.14,
+                                "rt": 18,
+                                "txval": 148146,
+                                "camt": 13333.14
+                            }
+                        }
+                    ],
+                    "val": 174812,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/397",
+                    "chksum": "c4319209f87ce1ba64f407cd1252030ba92c10dda98cc6ba51419ef7ebadcbca"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 13333.14,
+                                "rt": 18,
+                                "txval": 148146,
+                                "camt": 13333.14
+                            }
+                        }
+                    ],
+                    "val": 174812,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/392",
+                    "chksum": "5763984dabfaa312b13755e84441d4ad82765a57010c8b0c80823bb443f6a7a2"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 9615.78,
+                                "rt": 18,
+                                "txval": 106842,
+                                "camt": 9615.78
+                            }
+                        }
+                    ],
+                    "val": 126074,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/391",
+                    "chksum": "28c34696d905c91f4478f8c7abd5b0e71e0ba278d1069af208cdee68af848ba1"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 9672.57,
+                                "rt": 18,
+                                "txval": 107473,
+                                "camt": 9672.57
+                            }
+                        }
+                    ],
+                    "val": 126818,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/394",
+                    "chksum": "80492a31bf6c528ef69e1e0cb1fd20d225d02bbd2834a713843a6d968f75c597"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 11677.5,
+                                "rt": 18,
+                                "txval": 129750,
+                                "camt": 11677.5
+                            }
+                        }
+                    ],
+                    "val": 153105,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/393",
+                    "chksum": "fd146971cbdcaeb796673519b602605813960fea6aea43f505b128ae335b4445"
+                }
+            ]
+        },
+        {
+            "ctin": "27AAACL1799C1ZJ",
+            "cfs": "N",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 140.04,
+                                "rt": 18,
+                                "txval": 1556,
+                                "camt": 140.04
+                            }
+                        }
+                    ],
+                    "val": 1836,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "09-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/414",
+                    "chksum": "0a58601f65e6b8a635a6265d7ca817ceb576150d7537472c25c6bd2b903b3b62"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 107.01,
+                                "rt": 18,
+                                "txval": 1189,
+                                "camt": 107.01
+                            }
+                        }
+                    ],
+                    "val": 1403,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "06-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/411",
+                    "chksum": "34d72e8937aadb0dff1f3ee95a316a39dc328b5115a474a8ef87b325c488f66b"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 67.59,
+                                "rt": 18,
+                                "txval": 751,
+                                "camt": 67.59
+                            }
+                        }
+                    ],
+                    "val": 886,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "09-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/413",
+                    "chksum": "f4e1788a3ce81485005ef9802f0e46ba28c51ab7811b9463fcd030b1e763c223"
+                }
+            ]
+        },
+        {
+            "ctin": "27AAACN1884C1ZN",
+            "cfs": "N",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 44019.72,
+                                "rt": 18,
+                                "txval": 489108,
+                                "camt": 44019.72
+                            }
+                        }
+                    ],
+                    "val": 577147,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-11-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/347",
+                    "chksum": "fc5514a5df6d90461f7e6145f1975308e65795a37d596512e001923880d7d031"
+                }
+            ]
+        },
+        {
+            "ctin": "27AAACP0522B1Z6",
+            "cfs": "N",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 44954.46,
+                                "rt": 18,
+                                "txval": 499494,
+                                "camt": 44954.46
+                            }
+                        }
+                    ],
+                    "val": 589403,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "08-11-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/349",
+                    "chksum": "79fb93469dac25547159916f46e2d2bd4661d0ec80e2c3708ebbfafcbf5a652b"
+                }
+            ]
+        },
+        {
+            "ctin": "27AAACR0395J1Z8",
+            "cfs": "N",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 26697.15,
+                                "rt": 18,
+                                "txval": 296635,
+                                "camt": 26697.15
+                            }
+                        }
+                    ],
+                    "val": 350029,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "12-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/293",
+                    "chksum": "65f2fd00857175628743447e123de79c4f2c2bc324e04285563d7b7004d64117"
+                }
+            ]
+        },
+        {
+            "ctin": "27AAACR4896A3ZB",
+            "cfs": "N",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 4728.33,
+                                "rt": 18,
+                                "txval": 52537,
+                                "camt": 4728.33
+                            }
+                        }
+                    ],
+                    "val": 61994,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "13-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/291",
+                    "chksum": "6c6fac43aea019f45d4d1f64cebff5730a356734c9918b56231a1f8f521e719a"
+                }
+            ]
+        },
+        {
+            "ctin": "27AAACS9943H1Z0",
+            "cfs": "N",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 27185.58,
+                                "rt": 18,
+                                "txval": 302062,
+                                "camt": 27185.58
+                            }
+                        }
+                    ],
+                    "val": 356433,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "16-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/432",
+                    "chksum": "abdaeb370a8cf7cfa2e4108c2e264c98c015e7a67f86ef72159fca78c5da47af"
+                }
+            ]
+        },
+        {
+            "ctin": "27AAACW0462F1ZK",
+            "cfs": "N",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 20874.06,
+                                "rt": 18,
+                                "txval": 231934,
+                                "camt": 20874.06
+                            }
+                        }
+                    ],
+                    "val": 273682,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "16-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/435",
+                    "chksum": "aa7bb9e9e3d79b4f25f82f8bf9d4fd2072289c1f2984c57583a0e45227929cbf"
+                }
+            ]
+        },
+        {
+            "ctin": "27AABPV6289R1ZJ",
+            "cfs": "N",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 33347.7,
+                                "rt": 18,
+                                "txval": 370530,
+                                "camt": 33347.7
+                            }
+                        }
+                    ],
+                    "val": 437225,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "15-11-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/355",
+                    "chksum": "ff4ed7d749d0aa0dde51ffe8c3d4df7a46b6075f2c60f10411169a87890ef014"
+                }
+            ]
+        },
+        {
+            "ctin": "27AACCD7714K1ZH",
+            "cfs": "N",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 59568.75,
+                                "rt": 18,
+                                "txval": 661875,
+                                "camt": 59568.75
+                            }
+                        }
+                    ],
+                    "val": 781013,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/408",
+                    "chksum": "63b110707e459bb5bfc768c84f55ac119f21d04e1b8b0c2d22815d5d491cfe16"
+                }
+            ]
+        },
+        {
+            "ctin": "27AADCB6018P1ZD",
+            "cfs": "N",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 1403.28,
+                                "rt": 18,
+                                "txval": 15592,
+                                "camt": 1403.28
+                            }
+                        }
+                    ],
+                    "val": 18399,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "15-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/433",
+                    "chksum": "a331f08c5c7206ea8fa8e1e3c591b624241d3b5df906c5350e0f3388e2dab141"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 1177.2,
+                                "rt": 18,
+                                "txval": 13080,
+                                "camt": 1177.2
+                            }
+                        }
+                    ],
+                    "val": 15434,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "17-11-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/365",
+                    "chksum": "7d71eec9d77a24069ba11b27139d8472eb75aa870b78453251858f6ba36c7c13"
+                }
+            ]
+        },
+        {
+            "ctin": "27AADCC2693K1ZD",
+            "cfs": "N",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 3902.4,
+                                "rt": 18,
+                                "txval": 43360,
+                                "camt": 3902.4
+                            }
+                        }
+                    ],
+                    "val": 51165,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "13-11-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/353",
+                    "chksum": "e938e1758060dc01a08c9360316bcf43ba5651230f65ecb7ff72f424d1431ebf"
+                }
+            ]
+        },
+        {
+            "ctin": "27AADCR5058B1ZK",
+            "cfs": "N",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 10935,
+                                "rt": 18,
+                                "txval": 121500,
+                                "camt": 10935
+                            }
+                        }
+                    ],
+                    "val": 143370,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "22-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/443",
+                    "chksum": "cc9295f313c56346ad6321d2c3fd2bd0e0af8cd11fcc2f9ab597466ddba76b73"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 8292.33,
+                                "rt": 18,
+                                "txval": 92137,
+                                "camt": 8292.33
+                            }
+                        }
+                    ],
+                    "val": 108722,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "09-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/286",
+                    "chksum": "165f8503f90fec1c6958353b5c4e67a3449cd0fb42b90848c89ac87e2d9e3320"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 16650,
+                                "rt": 18,
+                                "txval": 185000,
+                                "camt": 16650
+                            }
+                        }
+                    ],
+                    "val": 218300,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "09-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/287",
+                    "chksum": "41665dd49c25406253a094b87c5d71e19c2fa7eb31911163499dfe0ac3bda750"
+                }
+            ]
+        },
+        {
+            "ctin": "27AADCS0420Q1Z8",
+            "cfs": "N",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 12050.55,
+                                "rt": 18,
+                                "txval": 133895,
+                                "camt": 12050.55
+                            }
+                        }
+                    ],
+                    "val": 157996,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "11-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/292",
+                    "chksum": "a349dfb8ab35295091e01579c1f5046287db80b4835ba0770339b2b24c54bb68"
+                }
+            ]
+        },
+        {
+            "ctin": "27AADFO8856H1ZT",
+            "cfs": "N",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 6840,
+                                "rt": 18,
+                                "txval": 76000,
+                                "camt": 6840
+                            }
+                        }
+                    ],
+                    "val": 89680,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "17-11-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/363",
+                    "chksum": "9aa245e2ae457b311795507353afc5536b67029ce02e851851be18694e7f0cc3"
+                }
+            ]
+        },
+        {
+            "ctin": "27AAECE5655J1ZC",
+            "cfs": "N",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 3663.09,
+                                "rt": 18,
+                                "txval": 40701,
+                                "camt": 3663.09
+                            }
+                        }
+                    ],
+                    "val": 48027,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "23-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/336",
+                    "chksum": "1a244dbfc2de16c9ae338a877f569ba4d78af1e4ae4b857aca2e5cf8669c35a1"
+                }
+            ]
+        },
+        {
+            "ctin": "27AAFCR1016H1ZO",
+            "cfs": "N",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 6181.29,
+                                "rt": 18,
+                                "txval": 68681,
+                                "camt": 6181.29
+                            }
+                        }
+                    ],
+                    "val": 81044,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "06-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/279",
+                    "chksum": "4411cbd741ff49daadf87cd215288f23670c2afb228a000b381bdc9fb1b15c71"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 9533.7,
+                                "rt": 18,
+                                "txval": 105930,
+                                "camt": 9533.7
+                            }
+                        }
+                    ],
+                    "val": 124997,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "30-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/345",
+                    "chksum": "3e5e9d95d84988583a7c48fc52959e60471905fe1182d71956d61f0d7530b2b5"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 8204.31,
+                                "rt": 18,
+                                "txval": 91159,
+                                "camt": 8204.31
+                            }
+                        }
+                    ],
+                    "val": 107568,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "11-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/422",
+                    "chksum": "b2be6a64caaf94f25383d496d17a964c65a93e852709a27dfe36bfbd3bfd5c7c"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 10895.76,
+                                "rt": 18,
+                                "txval": 121064,
+                                "camt": 10895.76
+                            }
+                        }
+                    ],
+                    "val": 142856,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "06-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/278",
+                    "chksum": "4c3007748e9f6d818c6eb0d873ba046dff023edeadee7937aeace329ef9e9d35"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 8859.6,
+                                "rt": 18,
+                                "txval": 98440,
+                                "camt": 8859.6
+                            }
+                        }
+                    ],
+                    "val": 116159,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "30-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/344",
+                    "chksum": "2258ac3cf7b4c8589ea310d01ff838e9b7ebb7d3ec6f91ebccb410669fb6db68"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 11936.07,
+                                "rt": 18,
+                                "txval": 132623,
+                                "camt": 11936.07
+                            }
+                        }
+                    ],
+                    "val": 156495,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "11-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/421",
+                    "chksum": "5638d7caec60386ed21c1f47625712ef593e0862bbabc7095f2c76b97e2e6ed9"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 6960.96,
+                                "rt": 18,
+                                "txval": 77344,
+                                "camt": 6960.96
+                            }
+                        }
+                    ],
+                    "val": 91266,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "11-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/424",
+                    "chksum": "60494614d0dc3c7f7e8e8d1c5ac990a389281437ea27f1f718e6ee8e628899e6"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 9832.05,
+                                "rt": 18,
+                                "txval": 109245,
+                                "camt": 9832.05
+                            }
+                        }
+                    ],
+                    "val": 128909,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "11-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/423",
+                    "chksum": "66ab6aa1b9992f717ee8afcf984c7d4e02ff8b967f2b55da64c1170c924b4319"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 15076.17,
+                                "rt": 18,
+                                "txval": 167513,
+                                "camt": 15076.17
+                            }
+                        }
+                    ],
+                    "val": 197665,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/407",
+                    "chksum": "416c72dcfd2eefda01562ea33295891d5a1adbe1c111a3fa990a51d874ed9a83"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 6181.29,
+                                "rt": 18,
+                                "txval": 68681,
+                                "camt": 6181.29
+                            }
+                        }
+                    ],
+                    "val": 81044,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "06-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/280",
+                    "chksum": "9095e558dfe47071c3a43c724ec22b9843e4cffa6076fd8fd279d5b1a0a42149"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 6237,
+                                "rt": 18,
+                                "txval": 69300,
+                                "camt": 6237
+                            }
+                        }
+                    ],
+                    "val": 81774,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "06-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/275",
+                    "chksum": "40232d3e6fd090a624926ad8a40a398fb3ef989da056c10b83ba50acb53afa90"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 9831.51,
+                                "rt": 18,
+                                "txval": 109239,
+                                "camt": 9831.51
+                            }
+                        }
+                    ],
+                    "val": 128902,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "06-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/274",
+                    "chksum": "e7c47fdabc2063eca96b31d0cfb70f546d59ec20cd19acabbb0cea9ef7457ecd"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 7486.11,
+                                "rt": 18,
+                                "txval": 83179,
+                                "camt": 7486.11
+                            }
+                        }
+                    ],
+                    "val": 98151,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "06-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/277",
+                    "chksum": "5edd18dc1f7fcc1a5854f2299486424be0cd3552c10b52b173dcf08ad1780d4e"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 6404.04,
+                                "rt": 18,
+                                "txval": 71156,
+                                "camt": 6404.04
+                            }
+                        }
+                    ],
+                    "val": 83964,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "30-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/343",
+                    "chksum": "33a9f398313230e54e14afb897cd1444a3052ac1d9ad7e4f3c09fdd0c73ed644"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 6307.38,
+                                "rt": 18,
+                                "txval": 70082,
+                                "camt": 6307.38
+                            }
+                        }
+                    ],
+                    "val": 82697,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "11-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/420",
+                    "chksum": "aa1b779f9e25134c5d5207366894669483490e931e343ce345ab6b52c9ec6dc1"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 10930.95,
+                                "rt": 18,
+                                "txval": 121455,
+                                "camt": 10930.95
+                            }
+                        }
+                    ],
+                    "val": 143317,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "06-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/276",
+                    "chksum": "89d51db3a47d635c288632f84b26cb6692a538cbf1d0ced947400eb73e5b64e1"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 9147.6,
+                                "rt": 18,
+                                "txval": 101640,
+                                "camt": 9147.6
+                            }
+                        }
+                    ],
+                    "val": 119935,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "30-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/342",
+                    "chksum": "4ec328e28b49e50078e1aa6a61501e696cd6a1e3a2c334790c468d53be2db01d"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 7394.31,
+                                "rt": 18,
+                                "txval": 82159,
+                                "camt": 7394.31
+                            }
+                        }
+                    ],
+                    "val": 96948,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "06-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/282",
+                    "chksum": "03456f4d949f7b144301982faeed3ae26a11fa8e13390d066ccc90cbdcc834c9"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 8035.92,
+                                "rt": 18,
+                                "txval": 89288,
+                                "camt": 8035.92
+                            }
+                        }
+                    ],
+                    "val": 105360,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "06-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/281",
+                    "chksum": "50a6ace1184ff4dca7283bd56f52d86a48b243a5e464b6051091f1de97752d34"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 6404.04,
+                                "rt": 18,
+                                "txval": 71156,
+                                "camt": 6404.04
+                            }
+                        }
+                    ],
+                    "val": 83964,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "06-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/273",
+                    "chksum": "805451b6a6ce53de41d8966aa761544991c134b77a1001acf1fbee43ecb0beaf"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 12320.1,
+                                "rt": 18,
+                                "txval": 136890,
+                                "camt": 12320.1
+                            }
+                        }
+                    ],
+                    "val": 161530,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "06-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/284",
+                    "chksum": "3089901f92fad9b5e2b948ffc9c8395128e9dd70a6f9fe8c675c46f6821a9862"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 12149.73,
+                                "rt": 18,
+                                "txval": 134997,
+                                "camt": 12149.73
+                            }
+                        }
+                    ],
+                    "val": 159296,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "06-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/283",
+                    "chksum": "0de8a51d7608f4ca5686fe01bdd6f2d312021a5af4ff02fcc2a3b6a57f9820c9"
+                }
+            ]
+        },
+        {
+            "ctin": "27AAFCR1404F1ZS",
+            "cfs": "N",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 10774.89,
+                                "rt": 18,
+                                "txval": 119721,
+                                "camt": 10774.89
+                            }
+                        }
+                    ],
+                    "val": 141271,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "13-11-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/354",
+                    "chksum": "8f0276abeeb6a6adcb748ef59884c0681b2970a0114e0599bbe7c17143e0642d"
+                }
+            ]
+        },
+        {
+            "ctin": "27AAFFL4502R1ZY",
+            "cfs": "N",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 34875,
+                                "rt": 18,
+                                "txval": 387500,
+                                "camt": 34875
+                            }
+                        }
+                    ],
+                    "val": 457250,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "11-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/426",
+                    "chksum": "14151c28df1f2904b387a83125cc30cfb193ce4754c40da2a7964708c6f749f6"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 27787.5,
+                                "rt": 18,
+                                "txval": 308750,
+                                "camt": 27787.5
+                            }
+                        }
+                    ],
+                    "val": 364325,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "11-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/427",
+                    "chksum": "181a3ebc87ae61e7d92eea7bbbb49f311d4d2514d4b080f127e3bc21cc1bea89"
+                }
+            ]
+        },
+        {
+            "ctin": "27AAGFK2048E1ZK",
+            "cfs": "N",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 12825,
+                                "rt": 18,
+                                "txval": 142500,
+                                "camt": 12825
+                            }
+                        }
+                    ],
+                    "val": 168150,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "12-11-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/350",
+                    "chksum": "eff96bbe51a5a66f270a88743cc0ed6812b2a20b1cc709ec9a73dcad2fe23a69"
+                }
+            ]
+        },
+        {
+            "ctin": "27AAIFR0307D2ZM",
+            "cfs": "N",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 26190,
+                                "rt": 18,
+                                "txval": 291000,
+                                "camt": 26190
+                            }
+                        }
+                    ],
+                    "val": 343380,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "11-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/429",
+                    "chksum": "5cb4f88f9ac7de278f3feec3dce30bd053d0b544f3b67656437248510be8f279"
+                }
+            ]
+        },
+        {
+            "ctin": "27AAJFR1111L1Z9",
+            "cfs": "N",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 7627.14,
+                                "rt": 18,
+                                "txval": 84746,
+                                "camt": 7627.14
+                            }
+                        }
+                    ],
+                    "val": 100000,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "22-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/444",
+                    "chksum": "5cfcc24d10d7a9c6498e8a55bfa064b861b97995c68b3d404d8e05de1263b525"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 7627.14,
+                                "rt": 18,
+                                "txval": 84746,
+                                "camt": 7627.14
+                            }
+                        }
+                    ],
+                    "val": 100000,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "22-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/445",
+                    "chksum": "710d05324e6bb70537ff3e71f431e5b66752ba2976b25a0559196c924ec9d201"
+                }
+            ]
+        },
+        {
+            "ctin": "27AAJFR3989E1ZQ",
+            "cfs": "N",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 7315.29,
+                                "rt": 18,
+                                "txval": 81281,
+                                "camt": 7315.29
+                            }
+                        }
+                    ],
+                    "val": 95912,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/249",
+                    "chksum": "e9d03460c6ad7737e68f1e0ec0c641f6e373d145575a9744b26a6b8760e43394"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 7315.29,
+                                "rt": 18,
+                                "txval": 81281,
+                                "camt": 7315.29
+                            }
+                        }
+                    ],
+                    "val": 95912,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/248",
+                    "chksum": "1113ff752feb18f4e23b72db9db68dd77cd06ed5ea41bc22ab87bbea21b1aee7"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 6962.22,
+                                "rt": 18,
+                                "txval": 77358,
+                                "camt": 6962.22
+                            }
+                        }
+                    ],
+                    "val": 91282,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "01-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/250",
+                    "chksum": "6aeb62c208ebbd3648f093c29f2bd49c5cfea6079a7d35b96bbae5432ddfe263"
+                }
+            ]
+        },
+        {
+            "ctin": "27AALCM3124B1ZU",
+            "cfs": "N",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 10777.59,
+                                "rt": 18,
+                                "txval": 119751,
+                                "camt": 10777.59
+                            }
+                        }
+                    ],
+                    "val": 141306,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "16-11-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/359",
+                    "chksum": "ee25daaa9f50a58cecf7a9fdc732c5d5080eb90551f722008cf4e3da5df4d96d"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 8324.91,
+                                "rt": 18,
+                                "txval": 92499,
+                                "camt": 8324.91
+                            }
+                        }
+                    ],
+                    "val": 109149,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "16-11-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/356",
+                    "chksum": "dc112d62408f4de2a22c6b491c513940294c20c71555e8709834f5eaf813d062"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 7800.3,
+                                "rt": 18,
+                                "txval": 86670,
+                                "camt": 7800.3
+                            }
+                        }
+                    ],
+                    "val": 102271,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "16-11-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/358",
+                    "chksum": "60580946aa4db39ac3ab14d57ed297d5ef81c75678c1db1a72406f7785191808"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 8337.69,
+                                "rt": 18,
+                                "txval": 92641,
+                                "camt": 8337.69
+                            }
+                        }
+                    ],
+                    "val": 109316,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "16-11-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/357",
+                    "chksum": "5ff0db96c3dcbb9fb35aeed09967b3c9d395f63f819f9d440bf354f71db45290"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 13256.64,
+                                "rt": 18,
+                                "txval": 147296,
+                                "camt": 13256.64
+                            }
+                        }
+                    ],
+                    "val": 173809,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "16-11-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/362",
+                    "chksum": "a4c74f863d1ba120e0eebe90c1f1ab1d8f01f1be5d10a5589b5dbc40d5995ad3"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 7625.43,
+                                "rt": 18,
+                                "txval": 84727,
+                                "camt": 7625.43
+                            }
+                        }
+                    ],
+                    "val": 99978,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "16-11-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/361",
+                    "chksum": "775bf9c4b6e1f8650bc2c62eaa474be43619e321800002812ebd62d05e431b97"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 9859.41,
+                                "rt": 18,
+                                "txval": 109549,
+                                "camt": 9859.41
+                            }
+                        }
+                    ],
+                    "val": 129268,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "16-11-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/360",
+                    "chksum": "3c1ad80530d314987e4a37d86fb2688e28fb453034bb0b9f53155f69bd28e5dc"
+                }
+            ]
+        },
+        {
+            "ctin": "27AAMCS1171K1Z1",
+            "cfs": "N",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 18000,
+                                "rt": 18,
+                                "txval": 200000,
+                                "camt": 18000
+                            }
+                        }
+                    ],
+                    "val": 236000,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "11-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/428",
+                    "chksum": "49773bcff592c1592012c7995b6de6dca78ef8812709ff68e2228e301a7fbbb5"
+                }
+            ]
+        },
+        {
+            "ctin": "27AAUCS4319K1ZP",
+            "cfs": "N",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 5920.38,
+                                "rt": 18,
+                                "txval": 65782,
+                                "camt": 5920.38
+                            }
+                        }
+                    ],
+                    "val": 77623,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "09-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/288",
+                    "chksum": "150629ce28f60e503602ff1cb25c8a0fa6aa6ca2500804e0765bc7c4a07ef54a"
+                }
+            ]
+        },
+        {
+            "ctin": "27AAUFM8302P1ZG",
+            "cfs": "N",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 3165.48,
+                                "rt": 18,
+                                "txval": 35172,
+                                "camt": 3165.48
+                            }
+                        }
+                    ],
+                    "val": 41503,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "18-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/442",
+                    "chksum": "318c61268310f0ba24650146e96d70f0859bbcd45afb2bb6c28a930a756ba873"
+                }
+            ]
+        },
+        {
+            "ctin": "27AAVFM2787M1Z8",
+            "cfs": "N",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 4779.09,
+                                "rt": 18,
+                                "txval": 53101,
+                                "camt": 4779.09
+                            }
+                        }
+                    ],
+                    "val": 62659,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "26-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/339",
+                    "chksum": "233a91c88a6b734450e327d0bb6446accddb67d920d876fce6df4caec092d849"
+                }
+            ]
+        },
+        {
+            "ctin": "27ABCCS6245F1ZB",
+            "cfs": "N",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 31201.83,
+                                "rt": 18,
+                                "txval": 346687,
+                                "camt": 31201.83
+                            }
+                        }
+                    ],
+                    "val": 409091,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "26-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/337",
+                    "chksum": "b575436731af7bec03079da386cfdcf22ff61b0dba3c523bbae6a6fec85fdd00"
+                }
+            ]
+        },
+        {
+            "ctin": "27ABMFA9638B1ZA",
+            "cfs": "N",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 5422.32,
+                                "rt": 18,
+                                "txval": 60248,
+                                "camt": 5422.32
+                            }
+                        }
+                    ],
+                    "val": 71093,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "10-12-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/418",
+                    "chksum": "3855149629350509bc452b79581f24680422bdefd73b3b9c74eb12a102c5ac54"
+                }
+            ]
+        },
+        {
+            "ctin": "27ACHFS1365F1Z3",
+            "cfs": "N",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 5809.68,
+                                "rt": 18,
+                                "txval": 64552,
+                                "camt": 5809.68
+                            }
+                        }
+                    ],
+                    "val": 76171,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "30-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/341",
+                    "chksum": "7de60a8238370203e90c8b32b1b6206fecac8395004b573a3a300341634389a4"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 5809.68,
+                                "rt": 18,
+                                "txval": 64552,
+                                "camt": 5809.68
+                            }
+                        }
+                    ],
+                    "val": 76171,
+                    "inv_typ": "R",
+                    "flag": "U",
+                    "pos": "27",
+                    "updby": "S",
+                    "idt": "30-10-2021",
+                    "rchrg": "N",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/340",
+                    "chksum": "d2c9b8f38be45174f67239dab448733f9dbad46559c0d5bb9b5df1938de4f443"
+                }
+            ]
+        }
+    ],
+    "cdnr": [
+        {
+            "cfs": "N",
+            "ctin": "27AALCM3124B1ZU",
+            "nt": [
+                {
+                    "itms": [
+                        {
+                            "num": 1800,
+                            "itm_det": {
+                                "samt": 8337.69,
+                                "rt": 18,
+                                "txval": 92641,
+                                "camt": 8337.69
+                            }
+                        }
+                    ],
+                    "val": 109316,
+                    "flag": "U",
+                    "updby": "S",
+                    "d_flag": "Y",
+                    "nt_num": "CN/21-22/6",
+                    "cflag": "N",
+                    "nt_dt": "16-11-2021",
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "ntty": "C",
+                    "rchrg": "N",
+                    "chksum": "e2fc13b09b3ddd25d7b4cdf341cf26df94d31f6f923e4fb2a8a8e6151a190a16"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1800,
+                            "itm_det": {
+                                "samt": 7800.3,
+                                "rt": 18,
+                                "txval": 86670,
+                                "camt": 7800.3
+                            }
+                        }
+                    ],
+                    "val": 102271,
+                    "flag": "U",
+                    "updby": "S",
+                    "d_flag": "Y",
+                    "nt_num": "CN/21-22/7",
+                    "cflag": "N",
+                    "nt_dt": "16-11-2021",
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "ntty": "C",
+                    "rchrg": "N",
+                    "chksum": "2ef2e6911a212bf102565bc4a4153d947a436453c0cfbad67bcc96f3a2894aa8"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1800,
+                            "itm_det": {
+                                "samt": 8324.91,
+                                "rt": 18,
+                                "txval": 92499,
+                                "camt": 8324.91
+                            }
+                        }
+                    ],
+                    "val": 109149,
+                    "flag": "U",
+                    "updby": "S",
+                    "d_flag": "Y",
+                    "nt_num": "CN/21-22/5",
+                    "cflag": "N",
+                    "nt_dt": "16-11-2021",
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "ntty": "C",
+                    "rchrg": "N",
+                    "chksum": "4e05c2e77b1cbe4700b8efff3fe60ffb197443ffb886145ed0efaa4f8bbfa9b4"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1800,
+                            "itm_det": {
+                                "samt": 10777.59,
+                                "rt": 18,
+                                "txval": 119751,
+                                "camt": 10777.59
+                            }
+                        }
+                    ],
+                    "val": 141306,
+                    "flag": "U",
+                    "updby": "S",
+                    "d_flag": "Y",
+                    "nt_num": "CN/21-22/8",
+                    "cflag": "N",
+                    "nt_dt": "16-11-2021",
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "ntty": "C",
+                    "rchrg": "N",
+                    "chksum": "3589264d9d19d6a6a133376b5312fb29689c5fbaefc49c53a265a6f35b4db8ed"
+                }
+            ]
+        }
+    ],
+    "hsn": {
+        "flag": "N",
+        "data": [
+            {
+                "samt": 1690896.65,
+                "rt": 18,
+                "uqc": "NA",
+                "txval": 1.8787737E7,
+                "qty": 0,
+                "num": 1,
+                "camt": 1690896.65,
+                "hsn_sc": "997222",
+                "desc": "Building sales on a fee/commission basis or contract basis"
+            }
+        ],
+        "chksum": "d1185f3ca55a070630ca92149962f80f5b2c2b784d239d2e943111e7e4306bb1"
+    },
+    "b2ba": [
+        {
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "samt": 20608.65,
+                                "rt": 18,
+                                "txval": 228985,
+                                "camt": 20608.65,
+                                "iamt": 0
+                            }
+                        }
+                    ],
+                    "val": 270202,
+                    "oinum": "HFPPVT/21-22/223",
+                    "flag": "U",
+                    "updby": "S",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/223",
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "03-09-2021",
+                    "rchrg": "N",
+                    "oidt": "03-09-2021",
+                    "chksum": "b6cb7a513fe28aa1e87e263cc04bf3ef4db8582539885f12d6be8b82c966dd0e"
+                }
+            ],
+            "cfs": "N",
+            "ctin": "27AAACW0462F1ZK"
+        },
+        {
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "samt": 14746.05,
+                                "rt": 18,
+                                "txval": 163845,
+                                "camt": 14746.05,
+                                "iamt": 0
+                            }
+                        }
+                    ],
+                    "val": 193337,
+                    "oinum": "HFPPVT/21-22/172",
+                    "flag": "U",
+                    "updby": "S",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/172",
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "03-08-2021",
+                    "rchrg": "N",
+                    "oidt": "03-08-2021",
+                    "chksum": "b556ef10d3652bfd3654c55d20b3c197ca14b64a761a40b5583730d268923dfb"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "samt": 18901.35,
+                                "rt": 18,
+                                "txval": 210015,
+                                "camt": 18901.35,
+                                "iamt": 0
+                            }
+                        }
+                    ],
+                    "val": 247818,
+                    "oinum": "HFPPVT/21-22/171",
+                    "flag": "U",
+                    "updby": "S",
+                    "cflag": "N",
+                    "inum": "HFPPVT/21-22/171",
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "03-08-2021",
+                    "rchrg": "N",
+                    "oidt": "03-08-2021",
+                    "chksum": "196ff655fb6081b7c8b6d397effea414776411a46f81b7d8c6265cc447e14f43"
+                }
+            ],
+            "cfs": "N",
+            "ctin": "27ABCCS6245F1ZB"
+        }
+    ],
+    "doc_issue": {
+        "flag": "N",
+        "doc_det": [
+            {
+                "docs": [
+                    {
+                        "cancel": 0,
+                        "num": 1,
+                        "totnum": 149,
+                        "from": "HFPPVT/21-22/248",
+                        "to": "HFPPVT/21-22/447",
+                        "net_issue": 149
+                    },
+                    {
+                        "cancel": 0,
+                        "num": 2,
+                        "totnum": 4,
+                        "from": "HFPPVT/21-22/209",
+                        "to": "HFPPVT/21-22/212",
+                        "net_issue": 4
+                    }
+                ],
+                "doc_num": 1
+            },
+            {
+                "docs": [],
+                "doc_num": 2
+            },
+            {
+                "docs": [],
+                "doc_num": 3
+            },
+            {
+                "docs": [],
+                "doc_num": 4
+            },
+            {
+                "docs": [
+                    {
+                        "cancel": 0,
+                        "num": 1,
+                        "totnum": 4,
+                        "from": "CN/21-22/5",
+                        "to": "CN/21-22/8",
+                        "net_issue": 4
+                    }
+                ],
+                "doc_num": 5
+            },
+            {
+                "docs": [],
+                "doc_num": 6
+            },
+            {
+                "docs": [],
+                "doc_num": 7
+            },
+            {
+                "docs": [],
+                "doc_num": 8
+            },
+            {
+                "docs": [],
+                "doc_num": 9
+            },
+            {
+                "docs": [],
+                "doc_num": 10
+            },
+            {
+                "docs": [],
+                "doc_num": 11
+            },
+            {
+                "docs": [],
+                "doc_num": 12
+            }
+        ],
+        "chksum": "1e489d282f740d2b76df2ef1be86cf51178a3e7510c95d660f7088c49ff5107c"
+    },
+    "cdnra": [
+        {
+            "cfs": "N",
+            "nt": [
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "samt": 24261.3,
+                                "rt": 18,
+                                "txval": 269570,
+                                "camt": 24261.3
+                            }
+                        }
+                    ],
+                    "val": 318093,
+                    "flag": "U",
+                    "ont_num": "CN/21-22/2",
+                    "updby": "S",
+                    "d_flag": "Y",
+                    "nt_num": "CN/21-22/2",
+                    "cflag": "N",
+                    "nt_dt": "27-08-2021",
+                    "inv_typ": "R",
+                    "ont_dt": "27-08-2021",
+                    "pos": "27",
+                    "ntty": "C",
+                    "rchrg": "N",
+                    "chksum": "b69349e2e7bae6ac8ae7dce74b9bc654cf187f99395af0c47ea227890f1bdc3a"
+                }
+            ],
+            "ctin": "27AADCE7724P1Z3"
+        }
+    ],
+    "fil_dt": "13-01-2022"
+}

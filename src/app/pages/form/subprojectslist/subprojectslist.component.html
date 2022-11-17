@@ -1,0 +1,100 @@
+<div class="container-fluid">
+    <!-- <app-page-title title="Subproject List"></app-page-title> -->
+   
+    <div class="row">
+        <div class="col-md-4">
+          <div>
+            <app-page-title title="Subproject List"></app-page-title>
+
+          </div>
+        </div>
+        <div class="col-md-8"  style="text-align: right;">
+                <button type="button" class="btn btn-primary mb-3"  routerLink="/form/subprojects"><i class="mdi mdi-plus me-1"></i>
+                Add Subproject</button>
+        </div>
+        <!-- Search -->
+        <!-- <div class="col-md-12">
+            <div id="tickets-table_filter" class="dataTables_length"><label
+                class="d-inline-flex align-items-center">Search:
+                <input type="text" name="searchteamdetailslist" class="form-control form-control-sm ms-2"
+                  aria-controls="tickets-table" [(ngModel)]="searchteamdetailslist"></label>
+              </div>
+        </div> -->
+      <!-- End search -->
+      <div class="col-md-8">
+        <!-- <div id="tickets-table_filter" class="dataTables_length"><label
+            class="d-inline-flex align-items-center">Search:
+            <input type="text" name="searchsubprojects" class="form-control form-control-sm ms-2"
+              aria-controls="tickets-table" [(ngModel)]="searchsubprojects"></label>
+          </div> -->
+    </div>
+      <div class="col-md-4">
+        <ngb-pagination class="d-flex justify-content-center" [(page)]="page" [maxSize]="4" [collectionSize]="subprojectsList.length" [boundaryLinks]="true"  style="justify-content: right!important;"></ngb-pagination>
+    </div>
+      </div>
+
+  <div class="row">
+      <div class="col-lg-12">
+          <div class="card">
+              <div class="card-body">
+                  <!-- <h4 class="card-title">Registered Users</h4> -->
+    
+                  <div class="table-responsive">
+                      <table class="table mb-0">
+                          <thead>
+                              <!-- Sorting-->
+                             <tr>
+                                <th [class.active]="order === 'project_name'" (click)="setOrder('project_name')">
+                                    Project ID <span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                </th>
+                                <th [class.active]="order === 'subproject_name'" (click)="setOrder('subproject_name')">
+                                    Subproject Name<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                </th>
+                                <th [class.active]="order === 'rera'" (click)="setOrder('rera')">
+                                    Rera No<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                </th>
+                                <th>Actions</th>
+                            </tr>
+                            <!-- Sorting End-->
+                            <!-- Search -->
+                           <tr>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2"
+                                        aria-controls="tickets-table" [(ngModel)]="project_name_search">
+                                </th>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2"
+                                        aria-controls="tickets-table" [(ngModel)]="subproject_name_Search">
+                                </th>
+                                
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2"
+                                        aria-controls="tickets-table" [(ngModel)]="rera_Search">
+                                </th>
+                            </tr>  
+                            <!-- End search -->
+                          </thead>
+                          <tbody>
+                              <tr *ngFor="let subproject of subprojectsArr  | searchsubprojects:project_name_search:subproject_name_Search:rera_Search | orderBy: order:reverse:caseInsensitive |  slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+                                  <!-- <th scope="row">{{subproject.subproject_id}}</th> -->
+                                  <td>{{subproject.project_name}}</td>
+                                  <td>{{subproject.subproject_name}}</td>
+                                  <td>{{subproject.rera}}</td>
+                                  <td><button type="button" class="btn btn-info"  routerLink="/form/editsubprojects/{{subproject.subproject_id}}"><i class="uil-pen"></i></button>
+                                        &nbsp;
+                                        <button type="button" class="btn btn-danger"  (click)="deleteSubprojectsData(subproject.subproject_id)"><i class="uil-trash-alt"></i></button> 
+                                    </td>
+                              </tr>
+                             
+  
+                          </tbody>
+                      </table>
+                  </div>
+  
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- end row -->
+  </div>
+  

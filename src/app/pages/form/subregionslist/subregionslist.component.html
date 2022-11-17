@@ -1,0 +1,92 @@
+<div class="container-fluid">
+    <!-- <app-page-title title="Subregion List"></app-page-title> -->
+    
+    <div class="row">
+        <div class="col-md-4">
+          <div>
+            <app-page-title title="Subregion List"></app-page-title>
+
+          </div>
+        </div>
+        <div class="col-md-8"  style="text-align: right;">
+                <button type="button" class="btn btn-primary mb-3"  routerLink="/form/subregions"><i class="mdi mdi-plus me-1"></i>
+                Add Subregion</button>
+        </div>
+        <!-- Search -->
+        <!-- <div class="col-md-12">
+            <div id="tickets-table_filter" class="dataTables_length"><label
+                class="d-inline-flex align-items-center">Search:
+                <input type="text" name="searchteamdetailslist" class="form-control form-control-sm ms-2"
+                  aria-controls="tickets-table" [(ngModel)]="searchteamdetailslist"></label>
+              </div>
+        </div> -->
+      <!-- End search -->
+      <div class="col-md-8">
+        <!-- <div id="tickets-table_filter" class="dataTables_length"><label
+            class="d-inline-flex align-items-center">Search:
+            <input type="text" name="searchsubregions" class="form-control form-control-sm ms-2"
+              aria-controls="tickets-table" [(ngModel)]="searchsubregions"></label>
+          </div> -->
+    </div>
+      <div class="col-md-4">
+        <ngb-pagination class="d-flex justify-content-center" [(page)]="page" [maxSize]="4" [collectionSize]="subregionList.length" [boundaryLinks]="true"  style="justify-content: right!important;"></ngb-pagination>
+    </div>
+      </div>
+
+  <div class="row">
+      <div class="col-lg-12">
+          <div class="card">
+              <div class="card-body">
+                  <!-- <h4 class="card-title">Registered Users</h4> -->
+    
+                  <div class="table-responsive">
+                      <table class="table mb-0">
+                          <thead>
+                              <!-- Sorting-->
+                             <tr>
+                                <th [class.active]="order === 'region_name'" (click)="setOrder('region_name')">
+                                    Region ID <span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                </th>
+                                <th [class.active]="order === 'subregion_name'" (click)="setOrder('subregion_name')">
+                                    Subregion Name<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                </th>
+                                <th>Actions</th>
+                            </tr>
+                            <!-- Sorting End-->
+                            <!-- Search -->
+                          <tr>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2"
+                                        aria-controls="tickets-table" [(ngModel)]="region_name_search">
+                                </th>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2"
+                                        aria-controls="tickets-table" [(ngModel)]="subregion_name_Search">
+                                </th>
+                            </tr> 
+                            <!-- End search -->
+                          </thead>
+                          <tbody>
+                              <tr *ngFor="let subregion of subregionsArr  | searchsubregions :region_name_search:subregion_name_Search |orderBy: order:reverse:caseInsensitive | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+                                  <!-- <th scope="row">{{subregion.subregion_id}}</th> -->
+                                  <td>{{subregion.region_name}}</td>
+                                  <td>{{subregion.subregion_name}}</td>
+                                  <td>
+                                    <button type="button" class="btn btn-info"  routerLink="/form/editsubregions/{{subregion.subregion_id}}"><i class="uil-pen"></i></button>
+                                    &nbsp;
+                                    <button type="button" class="btn btn-danger"  (click)="deleteSubregionsData(subregion.subregion_id)"><i class="uil-trash-alt"></i></button> 
+                                  </td>
+                              </tr>
+                             
+  
+                          </tbody>
+                      </table>
+                  </div>
+  
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- end row -->
+  </div>
+  

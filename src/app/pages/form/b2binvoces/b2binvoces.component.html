@@ -1,0 +1,124 @@
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-body">
+            <form (ngSubmit)="addfile()">
+                <div class="row">
+                    <div class="col-md-2">
+                        <label><b>Add Excel Data :</b></label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="file" class="form-control" (change)="addfilevent($event)" placeholder="Upload file"
+                            accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+                        <div class="text-center">
+                            <span>
+                                <h5 class="text-danger">{{invalidata}}</h5>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <button type="submit" class="btn btn-primary">
+                            Add Data
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <!-- <label class="d-inline-flex align-items-center">Search:
+                <input type="text" name="searchb2binvoice" class="form-control form-control-sm ms-2"
+                    aria-controls="tickets-table" [(ngModel)]="searchb2binvoice">
+            </label> -->
+        </div>
+        <div class="col-md-3">
+
+        </div>
+        <div class="col-md-6">
+            <ngb-pagination class="d-flex justify-content-center form-control-sm" [(page)]="page" [maxSize]="4"
+                [collectionSize]="datalength" [boundaryLinks]="true" style="justify-content: right!important;">
+            </ngb-pagination>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table mb-0">
+                            <thead>
+                                <tr>
+                                    <th [class.active]="order === 'party_name'" (click)="setOrder('party_name')">
+                                        Company Name <span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                    </th>
+                                    <th [class.active]="order === 'inv_no'" (click)="setOrder('inv_no')">
+                                        Invoice Number<span [hidden]="reverse">▼</span><span
+                                            [hidden]="!reverse">▲</span>
+                                    </th>
+                                    <th [class.active]="order === 'inv_val'" (click)="setOrder('inv_val')">
+                                        Invoice Value<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                    </th>
+                                    <th [class.active]="order === 'total_tax_amt'" (click)="setOrder('total_tax_amt')">
+                                        Taxable Amount<span [hidden]="reverse">▼</span><span
+                                            [hidden]="!reverse">▲</span>
+                                    </th>
+                                    <th [class.active]="order === 'total_tax_val'" (click)="setOrder('total_tax_val')">
+                                        Taxable Value<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                    </th>
+                                    <th [class.active]="order === 'inv_dt'" (click)="setOrder('inv_dt')">
+                                        Invoice Date<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                    </th>
+
+                                </tr>
+                                <!-- Search -->
+                                <tr>
+                                    <th>
+                                        <input type="text" class="form-control form-control-sm ms-2"
+                                            aria-controls="tickets-table" [(ngModel)]="party_name_Search">
+                                    </th>
+                                    <th>
+                                        <input type="text" class="form-control form-control-sm ms-2"
+                                            aria-controls="tickets-table" [(ngModel)]="inv_no_Search">
+                                    </th>
+                                    <th>
+                                        <input type="text" class="form-control form-control-sm ms-2"
+                                            aria-controls="tickets-table" [(ngModel)]="inv_val_Search">
+                                    </th>
+                                    <th>
+                                        <input type="text" class="form-control form-control-sm ms-2"
+                                            aria-controls="tickets-table" [(ngModel)]="total_tax_amt_Search">
+                                    </th>
+                                    <th>
+                                        <input type="text" class="form-control form-control-sm ms-2"
+                                            aria-controls="tickets-table" [(ngModel)]="total_tax_val_Search">
+                                    </th>
+                                    <th>
+                                        <input type="date" class="form-control form-control-sm ms-2"
+                                            aria-controls="tickets-table" [(ngModel)]="inv_dt_Search">
+                                    </th>
+                                </tr>
+                                <!-- End search -->
+                            </thead>
+                            <tbody>
+                                <tr
+                                    *ngFor="let b2bdata of B2bData | searchb2binvoice:party_name_Search:inv_no_Search:inv_val_Search:total_tax_amt_Search:total_tax_val_Search:inv_dt_Search | orderBy: order:reverse:caseInsensitive | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+                                    <td>{{b2bdata.party_name}}</td>
+                                    <td>{{b2bdata.inv_no}}</td>
+                                    <td>{{b2bdata.inv_val}}</td>
+                                    <td>{{b2bdata.total_tax_amt}}</td>
+                                    <td>{{b2bdata.total_tax_val}}</td>
+                                    <td>{{b2bdata.inv_dt}}</td>
+                                    <td>
+                                        <button type="button" class="btn btn-success"
+                                            routerLink="/form/b2binvoicedetails/{{b2bdata.id}}"><i
+                                                class="uil-eye"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

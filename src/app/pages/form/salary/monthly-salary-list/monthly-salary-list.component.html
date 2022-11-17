@@ -1,0 +1,156 @@
+<style>
+
+    button.btn.btn-success {
+        padding: 5px 10px;
+    }
+
+    button.btn.btn-info {
+        padding: 5px 10px;
+    }
+
+    button.btn.btn-danger {
+        padding: 4px 10px;
+    }
+    
+    td {
+        /* padding: 10px 15px; */
+        padding: 10px 10px;
+    }
+    
+    button.btn.btn-primary.mb-3 {
+        padding: 4px 8px;
+        margin-right: -341px;
+    }
+    
+</style>
+
+<div class="container-fluid">
+    <!-- <app-page-title title="Teams List"></app-page-title> -->
+   
+    <div class="row">
+        <div class="col-md-4">
+          <div>
+            <app-page-title title="Monthly Salary List"></app-page-title>
+
+          </div>
+        </div>
+        <div class="col-md-8"  style="text-align: right;">
+            <button type="button" class="btn btn-primary"  routerLink="/form/salary/monthly-salary-list-view1">
+           Report</button>
+    </div>
+        <div class="col-md-8"  style="text-align: right;">
+                <button type="button" class="btn btn-primary mb-3"  routerLink="/form/salary/monthly-salary"><i class="mdi mdi-plus me-1"></i>
+                Add Monthly Salary Details</button>
+        </div>
+        <!-- Search -->
+        <!-- <div class="col-md-12">
+            <div id="tickets-table_filter" class="dataTables_length"><label
+                class="d-inline-flex align-items-center">Search:
+                <input type="text" name="searchcompanylist" class="form-control form-control-sm ms-2"
+                  aria-controls="tickets-table" [(ngModel)]="searchcompanylist"></label>
+              </div>
+        </div> -->
+      <!-- End search -->
+      <div class="col-md-8">
+        <!-- <div id="tickets-table_filter" class="dataTables_length"><label
+            class="d-inline-flex align-items-center">Search:
+            <input type="text" name="searchmonthlysalary" class="form-control form-control-sm ms-2"
+              aria-controls="tickets-table" [(ngModel)]="searchmonthlysalary"></label>
+          </div> -->
+    </div>
+     <!-- End search -->
+    <div class="col-md-4">
+      <ngb-pagination class="d-flex justify-content-center" [(page)]="page" [maxSize]="4" [collectionSize]="monthlysalaryList.length" [boundaryLinks]="true"  style="justify-content: right!important;"></ngb-pagination>
+    </div>
+    </div>
+
+      
+  <div class="row">
+      <div class="col-lg-12">
+          <div class="card">
+              <div class="card-body"  style="padding: 0 10px 0 10px;">
+                  <!-- <h4 class="card-title">Registered Roles</h4> -->
+    
+                  <div class="table-responsive">
+                      <table class="table mb-0">
+                          <thead>
+                            <!-- Sorting-->
+                            <tr>
+                                <th [class.active]="order === 'firstname'" (click)="setOrder('firstname')">
+                                    User Name <span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th [class.active]="order === 'salary_month'" (click)="setOrder('salary_month')">
+                                    Salary Month<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th [class.active]="order === 'absent_days'" (click)="setOrder('absent_days')">
+                                    Absent Days<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th [class.active]="order === 'no_of_late_marks'" (click)="setOrder('no_of_late_marks')">
+                                    Number Of Late Mark<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th [class.active]="order === 'penalty_leave_days'" (click)="setOrder('penalty_leave_days')">
+                                    Penalty Leave Days<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th [class.active]="order === 'extra_days'" (click)="setOrder('extra_days')">
+                                    Extra Days<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th>Actions</th>
+                              </tr>
+                              <!-- Sorting End-->
+                              <!-- Search -->
+                              <tr>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2"
+                                        aria-controls="tickets-table" [(ngModel)]="firstname_Search">
+                                </th>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2"
+                                        aria-controls="tickets-table" [(ngModel)]="salary_month_Search">
+                                </th>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2"
+                                        aria-controls="tickets-table" [(ngModel)]="absent_days_Search">
+                                </th>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2"
+                                        aria-controls="tickets-table" [(ngModel)]="no_of_late_marks_Search">
+                                </th>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2"
+                                        aria-controls="tickets-table" [(ngModel)]="penalty_leave_days_Search">
+                                </th>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2"
+                                        aria-controls="tickets-table" [(ngModel)]="extra_days_Search">
+                                </th>
+                            </tr>
+                            <!-- End search -->
+                          </thead>
+                          <tbody>
+                              <tr *ngFor="let monthlysalary of monthlysalaryArr | searchmonthlysalary: firstname_Search:salary_month_Search:absent_days_Search:no_of_late_marks_Search:penalty_leave_days_Search:extra_days_Search | orderBy: order:reverse:caseInsensitive | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+                                    <!-- <th scope="row">{{monthlysalary.monthly_salary_id}}</th> -->
+                                    <td>{{monthlysalary.firstname}} {{monthlysalary.middlename}} {{monthlysalary.lastname}}</td>
+                                    <td>{{monthlysalary.salary_month}}</td>
+                                    <td>{{monthlysalary.absent_days}}</td>
+                                    <td>{{monthlysalary.no_of_late_marks}}</td>
+                                    <td>{{monthlysalary.penalty_leave_days}}</td>
+                                    <td>{{monthlysalary.extra_days}}</td>
+                                    <td>
+                                        <button type="button" class="btn btn-info"  routerLink="/form/salary/editmonthlysalary/{{monthlysalary.monthly_salary_id}}"><i class="uil-pen"></i></button>
+                                        &nbsp;
+                                        <button type="button" class="btn btn-success"  routerLink="/form/salary/monthly-salary-view/{{monthlysalary.monthly_salary_id}}"><i class="uil-eye"></i></button>
+                                        &nbsp;
+                                        <button type="button" class="btn btn-danger"  (click)="deleteMonthlysalaryData(monthlysalary.monthly_salary_id)"><i class="uil-trash-alt"></i></button>
+                                    </td>
+                              </tr>
+                             
+                          </tbody>
+                      </table>
+                  </div>
+  
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- end row -->
+  </div>

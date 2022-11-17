@@ -1,0 +1,53 @@
+<div class="container-fluid">
+
+    <!-- start page title -->
+    <app-page-title title="Create Monthly Target Details"></app-page-title>
+    <!-- end page title -->
+
+
+<form  (ngSubmit)="updateMonthlytarget()">
+
+    <div class="mb-3 row">
+
+        <div class="col-md-3">
+            <label for="example-text-input" class="col-form-label">Salary Package Id</label>
+            <select  class="form-control" name="salary_package_id"  [(ngModel)]="monthlytarget.salary_package_id"  disabled>
+                <option value="">-- Select User Name --</option>
+                <option *ngFor="let sal of salarypacArr"  value="{{sal.salary_package_id}}"> {{sal.basic_pay}}
+                </option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <label for="example-text-input" class="col-form-label">User Name</label>
+            <select  class="form-control" name="salary_package_id"  [(ngModel)]="monthlytarget.user_id"  disabled>
+                <option value="">-- Select User Name --</option>
+                <option *ngFor="let sal of data"  value="{{sal.user_id}}"> {{sal.firstname}} {{sal.middlename}} {{sal.lastname}}
+                </option>
+            </select>
+        </div>
+
+        <div class="col-md-3">
+            <label for="example-text-input" class="col-form-label">From Date</label>
+            <input class="form-control" type="date" value="" name="from_date"  [(ngModel)]="monthlytarget.from_date">
+        </div>
+
+        <div class="col-md-3">
+            <label for="example-text-input" class="col-form-label">To Date</label>
+            <input class="form-control" type="date" value="" name="to_date"  [(ngModel)]="monthlytarget.to_date">
+        </div>
+
+        <div class="col-md-3">
+            <label for="example-text-input" class="col-form-label">Status</label>
+            <input class="form-control" type="text" value="" name="status"  [(ngModel)]="monthlytarget.status">
+        </div>
+
+    </div>
+
+    <button type="button" class="btn btn-primary" (click)="cancel()">Cancel</button>
+    &nbsp;
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+   
+  
+  </div> <!-- container-fluid -->

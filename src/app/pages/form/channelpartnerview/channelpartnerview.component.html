@@ -1,0 +1,92 @@
+<div class="container-fluid">
+    <ng-container>
+    <div class="page-title-box d-flex align-items-center justify-content-between">
+        <div class="mb-0 font-size-20">
+            
+             
+          
+            <!-- <div class="col-md-3">
+          
+        </div>  -->
+        <h4>Channel Partner Details</h4> 
+       </div>
+       <div class="col-md-8"  style="text-align: right;">
+                <button type="button" class="btn btn-primary mb-3"  routerLink="/form/channelpartnerslist">Channel Partner List</button>
+        </div>
+        <!-- <div class="page-title-right">
+            <button type="button" class="btn btn-primary mb-3"  routerLink="/form/channelpartnerslist/{{cp_id}}">Channel Partners List</button>
+
+        </div> -->
+    </div>
+      <div class="card">
+        <div class="row">
+            <div class="card-body">
+                <div class="col-md-12">
+                <div class="table-responsive">
+                <table class="table" id='tab'>
+                    <tr>
+                        <td  colspan="3">
+             <div class="col-md-12"  style="text-align: left;">
+                <h4> <i class="fas fa-user border" style="font-size: 47px; padding: 9px;"></i>{{channelpartner.cp_name}}</h4>
+            </div> 
+         </td>
+         <td colspan="3">
+             <div class="col-md-12"  style="text-align: right;">
+                <button type="button" class="btn btn-primary mb-3" (click)="back()" style="text-align: right;"><i class='fas fa-angle-left fa-lg'></i> Back</button>&nbsp;
+                <button type="button" class="btn btn-primary mb-3" routerLink="/form/editchannelpartner/{{channelpartner.cp_id}}"><i class='fas fa-edit fa-lg'></i></button>&nbsp;
+                 <button type="button" class="btn btn-primary mb-3"  (click)="doSomeLogics()"><i class='fas fa-angle-left fa-lg'></i></button>&nbsp;
+                 <button type="button" class="btn btn-primary mb-3"  (click)="doSomeLogic()"><i class='fas fa-angle-right fa-lg'></i></button>
+             </div>
+         </td>
+         </tr>
+                    <tbody>
+                      
+                        <tr>
+                            <!-- <td scope="col">ID</td>
+                            <td><b>{{channelpartner.cp_id}}</b></td>
+                        -->
+                            <td scope="col">Categoty</td>
+                            <td><b>{{channelpartner.catrgory_id}}</b></td>
+                            
+                            <td scope="col">Occupation</td>
+                            <td><b>{{channelpartner.occupation_id}}</b></td>
+
+                        </tr>
+                        <tr>
+                            <td scope="col">Address</td>
+                            <td><b>{{channelpartner.address}}</b></td>
+
+                            <td scope="col">Date of Birth</td>
+                            <td><b>{{channelpartner.date_of_birth}}</b></td>
+
+                        </tr>
+                        <tr>
+                            <td scope="col">Conatct No. - 1</td>
+                            <td><b>{{channelpartner.mobile1}}</b></td>
+
+                            <td scope="col">Conatct No. - 2</td>
+                            <td><b>{{channelpartner.mobile2}}</b></td>
+
+                        </tr>
+                        <tr>
+                            <td scope="col">Official Email - 1</td>
+                            <td><b>{{channelpartner.email1}}</b></td>
+
+                            <td scope="col">Official Email - 2</td>
+                            <td><b>{{channelpartner.email2}}</b></td>
+
+                        </tr>
+                        
+              
+                    </tbody>
+                </table>
+                </div>
+            </div>
+
+
+       
+            </div>
+        </div>
+    </div>
+</ng-container>
+</div>

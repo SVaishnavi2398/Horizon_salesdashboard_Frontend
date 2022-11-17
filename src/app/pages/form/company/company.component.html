@@ -1,0 +1,113 @@
+<div class="container-fluid">
+
+  
+    <app-page-title title="Company Registration"></app-page-title>
+    
+
+
+<form  (ngSubmit)="submitcompnay(editForm)"  #editForm="ngForm"  id="editForm">
+
+    <div class="mb-3 row">
+  
+        <div class="col-md-4">
+      <label for="example-text-input" class="col-form-label">Compnay Name</label>
+      <input class="form-control" type="text" value="" id="cname"  name="cname"  [(ngModel)]="company.cname"  required>
+      <span class="text-danger" [hidden]="!error.cname">{{error.cname}}</span>    
+    </div>
+
+        <div class="col-md-4">
+        <label for="example-text-input" class="col-form-label">Company Pan No</label>
+        <input class="form-control" type="text" value="" id="cpan"  name="cpan"  [(ngModel)]="company.cpan"
+        (keypress)="keyPressAlphanumeric($event)"
+        maxlength="10">
+        <span class="text-danger" [hidden]="!error.cpan">{{error.cpan}}</span>
+        </div>
+
+        <div class="col-md-4">
+      <label for="example-text-input" class="col-form-label">Company GST No</label>
+      <input class="form-control" type="text" value="" id="cgst"  name="cgst"  [(ngModel)]="company.cgst"
+      (keypress)="keyPressAlphanumeric($event)"
+      maxlength="15">
+      <span class="text-danger" [hidden]="!error.cgst">{{error.cgst}}</span>
+        </div>
+
+    </div>
+
+
+    <div class="mb-3 row">
+
+        <div class="col-md-6">
+        <label for="example-text-input" class="col-form-label">Register Address</label>
+        <textarea class="form-control" type="email" value="" id="registered_address"  name="registered_address"  [(ngModel)]="company.registered_address"></textarea>
+        <span class="text-danger" [hidden]="!error.registered_address">{{error.registered_address}}</span>  
+      </div>
+
+        <div class="col-md-6">
+        <label for="example-text-input" class="col-form-label">Billing Address</label>
+        <textarea class="form-control" type="password" value="" id="billing_address"  name="billing_address"  [(ngModel)]="company.billing_address"></textarea>
+        <span class="text-danger" [hidden]="!error.billing_address">{{error.billing_address}}</span>  
+      </div>
+
+    </div>
+
+
+    <div class="mb-3 row">
+
+        <div class="col-md-6">
+      <label for="example-text-input" class="col-form-label">Conatct No. - 1</label>
+      <input class="form-control" type="text" value="" id="contact1"  name="contact1"  [(ngModel)]="company.contact1" 
+      (keypress)="keyPressNumbers($event)"
+      maxlength="10">
+      <span class="text-danger" [hidden]="!error.contact1">{{error.contact1}}</span>   
+    </div>
+
+        <div class="col-md-6">
+      <label for="example-text-input" class="col-form-label">Conatct No. - 2</label>
+      <input class="form-control" type="text" value="" id="contact2"  name="contact2"  [(ngModel)]="company.contact2" 
+      (keypress)="keyPressNumbers($event)"
+      maxlength="10">
+        </div>
+
+    </div>
+
+
+    <div class="mb-3 row">
+
+        <div class="col-md-6">
+        <label for="example-text-input" class="col-form-label">Official Email - 1</label>
+        <input class="form-control" type="email" value="" id="email1"  name="email1"  [(ngModel)]="company.email1">
+        <span class="text-danger" [hidden]="!error.email1">{{error.email1}}</span> 
+      </div>
+
+        <div class="col-md-6">
+        <label for="example-text-input" class="col-form-label">Official Email - 2</label>
+        <input class="form-control" type="email" value="" id="email2"  name="email2"  [(ngModel)]="company.email2">
+      </div>
+
+    </div>
+
+    <div class="mb-3 row">
+
+      <div class="col-md-4">
+        <label for="example-text-input" class="col-form-label">Profile Score</label> &nbsp; &nbsp; &nbsp;
+        <input type="radio" id="1" name="profile_score" value="1" [(ngModel)]="company.profile_score"> &nbsp;
+        <label for="example-text-input" class="col-form-label"> 1 </label> &nbsp;
+        <input type="radio" id="5" name="profile_score" value="5" [(ngModel)]="company.profile_score"> &nbsp;
+        <label for="example-text-input" class="col-form-label"> 5 </label> &nbsp;
+        <input type="radio" id="10" name="profile_score" value="10" [(ngModel)]="company.profile_score"> &nbsp;
+        <label for="example-text-input" class="col-form-label"> 10 </label><br>
+        <!-- <div class="text-center">
+         <span class="text-warning" >In Term of Incentive</span>
+        </div> -->
+        <span class="text-danger" [hidden]="!error.profile_score">{{error.profile_score}}</span>
+        
+      </div>
+
+    </div>
+ 
+        <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+   
+  
+</div> 

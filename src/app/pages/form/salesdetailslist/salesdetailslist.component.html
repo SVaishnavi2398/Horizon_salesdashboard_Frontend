@@ -1,0 +1,144 @@
+<style>
+
+    button.btn.btn-success {
+        padding: 5px 10px;
+    }
+
+    button.btn.btn-info {
+        padding: 5px 10px;
+    }
+
+    button.btn.btn-danger {
+        padding: 4px 10px;
+    }
+    
+    td {
+        /* padding: 10px 15px; */
+        padding: 10px 10px;
+    }
+    
+    button.btn.btn-primary.mb-3 {
+        padding: 4px 8px;
+    }
+    
+</style>
+
+<div class="container-fluid">
+    <!-- <app-page-title title="Teams List"></app-page-title> -->
+   
+    <div class="row">
+        <div class="col-md-4">
+        
+            <app-page-title title="Sales Details List"></app-page-title>
+
+         
+        </div>
+        <div class="col-md-8"  style="text-align: right;">
+                <button type="button" class="btn btn-primary mb-3"  routerLink="/form/salesdetails"><i class="mdi mdi-plus me-1"></i>
+                Add Sales Details</button>
+        </div>
+        <!-- Search -->
+        <div class="col-md-8">
+            <!-- <div id="tickets-table_filter" class="dataTables_length"><label
+                class="d-inline-flex align-items-center">Search:
+                <input type="text" name="searchsalesdetails" class="form-control form-control-sm ms-2"
+                  aria-controls="tickets-table" [(ngModel)]="searchsalesdetails"></label>
+              </div> -->
+        </div>
+      <!-- End search -->
+        <div class="col-md-4">
+            <ngb-pagination class="d-flex justify-content-center" [(page)]="page" [maxSize]="4" [collectionSize]="salesdetailsList.length" [boundaryLinks]="true"  style="justify-content: right!important;"></ngb-pagination>
+        </div>
+     
+      </div>
+
+      
+  <div class="row">
+      <div class="col-lg-12">
+          <div class="card">
+              <div class="card-body"  style="padding: 0 10px 0 10px;">
+                  <!-- <h4 class="card-title">Registered Roles</h4> -->
+    
+                  <div class="table-responsive">
+                      <table class="table mb-0">
+                          <thead>
+                              <tr>
+                                <!-- <th [class.active]="order === 'id'" (click)="setOrder('id')">
+                                    ID <span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th> -->
+                                  <th [class.active]="order === 'name'" (click)="setOrder('name')">
+                                    Client Name <span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th [class.active]="order === 'project_name'" (click)="setOrder('project_name')">
+                                    Project Name <span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <!-- <th>Subproject Name</th> -->
+                                  <th [class.active]="order === 'booking_date'" (click)="setOrder('booking_date')">
+                                    Booking Date <span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th [class.active]="order === 'status'" (click)="setOrder('status')">
+                                    Deal Status <span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th [class.active]="order === 'leadsource'" (click)="setOrder('leadsource')">
+                                    Lead Source <span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th [class.active]="order === 'firstname'" (click)="setOrder('firstname')">
+                                    Sourcing Employee <span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th>Action</th>
+                              </tr>
+                            <tr>
+                                <th>
+                                    <input type="text" name="name" class="form-control form-control-sm ms-2" aria-controls="tickets-table"
+                                        [(ngModel)]="nameSearch">
+                                </th>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2" aria-controls="tickets-table"
+                                        [(ngModel)]="project_nameSearch">
+                                </th>
+                                <th>
+                                    <input type="date" class="form-control form-control-sm ms-2" aria-controls="tickets-table"
+                                        [(ngModel)]="booking_dateSearch">
+                                </th>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2" aria-controls="tickets-table"
+                                        [(ngModel)]="statusSearch">
+                                </th>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2" aria-controls="tickets-table"
+                                        [(ngModel)]="leadsourceSearch">
+                                </th>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2" aria-controls="tickets-table"
+                                        [(ngModel)]="firstnameSearch">
+                                </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                              <tr  *ngFor="let salesdetails of salesdetailsArr | searchsalesdetails: nameSearch:project_nameSearch:statusSearch:leadsourceSearch:firstnameSearch:booking_dateSearch | orderBy: order:reverse:caseInsensitive | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize ">
+                                    <!-- <th scope="row">{{salesdetails.sales_id}}</th> -->
+                                    <td>{{salesdetails.name}}</td>
+                                    <td>{{salesdetails.project_name}}</td>
+                                    <!-- <td>{{salesdetails.subproject_name}}</td> -->
+                                    <td>{{salesdetails.booking_date}}</td>
+                                    <td>{{salesdetails.status}}</td>
+                                    <td>{{salesdetails.leadsource}}</td>
+                                    <td>{{salesdetails.firstname}} {{salesdetails.middlename}} {{salesdetails.lastname}}</td>
+                                    <td>
+                                        <button type="button" class="btn btn-info"  routerLink="/form/editsalesdetails/{{salesdetails.sales_id}}"><i class="uil-pen"></i></button>
+                                        &nbsp;&nbsp;
+                                        <button type="button" class="btn btn-success"  routerLink="/form/salesdetailsview/{{salesdetails.sales_id}}"><i class="uil-eye"></i></button>
+                                    </td>
+                              </tr>
+                             
+                          </tbody>
+                      </table>
+                  </div>
+  
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- end row -->
+  </div>
+  

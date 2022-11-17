@@ -1,0 +1,84 @@
+<div class="container-fluid">
+
+    <!-- start page title -->
+    <app-page-title title="Add Sales Documents"></app-page-title>
+    <!-- <app-page-title title="Project Allocation" [breadcrumbItems]="breadCrumbItems"></app-page-title> -->
+
+    <!-- end page title -->
+  <form #f="ngForm" (ngSubmit)="submitdocuments(f)">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body">
+  
+                    <div class="mb-3 row">
+                            <label for="first name" class="col-md-2 col-form-label">Client Name</label>
+                            <div class="col-md-10">
+                                <select  class="form-control"  name="sales_id"  [(ngModel)]="salesdocuments.sales_id"  disabled>
+                                    <option value="">-- Select Status --</option>
+                                    <option value="{{salesdocuments.sales_id}}" selected> {{salesdocuments.name}}
+                                    </option>
+                                </select>
+                            </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                       
+                        <label for="first name" class="col-md-2 col-form-label">Document 1</label>
+                        <div class="col-md-10">
+                            <input class="form-control" type="file" value="" id="doc1"  name="doc1" (change)="imageUpload1($event)"
+                            [(ngModel)]="salesdocuments.doc1">
+                        </div>
+                    </div> 
+
+                    
+
+                  <div class="mb-3 row">
+                       
+                    <label for="first name" class="col-md-2 col-form-label">Document 2</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="file" value="" id="doc2"  name="doc2" (change)="imageUpload2($event)"
+                        [(ngModel)]="salesdocuments.doc2">
+                    </div>
+                </div> 
+
+                <div class="mb-3 row">
+                       
+                  <label for="first name" class="col-md-2 col-form-label">Document 3</label>
+                  <div class="col-md-10">
+                      <input class="form-control" type="file" value="" id="doc3"  name="doc3" (change)="imageUpload3($event)"
+                      [(ngModel)]="salesdocuments.doc3">
+                  </div>
+                </div> 
+
+                <div class="mb-3 row">
+                       
+                  <label for="first name" class="col-md-2 col-form-label">Document 4</label>
+                  <div class="col-md-10">
+                      <input class="form-control" type="file" value="" id="doc4"  name="doc4" (change)="imageUpload4($event)"
+                      [(ngModel)]="salesdocuments.doc4">
+                  </div>
+                </div> 
+
+                <div class="mb-3 row">
+                       
+                  <label for="first name" class="col-md-2 col-form-label">Document 5</label>
+                  <div class="col-md-10">
+                   <input class="form-control" type="file" value="" id="doc5"  name="doc5" (change)="imageUpload5($event)"
+                   [(ngModel)]="salesdocuments.doc5">
+                  </div>
+                </div> 
+          
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+
+          </div>
+        </div>
+      </div> <!-- end col -->
+    </div>
+    <!-- end row -->
+  </form>
+
+  
+  </div> <!-- container-fluid -->

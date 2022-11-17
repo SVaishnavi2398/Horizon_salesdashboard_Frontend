@@ -1,0 +1,94 @@
+<div class="container-fluid">
+    <!-- start page title -->
+    <!-- <app-page-title title="Reports"></app-page-title> -->
+
+    <div class="row">
+        <div class="col-md-4">
+          <div>
+            <app-page-title title="Reports"></app-page-title>
+
+          </div>
+        </div>
+        <div class="col-md-8"  style="text-align: right;">
+            <!-- <button (click)="exportAsXLSX()" class="btn btn-danger mb-3">Export To Excel</button> -->
+            <button (click)="exportexcel()" class="btn btn-danger mb-3">Export To Excel</button>
+        </div>
+    </div>
+    
+    <!-- end page title -->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <!-- <h4 class="card-title mb-4">Reports</h4> -->
+
+                    <div class="table-responsive">
+                        <table class="table table-centered table-nowrap mb-0 align-middle"  id="excel-table">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Employee Name</th>
+                                    <th>Team Name</th>
+                                    <!--<th>Project</th>
+                                     <th>Subproject</th>
+                                    <th>Region</th>
+                                    <th>Subregion</th>
+                                    <th>Company</th>
+                                    <th>Client Name</th>
+                                    <th>Booking Date</th>
+                                    <th>Deal Status</th>
+                                    <th>Invoice Number</th>
+                                    <th>Receivable Amount</th>
+                                    <th>Yearly Salary</th> -->
+                                </tr>
+                            </thead>
+                            <!-- <tbody>
+                                <tr *ngFor="let data of transactions">
+                                    <td>
+                                        <a href="javascript: void(0);"
+                                            class="text-body font-weight-bold">{{data.id}}</a>
+                                    </td>
+                                    <td>{{data.name}}</td>
+                                    <td>{{data.date}}</td>
+                                    <td>{{data.total}}</td>
+                                    <td>
+                                        <span class="badge rounded-pill bg-soft-success font-size-12" [ngClass]=" { 'bg-soft-danger': data.status === 'Chargeback',
+                                              'bg-soft-warning':data.status === 'Refund' }">{{data.status}}</span>
+                                    </td>
+                                    <td>
+                                        <i class="fab {{data.payment[0]}} me-1"></i>
+                                        {{data.payment[1]}}
+                                    </td>
+                                    <td>
+                                        <button type="button"
+                                            class="btn btn-primary btn-sm btn-rounded waves-effect waves-light">View
+                                            Details</button>
+                                    </td>
+                                </tr>
+                            </tbody> -->
+                            <tbody>
+                                <tr  *ngFor="let reports of reportsArr">
+                                    <td>{{ reports.firstname }} {{ reports.middlename }} {{ reports.lastname }}</td>
+                                    <td>{{ reports.teamname }}</td>
+                                    <!--<td *ngFor="let users of usersArr" >{{users.firstname}} {{users.middlename}} {{users.lastname}}</td>
+                                     <td>RUNWAL MY CITY</td>
+                                    <td>MMR</td>
+                                    <td>DOMBIVALI SHILPHATA</td>
+                                    <td>HORIZON</td>
+                                    <td>CLIENT TEST</td>
+                                    <td>15/12/2020</td>
+                                    <td>DONE</td>
+                                    <td>0555</td>
+                                    <td>45,00,000</td>
+                                    <td>2,20,000</td> -->
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <!-- end table -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- container-fluid -->

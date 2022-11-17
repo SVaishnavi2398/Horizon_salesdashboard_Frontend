@@ -1,0 +1,136 @@
+<div class="container-fluid">
+
+  <!-- start page title -->
+  <app-page-title title="Create Report" ></app-page-title>
+  <!-- end page title -->
+<form  (ngSubmit)="submitreports()">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+
+          <div class="mb-3 row">
+            <label for="first name" class="col-md-2 col-form-label">Module Name</label>
+            <div class="col-md-10">
+                <input class="form-control" type="text"  id="report_name" placeholder="Enter Module Name" name="report_name"  [(ngModel)]="reports.report_name">
+            </div>
+          </div>
+
+          <div class="mb-3 row">
+            <label for="first name" class="col-md-2 col-form-label">Primary Module</label>
+            <div class="col-md-10">
+              <select  class="form-control"  name="primary_module_name"  (change)="getModulefields($event)" [(ngModel)]="reports.primary_module_name">
+                  <option value="">-- Select Primary Module --</option>
+                  <option *ngFor="let ml of modulesArr"  value="{{ml.module_name}}">  {{ml.module_name}}
+                  </option>
+              </select>
+            </div>
+          </div>
+
+          <div class="mb-3 row">
+            <label for="first name" class="col-md-2 col-form-label">Select Field</label>
+            <div class="col-md-10">
+              <ng-select  name="primary_module_field_name" [(ngModel)]="reports.primary_module_field_name" 
+              appendTo="body"
+              multiple="true"
+              [searchable]="true" 
+              [clearable]="true"
+              >
+                <ng-option value="">-- Select Field --</ng-option>
+                <ng-option *ngFor="let mf of modulefieldsArr;let ml of modulesArr"  value="{{ml.module_name}}.{{mf.module_field_name}},{{mf.table_field}}">{{ml.module_name}}.{{mf.module_field_name}}
+                </ng-option>
+              </ng-select>
+            </div>
+          </div>
+
+          <div class="mb-3 row">
+            <label for="first name" class="col-md-2 col-form-label">Secondary Module</label>
+            <div class="col-md-10">
+              <select  class="form-control"  name="secondary_module_name"  (change)="getSecModulefields($event)" [(ngModel)]="reports.secondary_module_name">
+                  <option value="">-- Select Secondary Module --</option>
+                  <option *ngFor="let secml of secmodulesArr"  value="{{secml.module_name}}">  {{secml.module_name}}
+                  </option>
+              </select>
+            </div>
+          </div>
+
+          <div class="mb-3 row">
+            <label for="first name" class="col-md-2 col-form-label">Select Field</label>
+            <div class="col-md-10">
+              <ng-select  name="secondary_module_field_name" [(ngModel)]="reports.secondary_module_field_name"
+              appendTo="body"
+              multiple="true"
+              [searchable]="true" 
+              [clearable]="true"
+              >
+                <ng-option value="">-- Select Field --</ng-option>
+                <ng-option *ngFor="let secmf of secmodulefieldsArr;let secml of secmodulesArr"  value="{{secml.module_name}}.{{secmf.module_field_name}},{{secmf.table_field}}">{{secml.module_name}}.{{secmf.module_field_name}}
+                </ng-option>
+              </ng-select>
+            </div>
+          </div>
+          
+          <div class="mb-3 row">
+   
+            <div class="col-md-4">
+             <label for="first name" class="col-form-label">Select Field1</label>
+               <select  class="form-control"   name="reports_field_1"   (change)="getModulefields1($event)"  [(ngModel)]="reports.reports_field_1">
+                   <option value="">-- Select Field --</option>
+                 <!-- <option *ngFor="let mf of modulefieldsArr"  value="{{mf.module_field_name_2}}">  {{mf.module_field_name_2}}
+                   </option> -->
+                   <option *ngFor="let mf of modulefieldsArr;let ml of modulesArr"  value="{{mf.table_field}}">{{ml.module_name}}.{{mf.module_field_name_2}}
+                   </option>
+                   <option *ngFor="let secmf of secmodulefieldsArr;let secml of secmodulesArr"  value="{{secmf.table_field}}">{{secml.module_name}}.{{secmf.module_field_name_2}}
+                   </option>
+               </select>
+           </div>
+           <!-- <div class="col-md-4">
+             <label for="first name" class="col-md-2 col-form-label">Primary Module</label>
+             <div class="col-md-10">
+               <select  class="form-control"  name="table_field"  (change)="getModulefields1($event)" [(ngModel)]="reports.table_field">
+                   <option value="">-- Select Primary Module --</option>
+                   <option *ngFor="let ml of modules1Arr"  value="{{ml.table_field}}">  {{ml.table_field}}
+                   </option>
+               </select>
+             </div>
+           </div> -->
+
+           <div class="col-md-4">
+             <label for="first name" class="col-form-label">Select Condition</label>
+               <!-- <input class="form-control" type="text"  id="conditions" value="equals" placeholder="equals" name="conditions"  [(ngModel)]="reports.conditions"> -->
+               <select  class="form-control"  name="conditions"   [(ngModel)]="reports.conditions">
+                 <option value="">-- Select Conditions --</option>
+                 <option value="equal"> Equal
+                 </option>
+               </select>
+           </div>
+            
+           <div class="col-md-4">
+             <label for="first name" class="col-form-label">Select Value</label>
+             <select  class="form-control"  name="reports_field_2"   [(ngModel)]="reports.reports_field_2">
+               <option value="">-- Select Field Value --</option>
+               <option *ngFor="let tf of value2Arr"  value="{{tf}}">  {{tf}}
+               </option>
+             </select>
+            
+           </div>
+  
+          
+  
+         </div>
+
+
+          <div class="col-12">
+              <button type="submit" class="btn btn-primary">Save & Next</button>
+          </div>
+
+
+        </div>
+      </div>
+    </div> <!-- end col -->
+  </div>
+  <!-- end row -->
+</form>
+
+</div> <!-- container-fluid -->
+

@@ -1,0 +1,133 @@
+<div class="container-fluid">
+
+    <!-- start page title -->
+    <app-page-title title="Team Details"></app-page-title>
+    <!-- end page title -->
+    
+<div class="card">
+    <div class="row">
+        <div class="card-body">
+          <div class="mb-3 row">
+          <div class="col-md-10">
+
+            <h4> <i class="fas fa-user border" style="font-size: 47px; padding: 9px;"></i>
+                <select  class="form-control" name="user_id"  [(ngModel)]="teamdetails.user_id"  disabled  style="background: none;
+                border: none;
+                font-weight: 700;
+                width: auto;
+                margin-left: 60px;
+                margin-top: -38px;
+                font-size: 20px;">
+                <option value="">-- Select User Name --</option>
+                <option *ngFor="let ul of usersArr"  value="{{ul.user_id}}"> {{ul.firstname}} {{ul.middlename}} {{ul.lastname}}
+                </option>
+            </select>
+            </h4>
+            </div>
+            <div class="col-md-2">
+            <button type="button" class="btn btn-primary mb-3" (click)="back()" style="text-align: right;"><i class='fas fa-angle-left fa-lg'></i> Back</button>&nbsp;
+            </div>
+            </div>
+    <div class="mb-3 row">
+
+      <div class="col-md-4">
+          <div class="row">
+            <div class="col-md-6">
+              <label for="example-text-input" class="col-form-label"  style="font-weight: 400;">Team Name :</label>
+            </div>
+            <div class="col-md-6"  style="margin-left: -100px;">
+              <!-- <input class="form-control" type="text" name="firstname" [(ngModel)]="teamdetails.firstname"  disabled> -->
+              <select  class="form-control" name="user_id"  [(ngModel)]="teamdetails.team_id"  disabled  style="background: none;
+              border: none;
+              font-weight: 700;
+              width: auto;">
+                  <option value="">-- Select Team Name --</option>
+                  <option *ngFor="let tl of teamsArr"  value="{{tl.team_id}}">  {{tl.teamname}}
+                  </option>
+              </select>
+            </div>
+          </div>
+      </div>
+      <div class="col-md-4">
+         <div class="row">
+            <div class="col-md-6">
+              <label for="example-text-input" class="col-form-label"  style="font-weight: 400;">Designation :</label>
+            </div>
+            <div class="col-md-6"  style="margin-left: -100px;">
+              <!-- <input class="form-control" type="text" name="firstname" [(ngModel)]="teamdetails.firstname"  disabled> -->
+              <select  class="form-control" name="user_id"  [(ngModel)]="teamdetails.designation_id"  disabled  style="background: none;
+              border: none;
+              font-weight: 700;
+              width: auto;">
+                  <option value="">-- Select Designation --</option>
+                  <option *ngFor="let dl of designationArr"  value="{{dl.designation_id}}"> {{dl.designation}}
+                  </option>
+              </select>
+            </div>
+          </div>
+      </div>
+
+    </div>
+
+    <div class="mb-3 row">
+  
+      
+      <div class="col-md-4">
+          <div class="row">
+            <div class="col-md-6">
+              <label for="example-text-input" class="col-form-label"  style="font-weight: 400;">Status :</label>
+            </div>
+            <div class="col-md-6"  style="margin-left: -100px;">
+              <!-- <input class="form-control" type="text" name="firstname" [(ngModel)]="teamdetails.firstname"  disabled> -->
+              <select  class="form-control" name="user_id"  [(ngModel)]="teamdetails.status"  disabled  style="background: none;
+              border: none;
+              font-weight: 700;
+              width: auto;">
+                  <option value="">-- Select Status --</option>
+                  <option *ngFor="let sl of statusArr"  value="{{sl.team_status_id}}"> {{sl.teamstatus}}
+                  </option>
+              </select>
+            </div>
+          </div>
+      </div>
+  
+      <div class="col-md-4">
+          <div class="row">
+            <div class="col-md-6">
+              <label for="example-text-input" class="col-form-label"  style="font-weight: 400;">From Date :</label>
+            </div>
+            <div class="col-md-6"  style="margin-left: -100px;">
+              <!-- <input class="form-control" type="text" name="firstname" [(ngModel)]="teamdetails.firstname"  disabled> -->
+              <input class="form-control" type="text" value="" name="from_date"  [(ngModel)]="teamdetails.from_date"  disabled  style="background: none;
+              border: none;
+              font-weight: 700;
+              width: auto;">
+            </div>
+          </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="row">
+            <div class="col-md-6">
+              <label for="example-text-input" class="col-form-label"  style="font-weight: 400;">To Date :</label>
+            </div>
+            <div class="col-md-6"  style="margin-left: -100px;">
+              <!-- <input class="form-control" type="text" name="firstname" [(ngModel)]="teamdetails.firstname"  disabled> -->
+              <input class="form-control" type="text" value="" name="to_date"  [(ngModel)]="teamdetails.to_date"  disabled  style="background: none;
+              border: none;
+              font-weight: 700;
+              width: auto;">
+            </div>
+          </div>
+      </div>
+      
+    </div>
+  </div>
+  </div>
+    
+</div>
+
+   
+  
+  </div> <!-- container-fluid -->
+  

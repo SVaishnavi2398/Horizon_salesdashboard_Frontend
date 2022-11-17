@@ -1,0 +1,67 @@
+<div class="container-fluid">
+    <!-- <app-page-title title="Teams List"></app-page-title> -->
+   
+    <div class="row">
+        <div class="col-md-4">
+          <div>
+            <app-page-title title="Sales Documents List"></app-page-title>
+
+          </div>
+        </div>
+        <!-- <div class="col-md-8"  style="text-align: right;">
+                <button type="button" class="btn btn-primary mb-3"  routerLink="/form/salesdetailsview/{{salesdetails.sales_id}}"><i class="mdi mdi-plus me-1"></i>
+                Add Sales Documents</button>
+        </div> -->
+        <!-- Search -->
+        <!-- <div class="col-md-12">
+            <div id="tickets-table_filter" class="dataTables_length"><label
+                class="d-inline-flex align-items-center">Search:
+                <input type="text" name="searchcompanylist" class="form-control form-control-sm ms-2"
+                  aria-controls="tickets-table" [(ngModel)]="searchcompanylist"></label>
+              </div>
+        </div> -->
+      <!-- End search -->
+      </div>
+
+      
+  <div class="row">
+      <div class="col-lg-12">
+          <div class="card">
+              <div class="card-body">
+                  <!-- <h4 class="card-title">Registered Roles</h4> -->
+    
+                  <div class="table-responsive">
+                      <table class="table mb-0">
+                          <thead>
+                              <tr>
+                                  <th>Name</th>
+                                  <th>Doc 1</th>
+                                  <th>Doc 2</th>
+                                  <th>Doc 3</th>
+                                  <th>Doc 4</th>
+                                  <th>Doc 5</th>
+                                  
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr  *ngFor="let salesdocuments of salesdocumentsArr">
+                                    <th scope="row">{{salesdocuments.name}}</th>
+                                    <td><a href="assets/img/{{salesdocuments.doc1}}" width="25%" height="25%">FIle1</a></td>
+                                    <td><a href="assets/img/{{salesdocuments.doc2}}" width="25%" height="25%">FIle1</a></td>
+                                    <td><a href="assets/img/{{salesdocuments.doc3}}" width="25%" height="25%">FIle1</a></td>
+                                    <td><a href="assets/img/{{salesdocuments.doc4}}" width="25%" height="25%">FIle1</a></td>
+                                    <td><a href="assets/img/{{salesdocuments.doc5}}" width="25%" height="25%">FIle1</a></td>
+
+                              </tr>
+                             
+                          </tbody>
+                      </table>
+                  </div>
+  
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- end row -->
+  </div>
+  

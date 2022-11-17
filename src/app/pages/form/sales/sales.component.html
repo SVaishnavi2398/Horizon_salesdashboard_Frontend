@@ -1,0 +1,95 @@
+<!-- <p>sales works!</p> -->
+
+<div class="container-fluid">
+    <app-page-title title="Tabs & Accordions"></app-page-title>
+
+  
+    <div class="row">
+        <div class="card">
+          <div class="card-body">
+            <!-- <h4 class="card-title">Nav pills justify</h4>
+            <p class="card-title-desc">Example of Nav pills justified</p> -->
+            <ul ngbNav #justifiednavpills="ngbNav" [activeId]="1" class="nav-pills nav-justified bg-light">
+              <li [ngbNavItem]="1">
+                <a ngbNavLink>
+                  <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
+                  <span class="d-none d-sm-block">Client Details</span>
+                </a>
+                <ng-template ngbNavContent>
+                  <ng-template [ngTemplateOutlet]="TabContent"></ng-template>
+                </ng-template>
+              </li>
+              <li [ngbNavItem]="2">
+                <a ngbNavLink>
+                  <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
+                  <span class="d-none d-sm-block">Channel Partner</span>
+                </a>
+                <ng-template ngbNavContent>
+                  <ng-template [ngTemplateOutlet]="TabContent1"></ng-template>
+                </ng-template>
+              </li>
+              <li [ngbNavItem]="3">
+                <a ngbNavLink>
+                  <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+                  <span class="d-none d-sm-block">Sales Details</span>
+                </a>
+                <ng-template ngbNavContent>
+                  <ng-template [ngTemplateOutlet]="TabContent"></ng-template>
+                </ng-template>
+              </li>
+              <li [ngbNavItem]="4">
+                <a ngbNavLink>
+                  <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
+                  <span class="d-none d-sm-block">Client Payment</span>
+                </a>
+                <ng-template ngbNavContent>
+                  <ng-template [ngTemplateOutlet]="TabContent1"></ng-template>
+                </ng-template>
+              </li>
+            </ul>
+            <div [ngbNavOutlet]="justifiednavpills"></div>
+          </div>
+        </div>
+    </div><!-- End Justified Tabs -->
+      
+  
+    <!-- Tab Content -->
+    <ng-template #TabContent>
+      <p class="p-3 mb-0 text-muted">
+        Raw denim you probably haven't heard of them jean shorts Austin.
+        Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache
+        cliche tempor, williamsburg carles vegan helvetica. Reprehenderit
+        butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi,
+        qui irure terry richardson ex squid. Aliquip placeat salvia cillum
+        iphone. Seitan aliquip quis cardigan american apparel, butcher
+        voluptate nisi qui.
+      </p>
+    </ng-template>
+  
+    <!-- Tab Content -->
+    <ng-template #TabContent1>
+      <p class="p-3 mb-0 text-muted">
+        Food truck fixie locavore, accusamus mcsweeney's marfa nulla
+        single-origin coffee squid. Exercitation +1 labore velit, blog
+        sartorial PBR leggings next level wes anderson artisan four loko
+        farm-to-table craft beer twee. Qui photo booth letterpress,
+        commodo enim craft beer mlkshk aliquip jean shorts ullamco ad
+        vinyl cillum PBR. Homo nostrud organic, assumenda labore
+        aesthetic magna delectus.
+      </p>
+    </ng-template>
+  
+    <!-- Tab Content -->
+    <ng-template #TabContent2>
+      <p class="p-3 mb-0 text-muted">
+        Etsy mixtape wayfarers, ethical wes anderson tofu before they
+        sold out mcsweeney's organic lomo retro fanny pack lo-fi
+        farm-to-table readymade. Messenger bag gentrify pitchfork
+        tattooed craft beer, iphone skateboard locavore carles etsy
+        salvia banksy hoodie helvetica. DIY synth PBR banksy irony.
+        Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh
+        mi whatever gluten yr.
+      </p>
+    </ng-template>
+</div>
+  

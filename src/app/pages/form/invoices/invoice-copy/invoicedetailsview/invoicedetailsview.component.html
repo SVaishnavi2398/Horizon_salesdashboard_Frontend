@@ -1,0 +1,195 @@
+<div class="container-fluid">
+    <div class="page-title-box d-flex align-items-center justify-content-between">
+        <div class="mb-0 font-size-20">
+          <h4>Invoice Details</h4> 
+       </div>
+       <!-- <div class="col-md-8"  style="text-align: right;">
+               <button type="button" class="btn btn-primary mb-3"  routerLink="/form/newusers" style="margin-right: 10px;">Create Users</button>
+        
+               <button type="button" class="btn btn-primary mb-3"  routerLink="/form/documents/{{users.user_id}}">Add Documents</button>
+        </div> -->
+        <!-- <div class="page-title-right">
+            <a href="/form/newusers/"><button type="button" class="btn btn-success mb-3" style="float: right;"><i class="mdi mdi-plus me-1"></i> Create User</button></a>
+
+            <a href="/form/documents/{{users.id}}"><button type="button" class="btn btn-success mb-3" style="float: right;margin-right: 10px;"><i class="mdi mdi-plus me-1"></i> Add Documents</button></a>
+        </div> -->
+    </div>
+      <div class="card">
+        <div class="row">
+            <div class="card-body">
+                <div class="col-md-12">
+                <div class="table-responsive">
+                <table class="table" id='tab'>
+                    <!-- <h4> <i class="fas fa-user border" style="font-size: 47px; padding: 9px;"></i> {{users.firstname}} {{users.lastname}}</h4> -->
+                    <tbody>
+                      
+                        <tr>
+                              <td scope="col">Invoice ID</td>
+                              <td><b>{{invoicedetails.invoice_id}}</b></td>
+                         
+                              <td scope="col">Sales ID</td>
+                              <td><b>{{invoicedetails.sales_id}}</b></td>
+                          </tr>
+                          <tr>
+                              <td scope="col">Company Name</td>
+                              <td>  
+                                 <select  class="form-control"  name="company_id" disabled [(ngModel)]="invoicedetails.company_id" style="border: none;
+                                 background: white;
+                                 padding: 0px;
+                                 font-weight: 700;">
+                                 <option *ngFor="let sl of companylistArr"  value="{{sl.debtor_company_det_id}}" >  {{sl.cname}}
+                                  </option>
+                              </select>
+                              </td>
+                         
+                              <td scope="col">Invoice Number</td>
+                              <td><b>{{invoicedetails.invoice_num}}</b></td>
+                          </tr>
+                          <tr>
+                              <td scope="col">Invoice Date</td>
+                              <td><b>{{invoicedetails.invoice_date}}</b></td>
+                         
+                              <td scope="col">Payout Percentage</td>
+                              <td><b>{{invoicedetails.payout_percentage}}</b></td>
+                          </tr>
+                          
+                          <tr>
+                              <td scope="col">Taxable Amount</td>
+                              <td><b>{{invoicedetails.taxable_amt}}</b></td>
+                          
+                              <td scope="col">CGST Amount</td>
+                              <td><b>{{invoicedetails.cgst_amt}}</b></td>
+                          </tr>
+                          <tr>
+                              <td scope="col">SGST Amountn</td>
+                              <td><b>{{invoicedetails.sgst_amt}}</b></td>
+                        
+                              <td scope="col">Total GST Amount</td>
+                              <td><b>{{invoicedetails.total_gst_amt}}</b></td>
+                          <tr>
+                              <td scope="col">Total Invoice Amount</td>
+                              <td><b>{{invoicedetails.total_invoice_amt}}</b></td>
+                          
+                              <td scope="col">TDS Rate (in %)</td>
+                              <td><b>{{invoicedetails.tds_rate}}</b></td>
+                          </tr>
+                          <tr>
+                              <td scope="col">Receivable TDS Amount</td>
+                              <td><b>{{invoicedetails.receivable_tds_amt}}</b></td>
+                         
+                              <td scope="col">Receivable Amount</td>
+                              <td><b>{{invoicedetails.receivable_amt}}</b></td>
+                          </tr>
+                          <tr>
+                              <td scope="col">Invoice Status</td>
+                              <td><b>{{invoicedetails.inv_status_id}}</b></td>
+  
+                              <td scope="col">Invoice Submited Date</td>
+                              <td><b>{{invoicedetails.inv_submitted_date}}</b></td>
+                          </tr>
+                          <tr>
+                              <td scope="col">Due Amount</td>
+                              <td><b>{{invoicedetails.due_amt}}</b></td>
+  
+                              <td scope="col">Credit Note Amount</td>
+                              <td><b>{{invoicedetails.credit_note_amt}}</b></td>
+                          </tr>
+                         
+                        
+                    
+                      </tbody>
+                     
+                </table>
+               
+                </div>
+            </div>
+
+            
+
+
+       
+            </div>
+        </div>
+    </div>
+
+
+   
+
+
+
+
+
+    <!-- <div class="card">
+        <div class="card-body">
+     <form (ngSubmit)="onSubmit()">
+            <div class="mb-3 row">
+
+                <div class="col-md-2">
+                    <label for="example-text-input" class="col-form-label"><b>Select User</b></label>
+                    </div>
+                    <div class="col-md-6">
+
+                        <select  class="form-control"  name="user_id"  [(ngModel)]="users.user_id" disabled >
+                            <option value="">--Select User--</option>
+                            <option *ngFor='let users of usersArr' value="{{users.user_id}}">
+                            {{users.firstname}}
+                            </option>
+                        </select>
+                  
+                  </div> 
+                  </div>
+
+                 
+                  <div class="mb-3 row">
+                  <div class="col-md-2">
+   
+            <label for="example-text-input" class="col-form-label"><b>Add Comment</b></label>
+            </div>
+            <div class="col-md-6">
+            <textarea class="form-control" type="text" value="" id="comment"  name="comment"  [(ngModel)]="users.comment" required>
+            </textarea>
+            </div>
+        </div>
+            <button type="submit" class="btn btn-primary">Add</button>
+
+
+            
+           </form> 
+        </div>
+    </div> -->
+
+
+
+    <!-- <div class="card">
+        <div class="card-body">
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                  <h4>Comments</h4>
+                  <table>
+                      <tbody>
+                      <tr *ngFor="let com of commentArr">
+                              
+                         <td><i class="fas fa-user border" style="font-size: 40px; padding: 6px;"></i></td>
+                         <td>
+                             <tr></tr>
+                         <tr>
+                              {{users.firstname}} {{users.lastname}}
+                            </tr>
+                          <tr>
+                              {{com.comment}}
+                            </tr>
+                        </td>
+                    </tr>
+
+                        
+                
+
+
+
+                </tbody>
+                </table>
+                </div>
+            </div>  
+        </div>
+    </div> -->
+</div>

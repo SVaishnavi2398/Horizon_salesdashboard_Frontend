@@ -1,0 +1,156 @@
+<!-- <p>monthly-salary-list-view1 works!</p> -->
+<div class="card">
+    <div class="card-body">
+        <div class="card-header">
+            <h4 class="card-title">Generate Report</h4>
+        </div>
+        <form>
+            <div class="mb-3 row">
+
+                <div class="col-md-4">
+                    <label>Attendance Month</label>
+                   
+                    <!-- <select class="form-control" name="month" (change)="getMonth($event)">
+                        <option value="">-- Select Month --</option>
+                        <option *ngFor="let cl of monthArr" value="{{cl.month_year}}">
+                            {{cl.month}}/{{cl.month_year.split('-')[0]}}
+                        </option>
+                    </select>  -->
+                    <ng-select  name="month" (change)="getMonth(event)" [(ngModel)]="event">
+                        <ng-option value="">-- Select Month --</ng-option>
+                        <ng-option *ngFor="let cl of monthArr"  value="{{cl.month_year}}">
+                        {{cl.month}}/{{cl.month_year.split('-')[0]}}
+                        </ng-option>
+                       </ng-select>
+
+                    
+
+                    <!-- <select  class="form-control" name="attendance_month" (change)="getMonth($event)" >
+                        <option value="">-- Attendance Month --</option>
+                        <option *ngFor="let pl of monthDataArr"  value="{{pl.month_year}}">
+                        {{pl.month_name }}/{{pl.month_year.split('-')[0]}}
+                        </option>
+                     </select> -->
+                </div>
+
+                <div class="col-md-4">
+                    <label>Team </label>
+                    <select class="form-control" name="team_id" (change)="getTeam($event)">
+                        <option value="">-- Select Team --</option>
+                        <option *ngFor="let team of teamArr " value="{{team.team_id}}">
+                            {{team.teamname}}
+                        </option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label>Employee Name</label>
+                    <!-- <input type="text" class="form-control"  name="user_id" value="" [(ngModel)]="monthlysalary.user_id" > -->
+                    <select class="form-control" name="user_id" (change)="getAdvData($event)" [(ngModel)]="monthlysalary.user_id">
+                        <option value="">Select User</option>
+                        <option *ngFor="let ul of usersArr"  value="{{ul.user_id}}"> {{ul.firstname}} {{ul.middlename}} {{ul.lastname}}
+                        </option>
+                    </select>
+                </div>
+                <!-- <div class="col-md-3" style="padding-top: 28px;">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div> -->
+                 <!-- <div class="col-md-3" style="padding-top: 28px;">
+                    <button (click)="exportexcel()" class="btn btn-primary">Download</button>
+                </div> -->
+
+            </div>
+           
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        
+        <div class="card">
+            <div class="card-body">
+                <div class="col-md-3" style="padding-left: 5px;">
+                    <button (click)="exportexcel()" class="btn btn-primary">Download</button>
+                </div>
+                <div class="table-responsive">
+                    <table class="table mb-0" id="excel-table">
+                        <!-- <tr *ngFor="let team of teamArr " value="{{team.teamname}}">
+                            <td>{{team.teamname}}</td>
+                        </tr> -->
+                        <thead>
+                            
+                            <tr>
+                                <th hidden>Team Name</th>
+                                <th>Name</th>
+                               <th>Salary Month</th>
+                                <!-- <th>Absent Days</th>
+                                <th>Number Of Late Marks</th>
+                                <th>Penalty Leave Days</th>
+                                <th>Extra Days</th> -->
+                                <th>Net Present Days</th>
+                                <th>Basic Pay</th>
+                                <th>Monthly Basic Salary</th>
+                                <th>Monthly Variable Pay</th>
+                                <th>Reimbursement</th>
+                                <th>Incentives</th>
+                                <th>Deduction</th>
+                                <th>Liabilities</th>
+                                <th>Total Pay</th>
+                                <th>TDS Deducted</th>
+                                <th>Net Pay</th>
+                                <th>Status</th>
+                                <th>Remark</th>
+                                <th>Paid Amount</th>
+                                <th>Payment Details</th>
+                                <th>Pending Amount</th>
+                                <th>TDS Paid</th>
+                                <th>Net Salary Paid</th>
+                                <th>Boolean value</th>
+            
+                                
+                            </tr>
+                        </thead>
+                            <tbody>
+                                    
+                                <tr *ngFor="let data of MonthlyData">
+                                  <td hidden>{{data.teamname}}</td>  
+                                  <td>{{data.firstname}} {{data.lastname}}</td>
+                                  <td>{{data.salary_month}}</td>
+                                  <!-- <td>{{data.absent_days}}</td>
+                                  <td>{{data.no_of_late_marks}}</td>
+                                  <td>{{data.penalty_leave_days}}</td>
+                                  <td>{{data.extra_days}}</td> -->
+                                  <td>{{data.net_present_days}}</td>
+                                  <td>{{data.basic_pay}}</td>
+                                  <td>{{data.monthly_basic_salary}}</td>
+                                  <td>{{data.monthly_variable_pay}}</td>
+                                  <td>{{data.reimbursement}}</td>
+                                  <td>{{data.incentives}}</td>
+                                  <td>{{data.deduction}}</td>
+                                  <td>{{data.liabilities}}</td>
+                                  <td>{{data.total_pay}}</td>
+                                  <td>{{data.tds_deducted}}</td>
+                                  <td>{{data.net_pay}}</td>
+                                  <td>{{data.status}}</td>
+                                  <td>{{data.remark}}</td>
+                                  <td>{{data.paid_amount}}</td>
+                                  <td>{{data.payment_details}}</td>
+                                  <td>{{data.pending_amount}}</td>
+                                  <td>{{data.TDS_paid}}</td>
+                                  <td>{{data.net_salary_paid}}</td>
+                                  <td>{{data.boolean_value}}</td>
+                                </tr>
+                                <tr><td></td></tr>
+                                
+                      </tbody>
+                        
+                        
+                    </table>
+                </div>
+
+
+            </div>
+        </div>
+      
+   
+    </div>
+</div>

@@ -1,0 +1,135 @@
+<style>
+
+    button.btn.btn-success {
+        padding: 5px 10px;
+    }
+
+    button.btn.btn-info {
+        padding: 5px 10px;
+    }
+
+    button.btn.btn-danger {
+        padding: 4px 10px;
+    }
+    
+    td {
+        /* padding: 10px 15px; */
+        padding: 10px 10px;
+    }
+    
+    button.btn.btn-primary.mb-3 {
+        padding: 4px 8px;
+    }
+    
+</style>
+
+<div class="container-fluid">
+    <!-- <app-page-title title="Teams List"></app-page-title> -->
+   
+    <div class="row">
+        <div class="col-md-4">
+          <div>
+            <app-page-title title="Monthly Target List"></app-page-title>
+
+          </div>
+        </div>
+        <div class="col-md-8"  style="text-align: right;">
+                <button type="button" class="btn btn-primary mb-3"  routerLink="/form/salary/monthly-target"><i class="mdi mdi-plus me-1"></i>
+                Add Monthly Target Details</button>
+        </div>
+        <!-- Search -->
+        <!-- <div class="col-md-12">
+            <div id="tickets-table_filter" class="dataTables_length"><label
+                class="d-inline-flex align-items-center">Search:
+                <input type="text" name="searchcompanylist" class="form-control form-control-sm ms-2"
+                  aria-controls="tickets-table" [(ngModel)]="searchcompanylist"></label>
+              </div>
+        </div> -->
+      <!-- End search -->
+      <div class="col-md-8">
+        <!-- <div id="tickets-table_filter" class="dataTables_length"><label
+            class="d-inline-flex align-items-center">Search:
+            <input type="text" name="searchmonthlytarget" class="form-control form-control-sm ms-2"
+              aria-controls="tickets-table" [(ngModel)]="searchmonthlytarget"></label>
+          </div> -->
+    </div>
+     <!-- End search -->
+    <div class="col-md-4">
+      <ngb-pagination class="d-flex justify-content-center" [(page)]="page" [maxSize]="4" [collectionSize]="monthlysalaryList.length" [boundaryLinks]="true"  style="justify-content: right!important;"></ngb-pagination>
+      </div>
+      </div>
+
+      
+  <div class="row">
+      <div class="col-lg-12">
+          <div class="card">
+              <div class="card-body"  style="padding: 0 10px 0 10px;">
+                  <!-- <h4 class="card-title">Registered Roles</h4> -->
+    
+                  <div class="table-responsive">
+                      <table class="table mb-0">
+                          <thead>
+                             <!-- Sorting-->
+                             <tr>
+                                <th [class.active]="order === 'firstname'" (click)="setOrder('firstname')">
+                                    User Name <span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th [class.active]="order === 'from_date'" (click)="setOrder('from_date')">
+                                    From Date<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th [class.active]="order === 'to_date'" (click)="setOrder('to_date')">
+                                    To Date<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th [class.active]="order === 'status'" (click)="setOrder('status')">
+                                    Status<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th>Actions</th>
+                              </tr>
+                              <!-- Sorting End-->
+                              <!-- Search -->
+                               <tr>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2"
+                                        aria-controls="tickets-table" [(ngModel)]="firstname_Search">
+                                </th>
+                                <th>
+                                    <input type="date" class="form-control form-control-sm ms-2"
+                                        aria-controls="tickets-table" [(ngModel)]="from_date_Search">
+                                </th>
+                                <th>
+                                    <input type="date" class="form-control form-control-sm ms-2"
+                                        aria-controls="tickets-table" [(ngModel)]="to_date_Search">
+                                </th>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2"
+                                        aria-controls="tickets-table" [(ngModel)]="status_Search">
+                                </th> 
+                            </tr> 
+                            <!-- End search -->
+                
+                          </thead>
+                          <tbody>
+                              <tr *ngFor="let monthlytarget of monthlytargetArr | searchmonthlytarget:firstname_Search:from_date_Search:to_date_Search:status_Search | orderBy: order:reverse:caseInsensitive | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+                                    <!-- <th scope="row">{{monthlytarget.monthly_target_id}}</th> -->
+                                    <td>{{monthlytarget.firstname}} {{monthlytarget.middlename}} {{monthlytarget.lastname}}</td>
+                                    <td>{{monthlytarget.from_date}}</td>
+                                    <td>{{monthlytarget.to_date}}</td>
+                                    <td>{{monthlytarget.status}}</td>
+                                   
+                                    <td>
+                                        <button type="button" class="btn btn-info"  routerLink="/form/salary/editmonthlytarget/{{monthlytarget.monthly_target_id}}"><i class="uil-pen"></i></button>
+                                        &nbsp;
+                                        <button type="button" class="btn btn-danger"  (click)="deleteMonthlytargetData(monthlytarget.monthly_target_id)"><i class="uil-trash-alt"></i></button>
+                                    </td>
+                              </tr>
+                             
+                          </tbody>
+                      </table>
+                  </div>
+  
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- end row -->
+  </div>

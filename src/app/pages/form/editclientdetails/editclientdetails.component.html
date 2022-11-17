@@ -1,0 +1,92 @@
+<div class="container-fluid">
+
+  
+    <app-page-title title="Update Client Details"></app-page-title>
+    
+
+
+<form  (ngSubmit)="updateclientdetails()">
+
+    <div class="mb-3 row">
+  
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Client Name</label>
+            <input class="form-control" type="text" value="" id="name"  name="name"  [(ngModel)]="clientdetails.name">
+        </div>
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Category</label>
+            <!-- <input class="form-control" type="text" value="" id="catrgory_id"  name="catrgory_id"  [(ngModel)]="clientdetails.catrgory_id"> -->
+            <select  class="form-control"  name="catrgory_id"  [(ngModel)]="clientdetails.catrgory_id">
+                <option value="">-- Select Category --</option>
+                <option value="1">Category 1</option>
+                <option value="2">Category 2</option>
+            </select>
+        </div>
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Occupation</label>
+            <!-- <input class="form-control" type="text" value="" id="occupation_id"  name="occupation_id"  [(ngModel)]="clientdetails.occupation_id"> -->
+            <select  class="form-control"  name="occupation_id"  [(ngModel)]="clientdetails.occupation_id">
+                <option value="">-- Select Occupation --</option>
+                <option value="1">Occupation 1</option>
+                <option value="2">Occupation 2</option>
+            </select>
+        </div>
+
+    </div>
+
+
+    <div class="mb-3 row">
+
+        <div class="col-md-6">
+      <label for="example-text-input" class="col-form-label">Conatct No. - 1</label>
+      <input class="form-control" type="text" value="" id="mobile1"  name="mobile1"  [(ngModel)]="clientdetails.mobile1" 
+      (keypress)="keyPressNumbers($event)"
+      maxlength="10">
+        </div>
+
+        <div class="col-md-6">
+      <label for="example-text-input" class="col-form-label">Conatct No. - 2</label>
+      <input class="form-control" type="text" value="" id="mobile2"  name="mobile2"  [(ngModel)]="clientdetails.mobile2" 
+      (keypress)="keyPressNumbers($event)"
+      maxlength="10">
+        </div>
+
+    </div>
+
+
+    <div class="mb-3 row">
+
+        <div class="col-md-6">
+        <label for="example-text-input" class="col-form-label">Email - 1</label>
+        <input class="form-control" type="email" value="" id="email1"  name="email1"  [(ngModel)]="clientdetails.email1">
+        </div>
+
+        <div class="col-md-6">
+        <label for="example-text-input" class="col-form-label">Email - 2</label>
+        <input class="form-control" type="email" value="" id="email2"  name="email2"  [(ngModel)]="clientdetails.email2">
+        </div>
+
+    </div>
+
+    <div class="mb-3 row">
+
+        <div class="col-md-6">
+        <label for="example-text-input" class="col-form-label">Address</label>
+        <textarea class="form-control" type="text" value="" id="address"  name="address"  [(ngModel)]="clientdetails.address"></textarea>
+        </div>
+
+        <div class="col-md-6">
+        <label for="example-text-input" class="col-form-label">Date Of Birth</label>
+        <input class="form-control" type="date" value="" id="date_of_birth"  name="date_of_birth"  [(ngModel)]="clientdetails.date_of_birth">
+        </div>
+
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>&nbsp;
+    <button type="submit" class="btn btn-primary" routerLink="/form/clientdetailslist">Cancel</button>
+</form>
+
+   
+  
+</div> 

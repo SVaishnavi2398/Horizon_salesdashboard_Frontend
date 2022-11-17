@@ -1,0 +1,347 @@
+<div class="container-fluid">
+
+    <!-- start page title -->
+    <!-- <app-page-title title="Create Sales Details"></app-page-title> -->
+    <!-- end page title -->
+
+    <div class="page-title-box d-flex align-items-center justify-content-between"  style="padding-bottom:0px !important;"> 
+      <!-- start page title -->
+      <div class="mb-0 font-size-20">
+          <h4>Add Invoice Details</h4> 
+      </div>
+      
+      <!-- end page title -->
+
+ 
+    </div> 
+
+
+<form  (ngSubmit)="submit()">
+
+  
+
+
+  <div class="mb-3 row">
+
+   
+
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Company Name</label>
+      <input class="form-control" type="text" value="" id="cname" name="cname"  [(ngModel)]="companylistArr.cname">
+      <!-- <span class="text-danger" [hidden]="!error.cname">{{error.cname}}</span> -->
+    </div>
+
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">GST Number</label>
+      <input class="form-control" type="text" value="" id="cgst" name="cgst"  [(ngModel)]="companylistArr.cgst">
+      <span class="text-danger" [hidden]="!error.cgst">{{error.cgst}}</span>
+    </div>
+
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Invoice Number</label>
+      <input class="form-control" type="text" *ngFor="let in of invoiceArr" value="" id="invoice_date" name="invoice_date"  [(ngModel)]="in.invoice_num">
+      <span class="text-danger" [hidden]="!error.invoice_date">{{error.invoice_date}}</span>
+    </div>
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Invoice Date</label>
+      <input class="form-control" type="date" *ngFor="let in of invoiceArr" value="" id="invoice_num" name="invoice_num"  [(ngModel)]="in.invoice_date">
+      <span class="text-danger" [hidden]="!error.invoice_num">{{error.invoice_num}}</span>
+    </div>
+
+    <!-- <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Client Name</label>
+      <select class="form-control" name="client_id"  [(ngModel)]="invoicedetails.client_id" (change)="getState2($event)" placeholder="-- Select Client Name --">
+        <option *ngFor="let cl of clientlistArr"  value="{{cl.client_id}}">
+        {{cl.name}}
+        </option>
+       </select>
+      <span class="text-danger" [hidden]="!error.client_id">{{error.client_id}}</span>
+    </div> -->
+    
+
+  </div>
+  
+  <form [formGroup]="form">
+   <div formArrayName="passenger" style="border-left: none !important;">
+      <div
+        *ngFor="let passengerGroup of passenger?.controls; let i = index"
+        [formGroupName]="i"
+        style="border-left: none !important;margin-bottom: 14px !important;">
+        <div class="mb-3 row">
+          <div class="col-md-12">
+        <select class="form-control" formControlName="client_id" (change)="getState2($event)" placeholder="-- Select Client Name --">
+          <option *ngFor="let cl of clientsArr"  value="{{cl.client_id}}">
+          {{cl.name}}
+          </option>
+         </select>
+         </div>
+        </div>
+         <div class="mb-3 row">
+          <div class="col-md-12">
+          <div class="card">
+               <div class="card-body">
+                  <div class="table-responsive">
+                          <table class="table table-centered table-nowrap mb-0 align-middle"  id="excel-table">
+                            <thead class="table-light">
+                               <tr>
+                                    <th>
+                                       Sales ID
+                                    </th>
+                                    <th>
+                                      Flat Number
+                                    </th> 
+                                    <th>
+                                      Building Name
+                                    </th>  
+                                    <th>
+                                      Payout Value
+                                    </th>
+                                    <th>
+                                      Consideration Value
+                                    </th>  
+                                   </tr>
+                             </thead>
+                              <tbody>
+                              <tr>
+                                    <td>
+                                       {{sales_id[i] | json}}
+                                    </td>
+                                    <td>
+                                      {{flat_no[i] | json}}
+                                   </td>
+                                   <td>
+                                    {{building_name[i] | json}}
+                                 </td>
+                                 <td>
+                                  {{payout_value[i] | json}}
+                               </td>
+                               <td>
+                                {{consideration_value[i] | json}}
+                             </td>
+                              </tr>
+                            </tbody>
+                        </table>
+  
+                    </div>
+                    <!-- end table -->
+                </div>
+            </div>
+            </div>
+        </div>
+     </div>
+   </div>
+   
+  <div class="mb-3 row">
+    <div class="col-md-3">
+     <button (click)="addPassenger()"  class="btn btn-primary">Add Client</button>
+     </div>
+  </div>
+    
+  </form>
+
+
+
+    <!-- <div class="mb-3 row"  *ngFor="let div of newDivs">
+
+    
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Flat Number2</label>
+        <select class="form-control" name="flat_no"  [(ngModel)]="invoicedetails.flat_no1" (change)="getflatdetails1($event)" placeholder="-- Select Client Name --">
+          <option *ngFor="let cl of sales"  value="{{cl.flat_no}}">
+          {{cl.flat_no}}
+          </option>
+         </select>
+        
+      </div>
+  
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">building_name</label>
+        <input class="form-control" type="text" value="" id="building_name"  name="building_name1"  [(ngModel)]="flatdetails1.building_name">
+      </div>
+  
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">consideration_value</label>
+        <input class="form-control" type="text" value="" id="consideration_value"  name="consideration_value1"  [(ngModel)]="flatdetails1.consideration_value">
+      </div>
+  
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Payout Value</label>
+        <input class="form-control" type="text" value="" id="payout_value"  name="payout_value1"  [(ngModel)]="flatdetails1.payout_value">
+      </div>
+      </div> -->
+
+
+   
+  
+    
+    <!-- form - {{form.value | json}} -->
+
+    
+     
+  <!-- <div class="mb-3 row">
+
+    
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Payout Percentage </label>
+      <input class="form-control" type="text" value="" id="payout_percentage"  name="payout_percentage"  [(ngModel)]="invoicedetails.payout_percentage">
+      <span class="text-danger" [hidden]="!error.payout_percentage">{{error.payout_percentage}}</span>
+    </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Taxable Amount</label>
+      <input class="form-control" type="text" value="" id="taxable_amt"  name="taxable_amt"  [(ngModel)]="invoicedetails.taxable_amt">
+      <span class="text-danger" [hidden]="!error.taxable_amt">{{error.taxable_amt}}</span>             
+    </div>
+
+    <div class="col-md-3" [ngClass]="{gst : value == false}">
+      <label for="example-text-input" class="col-form-label">CGST Amount</label>
+      <select  class="form-control" name="cgst_amt"  [(ngModel)]="invoicedetails.cgst_amt">
+         <option   value="{{invoicedetails.cgst_amt}}" selected> {{bmi}}
+          </option>
+      </select>
+      <span class="text-danger" [hidden]="!error.cgst_amt">{{error.cgst_amt}}</span>
+  </div>
+
+  <div class="col-md-3">
+    <label for="example-text-input" class="col-form-label">SGST Amount</label>
+    <select  class="form-control" name="sgst_amt"  [(ngModel)]="invoicedetails.sgst_amt">
+       <option   value="{{invoicedetails.sgst_amt}}" selected> {{bmi1}}
+        </option>
+    </select>
+    <span class="text-danger" [hidden]="!error.sgst_amt">{{error.sgst_amt}}</span>
+   </div>
+  </div>
+
+
+  <div class="mb-3 row">
+
+    
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">IGST Amount</label>
+      <select  class="form-control" name="igst_amt"  [(ngModel)]="invoicedetails.igst_amt">
+         <option   value="{{invoicedetails.igst_amt}}" selected> {{bmi2}}
+          </option>
+      </select>
+      <span class="text-danger" [hidden]="!error.igst_amt">{{error.igst_amt}}</span>
+     </div>
+
+  
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Total GST Amount</label>
+      <select  class="form-control" name="total_gst_amt"  [(ngModel)]="invoicedetails.total_gst_amt">
+         <option   value="{{invoicedetails.total_gst_amt}}" selected> {{bmi3}}
+          </option>
+      </select>
+      <span class="text-danger" [hidden]="!error.total_gst_amt">{{error.total_gst_amt}}</span>
+     </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Total Invoice Amount</label>
+      <select  class="form-control" name="total_invoice_amt"  [(ngModel)]="invoicedetails.total_invoice_amt">
+      <option   value="{{invoicedetails.total_invoice_amt}}" selected> {{bmi4}}
+      </option>
+      </select>
+      <span class="text-danger" [hidden]="!error.total_invoice_amt">{{error.total_invoice_amt}}</span>
+     </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">TDS Rate (in %)</label>
+      <input class="form-control" type="text" value="" id="tds_rate"  name="tds_rate"  [(ngModel)]="invoicedetails.tds_rate">
+      <span class="text-danger" [hidden]="!error.tds_rate">{{error.tds_rate}}</span>
+    </div>
+
+  
+   
+
+
+  </div>
+
+  <div class="mb-3 row">
+   
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Receivable TDS Amount</label>
+      <select  class="form-control" name="receivable_tds_amt"  [(ngModel)]="invoicedetails.receivable_tds_amt">
+         <option   value="{{invoicedetails.receivable_tds_amt}}" selected> {{bmi6}}
+          </option>
+      </select>
+      <span class="text-danger" [hidden]="!error.receivable_tds_amt">{{error.receivable_tds_amt}}</span>
+     </div>
+
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Receivable Amount</label>
+      <select  class="form-control" name="receivable_amt"  [(ngModel)]="invoicedetails.receivable_amt">
+      <option   value="{{invoicedetails.receivable_amt}}" selected> {{bmi5}}
+      </option>
+      </select>
+      <span class="text-danger" [hidden]="!error.receivable_amt">{{error.receivable_amt}}</span>
+     </div>
+
+     <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Received Amount</label>
+      <input class="form-control" type="text" value="" id="received_amt"  name="received_amt"  [(ngModel)]="invoicedetails.received_amt">
+      <span class="text-danger" [hidden]="!error.received_amt">{{error.received_amt}}</span>
+    </div>
+
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Suspense Amount</label>
+      <select  class="form-control" name="suspense_amt"  [(ngModel)]="invoicedetails.suspense_amt">
+      <option   value="{{invoicedetails.suspense_amt}}" selected> {{bmi8}}
+      </option>
+      </select>
+      <span class="text-danger" [hidden]="!error.suspense_amt">{{error.suspense_amt}}</span>
+     </div>
+</div>
+   
+    <div class="mb-3 row">
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Invoice Status</label>
+      <select  class="form-control"  name="inv_status_id"  [(ngModel)]="invoicedetails.inv_status_id">
+        <option value="">-- Select Invoice Status --</option>
+        <option *ngFor="let sl of invoicestatusArr"  value="{{sl.inv_status_id}}">  {{sl.status}}
+        </option>
+    </select>
+    <span class="text-danger" [hidden]="!error.inv_status_id">The status field is required</span>
+    </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Invoice Submited Date</label>
+      <input class="form-control" type="date" value="" id="inv_submitted_date"  name="inv_submitted_date"  [(ngModel)]="invoicedetails.inv_submitted_date">
+      <span class="text-danger" [hidden]="!error.inv_submitted_date">{{error.inv_submitted_date}}</span>   
+    </div>
+    
+
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Due Amount</label>
+      <select  class="form-control" name="due_amt"  [(ngModel)]="invoicedetails.due_amt">
+      <option   value="{{invoicedetails.due_amt}}" selected> {{bmi7}}
+      </option>
+      </select>
+      <span class="text-danger" [hidden]="!error.due_amt">{{error.due_amt}}</span>
+     </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Credit Note Amount</label>
+      <input class="form-control" type="text" value="" id="credit_note_amt"  name="credit_note_amt"  [(ngModel)]="invoicedetails.credit_note_amt">
+      <span class="text-danger" [hidden]="!error.credit_note_amt">{{error.credit_note_amt}}</span>
+    </div>
+
+  </div> -->
+
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+  
+  </div>
+
+ 
+
+
+
+

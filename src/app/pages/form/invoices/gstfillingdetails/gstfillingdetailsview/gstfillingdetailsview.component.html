@@ -1,0 +1,156 @@
+<div class="container-fluid">
+    <div class="page-title-box d-flex align-items-center justify-content-between">
+        <div class="mb-0 font-size-20">
+          <h4>GST Filling Details</h4> 
+       </div>
+       <div class="col-md-8"  style="text-align: right;">
+        <button type="button" class="btn btn-primary mb-3" (click)="back()" style="text-align: right;"><i class='fas fa-angle-left fa-lg'></i> Back</button>&nbsp;
+        <button type="button" class="btn btn-primary mb-3" routerLink="/form/invoices/gstfillingdetails/editgstfillingdetails/{{gstfillingdetails.gst_filling_det_id}}"><i class='fas fa-edit fa-lg'></i></button>&nbsp;
+        <button type="button" class="btn btn-primary mb-3"  (click)="doSomeLogics()"><i class='fas fa-angle-left fa-lg'></i></button>&nbsp;
+        <button type="button" class="btn btn-primary mb-3"  (click)="doSomeLogic()"><i class='fas fa-angle-right fa-lg'></i></button>
+        </div>
+        <!-- <div class="page-title-right">
+            <a href="/form/newusers/"><button type="button" class="btn btn-success mb-3" style="float: right;"><i class="mdi mdi-plus me-1"></i> Create User</button></a>
+
+            <a href="/form/documents/{{users.id}}"><button type="button" class="btn btn-success mb-3" style="float: right;margin-right: 10px;"><i class="mdi mdi-plus me-1"></i> Add Documents</button></a>
+        </div> -->
+    </div>
+      <div class="card">
+        <div class="row">
+            <div class="card-body">
+                <div class="col-md-12">
+                <div class="table-responsive">
+                <table class="table" id='tab'>
+                    <!-- <h4> <i class="fas fa-user border" style="font-size: 47px; padding: 9px;"></i> {{users.firstname}} {{users.lastname}}</h4> -->
+                    <tbody>
+                      
+                        <tr>
+                              <!-- <td scope="col">ID</td>
+                              <td><b>{{gstfillingdetails.gst_filling_det_id  }}</b></td> -->
+
+                              <td scope="col">Invoice Number</td>
+                              <td> <select  class="form-control"  name="invoice_id"  [(ngModel)]="gstfillingdetails.invoice_id" disabled style="border: none;
+                                background: white;
+                                padding: 0px;
+                                font-weight: 700;">
+                               <option *ngFor="let sl of invoicedetailsArr"  value="{{sl.invoice_id}}">  {{sl.invoice_num}}
+                                </option>
+                            </select></td>
+                         
+                          </tr>
+                          <tr>
+                              <td scope="col">Invoice Type</td>
+                              <td><b>{{gstfillingdetails.inv_type}}</b></td>
+                         
+                              <td scope="col">GSTR1 Month</td>
+                              <td><b>{{gstfillingdetails.gstr1_month}}</b></td>
+                          </tr>
+                          <tr>
+                              <td scope="col">GSTR1 Amount</td>
+                              <td><b>{{gstfillingdetails.gstr1_amount}}</b></td>
+                         
+                              <td scope="col">Filed Status</td>
+                              <td><b>{{gstfillingdetails.filed_status}}</b></td>
+                          </tr>
+                          
+                        
+                         
+                         
+                        
+                    
+                      </tbody>
+                     
+                </table>
+               
+                </div>
+            </div>
+
+            
+
+
+       
+            </div>
+        </div>
+    </div>
+
+
+   
+
+
+
+
+
+    <!-- <div class="card">
+        <div class="card-body">
+     <form (ngSubmit)="onSubmit()">
+            <div class="mb-3 row">
+
+                <div class="col-md-2">
+                    <label for="example-text-input" class="col-form-label"><b>Select User</b></label>
+                    </div>
+                    <div class="col-md-6">
+
+                        <select  class="form-control"  name="user_id"  [(ngModel)]="users.user_id" disabled >
+                            <option value="">--Select User--</option>
+                            <option *ngFor='let users of usersArr' value="{{users.user_id}}">
+                            {{users.firstname}}
+                            </option>
+                        </select>
+                  
+                  </div> 
+                  </div>
+
+                 
+                  <div class="mb-3 row">
+                  <div class="col-md-2">
+   
+            <label for="example-text-input" class="col-form-label"><b>Add Comment</b></label>
+            </div>
+            <div class="col-md-6">
+            <textarea class="form-control" type="text" value="" id="comment"  name="comment"  [(ngModel)]="users.comment" required>
+            </textarea>
+            </div>
+        </div>
+            <button type="submit" class="btn btn-primary">Add</button>
+
+
+            
+           </form> 
+        </div>
+    </div> -->
+
+
+
+    <!-- <div class="card">
+        <div class="card-body">
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                  <h4>Comments</h4>
+                  <table>
+                      <tbody>
+                      <tr *ngFor="let com of commentArr">
+                              
+                         <td><i class="fas fa-user border" style="font-size: 40px; padding: 6px;"></i></td>
+                         <td>
+                             <tr></tr>
+                         <tr>
+                              {{users.firstname}} {{users.lastname}}
+                            </tr>
+                          <tr>
+                              {{com.comment}}
+                            </tr>
+                        </td>
+                    </tr>
+
+                        
+                
+
+
+
+                </tbody>
+                </table>
+                </div>
+            </div>  
+        </div>
+    </div> -->
+</div>

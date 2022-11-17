@@ -1,0 +1,110 @@
+<div class="container-fluid">
+    <!-- <app-page-title title="Teams List"></app-page-title> -->
+   
+    <div class="row">
+        <div class="col-md-4">
+          <div>
+            <app-page-title title="Team Leaders List"></app-page-title>
+
+          </div>
+        </div>
+        <div class="col-md-8"  style="text-align: right;">
+                <button type="button" class="btn btn-primary mb-3"  routerLink="/form/teamleaders"><i class="mdi mdi-plus me-1"></i>
+                Add Team Leader</button>
+        </div>
+        <!-- Search -->
+        <div class="col-md-8">
+            <!-- <div id="tickets-table_filter" class="dataTables_length"><label
+                class="d-inline-flex align-items-center">Search:
+                <input type="text" name="searchteamleaderslist" class="form-control form-control-sm ms-2"
+                  aria-controls="tickets-table"  [(ngModel)]="searchteamleaderslist"></label>
+              </div> -->
+        </div>
+      <!-- End search -->
+      <div class="col-md-4">
+        <ngb-pagination class="d-flex justify-content-center" [(page)]="page" [maxSize]="4" [collectionSize]="teamleaderList.length" [boundaryLinks]="true"  style="justify-content: right!important;"></ngb-pagination>
+    </div>
+      </div>
+      
+  <div class="row">
+      <div class="col-lg-12">
+          <div class="card">
+              <div class="card-body">
+                  <!-- <h4 class="card-title">Registered Roles</h4> -->
+    
+                  <div class="table-responsive">
+                      <table class="table mb-0">
+                          <thead>
+                               <!-- Sorting-->
+                             <tr>
+                                <th [class.active]="order === 'teamname'" (click)="setOrder('teamname')">
+                                    Team Name <span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                </th>
+                                <th [class.active]="order === 'firstname'" (click)="setOrder('firstname')">
+                                    Team Leader Name<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                </th>
+                                <th [class.active]="order === 'teamstatus'" (click)="setOrder('teamstatus')">
+                                    Status<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                </th>
+                                <th [class.active]="order === 'from_date'" (click)="setOrder('from_date')">
+                                    From Date<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                </th>
+                                <th [class.active]="order === 'to_date'" (click)="setOrder('to_date')">
+                                    To Date<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                </th>
+                                <th>Actions</th>
+                            </tr>
+                            <!-- Sorting End-->
+                            <!-- Search -->
+                              <tr>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2"
+                                        aria-controls="tickets-table" [(ngModel)]="teamname_Search">
+                                </th>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2"
+                                        aria-controls="tickets-table" [(ngModel)]="firstname_search">
+                                </th>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2"
+                                        aria-controls="tickets-table" [(ngModel)]="teamstatus_search">
+                                </th>
+                                <th>
+                                    <input type="date" class="form-control form-control-sm ms-2"
+                                        aria-controls="tickets-table" [(ngModel)]="from_date_Search">
+                                </th>
+                                <th>
+                                    <input type="date" class="form-control form-control-sm ms-2"
+                                        aria-controls="tickets-table" [(ngModel)]="to_date_Search">
+                                </th>
+                            </tr>    
+                            <!-- End search -->
+                          </thead>
+                          <tbody>
+                              <tr  *ngFor="let teamleader of teamleadersArr | searchteamleaderslist:teamname_Search:firstname_search:teamstatus_search:from_date_Search:to_date_Search | orderBy: order:reverse:caseInsensitive | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+                                    <!-- <th scope="row">{{teamleader.team_leader_id}}</th> -->
+                                    <td>{{teamleader.teamname}}</td>
+                                    <td>{{teamleader.firstname}} {{teamleader.middlename}} {{teamleader.lastname}}</td>
+                                    <td>{{teamleader.teamstatus}}</td>
+                                    <td>{{teamleader.from_date}}</td>
+                                    <td>{{teamleader.to_date}}</td>
+                                    <td>
+                                        <button type="button" class="btn btn-info"  routerLink="/form/editteamleaders/{{teamleader.team_leader_id}}"><i class="uil-pen"></i></button>
+                                        &nbsp;
+                                        <!-- <button type="button" class="btn btn-success"  routerLink="/form/teamleaderslistview/{{teamleader.team_leader_id}}"><i class="uil-eye"></i></button>
+                                        &nbsp; -->
+                                        <button type="button" class="btn btn-danger"  (click)="deleteteamleadersData(teamleader.team_leader_id)"><i class="uil-trash-alt"></i></button>
+                                    </td>
+                              </tr>
+                             
+                          </tbody>
+                      </table>
+                  </div>
+  
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- end row -->
+  </div>
+  

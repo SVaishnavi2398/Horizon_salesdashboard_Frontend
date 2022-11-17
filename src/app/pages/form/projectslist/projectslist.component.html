@@ -1,0 +1,125 @@
+<div class="container-fluid">
+    <!-- <app-page-title title="Projects List"></app-page-title> -->
+   
+    <div class="row">
+        <div class="col-md-4">
+          <div>
+            <app-page-title title="Projects List"></app-page-title>
+
+          </div>
+        </div>
+        <div class="col-md-8"  style="text-align: right;">
+                <button type="button" class="btn btn-primary mb-3"  routerLink="/form/projects"><i class="mdi mdi-plus me-1"></i>
+                Add Project</button>
+        </div>
+        <!-- Search -->
+        <!-- <div class="col-md-12">
+            <div id="tickets-table_filter" class="dataTables_length"><label
+                class="d-inline-flex align-items-center">Search:
+                <input type="text" name="searchteamdetailslist" class="form-control form-control-sm ms-2"
+                  aria-controls="tickets-table" [(ngModel)]="searchteamdetailslist"></label>
+              </div>
+        </div> -->
+      <!-- End search -->
+      <div class="col-md-8">
+        <div id="tickets-table_filter" class="dataTables_length"><label
+            class="d-inline-flex align-items-center">Search:
+            <input type="text" name="searchprojects" class="form-control form-control-sm ms-2"
+              aria-controls="tickets-table" [(ngModel)]="searchprojects"></label>
+          </div>
+    </div>
+     <!-- End search -->
+    <div class="col-md-4">
+        <ngb-pagination class="d-flex justify-content-center" [(page)]="page" [maxSize]="4" [collectionSize]="projectsList.length" [boundaryLinks]="true"  style="justify-content: right!important;"></ngb-pagination>
+    </div>
+      </div>
+
+  <div class="row">
+      <div class="col-lg-12">
+          <div class="card">
+              <div class="card-body">
+                  <!-- <h4 class="card-title">Registered Users</h4> -->
+    
+                  <div class="table-responsive">
+                      <table class="table mb-0">
+                          <thead>
+                             <!-- Sorting-->
+                             <tr>
+                                <th [class.active]="order === 'cname'" (click)="setOrder('cname')">
+                                    Company Name <span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                </th>
+                                <th [class.active]="order === 'project_name'" (click)="setOrder('project_name')">
+                                    Projects Name<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                </th>
+                                <th [class.active]="order === 'rera'" (click)="setOrder('rera')">
+                                    Rera No<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                </th>
+                                <th [class.active]="order === 'location'" (click)="setOrder('location')">
+                                    Location<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                </th>
+                                <th [class.active]="order === 'region_name'" (click)="setOrder('region_name')">
+                                    Region Name<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                </th>
+                                <th [class.active]="order === 'subregion_name'" (click)="setOrder('subregion_name')">
+                                    Subegion Name<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                </th>
+                                <th>Actions</th>
+                            </tr>
+                            <!-- Sorting End-->
+                            <!-- Search -->
+                            <tr>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2"
+                                        aria-controls="tickets-table" [(ngModel)]="cname_Search">
+                                </th>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2"
+                                        aria-controls="tickets-table" [(ngModel)]="project_name_search">
+                                </th>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2"
+                                        aria-controls="tickets-table" [(ngModel)]="rera_Search">
+                                </th>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2"
+                                        aria-controls="tickets-table" [(ngModel)]="location_Search">
+                                </th>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2"
+                                        aria-controls="tickets-table" [(ngModel)]="region_name_Search">
+                                </th>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2"
+                                        aria-controls="tickets-table" [(ngModel)]="subregion_name_Search">
+                                </th>
+                            </tr> 
+                            <!-- End search -->
+                              
+                          </thead>
+                          <tbody>
+                              <tr *ngFor="let project of projectsArr | searchprojects :cname_Search:project_name_search:rera_Search:location_Search:region_name_Search:subregion_name_Search | orderBy: order:reverse:caseInsensitive | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+                                  <!-- <th scope="row">{{project.project_id}}</th> -->
+                                  <td>{{project.cname}}</td>
+                                  <td>{{project.project_name}}</td>
+                                  <td>{{project.rera}}</td>
+                                  <td>{{project.location}}</td>
+                                  <td>{{project.region_name}}</td>
+                                  <td>{{project.subregion_name}}</td>
+                                  <td><button type="button" class="btn btn-info"  routerLink="/form/editprojects/{{project.project_id}}"><i class="uil-pen"></i></button>
+                                        &nbsp;
+                                        <button type="button" class="btn btn-danger"  (click)="deleteProjectsData(project.project_id)"><i class="uil-trash-alt"></i></button> 
+                                    </td>
+                              </tr>
+                             
+  
+                          </tbody>
+                      </table>
+                  </div>
+  
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- end row -->
+  </div>
+  

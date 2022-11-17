@@ -1,0 +1,85 @@
+<div class="container-fluid">
+
+    <!-- start page title -->
+    <app-page-title title="Create Salary Package"></app-page-title>
+    <!-- end page title -->
+
+
+<form  (ngSubmit)="updateSalarypackage()">
+
+    <div class="mb-3 row">
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">User Name</label>
+            <select  class="form-control" name="user_id"  [(ngModel)]="salarypackage.user_id"  disabled>
+                <option value="">-- Select User Name --</option>
+                <option *ngFor="let ul of usersArr"  value="{{ul.user_id}}"> {{ul.firstname}} {{ul.middlename}} {{ul.lastname}}
+                </option>
+            </select>
+        </div>
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">From Date</label>
+            <input class="form-control" type="date" value="" name="from_date"  [(ngModel)]="salarypackage.from_date">
+        </div>
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">To Date</label>
+            <input class="form-control" type="date" value="" name="to_date"  [(ngModel)]="salarypackage.to_date">
+        </div>
+
+    </div>
+
+
+    <div class="mb-3 row">
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Basic Pay</label>
+            <input class="form-control" type="text" value="" name="basic_pay"  [(ngModel)]="salarypackage.basic_pay"
+            (keypress)="keyPressNumbers($event)">
+        </div>
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Variable Pay</label>
+            <input class="form-control" type="text" value="" name="variable_pay"  [(ngModel)]="salarypackage.variable_pay"
+            (keypress)="keyPressNumbers($event)">
+        </div>
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Yearly Bonus</label>
+            <input class="form-control" type="text" value="" name="yearly_bonus"  [(ngModel)]="salarypackage.yearly_bonus"
+            (keypress)="keyPressNumbers($event)">
+        </div>
+
+    </div>
+
+    <div class="mb-3 row">
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Monthly Salary</label>
+            <input class="form-control" type="text" value="" name="monthly_salary"  [(ngModel)]="salarypackage.monthly_salary"
+            (keypress)="keyPressNumbers($event)">
+        </div>
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Yearly Salary</label>
+            <input class="form-control" type="text" value="" name="yearly_salary"  [(ngModel)]="salarypackage.yearly_salary"
+            (keypress)="keyPressNumbers($event)">
+        </div>
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Remark</label>
+            <input class="form-control" type="text" value="" name="remark"  [(ngModel)]="salarypackage.remark">
+        </div>
+  
+      </div>
+      <button type="button" class="btn btn-primary" (click)="cancel()">Cancel</button>
+&nbsp;
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+
+   
+  
+  </div> <!-- container-fluid -->

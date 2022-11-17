@@ -1,0 +1,540 @@
+<div class="container-fluid">
+    <!-- <app-page-title title="Tabs & Accordions"></app-page-title> -->
+
+    <div class="page-title-box d-flex align-items-center justify-content-between"  style="padding-bottom:0px !important;"> 
+        <!-- start page title -->
+        <div class="mb-0 font-size-20">
+            <h4>Sales Details</h4> 
+        </div>
+        <!-- <app-page-title title="Sales Details"></app-page-title> -->
+        <!-- end page title -->
+
+        <div class="col-md-8"  style="text-align: right;">
+            <button type="button" class="btn btn-primary mb-3" (click)="back()" style="text-align: right;"><i class='fas fa-angle-left fa-lg'></i> Back</button>&nbsp;
+
+            <button type="button" class="btn btn-primary mb-3"  routerLink="/form/salesdetailslist" style="margin-right: 10px;">Sales Details List</button>
+
+            <button type="button" class="btn btn-primary mb-3"  routerLink="/form/salesdocuments/{{salesdetails.sales_id}}"  style="margin-right: 10px;"><i class="mdi mdi-plus me-1"></i>Add Documents</button>
+
+            <!-- <button type="button" class="btn btn-primary mb-3" routerLink="/form/editsalesdetails/{{salesdetails.sales_id}}"><i class='fas fa-edit fa-lg'></i></button>&nbsp; -->
+            <button type="button" class="btn btn-primary mb-3"  (click)="doSomeLogics()"><i class='fas fa-angle-left fa-lg'></i></button>&nbsp;
+            <button type="button" class="btn btn-primary mb-3"  (click)="doSomeLogic()"><i class='fas fa-angle-right fa-lg'></i></button>        </div>
+    </div> 
+
+  
+    <div class="row">
+        <div class="card">
+          <div class="card-body">
+            <!-- <h4 class="card-title">Nav pills justify</h4>
+            <p class="card-title-desc">Example of Nav pills justified</p> -->
+            <ul ngbNav #justifiednavpills="ngbNav" [activeId]="1" class="nav-pills nav-justified bg-light">
+              <li [ngbNavItem]="1">
+                <a ngbNavLink>
+                  <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
+                  <span class="d-none d-sm-block">Summary</span>
+                </a>
+                <ng-template ngbNavContent>
+                  <ng-template [ngTemplateOutlet]="TabContentSummary"></ng-template>
+                </ng-template>
+              </li>
+              <li [ngbNavItem]="2">
+                <a ngbNavLink>
+                  <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
+                  <span class="d-none d-sm-block">Details</span>
+                </a>
+                <ng-template ngbNavContent>
+                  <ng-template [ngTemplateOutlet]="TabContentDetails"></ng-template>
+                </ng-template>
+              </li>
+              <!-- <li [ngbNavItem]="3">
+                <a ngbNavLink>
+                  <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+                  <span class="d-none d-sm-block">Sales Details</span>
+                </a>
+                <ng-template ngbNavContent>
+                  <ng-template [ngTemplateOutlet]="TabContent2"></ng-template>
+                </ng-template>
+              </li> -->
+              <!-- <li [ngbNavItem]="4">
+                <a ngbNavLink>
+                  <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
+                  <span class="d-none d-sm-block">Client Payment</span>
+                </a>
+                <ng-template ngbNavContent>
+                  <ng-template [ngTemplateOutlet]="TabContent"></ng-template>
+                </ng-template>
+              </li> -->
+            </ul>
+            <div [ngbNavOutlet]="justifiednavpills"></div>
+          </div>
+        </div>
+    </div><!-- End Justified Tabs -->
+      
+  
+    <!-- Tab Content -->
+    <ng-template #TabContentSummary> 
+        <div class="row">
+            <div class="col-lg-6">
+                <div  class="table-responsive">
+                    <table class="table mb-0">
+                        
+                        <tbody>
+                            <tr>
+                                <!-- <td scope="col">ID :</td>
+                                <td><b>{{salesdetails.sales_id}}</b></td> -->
+                            </tr>
+
+                            <tr>
+                                <td scope="col">Client Name :</td>
+                                <!-- <td><b>{{salesdetails.name}}</b></td> -->
+                                <td>
+                                    <select  class="form-control"  name="client_id"  [(ngModel)]="salesdetails.client_id"  style="border: none;  padding: initial; font-weight: 700; background-color: #ffffff;"  disabled>
+                                        <option value="">-- Select Client --</option>
+                                        <option *ngFor="let cl of clientArr"  value="{{cl.client_id}}">
+                                        {{cl.name}}
+                                        </option>
+                                     </select>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td scope="col">Projects Name :</td>
+                                <td>
+                                    <select  class="form-control"  name="project_id" [(ngModel)]="salesdetails.project_id"  style="border: none;  padding: initial; font-weight: 700; background-color: #ffffff;"  disabled> 
+                                        <option value="">-- Select Projects --</option>
+                                        <option *ngFor="let pl of projectArr"  value="{{pl.project_id}}">
+                                        {{pl.project_name}}
+                                        </option>
+                                     </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td scope="col">Subprojects Name :</td>
+                                <td>
+                                    <select  class="form-control"  name="subproject_id"  [(ngModel)]="salesdetails.subproject_id"  style="border: none;  padding: initial; font-weight: 700; background-color: #ffffff;"  disabled>
+                                        <option value="">-- Select Subproject Name --</option>
+                                        <option *ngFor="let sl of subprojectsArr"  value="{{sl.subproject_id}}">  {{sl.subproject_name}}
+                                        </option>
+                                    </select>
+                                </td>
+                            </tr>
+        
+                            <tr>
+                                <td scope="col">Booking Date :</td>
+                                <td><b>{{salesdetails.booking_date}}</b></td>
+                            </tr>
+
+                            <tr>
+                                <td scope="col">Deal Status :</td>
+                                <td>
+                                    <select  class="form-control"  name="deal_status_id"  [(ngModel)]="salesdetails.deal_status_id"  style="border: none;  padding: initial; font-weight: 700; background-color: #ffffff;"  disabled>
+                                        <option value="">Select Deal Status</option>
+                                        <option *ngFor="let bl of bookingstatusArr"  value="{{bl.deal_status_id}}">
+                                        {{bl.status}}
+                                        </option>
+                                    </select>
+                                </td>
+                            </tr>
+        
+                            <tr>
+                                <td scope="col">Chanel Partner Name :</td>
+                                <td>
+                                    <select  class="form-control"  name="cp_id"  [(ngModel)]="salesdetails.cp_id"  style="border: none;  padding: initial; font-weight: 700; background-color: #ffffff;"  disabled>
+                                        <option value="">Select Chanel Partner</option>
+                                        <option *ngFor="let cl of channelpartnerArr"  value="{{cl.cp_id}}">
+                                        {{cl.cp_name}}
+                                        </option>
+                                    </select>
+                                </td> 
+                            </tr>
+                            
+                            <tr>
+                                <td scope="col">Pending Invoice Amount :</td>
+                                <td><b>{{salesdetails.pending_invoice_amount}}</b></td>
+                            </tr>
+        
+                            <tr>
+                                <td scope="col">Payout Status :</td>
+                                <td>
+                                    <select  class="form-control"  name="payout_status_id"  [(ngModel)]="salesdetails.payout_status_id"   style="border: none;  padding: initial; font-weight: 700; background-color: #ffffff;"  disabled>
+                                        <option value="">-- Select Payout Status --</option>
+                                        <option *ngFor="let psl of payoutstatusArr"  value="{{psl.payout_status_id}}">
+                                        {{psl.status}}
+                                        </option>
+                                    </select>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td scope="col">Sourcing Employee Name :</td>
+                                <td>
+                                    <select  class="form-control"  name="sourcing_emp_id"  [(ngModel)]="salesdetails.sourcing_emp_id"   style="border: none;  padding: initial; font-weight: 700; background-color: #ffffff;"  disabled>
+                                        <option value="">-- Select Sourcing Employee --</option>
+                                        <option *ngFor="let ul of usersArr"  value="{{ul.user_id}}">
+                                        {{ul.firstname}} {{ul.middlename}} {{ul.lastname}}
+                                    </option>
+                                    </select>
+                                </td>
+                            </tr>
+                        
+                            <!-- <tr>
+                                <td scope="col">Closing Employee Name</td>
+                                <td  *ngFor="let salesdetails of salesdetailsArr"><b>{{salesdetails.firstname}} {{salesdetails.middlename}} {{salesdetails.lastname}}</b></td>
+                            </tr> -->
+        
+                            <tr>
+                                <td scope="col">Team Name :</td>
+                                <td>
+                                    <select  class="form-control"  name="team_id"  [(ngModel)]="salesdetails.team_id"   style="border: none;  padding: initial; font-weight: 700; background-color: #ffffff;"  disabled>
+                                        <option value="">-- Select Team --</option>
+                                        <option *ngFor="let tl of teamsArr"  value="{{tl.team_id}}">
+                                        {{tl.teamname}}
+                                        </option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td scope="col">Leads Source :</td>
+                                <td>
+                                    <select  class="form-control"  name="leadsource_id"  [(ngModel)]="salesdetails.leadsource_id"  style="border: none;  padding: initial; font-weight: 700; background-color: #ffffff;"  disabled>
+                                        <option value="">-- Select Lead Source --</option>
+                                        <option *ngFor="let tl of leadsourceArr"  value="{{tl.leadsource_id}}">
+                                        {{tl.leadsource}}
+                                        </option>
+                                    </select>
+                                <td>
+                            </tr>
+                         
+                            <tr>
+                                <td scope="col">Booking ID :</td>
+                                <td><b>{{salesdetails.booking_id}}</b></td>
+                            </tr>
+        
+                           
+                           
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div><!-- End Default Tabs -->
+        
+            <div class="col-lg-6">
+                
+                <form  (ngSubmit)="submitcomments()">
+                  
+                    <div class="mb-3 row"  hidden>
+                        <label for="first name" class="col-md-12 col-form-label">Sales ID</label>
+                        <div class="col-md-12">
+                            <select  class="form-control"  name="sales_id"  [(ngModel)]="salescomments.sales_id">
+                            <option *ngFor="let sl of salesArr"  value="{{sl.sales_id}}"> {{sl.sales_id}}
+                            </option>
+                            </select>
+                        </div>
+                    </div>
+                
+                    <div class="mb-3 row">
+                        <label for="first name" class="col-md-12 col-form-label">Updated By</label>
+                        <div class="col-md-12">
+                            <select  class="form-control"  name="user_id" [(ngModel)]="salescomments.user_id">
+                            <option *ngFor="let ul of userArr"  value="{{ul.user_id}}"> {{user}} {{user1}} {{user2}}
+                            </option>
+                            </select>
+                            <!-- <select  class="form-control"  name="sales_id"  [(ngModel)]="salescomments.sales_id">
+                                <option *ngFor="let sl of salesArr"  value="{{sl.sales_id}}"> {{sl.sales_id}}
+                                </option>
+                                </select> -->
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">      
+                        <label for="first name" class="col-md-12 col-form-label">Comment</label>
+                        <div class="col-md-12">
+                            <input class="form-control" type="text" value="" id="comment"  name="comment"  [(ngModel)]="salescomments.comment">
+                        </div>
+                    </div> 
+                          
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                
+                </form>
+                <br>
+                <h4>Comments</h4>
+              <table>
+                  <tbody>
+                  <tr *ngFor="let cs of salescommentsArr">
+                          
+                    <td><i class="fas fa-user border"  style="font-size: 40px; padding: 6px;"></i></td>
+                    <td>
+                    <tr>
+                        {{cs.firstname}} {{cs.middlename}} {{cs.lastname}}
+                    </tr>
+                    <tr>
+                        {{cs.comment}}
+                        <!-- <span class="d-inline-block font-size-12 text-muted ms-2">{{ calculateDiff(obj) }}</span> -->
+                    </tr>
+                    <!-- <tr>{{ calculateDiff(obj) }}</tr> -->
+                    </td>
+                </tr>
+
+                    
+            
+
+
+
+            </tbody>
+            </table>
+
+            </div><!-- End Justified Tabs -->
+          </div>
+    </ng-template>
+  
+    <!-- Tab Content -->
+    <ng-template #TabContentDetails>
+        <div  class="table-responsive">
+            <table class="table mb-0">
+                
+                <tbody>
+                    <tr>
+                        <td scope="col">ID :</td>
+                        <td><b>{{salesdetails.sales_id}}</b></td>
+
+                        <td scope="col">Client Name :</td>
+                        <td>
+                            <select  class="form-control"  name="client_id"  [(ngModel)]="salesdetails.client_id"  style="border: none;  padding: initial; font-weight: 700; background-color: #ffffff;"  disabled>
+                                <option value="">-- Select Client --</option>
+                                <option *ngFor="let cl of clientArr"  value="{{cl.client_id}}">
+                                {{cl.name}}
+                                </option>
+                             </select>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td scope="col">Projects Name :</td>
+                        <td>
+                            <select  class="form-control"  name="project_id" [(ngModel)]="salesdetails.project_id"  style="border: none;  padding: initial; font-weight: 700; background-color: #ffffff;"  disabled> 
+                                <option value="">-- Select Projects --</option>
+                                <option *ngFor="let pl of projectArr"  value="{{pl.project_id}}">
+                                {{pl.project_name}}
+                                </option>
+                             </select>
+                        </td>
+
+                        <td scope="col">Subprojects Name :</td>
+                        <td>
+                            <select  class="form-control"  name="subproject_id"  [(ngModel)]="salesdetails.subproject_id"  style="border: none;  padding: initial; font-weight: 700; background-color: #ffffff;"  disabled>
+                                <option value="">-- Select Subproject Name --</option>
+                                <option *ngFor="let sl of subprojectsArr"  value="{{sl.subproject_id}}">  {{sl.subproject_name}}
+                                </option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td scope="col">Booking Date :</td>
+                        <td><b>{{salesdetails.booking_date}}</b></td>
+
+                        <td scope="col">Building Name :</td>
+                        <td><b>{{salesdetails.building_name}}</b></td>
+                    </tr>
+                    
+                    <tr>
+                        <td scope="col">Wing :</td>
+                        <td><b>{{salesdetails.wing}}</b></td>
+
+                        <td scope="col">Flat No :</td>
+                        <td><b>{{salesdetails.flat_no}}</b><td>
+                    </tr>
+                    
+                    <tr>
+                        <td scope="col">Consideration Value :</td>
+                        <td><b>{{salesdetails.consideration_value}}</b></td>
+
+                        <td scope="col">Case Payout (in %) :</td>
+                        <td><b>{{salesdetails.case_payout_percentage}}</b></td>
+                    </tr>
+                    
+                    <tr>
+                        <td scope="col">Extra Payout (in %) :</td>
+                        <td><b>{{salesdetails.extra_payout_percentage}}</b></td>
+
+                        <td scope="col">Extra Payout :</td>
+                        <td><b>{{salesdetails.extra_payout}}</b></td>
+                    </tr>
+                   
+                    <tr>
+                        <td scope="col">Payout Value :</td>
+                        <td><b>{{salesdetails.payout_value}}</b></td>
+
+                        <td scope="col">Deal Status :</td>
+                        <td>
+                            <select  class="form-control"  name="deal_status_id"  [(ngModel)]="salesdetails.deal_status_id"  style="border: none;  padding: initial; font-weight: 700; background-color: #ffffff;"  disabled>
+                                <option value="">Select Deal Status</option>
+                                <option *ngFor="let bl of bookingstatusArr"  value="{{bl.deal_status_id}}">
+                                {{bl.status}}
+                                </option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td scope="col">Chanel Partner Name :</td>
+                        <td>
+                            <select  class="form-control"  name="cp_id"  [(ngModel)]="salesdetails.cp_id"  style="border: none;  padding: initial; font-weight: 700; background-color: #ffffff;"  disabled>
+                                <option value="">Select Chanel Partner</option>
+                                <option *ngFor="let cl of channelpartnerArr"  value="{{cl.cp_id}}">
+                                {{cl.cp_name}}
+                                </option>
+                            </select>
+                        </td>
+
+                        <td scope="col">Shared Payout :</td>
+                        <td><b>{{salesdetails.shared_payout}}</b></td>
+                    </tr>
+                    
+                    <tr>
+                        <td scope="col">Net Payout :</td>
+                        <td><b>{{salesdetails.net_payout}}</b></td>
+
+                        <td scope="col">Payout Status :</td>
+                        <td>
+                            <select  class="form-control"  name="payout_status_id"  [(ngModel)]="salesdetails.payout_status_id"   style="border: none;  padding: initial; font-weight: 700; background-color: #ffffff;"  disabled>
+                                <option value="">-- Select Payout Status --</option>
+                                <option *ngFor="let psl of payoutstatusArr"  value="{{psl.payout_status_id}}">
+                                {{psl.status}}
+                                </option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        
+                        <td scope="col">Sourcing Employee Name :</td>
+                        <td>
+                            <select  class="form-control"  name="sourcing_emp_id"  [(ngModel)]="salesdetails.sourcing_emp_id"   style="border: none;  padding: initial; font-weight: 700; background-color: #ffffff;"  disabled>
+                                <option value="">-- Select Sourcing Employee --</option>
+                                <option *ngFor="let ul of usersArr"  value="{{ul.user_id}}">
+                                {{ul.firstname}} {{ul.middlename}} {{ul.lastname}}
+                            </option>
+                            </select>
+                        </td>
+
+                        <td scope="col">Team Name :</td>
+                        <td>
+                            <select  class="form-control"  name="team_id"  [(ngModel)]="salesdetails.team_id"   style="border: none;  padding: initial; font-weight: 700; background-color: #ffffff;"  disabled>
+                                <option value="">-- Select Team --</option>
+                                <option *ngFor="let tl of teamsArr"  value="{{tl.team_id}}">
+                                {{tl.teamname}}
+                                </option>
+                            </select>
+                        </td>
+                    </tr>
+                
+                    <!-- <tr>
+                        <td scope="col">Closing Employee Name</td>
+                        <td  *ngFor="let salesdetails of salesdetailsArr"><b>{{salesdetails.firstname}} {{salesdetails.middlename}} {{salesdetails.lastname}}</b></td>
+                    </tr> -->
+
+                    <tr>
+
+                        <td scope="col">Leads Source :</td>
+                        <td>
+                            <select  class="form-control"  name="leadsource_id"  [(ngModel)]="salesdetails.leadsource_id"  style="border: none;  padding: initial; font-weight: 700; background-color: #ffffff;"  disabled>
+                                <option value="">-- Select Lead Source --</option>
+                                <option *ngFor="let tl of leadsourceArr"  value="{{tl.leadsource_id}}">
+                                {{tl.leadsource}}
+                                </option>
+                            </select>
+                        </td>
+
+                        <td scope="col">Booking ID :</td>
+                        <td><b>{{salesdetails.booking_id}}</b></td>
+                    </tr>
+                 
+                    <tr>
+                    
+                        <td scope="col">Remark :</td>
+                        <td><b>{{salesdetails.remark}}</b></td>
+
+                        <td scope="col">Registration Date :</td>
+                        <td><b>{{salesdetails.registration_date}}</b></td>
+
+                    </tr>
+
+                    <tr>
+                    
+                        <td scope="col">BA1 Amount Date :</td>
+                        <td><b>{{salesdetails.BA1_amt_paid}}</b></td>
+
+                        <td scope="col">BA2 Amount Date :</td>
+                        <td><b>{{salesdetails.BA2_amt_paid}}</b></td>
+
+                    </tr>
+
+                    <tr>
+                    
+                        <td scope="col">Company Name :</td>
+                        <td>
+                            <select  class="form-control"  name="debtor_company_det_id" [(ngModel)]="salesdetails.debtor_company_det_id"  style="border: none;  padding: initial; font-weight: 700; background-color: #ffffff;"  disabled> 
+                                <option value="">-- Select Company Name --</option>
+                                <option *ngFor="let pl of companylistArr"  value="{{pl.debtor_company_det_id}}">
+                                {{pl.cname}}
+                                </option>
+                             </select>
+                        </td>
+
+                        <!-- <td scope="col">BA2 Amount Date :</td>
+                        <td><b>{{salesdetails.BA2_amt_paid}}</b></td> -->
+
+                    </tr>
+
+                   
+                   
+                </tbody>
+            </table>
+        </div>
+    </ng-template>
+  
+    <!-- Tab Content -->
+    <ng-template #TabContent2>
+      <!-- <p class="p-3 mb-0">
+        Etsy mixtape wayfarers, ethical wes anderson tofu before they
+        sold out mcsweeney's organic lomo retro fanny pack lo-fi
+        farm-to-table readymade. Messenger bag gentrify pitchfork
+        tattooed craft beer, iphone skateboard locavore carles etsy
+        salvia banksy hoodie helvetica. DIY synth PBR banksy irony.
+        Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh
+        mi whatever gluten yr.
+      </p> -->
+    </ng-template>
+</div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

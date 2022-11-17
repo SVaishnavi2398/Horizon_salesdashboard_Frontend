@@ -1,0 +1,190 @@
+<div class="container-fluid">
+  <app-page-title title="Add Documents"></app-page-title>
+    <div class="card">
+      <div class="row">
+        <div class="card-body">
+
+
+ <!-- <form (ngSubmit)="onSubmit()">
+         
+<div class="mb-3 row">
+  
+
+  <div class="col-md-7">
+   <label for="example-text-input" class="col-form-label">User Name</label> 
+
+    <select class="form-control" type="text" name="user_id" formControlName="user_id" [(ngModel)]="users.user_id" disabled>
+      <option>--Select User Name--</option>
+      <option *ngFor="let users of usersArr"value="{{users.user_id}}">
+      {{users.firstname}}
+      </option>
+    </select>  
+  </div>
+</div>
+ 
+
+   
+  <div class="mb-3 row">
+    <div class="col-md-7">
+      <label for="example-text-input" class="col-form-label">Upload Document-1</label>
+      <input class="form-control" type="file" id="doc1" name="doc1" [(ngModel)]="users.doc1" required >
+      <span class="text-danger" [hidden]="!error.doc1">{{error.doc1}}</span>
+    </div>
+ </div> 
+
+
+<div class="mb-3 row">
+  <div class="col-md-7">
+    <label for="example-text-input" class="col-form-label">Upload Document-2</label>
+    <input class="form-control" type="file" id="doc2" name="doc2" [(ngModel)]="users.doc2" >
+  </div>
+</div>
+
+<div class="mb-3 row">
+  <div class="col-md-7">
+    <label for="example-text-input" class="col-form-label">Upload Document-3</label>
+    <input class="form-control" type="file" id="doc3" name="doc3" [(ngModel)]="users.doc3" >
+  </div>
+</div>
+
+<div class="mb-3 row">
+  <div class="col-md-7">
+    <label for="example-text-input" class="col-form-label">Upload Document-4</label>
+    <input class="form-control" type="file" id="doc4" name="doc4" [(ngModel)]="users.doc4" >
+  </div>
+</div>
+
+<div class="mb-3 row">
+  <div class="col-md-7">
+    <label for="example-text-input" class="col-form-label">Upload Document-5</label>
+    <input class="form-control" type="file" id="doc5" name="doc5" [(ngModel)]="users.doc5" >
+  </div>
+</div>
+
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>  -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<form #f="ngForm" (ngSubmit)="onSubmitform(f)">
+  <div class="mb-3 row">
+    <div class="col-md-7">
+  <label for="example-text-input" class="col-form-label">User ID</label> 
+  <select  class="form-control"  name="user_id"  [(ngModel)]="myFormData.user_id"  disabled>
+    <option value="">-- Select Status --</option>
+    <option *ngFor="let sl of usersArr"  value="{{myFormData.user_id}}" selected> {{myFormData.user_id}}
+    </option>
+</select>
+  </div>
+  </div>
+
+  <div class="mb-3 row">
+    <div class="col-md-7">
+      <label for="example-text-input" class="col-form-label">Upload Document1</label> 
+      <input class="form-control" type="file" value="" id="doc1"  name="doc1" (change)="imageUpload1($event)"
+      [(ngModel)]="myFormData.doc1">
+  </div>
+  </div>
+
+  <div class="mb-3 row">
+    <div class="col-md-7">
+      <label for="example-text-input" class="col-form-label">Upload Document2</label>
+      <input class="form-control" type="file" value="" id="doc2"  name="doc2" (change)="imageUpload1($event)"
+      [(ngModel)]="myFormData.doc2">  </div>
+  </div>
+
+ 
+<button type="submit" class="btn btn-primary w-md">Submit</button>
+
+</form> -->
+
+
+
+
+
+
+
+
+
+<form #f="ngForm" (ngSubmit)="submitdocuments(f)">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+
+                  <div class="mb-3 row">
+                          <label for="first name" class="col-md-2 col-form-label">User Name</label>
+                          <div class="col-md-10">
+                              <select  class="form-control"  name="user_id"  [(ngModel)]="empdocuments.user_id"  disabled>
+                                  <option value="">-- Select Status --</option>
+                                  <option   value="{{empdocuments.user_id}}"> {{empdocuments.firstname}}
+                                  </option>
+                              </select>
+                          </div>
+                  </div>
+
+                  <div class="mb-3 row">
+                      <label for="first name" class="col-md-2 col-form-label">Document 1</label>
+                      <div class="col-md-10">
+                          <input class="form-control" type="file" value="" id="doc1"  name="doc1" (change)="imageUpload1($event)"
+                          [(ngModel)]="empdocuments.doc1">
+                      </div>
+                  </div> 
+
+                    <div class="mb-3 row">
+                      <label for="first name" class="col-md-2 col-form-label">Document 2</label>
+                      <div class="col-md-10">
+                          <input class="form-control" type="file" value="" id="doc2"  name="doc2" (change)="imageUpload2($event)"
+                          [(ngModel)]="empdocuments.doc2">
+                      </div>
+                  </div>
+
+                  <div class="mb-3 row">
+                    <label for="first name" class="col-md-2 col-form-label">Document 3</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="file" value="doc3" id="doc3"  name="doc3" (change)="imageUpload3($event)"
+                        [(ngModel)]="empdocuments.doc2">
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                  <label for="first name" class="col-md-2 col-form-label">Document 4</label>
+                  <div class="col-md-10">
+                      <input class="form-control" type="file" value="doc4" id="doc4"  name="doc4" (change)="imageUpload4($event)"
+                      [(ngModel)]="empdocuments.doc2">
+                  </div>
+              </div>
+
+              <div class="mb-3 row">
+                <label for="first name" class="col-md-2 col-form-label">Document 5</label>
+                <div class="col-md-10">
+                    <input class="form-control" type="file" value="" id="doc5"  name="doc5" (change)="imageUpload5($event)"
+                    [(ngModel)]="empdocuments.doc2">
+                </div>
+            </div> 
+        
+              <div class="col-12">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+
+        </div>
+      </div>
+    </div> <!-- end col -->
+  </div>
+  <!-- end row -->
+</form>
+</div>
+</div>
+</div>
+</div>
+
+

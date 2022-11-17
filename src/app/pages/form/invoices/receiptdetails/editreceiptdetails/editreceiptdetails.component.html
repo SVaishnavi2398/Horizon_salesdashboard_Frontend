@@ -1,0 +1,146 @@
+<div class="container-fluid">
+
+    <!-- start page title -->
+    <!-- <app-page-title title="Create Sales Details"></app-page-title> -->
+    <!-- end page title -->
+
+    <div class="page-title-box d-flex align-items-center justify-content-between"  style="padding-bottom:0px !important;"> 
+      <!-- start page title -->
+      <div class="mb-0 font-size-20">
+          <h4>Update Receipt Details</h4> 
+      </div>    
+
+      <!-- end page title -->
+    </div> 
+
+
+<form  (ngSubmit)="updateReceiptdetails()">
+
+  <div class="mb-3 row">
+
+    <!-- <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Invoice Number</label>
+      <select  class="form-control"  name="invoice_multi_id"  [(ngModel)]="receiptdetails.invoice_multi_id" >
+        <option *ngFor="let sl of invoicedetailsArr"  value="{{sl.invoice_multi_id}}" selected>  {{sl.invoice_num}}
+        </option>
+    </select>
+    </div> -->
+    <div class="col-md-3" disabled>
+      <label for="example-text-input" class="col-form-label">Instument Number</label>
+      <input class="form-control" type="text" value="{{data1.invoice_multi_id}}" id="instument_no" name="instument_no"  [(ngModel)]="data1.invoice_num">
+    </div>
+
+    <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Payment Mode</label>
+        <select  class="form-control"  name="payment_mode"  [(ngModel)]="receiptdetails.payment_mode">
+          <option value="">-- Select Payment Mode --</option>
+          <option value="Cheque">Cheque</option>
+          <option value="NEFT">NEFT</option>
+          <option value="Adjustement against Advance">Adjustement against Advance</option>
+        </select>
+      </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Instument Number</label>
+      <input class="form-control" type="text" value="" id="instument_no" name="instument_no"  [(ngModel)]="receiptdetails.instument_no">
+    </div>
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Received Amount</label>
+      <input class="form-control" type="text" value="" id="received_amt" name="received_amt"  [(ngModel)]="receiptdetails.received_amt">
+    </div>
+
+    
+
+  </div>
+
+
+  <div class="mb-3 row">
+
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Instument Date </label>
+      <input class="form-control" type="date" value="" id="instument_date"  name="instument_date"  [(ngModel)]="receiptdetails.instument_date">
+    </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Instument Taxable Amount</label>
+      <input class="form-control" type="text" value="" id="received_taxable_amt"  name="received_taxable_amt"  [(ngModel)]="receiptdetails.received_taxable_amt">
+    </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Instument GST Amount</label>
+      <input class="form-control" type="text" value="" id="received_gst_amt"  name="received_gst_amt"  [(ngModel)]="receiptdetails.received_gst_amt">
+    </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Received TDS Amount</label>
+      <input class="form-control" type="text" value="" id="received_tds_amt"  name="received_tds_amt"  [(ngModel)]="receiptdetails.received_tds_amt">
+    </div>
+
+  
+
+  </div>
+
+
+  <div class="mb-3 row">
+
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Credit Date</label>
+      <input class="form-control" type="date" value="" id="credit_date"  name="credit_date"  [(ngModel)]="receiptdetails.credit_date">
+    </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Credit Account</label>
+      <input class="form-control" type="text" value="" id="credit_account"  name="credit_account"  [(ngModel)]="receiptdetails.credit_account">
+    </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Suspense Amount</label>
+      <input class="form-control" type="text" value="{{receiptdetails.suspense_amount}}" id="suspense_amount"  name="suspense_amount"  [(ngModel)]="receiptdetails.suspense_amount">
+      <!-- <select  class="form-control" name="suspense_amount"  [(ngModel)]="receiptdetails.suspense_amount">
+        <option   value="{{receiptdetails.suspense_amount}}" selected> {{bmi}}
+         </option>
+      </select> -->
+    </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Receivable Amount</label>
+      <input class="form-control" type="text" value="" id="receivable_amt"  name="receivable_amt"  [(ngModel)]="receiptdetails.taxableAmt"  disabled>
+      <!-- <select  class="form-control" name="receivable_amt"  [(ngModel)]="receiptdetails.receivable_amt">
+        <option *ngFor="let inv of invoiceArr"  value="{{inv.receivable_amt}}"> {{inv.receivable_amt}}
+         </option>
+      </select> -->
+    </div>
+    <!-- <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Receivable Amount</label>
+      <input class="form-control" type="text" value="{{receiptdetails.taxableAmt}}" readonly>
+    </div> -->
+
+  </div>
+
+  
+  
+  <button type="submit" class="btn btn-primary">Submit</button>&nbsp;
+  <button type="submit" class="btn btn-primary" routerLink="/form/invoices/receiptdetails/receiptdetailslist">Cancel</button>
+</form>
+  
+  </div> <!-- container-fluid -->
+
+  <!-- Standard Modal -->
+<ng-template #content role="document" let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title mt-0">Create Client Details</h5>
+    <button type="button" class="btn-close" aria-hidden="true" (click)="modal.dismiss('Cross click')">×</button>
+  </div>
+  <div class="modal-body">
+      <app-clientdetails></app-clientdetails>
+  </div>
+  <!-- <div class="modal-footer">
+    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+    <button type="button" class="btn btn-primary">Save changes</button>
+  </div> -->
+</ng-template>
+
+
+

@@ -1,0 +1,130 @@
+<div class="container-fluid">
+  <!-- <app-page-title title="Teams List"></app-page-title> -->
+
+  <div class="row">
+    <div class="col-md-4">
+      <div>
+        <app-page-title title="Credit Details List"></app-page-title>
+
+      </div>
+    </div>
+    <div class="col-md-8" style="text-align: right;">
+      <button type="button" class="btn btn-primary mb-3" routerLink="/form/invoices/creditnote/creditnote"><i
+          class="mdi mdi-plus me-1"></i>
+        Add Credit Note Details</button>
+    </div>
+    <div class="col-md-8">
+      <!-- <div id="tickets-table_filter" class="dataTables_length"><label class="d-inline-flex align-items-center">Search:
+          <input type="text" name="searchcreditnotedetails" class="form-control form-control-sm ms-2"
+            aria-controls="tickets-table" [(ngModel)]="searchcreditnotedetails"></label>
+      </div> -->
+    </div>
+    <div class="col-md-4">
+      <ngb-pagination class="d-flex justify-content-center" [(page)]="page" [maxSize]="4"
+        [collectionSize]="creditnotedetailsList.length" [boundaryLinks]="true"
+        style="justify-content: right!important;"></ngb-pagination>
+    </div>
+    <!-- Search -->
+    <!-- <div class="col-md-12">
+            <div id="tickets-table_filter" class="dataTables_length"><label
+                class="d-inline-flex align-items-center">Search:
+                <input type="text" name="searchcompanylist" class="form-control form-control-sm ms-2"
+                  aria-controls="tickets-table" [(ngModel)]="searchcompanylist"></label>
+              </div>
+        </div> -->
+    <!-- End search -->
+  </div>
+
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-body">
+          <!-- <h4 class="card-title">Registered Roles</h4> -->
+
+          <div class="table-responsive">
+            <table class="table mb-0">
+              <thead>
+                <!-- Sorting -->
+                <tr>
+                  <th [class.active]="order === 'invoice_num'" (click)="setOrder('invoice_num')">
+                    Invoice Number <span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                  </th>
+                  <th [class.active]="order === 'cname'" (click)="setOrder('cname')">
+                    Company Name<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                  </th>
+                  <th [class.active]="order === 'credit_note_num'" (click)="setOrder('credit_note_num')">
+                    Credit Note Number<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                  </th>
+                  <th [class.active]="order === 'credit_note_date'" (click)="setOrder('credit_note_date')">
+                    Credit Note Date<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                  </th>
+                  <th [class.active]="order === 'payout_percenatge'" (click)="setOrder('payout_percenatge')">
+                    Payout Percentage<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                  </th>
+                  <th [class.active]="order === 'taxable_amt'" (click)="setOrder('taxable_amt')">
+                    Taxable Amount<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                  </th>
+
+                </tr>
+                <!-- Sorting End-->
+                <!-- Search -->
+                <tr>
+                  <th>
+                    <input type="text" class="form-control form-control-sm ms-2" aria-controls="tickets-table"
+                      [(ngModel)]="invoice_num_Search">
+                  </th>
+                  <th>
+                    <input type="text" class="form-control form-control-sm ms-2" aria-controls="tickets-table"
+                      [(ngModel)]="cname_Search">
+                  </th>
+                  <th>
+                    <input type="text" class="form-control form-control-sm ms-2" aria-controls="tickets-table"
+                      [(ngModel)]="credit_note_num_Search">
+                  </th>
+                  <th>
+                    <input type="date" class="form-control form-control-sm ms-2" aria-controls="tickets-table"
+                      [(ngModel)]="credit_note_date_Search">
+                  </th>
+                  <th>
+                    <input type="text" class="form-control form-control-sm ms-2" aria-controls="tickets-table"
+                      [(ngModel)]="payout_percenatge_Search">
+                  </th>
+                  <th>
+                    <input type="text" class="form-control form-control-sm ms-2" aria-controls="tickets-table"
+                      [(ngModel)]="taxable_amt_Search">
+                  </th>
+                </tr>
+                <!-- End search -->
+              </thead>
+              <tbody>
+                <tr
+                  *ngFor="let creditnotedetails of creditnotedetailsArr | searchcreditnotedetails: invoice_num_Search:cname_Search:credit_note_num_Search:credit_note_date_Search:payout_percenatge_Search:taxable_amt_Search | orderBy: order:reverse:caseInsensitive | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+                  <!-- <th scope="row">{{creditnotedetails.credit_note_id }}</th> -->
+                  <td>{{creditnotedetails.invoice_num }}</td>
+                  <td>{{creditnotedetails.cname }}</td>
+                  <td>{{creditnotedetails.credit_note_num}}</td>
+                  <td>{{creditnotedetails.credit_note_date}}</td>
+                  <td>{{creditnotedetails.payout_percenatge}}</td>
+                  <td>{{creditnotedetails.taxable_amt}}</td>
+                  <td>
+                    <button type="button" class="btn btn-info"
+                      routerLink="/form/invoices/creditnote/editcreditnote/{{creditnotedetails.credit_note_id}}"><i
+                        class="uil-pen"></i></button>
+                    &nbsp;&nbsp;
+                    <button type="button" class="btn btn-success"
+                      routerLink="/form/invoices/creditnote/creditnoteview/{{creditnotedetails.credit_note_id}}"><i
+                        class="uil-eye"></i></button>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end row -->
+</div>

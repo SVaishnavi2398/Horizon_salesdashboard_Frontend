@@ -1,0 +1,89 @@
+<div class="container-fluid">
+
+    <!-- start page title -->
+    <app-page-title title=" Advance Salary"></app-page-title>
+    <!-- end page title -->
+
+
+<form  (ngSubmit)="submitAdvancesalary()">
+
+    <div class="mb-3 row">
+
+        <div class="col-md-3">
+            <label for="example-text-input" class="col-form-label">User Name</label>
+            <select  class="form-control" name="user_id" [(ngModel)]="advancesalary.user_id">
+                <option value="">-- Select User Name --</option>
+                <option *ngFor="let ul of usersArr"  value="{{ul.user_id}}"> {{ul.firstname}} {{ul.middlename}} {{ul.lastname}}
+                </option>
+            </select>
+            <span class="text-danger" [hidden]="!error.user_id">The user name field is required</span>
+        </div>
+
+        <div class="col-md-3">
+            <label for="example-text-input" class="col-form-label">Advance Paid Date</label>
+            <input class="form-control" type="date" value="" name="advanced_paid_date"  [(ngModel)]="advancesalary.advanced_paid_date">
+            <span class="text-danger" [hidden]="!error.advanced_paid_date">{{error.advanced_paid_date}}</span>
+        </div>
+
+        <div class="col-md-3">
+            <label for="example-text-input" class="col-form-label"> Amount</label>
+            <input class="form-control" type="text" value="{{advancesalary.amount}}" name="amount"  [(ngModel)]="advancesalary.amount" (keyup)="keyPressNumbers($event)">
+            <span class="text-danger" [hidden]="!error.amount">{{error.amount}}</span>
+        </div>
+
+        <div class="col-md-3" hidden>
+            <label for="example-text-input" class="col-form-label">Paid</label>
+            <input class="form-control" type="text" value="{{bmi2}}" name="paid"  [(ngModel)]="advancesalary.paid" (keyup)="keyPressNumbers($event)">
+            <span class="text-danger" [hidden]="!error.emi_amount">{{error.emi_amount}}</span>
+        </div>
+
+       
+
+    </div>
+
+    <!-- <div class="col-md-4">
+        <label for="example-text-input" class="col-form-label">Net Present Days</label>
+        <select  class="form-control" name="net_present_days"  [(ngModel)]="monthlysalary.net_present_days">
+           <option   value="{{monthlysalary.net_present_days}}" selected> {{bmi}}
+            </option>
+        </select>
+        <span class="text-danger" [hidden]="!error.net_present_days">{{error.net_present_days}}</span>
+    </div> -->
+    <div class="mb-3 row">
+
+        <div class="col-md-3" hidden>
+            <label for="example-text-input" class="col-form-label">Pending Amount</label>
+            <input class="form-control" type="text" value="{{bmi3}}" name="pending_amount"  [(ngModel)]="advancesalary.pending_amount"
+            >
+            <span class="text-danger" [hidden]="!error.repaid_amount">{{error.repaid_amount}}</span>
+        </div>
+
+        <div class="col-md-3" hidden>
+            <label for="example-text-input" class="col-form-label">Advance Amount</label>
+            <input class="form-control" type="text" value="{{bmi1}}" name="adv_amount"  [(ngModel)]="advancesalary.adv_amount"
+            selected>
+             <span class="text-danger" [hidden]="!error.balance_amount">{{error.balance_amount}}</span> 
+        </div>
+
+        <div class="col-md-3">
+            <label for="example-text-input" class="col-form-label">Status</label>
+            <input class="form-control" type="text" value="{{bmi4}}" name="status"  [(ngModel)]="advancesalary.status">
+            <span class="text-danger" [hidden]="!error.status">{{error.status}}</span>
+        </div>
+
+        <div class="col-md-3">
+            <label for="example-text-input" class="col-form-label">Remark</label>
+            <input class="form-control" type="text" value="" name="remark"  [(ngModel)]="advancesalary.remark">
+            <span class="text-danger" [hidden]="!error.remark">{{error.remark}}</span>
+        </div>
+    </div>
+
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+  &nbsp;
+  <button type="submit" class="btn btn-primary" routerLink="/form/salary/advancesalarylist">Cancel</button>
+</form>
+
+   
+  
+  </div> <!-- container-fluid -->

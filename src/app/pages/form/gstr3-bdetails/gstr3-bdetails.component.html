@@ -1,0 +1,110 @@
+<div class="container-fluid">
+    <!-- <app-page-title title="Teams List"></app-page-title> -->
+   
+    <div class="row">
+        <div class="col-md-4">
+          <div>
+            <app-page-title title="GSTR 3B Report List"></app-page-title>
+
+          </div>
+        </div>
+        <div class="col-md-8"  style="text-align: right;">
+            <button type="button" class="btn btn-primary mb-3"  routerLink="/form/gstrb3"><i class="mdi mdi-plus me-1"></i>
+                Create Report</button>
+        </div>
+        <!-- Search -->
+        <div class="col-md-12">
+        </div>
+      <!-- End search -->
+      </div>
+
+      
+  <div class="row">
+      <div class="col-lg-12">
+          <div class="card">
+              <div class="card-body">
+                  <!-- <h4 class="card-title">Registered Roles</h4> -->
+    
+                  <div class="table-responsive">
+                      <table class="table mb-0">
+                          <thead>
+                              <tr>
+                                <th [class.active]="order === 'month_year'" (click)="setOrder('month_year')">
+                                    Month/Year<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th [class.active]="order === 'Sales_RCM'" (click)="setOrder('Sales_RCM')">
+                                    Sales RCM<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th [class.active]="order === 'Sales_Amendment'" (click)="setOrder('Sales_Amendment')">
+                                    Sales Amendment<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th [class.active]="order === 'Purchase_RCM'" (click)="setOrder('Purchase_RCM')">
+                                    Purchase RCM<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th [class.active]="order === 'Purchase_Amendment'" (click)="setOrder('Purchase_Amendment')">
+                                    Purchase Amendment<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th [class.active]="order === 'Previous_Month_ITC'" (click)="setOrder('Previous_Month_ITC')">
+                                    Previous Month ITC<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th [class.active]="order === 'PURC_Previous_year'" (click)="setOrder('PURC_Previous_year')">
+                                    Previous year adjustment<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th [class.active]="order === 'IGST_to_IGST'" (click)="setOrder('IGST_to_IGST')">
+                                    IGST to IGST<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th [class.active]="order === 'CGST_to_CGST'" (click)="setOrder('CGST_to_CGST')">
+                                    CGST to CGST<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th [class.active]="order === 'CGST_to_IGST'" (click)="setOrder('CGST_to_IGST')">
+                                    CGST to IGST<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th [class.active]="order === 'IGST_to_SGST'" (click)="setOrder('IGST_to_SGST')">
+                                    IGST to SGST<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th [class.active]="order === 'SGST_to_IGST'" (click)="setOrder('SGST_to_IGST')">
+                                    SGST to IGST<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th [class.active]="order === 'SGST_to_SGST'" (click)="setOrder('SGST_to_SGST')">
+                                    SGST_to_SGST<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th [class.active]="order === 'Late_Fees'" (click)="setOrder('Late_Fees')">
+                                    Late Fees<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th [class.active]="order === 'Carried_Forward'" (click)="setOrder('Carried_Forward')">
+                                    Carried Forward<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr *ngFor = "let data of gstr3bdetails | orderBy: order:reverse:caseInsensitive">
+                                <td><a class="text-primary"
+                                    routerLink="/form/gstr3BReport/{{data.id}}">{{data.month_year}}</a></td>
+                                    <td>{{data.Sales_RCM}}</td>
+                                    <td>{{data.Sales_Amendment}}</td>
+                                    <td>{{data.Purchase_RCM}}</td>
+                                    <td>{{data.Purchase_Amendment}}</td>
+                                    <td>{{data.Previous_Month_ITC}}</td>
+                                    <td>{{data.PURC_Previous_year}}</td>
+                                    <td>{{data.IGST_to_IGST}}</td>
+                                    <td>{{data.CGST_to_CGST}}</td>
+                                    <td>{{data.CGST_to_IGST}}</td>
+                                    <td>{{data.IGST_to_SGST}}</td>
+                                    <td>{{data.SGST_to_IGST}}</td>
+                                    <td>{{data.SGST_to_SGST}}</td>
+                                    <td>{{data.Late_Fees}}</td>
+                                    <td>{{data.Carried_Forward}}</td>
+                                </tr>
+                             
+                          </tbody>
+                      </table>
+                  </div>
+  
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- end row -->
+  </div>
+  

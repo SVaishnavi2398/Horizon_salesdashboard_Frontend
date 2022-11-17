@@ -1,0 +1,47 @@
+<div class="container-fluid">
+
+    <!-- start page title -->
+    <app-page-title title=" Advance EMI Details"></app-page-title>
+    <!-- end page title -->
+
+
+<form  (ngSubmit)="updateAdvanceemi()">
+
+    <div class="mb-3 row">
+
+        <!-- <div class="col-md-3"> -->
+            <!-- <label for="example-text-input" class="col-form-label">Advance Salary Id</label>
+            <select  class="form-control" name="advance_salary_id"  [(ngModel)]="advanceemi.advance_salary_id"  disabled>  
+                <option value="">-- Select User Name --</option>
+                <option *ngFor="let al of advancesalArr"  value="{{al.advance_salary_id}}"> {{al.firstname}} {{al.middlename}} {{al.lastname}}
+                </option>
+            </select> -->
+        <!-- </div> -->
+
+        <div class="col-md-3">
+            <label for="example-text-input" class="col-form-label">EMI Deduct Date</label>
+            <input class="form-control" type="date" value="" name="emi_deduct_date"  [(ngModel)]="advanceemi.emi_deduct_date">
+        </div>
+
+        <!-- <div class="col-md-3">
+            <label for="example-text-input" class="col-form-label">EMI Amount</label>
+            <input class="form-control" type="text" value="" name="emi_amount"  [(ngModel)]="advanceemi.emi_amount"
+            (keypress)="keyPressNumbers($event)">
+        </div> -->
+
+        <div class="col-md-3">
+            <label for="example-text-input" class="col-form-label">Remark</label>
+            <input class="form-control" type="text" value="" name="remark"  [(ngModel)]="advanceemi.remark">
+        </div>
+
+    </div>
+
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+  &nbsp;
+  <button type="submit" class="btn btn-primary" routerLink="/form/salary/advance-emi-list">Cancel</button>
+</form>
+
+   
+  
+  </div> <!-- container-fluid -->

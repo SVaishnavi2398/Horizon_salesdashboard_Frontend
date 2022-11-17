@@ -1,0 +1,194 @@
+<div class="container-fluid">
+
+
+    <!-- <app-page-title title="Walkin Deals"></app-page-title> -->
+
+
+    <div class="mb-3 row">
+        <div class="col-md-3">
+            <button (click)="addPassenger()" class="btn btn-primary">Add Client</button>
+        </div>
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="Submitdata()">
+
+        <div formArrayName="passenger" style="border-left: none !important;">
+            <div>
+
+
+
+                <div class="mb-3 row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-centered table-nowrap mb-0 align-middle" id="excel-table">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>
+                                                    Date
+                                                </th>
+                                                <th>
+                                                    Clients Name
+                                                </th>
+                                                <th>
+                                                    Project Name
+                                                </th>
+                                                <th>
+                                                    Sourcing
+                                                </th>
+                                                <th>
+                                                    Closing
+                                                </th>
+
+                                                <th>
+                                                    Team
+                                                </th>
+
+                                                <th>
+                                                    Team Leader Name
+                                                </th>
+
+                                                <th>
+                                                    Revisit
+                                                </th>
+
+                                                <th>
+                                                    Video Presentation
+                                                </th>
+
+                                                <th>
+                                                    Lead Source
+                                                </th>
+
+                                                <th>
+                                                    Remark
+                                                </th>
+
+                                                <th>
+                                                    Present With Client
+                                                </th>
+
+                                                <th>
+                                                    Closing Ti Site
+                                                </th>
+
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let passengerGroup of passenger?.controls; let i = index" [formGroupName]="i" style="border-left: none !important;margin-bottom: 14px !important;">
+                                                <td>
+                                                    <input class="form-control" type="date" id="" formControlName="date" value="{{date[i]}}">
+
+                                                </td>
+
+                                                <td>
+                                                    <input type="text" class="form-control" formControlName="client_name" value="{{client_name[i]}}" style="width:170px;" />
+                                                    <!-- <select class="form-control" formControlName="client_id" value="{{client_id[i]}}" style="width:180px;">
+                                                        <option value="">-- Select Client --</option>
+                                                        <option *ngFor="let cl of clientArr" value="{{cl.client_id}}">
+                                                            {{cl.name}}
+                                                        </option>
+                                                    </select> -->
+                                                </td>
+                                                <td>
+                                                    <select class="form-control" formControlName="project_id" value="{{project_id[i]}}" style="width:180px;">
+                                                        <option value="">-- Select Projects --</option>
+                                                        <option *ngFor="let ul of projectArr" value="{{ul.project_id}}">
+                                                            {{ul.project_name}}
+                                                        </option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select class="form-control" formControlName="sourcing_emp_id" value="{{sourcing_emp_id[i]}}" style="width:180px;">
+                                                        <option value="">-- Select sourcing_emp_id Employee --</option>
+                                                        <option *ngFor="let ul of usersArr" value="{{ul.user_id}}">
+                                                            {{ul.firstname}} {{ul.middlename}} {{ul.lastname}}
+                                                        </option>
+                                                    </select>
+                                                </td>
+
+                                                <td>
+                                                    <select class="form-control" formControlName="closing_emp_id" value="{{closing_emp_id[i]}}" style="width:180px;">
+                                                        <option value="">-- Select closing_emp_id Employee --</option>
+                                                        <option *ngFor="let ul of usersArr" value="{{ul.user_id}}">
+                                                            {{ul.firstname}} {{ul.middlename}} {{ul.lastname}}
+                                                        </option>
+                                                    </select>
+                                                </td>
+
+                                                <td>
+                                                    <select class="form-control" formControlName="team_id" value="{{team_id[i]}}" style="width:180px;">
+                                                        <option value="">-- Select Team --</option>
+                                                        <option *ngFor="let tl of teamsArr" value="{{tl.team_id}}">
+                                                            {{tl.teamname}}
+                                                        </option>
+                                                    </select>
+
+                                                </td>
+
+                                                <td>
+                                                    <select class="form-control" formControlName="team_leader_id" value="{{team_leader_id[i]}}" style="width:180px;">
+                                                        <option value="">-- Select Team Leader Name --</option>
+                                                        <option *ngFor="let tl of leaderArr" value="{{tl.team_leader_id}}">
+                                                            {{tl.team_leader_name}}
+                                                        </option>
+                                                    </select>
+                                                </td>
+
+                                                <td>
+                                                    <!-- <input class="form-control" type="text" name="revisit" [(ngModel)]="walkindata.revisit"> -->
+                                                    <input type="text" class="form-control" formControlName="revisit" value="{{revisit[i]}}" style="width:170px;" />
+                                                </td>
+
+                                                <td>
+                                                    <!-- <input class="form-control" type="text" name="videopresentation" [(ngModel)]="walkindata.videopresentation"> -->
+                                                    <input type="text" class="form-control" formControlName="videopresentation" value="{{videopresentation[i]}}" style="width:170px;" />
+                                                </td>
+
+                                                <td>
+                                                    <select class="form-control" formControlName="leadsource_id" value="{{leadsource_id[i]}}" placeholder="-- Select Lead Source --" style="width:180px;">
+                                                        <option>-- Select Lead Source --</option>
+                                                    <option *ngFor="let tl of leadsourceArr" value="{{tl.leadsource_id}}">
+                                                        {{tl.leadsource}}
+                                                    </option>
+                                                    </select>
+
+                                                </td>
+
+                                                <td>
+                                                    <!-- <input class="form-control" type="text" name="remark" [(ngModel)]="walkindata.remark"> -->
+                                                    <input type="text" class="form-control" formControlName="remark" value="{{remark[i]}}" style="width:170px;" />
+                                                </td>
+
+                                                <td>
+                                                    <!-- <input class="form-control" type="text" name="presentwithclient" [(ngModel)]="walkindata.presentwithclient"> -->
+                                                    <input type="text" class="form-control" formControlName="presentwithclient" value="{{presentwithclient[i]}}" style="width:170px;" />
+
+                                                </td>
+
+                                                <td>
+
+                                                    <!-- <input class="form-control" type="text" name="closing_emp_idtisite" [(ngModel)]="walkindata.closing_emp_idtisite"> -->
+                                                    <input type="text" class="form-control" formControlName="closingtisite" value="{{closingtisite[i]}}" style="width:170px;" />
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+
+</div>

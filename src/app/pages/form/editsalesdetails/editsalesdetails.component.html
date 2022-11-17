@@ -1,0 +1,302 @@
+<div class="container-fluid">
+
+    <!-- start page title -->
+    <app-page-title title="Update Sales Details"></app-page-title>
+    <!-- end page title -->
+
+
+<form  (ngSubmit)="updateSalesdetails()">
+
+  <div class="mb-3 row">
+  
+    <div class="col-md-3 form-group">
+      <label for="example-text-input" class="col-form-label">Client Name</label>
+      <!-- <input class="form-control" type="text" value="" id="firstname" name="firstname"> -->
+      <select  class="form-control"  name="client_id"  [(ngModel)]="salesdetails.client_id">
+        <option value="">-- Select Client --</option>
+        <option *ngFor="let cl of clientArr"  value="{{cl.client_id}}">
+        {{cl.name}}
+        </option>
+     </select>
+    </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Chanel Partner Name</label>
+      <select  class="form-control"  name="cp_id"  [(ngModel)]="salesdetails.cp_id">
+          <option value="">-- Select Chanel Partner --</option>
+          <option *ngFor="let cl of channelpartnerArr"  value="{{cl.cp_id}}">
+          {{cl.cp_name}}
+          </option>
+      </select>
+    </div>
+   
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Projects Name</label>
+      <!-- <input class="form-control" type="text" value="" id="middlename"  name="middlename"> -->
+      <select  class="form-control"  name="project_id" [(ngModel)]="salesdetails.project_id" (change)="getState($event)">
+        <option value="">-- Select Projects --</option>
+        <option *ngFor="let pl of projectArr"  value="{{pl.project_id}}">
+        {{pl.project_name}}
+        </option>
+     </select>
+    </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Subprojects Name</label>
+      <!-- <input class="form-control" type="text" value="" id="lastname"  name="lastname"> -->
+      <select  class="form-control"  name="subproject_id"  [(ngModel)]="salesdetails.subproject_id">
+        <option value="">-- Select Subproject Name --</option>
+        <option *ngFor="let sl of subprojectsArr"  value="{{sl.subproject_id}}">  {{sl.subproject_name}}
+        </option>
+      </select>
+    </div>
+
+
+  </div>
+
+
+  <div class="mb-3 row">
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Booking Date</label>
+      <input class="form-control" type="date" value="" id="booking_date"  name="booking_date"  [(ngModel)]="salesdetails.booking_date" (change)="getDate($event)">
+    </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Building Name</label>
+      <input class="form-control" type="text" value="" id="building_name"  name="building_name"  [(ngModel)]="salesdetails.building_name">
+    </div>
+
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Wing</label>
+      <input class="form-control" type="text" value="" id="wing"  name="wing"  [(ngModel)]="salesdetails.wing">
+    </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Flat No</label>
+      <input class="form-control" type="text" value="" id="flat_no" name="flat_no"  [(ngModel)]="salesdetails.flat_no">
+    </div>
+
+
+  </div>
+
+
+  <div class="mb-3 row">
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Company Name</label>
+      <select  class="form-control"  name="debtor_company_det_id" [(ngModel)]="salesdetails.debtor_company_det_id">
+        <option value="">-- Select Company Name --</option>
+        <option *ngFor="let pl of companylistArr"  value="{{pl.debtor_company_det_id}}">
+        {{pl.cname}}
+        </option>
+     </select>
+    </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Consideration Value</label>
+      <input class="form-control" type="text" value="" id="consideration_value"  name="consideration_value"  [(ngModel)]="salesdetails.consideration_value" (keyup)="getBusinessValue1($event)">
+    </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Case Payout (in %)</label>
+      <input class="form-control" type="text" value="" id="case_payout_percentage"  name="case_payout_percentage"  [(ngModel)]="salesdetails.case_payout_percentage">
+    </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Payout Value</label>
+      <!-- <input class="form-control" type="text" value="" id="payout_value"  name="payout_value"  [(ngModel)]="salesdetails.payout_value"> -->
+      <select  class="form-control" name="payout_value"  [(ngModel)]="salesdetails.payout_value"  disabled>  
+        <option   value="{{salesdetails.payout_value}}" selected> {{bmi}}
+         </option>
+      </select>
+    </div>
+
+
+  </div>
+
+  <div class="mb-3 row">
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Extra Payout (in %)</label>
+      <input class="form-control" type="text" value="" id="extra_payout_percentage"  name="extra_payout_percentage"  [(ngModel)]="salesdetails.extra_payout_percentage">
+    </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Extra Payout (in value)</label>
+      <input class="form-control" type="text" value="" id="extra_payout_value"  name="extra_payout_value"  [(ngModel)]="salesdetails.extra_payout_value">
+    </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Net Extra Payout</label>
+      <!-- <input class="form-control" type="text" value="" id="net_extra_payout"  name="net_extra_payout"  [(ngModel)]="salesdetails.net_extra_payout"> -->
+      <select  class="form-control" name="net_extra_payout"  [(ngModel)]="salesdetails.net_extra_payout"  disabled>  
+        <option   value="{{salesdetails.net_extra_payout}}" selected> {{bmi2}}
+         </option>
+      </select>
+    </div>
+
+    <!-- <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Extra Payout</label>
+      <input class="form-control" type="text" value="" id="extra_payout"  name="extra_payout"  [(ngModel)]="salesdetails.extra_payout">
+      <span class="text-danger" [hidden]="!error.extra_payout">{{error.extra_payout}}</span>
+    </div> -->
+
+  </div>
+
+  <div class="mb-3 row">
+
+    
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Shared Payout (in %)</label>
+      <input class="form-control" type="text" value="" id="shared_payout"  name="shared_payout"  [(ngModel)]="salesdetails.shared_payout">
+    </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Shared Payout (in value)</label>
+      <input class="form-control" type="text" value="" id="shared_payout_value"  name="shared_payout_value"  [(ngModel)]="salesdetails.shared_payout_value" (keyup)="getBusinessValue2($event)">
+    </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Net Shared Payout</label>
+      <!-- <input class="form-control" type="text" value="" id="net_shared_payout"  name="net_shared_payout"  [(ngModel)]="salesdetails.net_shared_payout"> -->
+      <select  class="form-control" name="net_shared_payout"  [(ngModel)]="salesdetails.net_shared_payout"  disabled>  
+        <option   value="{{salesdetails.net_shared_payout}}" selected> {{bmi3}}
+         </option>
+      </select>
+    </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Net Payout</label>
+      <!-- <input class="form-control" type="text" value="" id="net_payout"  name="net_payout"  [(ngModel)]="salesdetails.net_payout"> -->
+      <select  class="form-control" name="net_payout"  [(ngModel)]="salesdetails.net_payout"  disabled>  
+        <option   value="{{salesdetails.net_payout}}" selected> {{bmi1}}
+         </option>
+      </select>
+    </div>
+
+
+  </div>
+
+  <div class="mb-3 row">
+
+    
+    <!-- <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Pending Invoice Amount</label>
+      <input class="form-control" type="text" value="" id="pending_invoice_amount"  name="pending_invoice_amount"  [(ngModel)]="salesdetails.pending_invoice_amount">
+    </div> -->
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Payout Status</label>
+        <select  class="form-control"  name="payout_status_id"  [(ngModel)]="salesdetails.payout_status_id">
+            <option value="">-- Select Payout Status --</option>
+            <option *ngFor="let psl of payoutstatusArr"  value="{{psl.payout_status_id}}">
+            {{psl.status}}
+            </option>
+        </select>
+    </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Sourcing Employee Name</label>
+        <select  class="form-control"  name="sourcing_emp_id"  [(ngModel)]="salesdetails.sourcing_emp_id">
+            <option value="">-- Select Sourcing Employee --</option>
+            <option *ngFor="let ul of usersArr"  value="{{ul.user_id}}">
+            {{ul.firstname}} {{ul.middlename}} {{ul.lastname}}
+        </option>
+        </select>
+    </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Closing Employee Name</label>
+        <select  class="form-control"  name="closing_emp_id"  [(ngModel)]="salesdetails.closing_emp_id">
+            <option value="">-- Select Closing Employee --</option>
+            <option *ngFor="let ul of usersArr"  value="{{ul.user_id}}">
+            {{ul.firstname}} {{ul.middlename}} {{ul.lastname}}
+        </option>
+        </select>
+    </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Deal Status</label>
+      <select  class="form-control"  name="deal_status_id"  [(ngModel)]="salesdetails.deal_status_id">
+          <option value="">Select Deal Status</option>
+          <option *ngFor="let bl of bookingstatusArr"  value="{{bl.deal_status_id}}">
+          {{bl.status}}
+          </option>
+      </select>
+    </div>
+
+  </div>
+
+  <div class="mb-3 row">  
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Team Name</label>
+      <select  class="form-control"  name="team_id"  [(ngModel)]="salesdetails.team_id">
+          <option value="">-- Select Team --</option>
+          <option *ngFor="let tl of teamsArr"  value="{{tl.team_id}}">
+          {{tl.teamname}}
+          </option>
+      </select>
+    </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Leads Source</label>
+      <select  class="form-control"  name="leadsource_id"  [(ngModel)]="salesdetails.leadsource_id" (change)="getBusinessValue3($event)">
+        <option value="">-- Select Lead Source --</option>
+        <option *ngFor="let tl of leadsourceArr"  value="{{tl.leadsource_id}}">
+        {{tl.leadsource}}
+        </option>
+    </select>
+    </div>
+    <div class="col-md-3" hidden>
+      <label for="example-text-input" class="col-form-label">business value</label>
+      <input class="form-control" type="text"  id="business_value"  name="business_value"  [(ngModel)]="salesdetails.business_value">
+    </div>
+    <div class="col-md-3" hidden>
+      <label for="example-text-input" class="col-form-label">cv_range</label>
+      <input class="form-control" type="text"  id="cv_range"  name="cv_range"  [(ngModel)]="salesdetails.cv_range">
+    </div>
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Booking ID</label>
+      <input class="form-control" type="text" value="" id="booking_id"  name="booking_id"  [(ngModel)]="salesdetails.booking_id">
+    </div>
+
+    <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Remark</label>
+        <input class="form-control" type="text" value="" id="remark"  name="remark"  [(ngModel)]="salesdetails.remark">
+      </div>
+
+    </div>
+
+
+    <div class="mb-3 row">
+  
+      <div class="col-md-4">
+          <label for="example-text-input" class="col-form-label">BA1 Amount Date</label>
+          <input class="form-control" type="date" value="" id="BA1_amt_paid"  name="BA1_amt_paid"  [(ngModel)]="salesdetails.BA1_amt_paid"  disabled>  
+          
+      </div>
+
+      <div class="col-md-4">
+          <label for="example-text-input" class="col-form-label">BA2 Amount Date</label>
+          <input class="form-control" type="date" value="" id="BA2_amt_paid"  name="BA2_amt_paid"  [(ngModel)]="salesdetails.BA2_amt_paid"  disabled>
+           
+       </div>
+
+      <div class="col-md-4">
+          <label for="example-text-input" class="col-form-label">Registration Date</label>
+          <input class="form-control" type="date" value="" id="registration_date"  name="registration_date"  [(ngModel)]="salesdetails.registration_date">
+          
+      </div>
+
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>&nbsp;
+    <button type="submit" class="btn btn-primary" routerLink="/form/salesdetailslist">Cancel</button>
+</form>
+
+   
+  
+  </div> <!-- container-fluid -->

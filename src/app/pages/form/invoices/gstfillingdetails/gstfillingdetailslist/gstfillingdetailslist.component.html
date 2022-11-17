@@ -1,0 +1,122 @@
+<div class="container-fluid">
+  <!-- <app-page-title title="Teams List"></app-page-title> -->
+
+  <div class="row">
+    <div class="col-md-4">
+      <div>
+        <app-page-title title="GST FIlling Details List"></app-page-title>
+
+      </div>
+    </div>
+    <div class="col-md-8" style="text-align: right;">
+      <button type="button" class="btn btn-primary mb-3"
+        routerLink="/form/invoices/gstfillingdetails/gstfillingdetails"><i class="mdi mdi-plus me-1"></i>
+        Add GST FIlling Details</button>
+    </div>
+    <div class="col-md-8">
+      <!-- <div id="tickets-table_filter" class="dataTables_length"><label class="d-inline-flex align-items-center">Search:
+          <input type="text" name="searchgstfillingdetails" class="form-control form-control-sm ms-2"
+            aria-controls="tickets-table" [(ngModel)]="searchgstfillingdetails"></label>
+      </div> -->
+    </div>
+    <!-- End search -->
+    <div class="col-md-4">
+      <ngb-pagination class="d-flex justify-content-center" [(page)]="page" [maxSize]="4"
+        [collectionSize]="gstfillingdetailsList.length" [boundaryLinks]="true"
+        style="justify-content: right!important;"></ngb-pagination>
+    </div>
+    <!-- Search -->
+    <!-- <div class="col-md-12">
+            <div id="tickets-table_filter" class="dataTables_length"><label
+                class="d-inline-flex align-items-center">Search:
+                <input type="text" name="searchcompanylist" class="form-control form-control-sm ms-2"
+                  aria-controls="tickets-table" [(ngModel)]="searchcompanylist"></label>
+              </div>
+        </div> -->
+    <!-- End search -->
+  </div>
+
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-body">
+          <!-- <h4 class="card-title">Registered Roles</h4> -->
+
+          <div class="table-responsive">
+            <table class="table mb-0">
+              <thead>
+                <tr>
+                  <th [class.active]="order === 'invoice_num'" (click)="setOrder('invoice_num')">
+                    Invoice ID <span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                  </th>
+                  <th [class.active]="order === 'inv_type'" (click)="setOrder('inv_type')">
+                    Invoice Type<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                  </th>
+                  <th [class.active]="order === 'gstr1_month'" (click)="setOrder('gstr1_month')">
+                    GSTR1 Month<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                  </th>
+                  <th [class.active]="order === 'gstr1_amount'" (click)="setOrder('gstr1_amount')">
+                    GSTR1 Amount<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                  </th>
+                  <th [class.active]="order === 'filed_status'" (click)="setOrder('filed_status')">
+                    Filed Status<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                  </th>
+
+                </tr>
+                <!-- Search -->
+                <tr>
+                  <th>
+                    <input type="text" class="form-control form-control-sm ms-2" aria-controls="tickets-table"
+                      [(ngModel)]="invoice_num_Search">
+                  </th>
+                  <th>
+                    <input type="text" class="form-control form-control-sm ms-2" aria-controls="tickets-table"
+                      [(ngModel)]="inv_type_Search">
+                  </th>
+                  <th>
+                    <input type="text" class="form-control form-control-sm ms-2" aria-controls="tickets-table"
+                      [(ngModel)]="gstr1_month_Search">
+                  </th>
+                  <th>
+                    <input type="text" class="form-control form-control-sm ms-2" aria-controls="tickets-table"
+                      [(ngModel)]="gstr1_amount_Search">
+                  </th>
+                  <th>
+                    <input type="text" class="form-control form-control-sm ms-2" aria-controls="tickets-table"
+                      [(ngModel)]="filed_status_Search">
+                  </th>
+                </tr>
+                <!-- End search -->
+              </thead>
+              <tbody>
+                <tr
+                  *ngFor="let gstfillingdetails of gstfillingdetailsArr | searchgstfillingdetails:invoice_num_Search:inv_type_Search:gstr1_month_Search:gstr1_amount_Search:filed_status_Search | orderBy: order:reverse:caseInsensitive">
+                  <!-- <th scope="row">{{gstfillingdetails.gst_filling_det_id  }}</th> -->
+                  <td>{{gstfillingdetails.invoice_num }}</td>
+                  <td>{{gstfillingdetails.inv_type }}</td>
+                  <td>{{gstfillingdetails.gstr1_month}}</td>
+                  <td>{{gstfillingdetails.gstr1_amount}}</td>
+                  <td>{{gstfillingdetails.filed_status}}</td>
+
+                  <td>
+                    <button type="button" class="btn btn-info"
+                      routerLink="/form/invoices/gstfillingdetails/editgstfillingdetails/{{gstfillingdetails.gst_filling_det_id }}"><i
+                        class="uil-pen"></i></button>
+                    &nbsp;&nbsp;
+                    <button type="button" class="btn btn-success"
+                      routerLink="/form/invoices/gstfillingdetails/gstfillingdetailsview/{{gstfillingdetails.gst_filling_det_id }}"><i
+                        class="uil-eye"></i></button>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end row -->
+</div>

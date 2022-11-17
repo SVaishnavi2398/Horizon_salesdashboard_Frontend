@@ -1,0 +1,173 @@
+<div class="container-fluid">
+
+  <div class="page-title-box d-flex align-items-center justify-content-between" style="padding-bottom:0px !important;">
+    <!-- start page title -->
+    <div class="mb-0 font-size-20">
+      <h4>Add Receipt Details</h4>
+    </div>
+
+    <!-- end page title -->
+
+  </div>
+
+
+  <form (ngSubmit)="submitReceiptdetails()">
+    <div class="mb-3 row">
+
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Invoice Number</label>
+        <select class="form-control" name="invoice_id" [(ngModel)]="receiptdetails.invoice_id"
+          (change)="getInvoice($event)">
+          <option value="">-- Select Invoice Number --</option>
+          <option *ngFor="let sl of invoicedetailsArr" value="{{sl.invoice_multi_id}}"> {{sl.invoice_num}}
+          </option>
+        </select>
+        <span class="text-danger" [hidden]="!error.invoice_multi_id">{{error.invoice_multi_id}}</span>
+      </div>
+
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Client</label>
+        <select class="form-control" name="client_id" [(ngModel)]="receiptdetails.client_id"
+          (change)="getInvoice1($event)">
+          <option value="">-- Client --</option>
+          <option *ngFor="let sl of invoiceArr" value="{{sl.client_id}}"> {{sl.name}}
+          </option>
+        </select>
+        <span class="text-danger" [hidden]="!error.invoicedetids_id">{{error.invoicedetids_id}}</span>
+      </div>
+
+
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Payment Mode</label>
+        <!-- <input class="form-control" type="text" value="" id="payment_mode" name="payment_mode"  [(ngModel)]="receiptdetails.payment_mode"> -->
+        <select class="form-control" name="payment_mode" [(ngModel)]="receiptdetails.payment_mode">
+          <option value="">-- Select Payment Mode --</option>
+          <option value="Cheque">Cheque</option>
+          <option value="NEFT">NEFT</option>
+          <option value="Adjustement against Advance">Adjustement against Advance</option>
+        </select>
+        <span class="text-danger" [hidden]="!error.payment_mode">{{error.payment_mode}}</span>
+      </div>
+
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Instument Number</label>
+        <input class="form-control" type="text" value="" id="instument_no" name="instument_no"
+          [(ngModel)]="receiptdetails.instument_no">
+        <span class="text-danger" [hidden]="!error.instument_no">{{error.instument_no}}</span>
+      </div>
+    </div>
+
+
+    <div class="mb-3 row">
+
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Received Amount</label>
+        <input class="form-control" type="text" value="" id="received_amt" name="received_amt"
+          [(ngModel)]="receiptdetails.received_amt" (keyup)="bmi($event)">
+        <span class="text-danger" [hidden]="!error.received_amt">{{error.received_amt}}</span>
+      </div>
+
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Instument Date </label>
+        <input class="form-control" type="date" value="" id="instument_date" name="instument_date"
+          [(ngModel)]="receiptdetails.instument_date">
+        <span class="text-danger" [hidden]="!error.instument_date">{{error.instument_date}}</span>
+      </div>
+
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">received_taxable_amt</label>
+        <input class="form-control" type="text" value="" id="received_taxable_amt" name="received_taxable_amt"
+          [(ngModel)]="receiptdetails.received_taxable_amt">
+        <span class="text-danger" [hidden]="!error.received_taxable_amt">{{error.received_taxable_amt}}</span>
+      </div>
+
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Instument GST Amount</label>
+        <input class="form-control" type="text" value="" id="received_gst_amt" name="received_gst_amt"
+          [(ngModel)]="receiptdetails.received_gst_amt">
+        <span class="text-danger" [hidden]="!error.received_gst_amt">{{error.received_gst_amt}}</span>
+      </div>
+
+    </div>
+
+
+    <div class="mb-3 row">
+
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Received TDS Amount</label>
+        <input class="form-control" type="text" value="" id="received_tds_amt" name="received_tds_amt"
+          [(ngModel)]="receiptdetails.received_tds_amt">
+        <span class="text-danger" [hidden]="!error.received_tds_amt">{{error.received_tds_amt}}</span>
+      </div>
+
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Credit Date</label>
+        <input class="form-control" type="date" value="" id="credit_date" name="credit_date"
+          [(ngModel)]="receiptdetails.credit_date">
+        <span class="text-danger" [hidden]="!error.credit_date">{{error.credit_date}}</span>
+      </div>
+
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Credit Account</label>
+        <input class="form-control" type="text" value="" id="credit_account" name="credit_account"
+          [(ngModel)]="receiptdetails.credit_account">
+        <span class="text-danger" [hidden]="!error.credit_account">{{error.credit_account}}</span>
+      </div>
+
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Suspense Amount</label>
+        <input class="form-control" type="text" value="{{receiptdetails.suspense_amount}}" id="suspense_amount"  name="suspense_amount"  [(ngModel)]="receiptdetails.suspense_amount">
+        <!-- <select class="form-control" name="suspense_amount" [(ngModel)]="receiptdetails.suspense_amount">
+          <option value="{{receiptdetails.suspense_amount}}" selected>
+          </option>
+        </select> -->
+        <span class="text-danger" [hidden]="!error.suspense_amount">{{error.suspense_amount}}</span>
+      </div>
+
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Receivable Amount</label>
+        <input class="form-control" type="text" value="{{receiptdetails.taxableAmt}}" readonly>
+      </div>
+
+      <!-- <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Receivable Amount</label>
+      <select  class="form-control" name="receivable_amt"  [(ngModel)]="receiptdetails.receivable_amt">
+        <option *ngFor="let inv of invoiceArr"  value="{{inv.receivable_amt}}" selected> {{inv.receivable_amt}}
+         </option>
+      </select>
+     <span class="text-danger" [hidden]="!error.credit_account">{{error.credit_account}}</span>
+    </div> -->
+
+
+    </div>
+
+    <div class="mb-3 row">
+
+      <!-- <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Receivable Amount 1</label>
+      <input class="form-control" type="text" value="{{receiptdetails.taxableAmt}}" readonly>
+    </div> -->
+
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>&nbsp;
+    <button type="button" class="btn btn-primary"  routerLink="/form/invoices/receiptdetails/receiptdetailslist">Cancel</button>
+  </form>
+
+</div> <!-- container-fluid -->
+
+<!-- Standard Modal -->
+<ng-template #content role="document" let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title mt-0">Create Client Details</h5>
+    <button type="button" class="btn-close" aria-hidden="true" (click)="modal.dismiss('Cross click')">×</button>
+  </div>
+  <div class="modal-body">
+    <app-clientdetails></app-clientdetails>
+  </div>
+  <!-- <div class="modal-footer">
+    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+    <button type="button" class="btn btn-primary">Save changes</button>
+  </div> -->
+</ng-template>

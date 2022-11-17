@@ -1,0 +1,132 @@
+<style>
+    button.btn.btn-info {
+        padding: 4px 10px;
+    }
+
+    td {
+        /* padding: 10px 15px; */
+        padding: 10px 10px;
+    }
+
+    button.btn.btn-primary.mb-3 {
+        padding: 4px 8px;
+    }
+</style>
+
+<div class="container-fluid">
+
+    <div class="row">
+        
+        <div class="col-md-4">
+            <div>
+                <app-page-title title="Users List"></app-page-title>
+
+            </div>
+        </div>
+        <div class="col-md-8" style="text-align: right;">
+            <button type="button" class="btn btn-primary mb-3" routerLink="/form/newusers"><i
+                    class="mdi mdi-plus me-1"></i>
+                Add Users Details</button>
+        </div>
+       
+        <!-- Search -->
+            <div class="col-md-8" style="text-align: left;">
+                <button type="button" class="btn btn-primary mb-3" (click)="back()">
+                    < Back</button>
+            </div>
+        <!-- End search -->
+        <div class="col-md-4">
+            <ngb-pagination class="d-flex justify-content-center" [(page)]="page" [maxSize]="4"
+                [collectionSize]="newusersList.length" [boundaryLinks]="true" style="justify-content: right!important;">
+            </ngb-pagination>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body" style="padding: 0 10px 0 10px;">
+                    <!-- <h4 class="card-title">Registered Users</h4> -->
+                    <!-- @if(sessions('message'))
+                        <div class="alert alert-success">{{(sessions('message'))}}</div>
+                    @endif -->
+
+
+                    <div class="table-responsive">
+                        <table class="table" id='tab'>
+                            <thead>
+                                <!-- Sorting-->
+                                <tr>
+                                    <th [class.active]="order === 'firstname'" (click)="setOrder('firstname')">
+                                        Name <span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                    </th>
+                                    <th [class.active]="order === 'email'" (click)="setOrder('email')">
+                                        Email<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                    </th>
+                                    <th [class.active]="order === 'mobile_no'" (click)="setOrder('mobile_no')">
+                                        Mobile No.<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                    </th>
+                                    <th [class.active]="order === 'designation'" (click)="setOrder('designation')">
+                                        Designation<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                    </th>
+                                    <th [class.active]="order === 'empstatus'" (click)="setOrder('empstatus')">
+                                        Status<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                    </th>
+                                    <th>Actions</th>
+                                </tr>
+                                <!-- Sorting End-->
+                                <!-- Search -->
+                                <tr>
+                                    <th>
+                                        <input type="text" class="form-control form-control-sm ms-2"
+                                            aria-controls="tickets-table" [(ngModel)]="firstname_Search">
+                                    </th>
+                                    <th>
+                                        <input type="text" class="form-control form-control-sm ms-2"
+                                            aria-controls="tickets-table" [(ngModel)]="email_search">
+                                    </th>
+                                    <th>
+                                        <input type="text" class="form-control form-control-sm ms-2"
+                                            aria-controls="tickets-table" [(ngModel)]="mobile_no_Search">
+                                    </th>
+                                    <th>
+                                        <input type="text" class="form-control form-control-sm ms-2"
+                                            aria-controls="tickets-table" [(ngModel)]="designation_Search">
+                                    </th>
+                                    <th>
+                                        <input type="text" class="form-control form-control-sm ms-2"
+                                            aria-controls="tickets-table" [(ngModel)]="empstatus_Search">
+                                    </th>
+                                </tr>  
+                                <!-- End search -->
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let user of usersArr | searchusers:firstname_Search:email_search:mobile_no_Search:designation_Search:empstatus_Search | orderBy: order:reverse:caseInsensitive | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+                                    <!-- <td>{{ user.user_id }}</td> -->
+                                    <td routerLink="/form/userview/{{user.user_id}}">{{ user.firstname }} {{
+                                        user.lastname }}</td>
+                                    <td>{{ user.email }}</td>
+                                    <td>{{ user.mobile_no }}</td>
+                                    <td>{{ user.designation }}</td>
+                                    <td>{{ user.empstatus }}</td>
+                                    <td>
+
+                                        <button type="button" class="btn btn-info"
+                                            routerLink="/form/editusers/{{user.user_id}}">Edit</button>
+
+                                        <!-- <button type="button" class="btn btn-danger"  routerLink="deleteUsersData(user.user_id)">Edit</button> -->
+                                    </td>
+
+                                </tr>
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end row -->
+</div>

@@ -1,0 +1,158 @@
+<p></p>
+<style>
+ button.btn.btn-primary.mb-4 {
+        padding: 4px 8px;
+         margin-right: -367px;
+    }
+</style>
+<div class="container-fluid">
+    <!-- <app-page-title title=" Advance Salary Report"></app-page-title> -->
+    <!-- start page title -->
+    <div class="row">
+        <div class="col-md-4">
+            <app-page-title title=" Advance Salary Report"></app-page-title>
+        </div>
+        <div class="col-md-4"  style="text-align: right;">
+            <!-- <button type="button" class="btn btn-primary mb-4" (click)="reset()">
+            Reset</button>&nbsp; -->
+            <button type="button" class="btn btn-primary mb-4" routerLink="/form/salary/advancesalarylist">Cancel</button>
+        </div>
+    </div>
+    <!-- end page title -->
+<form>
+
+    <div class="mb-3 row">
+        <div class="col-md-3">
+            <label for="example-text-input" class="col-form-label">Employee Name</label>
+            <select  class="form-control" name="user_id" (change)="getReport($event)" [(ngModel)]="advanceemi.user_id">
+                <option value="">-- Select User Name --</option>
+                <option *ngFor="let ul of usersArr"  value="{{ul.user_id}}"> {{ul.firstname}} {{ul.middlename}} {{ul.lastname}}
+                </option>
+            </select>
+            <!-- <span class="text-danger" [hidden]="!error.user_id">The user name field is required</span> -->
+        </div>
+    </div>
+    </form>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body"  style="padding: 0 10px 0 10px;">
+                    <div class="table-responsive">
+                        <table class="table mb-0">
+                            <thead>
+                                <!-- Sorting-->
+                                <tr>
+                                   <th>
+                                        Name
+                                     </th>
+                                     <th>
+                                        Deduct Date
+                                     </th>
+                                     <th>
+                                      Paid Amount
+                                     </th>
+                                     <th>
+                                       Remark
+                                     </th>
+                                    
+                                 </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let adv of advanceemiArr">
+                                    <td (click)="yourFunction($event)" value="{{adv.id}}">{{adv.firstname}}{{adv.middlename}}{{adv.lastname}}</td>
+                                    <!-- <td>{{adv.user_id}}</td> -->
+                                   <td>{{adv.emi_deduct_date}}</td>
+                                   <td>{{adv.deduction_amount}}</td>
+                                   <td>{{adv.remark}}</td>
+                                </tr>
+                            </tbody>
+                            
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+
+     <div class="row" *ngIf="!(id == newid)">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body"  style="padding: 0 10px 0 10px;">
+                    <div class="table-responsive">
+                        <table class="table mb-0">
+                            <thead>
+                                <!-- Sorting-->
+                                <tr>
+                                   <th>
+                                        Name
+                                     </th>
+                                     <th>
+                                        Deduct Date
+                                     </th>
+                                     <th>
+                                      Paid Amount
+                                     </th>
+                                     <th>
+                                       Remark
+                                     </th>
+                                    
+                                 </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let adv of advanceemiArr">
+                                    <td (click)="yourFunction($event)" value="{{adv.id}}">{{adv.firstname}}{{adv.middlename}}{{adv.lastname}}</td>
+                                    <!-- <td>{{adv.user_id}}</td> -->
+                                   <td>{{adv.emi_deduct_date}}</td>
+                                   <td>{{adv.deduction_amount}}</td>
+                                   <td>{{adv.remark}}</td>
+                                </tr>
+                            </tbody>
+                            
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+     <div class="row" *ngIf="id == newid">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body"  style="padding: 0 10px 0 10px;">
+                    <div class="table-responsive">
+                        <table class="table mb-0">
+                            <thead>
+                                <!-- Sorting-->
+                                <tr>
+                                   <th>
+                                        Name
+                                     </th>
+                                     <th>
+                                        Deduct Date
+                                     </th>
+                                     <th>
+                                      Paid Amount
+                                     </th>
+                                     <th>
+                                       Remark
+                                     </th>
+                                    
+                                 </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let adv of advanceemiArr1" >
+                                    <td>{{adv.firstname}}{{adv.middlename}}{{adv.lastname}}</td>
+                                    <!-- <td>{{adv.user_id}}</td> -->
+                                   <td>{{adv.emi_deduct_date}}</td>
+                                   <td>{{adv.deduction_amount}}</td>
+                                   <td>{{adv.remark}}</td>
+                                </tr>
+                            </tbody>
+                            
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+    

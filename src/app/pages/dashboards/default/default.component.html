@@ -1,0 +1,151 @@
+<div class="container-fluid">
+    <!-- start page title -->
+    <app-page-title title="Dashboard"></app-page-title>
+    
+    <!-- end page title -->
+
+    <div class="row">
+        <div class="col-md-6 col-xl-3">
+            <div class="card">
+                <div class="card-body">
+                    <div>
+                        <h4 class="mb-1 mt-1">{{userscount}}</h4>
+                        <p class="text-muted mb-0">Total Users</p>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end col-->
+
+        <div class="col-md-6 col-xl-3">
+            <div class="card">
+                <div class="card-body">
+                    <div>
+                        <h4 class="mb-1 mt-1">{{projectscount}}</h4>
+                        <p class="text-muted mb-0">Total Projects</p>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end col-->
+
+        <div class="col-md-6 col-xl-3">
+            <div class="card">
+                <div class="card-body">
+                    <div>
+                        <h4 class="mb-1 mt-1"><span data-plugin="counterup">{{salescount}}</span></h4>
+                        <p class="text-muted mb-0">Total Sales Deatils</p>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end col-->
+
+        <div class="col-md-6 col-xl-3">
+
+            <div class="card">
+                <div class="card-body">
+                    <div>
+                        <h4 class="mb-1 mt-1">{{invoicescount}}</h4>
+                        <p class="text-muted mb-0">Total Invoices Details</p>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end col-->
+    </div> <!-- end row-->
+
+    <!-- <div class="mb-3 row">
+
+        <div class="col-md-3">
+          <label for="example-text-input" class="col-form-label">Booking Date</label>
+          <input class="form-control" type="date" value="" id="booking_date"  name="booking_date">
+        </div>
+    
+    </div> -->
+
+    <!-- Chart Representation -->
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="card">
+                <div class="card-body">
+                    <!-- <div class="float-end"> -->
+
+                        <!-- <div class="dropdown" ngbDropdown>
+                            <a class="dropdown-toggle text-reset" href="javascript:void(0);" id="dropdownMenuButton5"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>
+                                <span class=" fw-semibold" class="text-muted">Sort By : Month </span>
+                                <select class="form-control fw-semibold" class="text-muted"  (change)="monthnumber($event)" [(ngModel)]="data1.monthnumber">
+                                   <i class="mdi mdi-chevron-down ms-1"></i>
+                    
+                                    <option value="1">January</option>
+                                    <option value="2">February</option>
+                                    <option value="3">March</option>
+                                    <option value="4">April</option>
+                                    <option value="5">May</option>
+                                    <option value="6">June</option>
+                                    <option value="7">July</option>
+                                    <option value="8">August</option>
+                                    <option value="9">September</option>
+                                    <option value="10">October</option>
+                                    <option value="11">November</option>
+                                    <option value="12">December</option>
+                                </select>
+                            </a>
+                          
+                        </div> -->
+                    <!-- </div> -->
+                <div class="row">
+                    <h4 class="card-title mb-4"  style="width: 30%">Sales Analytics</h4>
+
+                    <div class="mb-2"  style="width: 10%">
+                        <label for="example-text-input" class="col-form-label">From Date:</label>
+                    </div>
+
+                    <div class="mb-2"  style="width: 20%">
+                        <input class="form-control" type="date" id="from_date"  name="from_date"  [(ngModel)]="default.from_date" (change)="monthnumber1($event)">
+                      
+                    </div>
+
+                    <div class="mb-2"  style="width: 10%">
+                        <label for="example-text-input" class="col-form-label">To Date:</label>
+                    </div>
+
+                    <div class="mb-2"  style="width: 20%">
+                        <input class="form-control" type="date" id="to_date"  name="to_date"  [(ngModel)]="default.to_date"  (change)="monthnumber2($event)">
+                    </div>
+
+                    <div class="mb-2"  style="width: 10%">
+                        <button type="button" (click)="getApply()" class="btn btn-success">APPLY</button>
+                    </div>
+
+                </div>
+
+                    <!-- <div class="mt-1">
+                        <ul class="list-inline main-chart mb-0">
+                            <li class="list-inline-item chart-border-left me-0 border-0">
+                                <h3 class="text-primary">$<span data-plugin="counterup">2,371</span><span
+                                        class="text-muted d-inline-block font-size-15 ms-3">Income</span></h3>
+                            </li>
+                            <li class="list-inline-item chart-border-left me-0">
+                                <h3><span data-plugin="counterup">258</span><span
+                                        class="text-muted d-inline-block font-size-15 ms-3">Sales</span>
+                                </h3>
+                            </li>
+                            <li class="list-inline-item chart-border-left me-0">
+                                <h3><span data-plugin="counterup">3.6</span>%<span
+                                        class="text-muted d-inline-block font-size-15 ms-3">Conversation Ratio</span>
+                                </h3>
+                            </li>
+                        </ul>
+                    </div> -->
+
+                    <div class="mt-3">
+                        <div id="sales-analytics-chart" style="display: block;">
+                            <!-- Line, column & Area chart-->
+                            <apx-chart class="apex-charts"  [series]="ChartType.series" [chart]="ChartType.chart"
+                                [labels]="ChartType.labels" [colors]="ChartType.colors">
+                            </apx-chart>
+                        </div>
+                    </div>
+                </div> <!-- end card-body-->
+            </div> <!-- end card-->
+        </div> <!-- end col-->
+
+</div> <!-- container-fluid -->

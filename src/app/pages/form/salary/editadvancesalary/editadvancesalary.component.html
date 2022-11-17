@@ -1,0 +1,74 @@
+<div class="container-fluid">
+
+    <!-- start page title -->
+    <app-page-title title=" Advance Salary"></app-page-title>
+    <!-- end page title -->
+
+
+<form  (ngSubmit)="updateAdvancesalary()">
+
+    <div class="mb-3 row">
+
+        <div class="col-md-3">
+            <label for="example-text-input" class="col-form-label">User Name</label>
+            <select  class="form-control" name="user_id"  [(ngModel)]="advancesalary.user_id"  disabled>
+                <option value="">-- Select User Name --</option>
+                <option *ngFor="let ul of usersArr"  value="{{ul.user_id}}"> {{ul.firstname}} {{ul.middlename}} {{ul.lastname}}
+                </option>
+            </select>
+        </div>
+
+        <div class="col-md-3">
+            <label for="example-text-input" class="col-form-label">Advance Paid Date</label>
+            <input class="form-control" type="date" value="" name="advanced_paid_date"  [(ngModel)]="advancesalary.advanced_paid_date">
+        </div>
+
+        <div class="col-md-3">
+            <label for="example-text-input" class="col-form-label">  Amount</label>
+            <input class="form-control" type="text" value="" name="amount"  [(ngModel)]="advancesalary.amount"
+            (keypress)="keyPressNumbers($event)">
+        </div>
+
+        <div class="col-md-3">
+            <label for="example-text-input" class="col-form-label">Paid</label>
+            <input class="form-control" type="text" value="" name="paid" [(ngModel)]="advancesalary.paid"
+            (keypress)="keyPressNumbers($event)">
+        </div>
+
+    </div>
+
+
+    <div class="mb-3 row">
+
+        <div class="col-md-3">
+            <label for="example-text-input" class="col-form-label">Pending Amount</label>
+            <input class="form-control" type="text" value="" name="pending_amount"  [(ngModel)]="advancesalary.pending_amount"
+            (keypress)="keyPressNumbers($event)">
+        </div>
+
+        <div class="col-md-3">
+            <label for="example-text-input" class="col-form-label">Advance Amount</label>
+            <input class="form-control" type="text" value="" name="adv_amount"  [(ngModel)]="advancesalary.adv_amount"
+            (keypress)="keyPressNumbers($event)">
+        </div>
+
+        <div class="col-md-3">
+            <label for="example-text-input" class="col-form-label">Status</label>
+            <input class="form-control" type="text" value="" name="status"  [(ngModel)]="advancesalary.status">
+        </div>
+
+        <div class="col-md-3">
+            <label for="example-text-input" class="col-form-label">Remark</label>
+            <input class="form-control" type="text" value="" name="remark"  [(ngModel)]="advancesalary.remark">
+        </div>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    &nbsp;
+    <button type="submit" class="btn btn-primary" routerLink="/form/salary/advancesalarylist">Cancel</button>
+</form>
+
+   
+  
+  </div> <!-- container-fluid -->

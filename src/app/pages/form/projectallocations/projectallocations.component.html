@@ -1,0 +1,115 @@
+<div class="container-fluid">
+
+    <!-- start page title -->
+    <app-page-title title="Create Project Allocation" ></app-page-title>
+    <!-- <app-page-title title="Project Allocation" [breadcrumbItems]="breadCrumbItems"></app-page-title> -->
+
+    <div class="row mb-md-2">
+        <!-- <div class="col-sm-12 col-md-6">
+            <div class="dataTables_filter text-md-end"><label class="d-inline-flex align-items-center">
+                Show
+                <select name="pageSize"
+                class="custom-select custom-select-sm form-control form-control-sm form-select form-select-sm">
+                <option >10</option>
+                <option >25</option>
+                <option >50</option>
+                <option >100</option>
+                </select> entries</label>
+            </div>
+        </div> -->
+        <!-- Search -->
+        <!-- <div class="col-sm-12 col-md-6">
+            <div id="tickets-table_filter" class="dataTables_length"><label
+              class="d-inline-flex align-items-center">Search:
+              <input type="text" name="searchTerm" class="form-control form-control-sm ms-2"
+                aria-controls="tickets-table"  [(ngModel)]="search"></label>
+            </div>
+        </div> -->
+        <!-- End search -->
+    </div>
+   
+    <!-- end page title -->
+  <form  (ngSubmit)="submitprojectallocation()">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body">
+  
+                <!-- <div class="mb-3 row">
+                    <label for="last name" class="col-md-2 col-form-label">User Name</label>
+                        <div class="col-md-10">
+                            <input class="form-control" type="text"  id="user_name" placeholder="Enter User Name" name="user_name" >
+                         
+                        </div>
+                </div> -->
+            <!-- <div *ngFor="let obj of dataarray; let i=index"> -->
+                
+                    <div class="mb-3 row">
+                            <label for="first name" class="col-md-2 col-form-label">User Name</label>
+                            <div class="col-md-10">
+                                <!-- <input class="form-control" type="text"  id="user_name" placeholder="Enter User Name" name="user_name">  -->
+                                <select  class="form-control"  name="user_id" [(ngModel)]="projectallocations.user_id">
+                                    <option value="">Select User Name</option>
+                                    <option *ngFor="let ul of usersArr"  value="{{ul.user_id}}">
+                                    {{ul.firstname}} {{ul.middlename}} {{ul.lastname}}
+                                    </option>
+                                </select>
+                                <span class="text-danger" [hidden]="!error.user_id">{{error.user_id}}</span>
+                            </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <!-- <label for="last name" class="col-form-label">Project Name</label> -->
+                        <!-- <input class="form-control" type="text"  id="project_name" placeholder="Enter Region Name" name="project_name{{i}}"  >     -->
+                        <label for="first name" class="col-md-2 col-form-label">Project Name</label>
+                        <div class="col-md-10">
+                            <select  class="form-control"  name="project_id"  (change)="getState($event)" [(ngModel)]="projectallocations.project_id">
+                                <option value="">Select Project Name</option>
+                                <option *ngFor="let pl of projectsArr"  value="{{pl.project_id}}">  {{pl.project_name}}
+                                </option>
+                            </select>
+                            <span class="text-danger" [hidden]="!error.project_id">{{error.project_id}}</span>
+                        </div>
+                    </div> 
+
+
+                    <div class="mb-3 row">
+                        <!-- <label for="last name" class="col-form-label">Subproject Name</label> -->
+                        <!-- <input class="form-control" type="text"  id="subproject_name" placeholder="Enter Region Name" name="subproject_name"> -->
+                        <label for="first name" class="col-md-2 col-form-label">Subproject Name</label>
+                        <div class="col-md-10">
+                            <select  class="form-control"  name="subproject_id" [(ngModel)]="projectallocations.subproject_id">
+                                <option value="">Select Subproject Name</option>
+                                <option *ngFor="let sl of subprojectsArr"  value="{{sl.subproject_id}}">  {{sl.subproject_name}}
+                                </option>
+                            </select>
+                            <span class="text-danger" [hidden]="!error.subproject_id">{{error.subproject_id}}</span>
+                        </div>
+                    </div> 
+
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+
+                    <!-- <div class="col-md-2"  *ngIf="i!=0">
+                        <span  (click)="removeForm(i)"  class="btn btn-danger">-</span>
+                    </div>  -->
+               
+          
+
+                <!-- <div class="col-12"  style="text-align: right;">
+                    <span  (click)="addForm()"  class="btn btn-success">+</span>
+                </div> -->
+        
+            
+  
+  
+          </div>
+        </div>
+      </div> <!-- end col -->
+    </div>
+    <!-- end row -->
+  </form>
+
+  
+  </div> <!-- container-fluid -->

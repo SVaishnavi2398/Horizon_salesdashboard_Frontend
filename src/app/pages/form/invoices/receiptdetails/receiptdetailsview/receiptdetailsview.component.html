@@ -1,0 +1,175 @@
+<div class="container-fluid">
+    <div class="page-title-box d-flex align-items-center justify-content-between">
+        <div class="mb-0 font-size-20">
+          <h4>Receipt Details</h4> 
+       </div>
+       <div class="col-md-8"  style="text-align: right;">
+      
+        </div>
+        <div class="page-title-right">
+            <button type="button" class="btn btn-primary mb-3" (click)="back()" style="text-align: right;"><i class='fas fa-angle-left fa-lg'></i> Back</button>&nbsp;
+            <button type="button" class="btn btn-primary mb-3" routerLink="/form/invoices/receiptdetails/editreceiptdetails/{{receiptdetails.receipt_id}}"><i class='fas fa-edit fa-lg'></i></button>&nbsp;
+            <button type="button" class="btn btn-primary mb-3"  (click)="doSomeLogics()"><i class='fas fa-angle-left fa-lg'></i></button>&nbsp;
+            <button type="button" class="btn btn-primary mb-3"  (click)="doSomeLogic()"><i class='fas fa-angle-right fa-lg'></i></button>
+        </div>
+    </div>
+      <div class="card">
+        <div class="row">
+            <div class="card-body">
+                <div class="col-md-12">
+                   
+                <div class="table-responsive">
+                <table class="table" id='tab'>
+                    <!-- <h4> <i class="fas fa-user border" style="font-size: 47px; padding: 9px;"></i> {{users.firstname}} {{users.lastname}}</h4> -->
+                    <tbody>
+                      
+                        <!-- <tr>
+                            <td scope="col">Receipt ID</td>
+                            <td><b>{{receiptdetails.receipt_id}}</b></td>
+
+                              <td scope="col">Invoice Number</td>
+                              <td><b>{{receiptdetails.invoice_num}}</b></td>
+                         
+                              
+                          </tr> -->
+                          <tr>
+
+                            <td scope="col">Payment Mode</td>
+                            <td><b>{{receiptdetails.payment_mode}}</b></td>
+
+                              <td scope="col">Instument Number</td>
+                              <td><b>{{receiptdetails.instument_no}}</b></td>
+                         
+                              
+                          </tr>
+                          <tr>
+                              <td scope="col">Received Amount</td>
+                              <td><b>{{receiptdetails.received_amt}}</b></td>
+
+                              <td scope="col">Instument Date</td>
+                              <td><b>{{receiptdetails.instument_date}}</b></td>
+                         
+                              
+                          </tr>
+                          
+                          <tr>
+                            <td scope="col">Instument Taxable Amount</td>
+                            <td><b>{{receiptdetails.received_taxable_amt}}</b></td>
+
+                              <td scope="col">Received GST Amount</td>
+                              <td><b>{{receiptdetails.received_gst_amt}}</b></td>
+                          
+                             
+                          </tr>
+                          <tr>
+
+                            <td scope="col">Received TDS Amount</td>
+                            <td><b>{{receiptdetails.received_tds_amt}}</b></td>
+                              <td scope="col">Credit Date</td>
+                              <td><b>{{receiptdetails.credit_date}}</b></td>
+                        
+                           
+                          </tr>
+                          <tr>
+                          <td scope="col">Credit Account</td>
+                          <td><b>{{receiptdetails.credit_account}}</b></td>
+                          <td scope="col">Suspense Amount</td>
+                          <td><b>{{receiptdetails.suspense_amount}}</b></td>
+                        </tr>
+                    
+                      </tbody>
+                     
+                </table>
+               
+                </div>
+            </div>
+
+            
+
+
+       
+            </div>
+        </div>
+    </div>
+
+
+   
+
+
+
+
+
+    <!-- <div class="card">
+        <div class="card-body">
+     <form (ngSubmit)="onSubmit()">
+            <div class="mb-3 row">
+
+                <div class="col-md-2">
+                    <label for="example-text-input" class="col-form-label"><b>Select User</b></label>
+                    </div>
+                    <div class="col-md-6">
+
+                        <select  class="form-control"  name="user_id"  [(ngModel)]="users.user_id" disabled >
+                            <option value="">--Select User--</option>
+                            <option *ngFor='let users of usersArr' value="{{users.user_id}}">
+                            {{users.firstname}}
+                            </option>
+                        </select>
+                  
+                  </div> 
+                  </div>
+
+                 
+                  <div class="mb-3 row">
+                  <div class="col-md-2">
+   
+            <label for="example-text-input" class="col-form-label"><b>Add Comment</b></label>
+            </div>
+            <div class="col-md-6">
+            <textarea class="form-control" type="text" value="" id="comment"  name="comment"  [(ngModel)]="users.comment" required>
+            </textarea>
+            </div>
+        </div>
+            <button type="submit" class="btn btn-primary">Add</button>
+
+
+            
+           </form> 
+        </div>
+    </div> -->
+
+
+
+    <!-- <div class="card">
+        <div class="card-body">
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                  <h4>Comments</h4>
+                  <table>
+                      <tbody>
+                      <tr *ngFor="let com of commentArr">
+                              
+                         <td><i class="fas fa-user border" style="font-size: 40px; padding: 6px;"></i></td>
+                         <td>
+                             <tr></tr>
+                         <tr>
+                              {{users.firstname}} {{users.lastname}}
+                            </tr>
+                          <tr>
+                              {{com.comment}}
+                            </tr>
+                        </td>
+                    </tr>
+
+                        
+                
+
+
+
+                </tbody>
+                </table>
+                </div>
+            </div>  
+        </div>
+    </div> -->
+</div>

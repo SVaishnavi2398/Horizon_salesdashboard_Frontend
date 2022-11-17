@@ -1,0 +1,343 @@
+<div class="container-fluid">
+
+    <!-- start page title -->
+    <app-page-title title="Create Monthly Salary"></app-page-title>
+    <!-- end page title -->
+
+
+<form  (ngSubmit)="submitMonthlysalary()">
+
+    <div class="mb-3 row">
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">User Name</label>
+            <select  class="form-control" name="user_id" (change)="getState($event)"  [(ngModel)]="monthlysalary.user_id">
+                <option [ngValue]="null" selected disabled>Select User</option>
+                <option *ngFor="let ul of usersArr"  value="{{ul.user_id}}"> {{ul.firstname}} {{ul.middlename}} {{ul.lastname}}
+                </option>
+            </select>
+            <span class="text-danger" [hidden]="!error.user_id">{{error.user_id}}</span>
+        </div>
+
+        <!-- <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Salary Package ID</label>
+            <select  class="form-control" name="basic_pay"  [(ngModel)]="monthlysalary.basic_pay">
+                <option value="">-- Select User Name --</option>
+                <option *ngFor="let sal of salaryArr"  value="{{sal.basic_pay}}"> {{sal.basic_pay}}
+                </option>
+            </select>
+        </div> -->
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Salary Package ID</label>
+            <select  class="form-control" name="basic_pay"  [(ngModel)]="monthlysalary.basic_pay">
+               <option *ngFor="let sal of salaryArr"  value="{{sal.basic_pay}}" selected> {{sal.basic_pay}}
+                </option>
+            </select>
+            <span class="text-danger" [hidden]="!error.basic_pay">{{error.basic_pay}}</span>
+        </div>
+       
+        
+      
+        <!-- <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Hidden</label>
+            <input class="form-control" type="text" value="" name="basic_pay"  [(ngModel)]="monthlysalary.basic_pay"
+            (keypress)="keyPressNumbers($event)">
+        </div>  -->
+     <!-- <div class="form-group">
+        <label class="form-control-label col-form-label-sm">Content Type</label>
+        <select class="form-control form-control-sm" [(ngModel)]="monthlysalary.basic_pay"
+              name="basic_pay">
+           <option *ngFor="let contentType of salaryArr" [value]="contentType.basic_pay" selected>  
+               {{contentType.basic_pay}}
+           </option>
+         </select> 
+     </div> -->
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Salary Month</label>
+            <select  class="form-control" name="salary_month" (change)="getState1($event)"   [(ngModel)]="monthlysalary.salary_month">
+                <option value="">-- Select User Name --</option>
+                <option *ngFor="let month of monthArr" value="{{month.month_name}}"> {{month.month_name}} </option>
+              
+            </select>
+            <span class="text-danger" [hidden]="!error.salary_month">{{error.salary_month}}</span>
+        </div>
+
+        <div class="col-md-4" hidden>
+            <label for="example-text-input" class="col-form-label">Salary Month value</label>
+            <select  class="form-control" name="month_value" [(ngModel)]="monthlysalary.month_value">
+                <option value="">-- Select User Name --</option>
+                <option *ngFor="let months of monthvalueArr" value="{{months.month_value}}" selected> {{months.month_value}} </option>
+              
+            </select>
+            <span class="text-danger" [hidden]="!error.month_value">{{error.month_value}}</span>
+        </div>
+
+    </div>
+
+
+    <div class="mb-3 row">
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Absent Days</label>
+            <input class="form-control" type="text" value="" name="absent_days"  [(ngModel)]="monthlysalary.absent_days"
+            (keypress)="keyPressNumbers($event)">
+            <span class="text-danger" [hidden]="!error.absent_days">{{error.absent_days}}</span>
+        </div>
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">No of Late Marks In Days</label>
+            <input class="form-control" type="text" value="" name="no_of_late_marks"  [(ngModel)]="monthlysalary.no_of_late_marks"
+            (keypress)="keyPressNumbers($event)">
+            <span class="text-danger" [hidden]="!error.no_of_late_marks">{{error.no_of_late_marks}}</span>
+        </div>
+
+        <!-- <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">penalty_leave_days</label>
+            <select  class="form-control" name="penalty_leave_days"  [(ngModel)]="monthlysalary.penalty_leave_days">
+               <option   value="{{monthlysalary.penalty_leave_days}}" selected> {{bmi}}
+                </option>
+            </select>
+        </div> -->
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Penalty Leave Days</label>
+            <input class="form-control" type="text" value="penalty_leave_days" name="penalty_leave_days"  [(ngModel)]="monthlysalary.penalty_leave_days"
+            (keypress)="keyPressNumbers($event)">
+            <span class="text-danger" [hidden]="!error.penalty_leave_days">{{error.penalty_leave_days}}</span>
+        </div>
+
+    </div>
+
+    <div class="mb-3 row">
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Extra Days</label>
+            <input class="form-control" type="text" value="" name="extra_days" [(ngModel)]="monthlysalary.extra_days"
+            (keypress)="keyPressNumbers($event)">
+            <span class="text-danger" [hidden]="!error.extra_days">{{error.extra_days}}</span>
+        </div>
+
+        <!-- <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Net Present Days</label>
+            <input class="form-control" type="text" value="{{(monthlysalary.salary_month - monthlysalary.penalty_leave_days - monthlysalary.absent_days)
+            - monthlysalary.no_of_late_marks--monthlysalary.extra_days}}" name="net_present_days"  [(ngModel)]="monthlysalary.net_present_days"
+            (keypress)="keyPressNumbers($event)">
+        </div> -->
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Net Present Days</label>
+            <select  class="form-control" name="net_present_days"  [(ngModel)]="monthlysalary.net_present_days">
+               <option   value="{{monthlysalary.net_present_days}}" selected> {{bmi}}
+                </option>
+            </select>
+            <span class="text-danger" [hidden]="!error.net_present_days">{{error.net_present_days}}</span>
+        </div>
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Monthly Basic Salary</label>
+            <select  class="form-control" name="monthly_basic_salary"  [(ngModel)]="monthlysalary.monthly_basic_salary">
+               <option   value="{{monthlysalary.monthly_basic_salary}}" selected> {{bmi1}}
+                </option>
+            </select>
+            <span class="text-danger" [hidden]="!error.monthly_basic_salary">{{error.monthly_basic_salary}}</span>
+        </div>
+
+        <!-- <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Monthly Basic Salary</label>
+            <input class="form-control" type="text" [(ngModel)]="monthlysalary.monthly_basic_salary" value="{{((monthlysalary.basic_pay / monthlysalary.salary_month) * ((monthlysalary.salary_month - monthlysalary.penalty_leave_days - monthlysalary.absent_days)
+                - monthlysalary.no_of_late_marks--monthlysalary.extra_days)) | number : '1.0-0'}}" name="monthly_basic_salary"
+            (keypress)="keyPressNumbers($event)">
+        </div>
+   -->
+      </div>
+
+      <div class="mb-3 row">
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Monthly Variable Pay</label>
+            <input class="form-control" type="text" value="" name="monthly_variable_pay"  [(ngModel)]="monthlysalary.monthly_variable_pay"
+            (keypress)="keyPressNumbers($event)">
+            <span class="text-danger" [hidden]="!error.monthly_variable_pay">{{error.monthly_variable_pay}}</span>
+        </div>
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Reimbursement</label>
+            <input class="form-control" type="text" value="" name="reimbursement"  [(ngModel)]="monthlysalary.reimbursement"
+            (keypress)="keyPressNumbers($event)">
+            <span class="text-danger" [hidden]="!error.reimbursement">{{error.reimbursement}}</span>
+        </div>
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Incentives</label>
+            <input class="form-control" type="text" value="" name="incentives"  [(ngModel)]="monthlysalary.incentives"
+            (keypress)="keyPressNumbers($event)">
+            <span class="text-danger" [hidden]="!error.incentives">{{error.incentives}}</span>
+        </div>
+  
+      </div>
+
+      <div class="mb-3 row">
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Deduction Advance</label>
+            <input class="form-control" type="text" value="" name="deduction"  [(ngModel)]="monthlysalary.deduction"
+            (keypress)="keyPressNumbers($event)">
+            <span class="text-danger" [hidden]="!error.deduction">{{error.deduction}}</span>
+        </div>
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Liabilities</label>
+            <input class="form-control" type="text" value="" name="liabilities"  [(ngModel)]="monthlysalary.liabilities"
+            (keypress)="keyPressNumbers($event)">
+            <span class="text-danger" [hidden]="!error.liabilities">{{error.liabilities}}</span>
+        </div>
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Total Pay</label>
+            <select  class="form-control" name="monthly_basic_salary"  [(ngModel)]="monthlysalary.monthly_basic_salary">
+               <option   value="{{monthlysalary.monthly_basic_salary}}" selected> {{bmi2}}
+                </option>
+            </select>
+            <span class="text-danger" [hidden]="!error.monthly_basic_salary">{{error.monthly_basic_salary}}</span>
+        </div>
+  
+      </div>
+
+      <div class="mb-3 row">
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Tds Deducted</label>
+            <select  class="form-control" name="tds_deducted"  [(ngModel)]="monthlysalary.tds_deducted">
+               <option   value="{{monthlysalary.tds_deducted}}" selected> {{bmi3}}
+                </option>
+            </select>
+            <span class="text-danger" [hidden]="!error.tds_deducted">{{error.tds_deducted}}</span>
+        </div>
+  
+        <!-- <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Tds Deducted</label>
+            <input class="form-control" type="text" value="{{(((((monthlysalary.basic_pay / monthlysalary.salary_month) * ((monthlysalary.salary_month - monthlysalary.penalty_leave_days - monthlysalary.absent_days)
+                - monthlysalary.no_of_late_marks--monthlysalary.extra_days))--monthlysalary.reimbursement--monthlysalary.incentives - monthlysalary.liabilities--monthlysalary.monthly_variable_pay) * 1) / 100) | number : '1.0-0'}}" name="tds_deducted"  [(ngModel)]="monthlysalary.tds_deducted"
+            (keypress)="keyPressNumbers($event)">
+        </div> -->
+
+        <!-- <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Net Pay</label>
+            <input class="form-control" type="text" value="{{((((monthlysalary.basic_pay / monthlysalary.salary_month) * ((monthlysalary.salary_month - monthlysalary.penalty_leave_days - monthlysalary.absent_days)
+                - monthlysalary.no_of_late_marks--monthlysalary.extra_days))--monthlysalary.reimbursement--monthlysalary.incentives - monthlysalary.liabilities--monthlysalary.monthly_variable_pay) - (((((monthlysalary.basic_pay / monthlysalary.salary_month) * ((monthlysalary.salary_month - monthlysalary.penalty_leave_days - monthlysalary.absent_days)
+                - monthlysalary.no_of_late_marks--monthlysalary.extra_days))--monthlysalary.reimbursement--monthlysalary.incentives - monthlysalary.liabilities--monthlysalary.monthly_variable_pay) * 1) / 100) - monthlysalary.deduction) | number : '1.0-0'}}" name="net_pay"  [(ngModel)]="monthlysalary.net_pay"
+            (keypress)="keyPressNumbers($event)">
+        </div> -->
+
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Net Pay</label>
+            <select  class="form-control" name="net_pay"  [(ngModel)]="monthlysalary.net_pay">
+               <option   value="{{monthlysalary.net_pay}}" selected> {{bmi4}}
+                </option>
+            </select>
+            <span class="text-danger" [hidden]="!error.net_pay">{{error.net_pay}}</span>
+        </div>
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Status</label>
+            <select  class="form-control" name="status"  [(ngModel)]="monthlysalary.status">
+                <option value="">-- Select User Name --</option>
+                <option value="Paid"> Paid </option>
+                <option value="Hold"> Hold </option>
+                <option value="Echeck Preferred"> Echeque Preferred  </option>
+                <option value="Pending"> Pending </option>
+               
+            </select>
+            <span class="text-danger" [hidden]="!error.status">{{error.status}}</span>
+        </div>
+  
+      </div>
+      <div class="mb-3 row">
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Deduction Advance</label>
+            <input class="form-control" type="text" value="" name="TDS_paid"  [(ngModel)]="monthlysalary.TDS_paid"
+            (keypress)="keyPressNumbers($event)">
+            <span class="text-danger" [hidden]="!error.TDS_paid">{{error.TDS_paid}}</span>
+        </div>
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Deduction Advance</label>
+            <input class="form-control" type="text" value="" name="net_salary_paid"  [(ngModel)]="monthlysalary.net_salary_paid"
+            (keypress)="keyPressNumbers($event)">
+            <span class="text-danger" [hidden]="!error.net_salary_paid">{{error.net_salary_paid}}</span>
+        </div>
+
+        <!-- <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">TDS Paid</label>
+            <select  class="form-control" name="TDS_paid"  [(ngModel)]="monthlysalary.TDS_paid">
+                <option   value="{{monthlysalary.TDS_paid}}" selected> {{monthlysalary.TDS_paid}}
+                 </option>
+             </select>
+        </div>
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Net Salary Paid</label>
+            <select  class="form-control" name="net_salary_paid"  [(ngModel)]="monthlysalary.net_salary_paid">
+               <option   value="{{monthlysalary.net_salary_paid}}" selected> {{monthlysalary.net_salary_paid}}
+                </option>
+            </select>
+        </div> -->
+
+     
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Pending Amount</label>
+            <select  class="form-control" name="pending_amount"  [(ngModel)]="monthlysalary.pending_amount">
+               <option   value="{{monthlysalary.pending_amount}}" selected> {{bmi5}}
+                </option>
+            </select>
+            <span class="text-danger" [hidden]="!error.pending_amount">{{error.pending_amount}}</span>
+        </div>
+
+    </div>
+      <div class="mb-3 row">
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Remark</label>
+            <input class="form-control" type="text" value="" name="remark"  [(ngModel)]="monthlysalary.remark">
+            <span class="text-danger" [hidden]="!error.remark">{{error.remark}}</span>
+        </div>
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Paid Amount</label>
+            <select  class="form-control" name="paid_amount"  [(ngModel)]="monthlysalary.paid_amount">
+               <option   value="{{monthlysalary.paid_amount}}" selected> {{bmi4}}
+                </option>
+            </select>
+            <span class="text-danger" [hidden]="!error.paid_amount">{{error.paid_amount}}</span>
+        </div>
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Payment Details</label>
+            <input class="form-control" type="text" value="" name="payment_details"  [(ngModel)]="monthlysalary.payment_details">
+            <span class="text-danger" [hidden]="!error.payment_details">{{error.payment_details}}</span>
+        </div>
+     
+
+    </div>
+
+
+   
+
+<!-- 
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Payment Details</label>
+        <input class="form-control" type="text" value="" name="TDS_paid"  [(ngModel)]="monthlysalary.TDS_paid">
+    </div>
+
+    <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Payment Details</label>
+        <input class="form-control" type="text" value="" name="net_salary_paid"  [(ngModel)]="monthlysalary.net_salary_paid">
+    </div> -->
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+   
+  
+  </div> <!-- container-fluid -->

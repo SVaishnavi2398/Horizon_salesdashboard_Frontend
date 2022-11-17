@@ -1,0 +1,58 @@
+<div class="container-fluid">
+
+    <!-- start page title -->
+    <app-page-title title="Create Monthly Target Details"></app-page-title>
+    <!-- end page title -->
+
+
+<form  (ngSubmit)="submitMonthlytarget()">
+
+    <div class="mb-3 row">
+        <div class="col-md-3">
+            <label for="example-text-input" class="col-form-label">User Name</label>
+            <select  class="form-control" name="user_id" (change)="getsalary( $event)" [(ngModel)]="monthlytarget.user_id">
+                <option value="">-- Select User Name --</option>
+                <option *ngFor="let ul of usersArr"  value="{{ul.user_id}}"> {{ul.firstname}} {{ul.middlename}} {{ul.lastname}}
+                </option>
+            </select>
+            <span class="text-danger" [hidden]="!error.user_id">The user name field is required</span>
+        </div>
+
+        
+        <div class="col-md-3">
+            <label for="example-text-input" class="col-form-label">Salary Package Id</label>
+            <select  class="form-control" name="salary_package_id"  [(ngModel)]="monthlytarget.salary_package_id">
+                <option value="">-- Select User Name --</option>
+                <option  value="{{monthlytarget.salary_package_id}}"> {{monthlytarget.basic_pay}}
+                </option>
+            </select>
+            <span class="text-danger" [hidden]="!error.salary_package_id">{{error.salary_package_id}}</span>
+        </div>
+
+        <div class="col-md-3">
+            <label for="example-text-input" class="col-form-label">From Date</label>
+            <input class="form-control" type="date" value="" name="from_date"  [(ngModel)]="monthlytarget.from_date">
+            <span class="text-danger" [hidden]="!error.from_date">{{error.from_date}}</span>
+        </div>
+
+        <div class="col-md-3">
+            <label for="example-text-input" class="col-form-label">To Date</label>
+            <input class="form-control" type="date" value="" name="to_date"  [(ngModel)]="monthlytarget.to_date">
+            <span class="text-danger" [hidden]="!error.to_date">{{error.to_date}}</span>
+        </div>
+
+        <div class="col-md-3">
+            <label for="example-text-input" class="col-form-label">Status</label>
+            <input class="form-control" type="text" value="" name="status"  [(ngModel)]="monthlytarget.status">
+            <span class="text-danger" [hidden]="!error.status">{{error.status}}</span>
+        </div>
+
+    </div>
+
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+   
+  
+  </div> <!-- container-fluid -->

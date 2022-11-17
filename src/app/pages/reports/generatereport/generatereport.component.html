@@ -1,0 +1,133 @@
+<div class="container-fluid">
+    <!-- start page title -->
+    <!-- <app-page-title title="Reports"></app-page-title> -->
+    <div class="row">
+        <div class="col-md-4">
+          <div>
+            <app-page-title title="Calculations"></app-page-title>
+
+          </div>
+        </div>
+
+        <div class="col-md-8"  style="text-align: right;">
+            <!-- <button (click)="exportAsXLSX()" class="btn btn-danger mb-3">Export To Excel</button> -->
+            <button type="button" class="btn btn-primary mb-3"  routerLink="/reports/addreports" style="margin-right: 10px;"><i class="mdi mdi-plus me-1"></i>
+                Add Report</button>
+                    
+            <button (click)="exportexcel()" class="btn btn-danger mb-3">Export To Excel</button>
+                    
+        </div>
+    </div>
+    
+    <!-- end page title -->
+  
+    <div class="row">
+  
+        <div class="col-lg-12">
+            <div class="card">
+
+
+                <div class="card-body">
+                    <!-- <h4 class="card-title mb-4">Reports</h4> -->
+  
+                    <div class="table-responsive">
+
+                        <table class="table table-centered table-nowrap mb-0 align-middle"  id="excel-table">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Fields</th>
+                                        <th>Calculations</th>
+                                       
+
+                                    </tr>
+                                </thead>
+                               <td>
+                                <tr *ngFor="let ml of avgkeys1 | keyvalue">
+                                  <td>{{ml.value}}</td>
+                                </tr>
+                                </td>
+
+                                <td>
+                                <tr *ngFor="let ml of sumvalue | keyvalue">
+                                    <td>{{ml.value}}</td>
+                                </tr>
+                               
+                                     
+                                
+                                <tr *ngFor="let ml of avgvalue | keyvalue">
+                                    <td> {{ml.value}}</td>
+                                </tr>
+                                </td>
+
+                              
+                            
+                            </table>
+
+            
+                       
+                       
+                    </div>
+                </div>
+                    <!-- end table -->
+                </div>
+           </div>
+        </div>
+
+
+
+
+<div class="row">
+    <div class="col-md-4">
+      <div>
+        <app-page-title title="Report"></app-page-title>
+
+      </div>
+    </div>
+</div>
+<div class="row">
+  
+    <div class="col-lg-12">
+        <div class="card">
+                
+                <div class="card-body">
+                    <!-- <h4 class="card-title mb-4">Reports</h4> -->
+  
+                    <div class="table-responsive">
+
+                     <table class="table table-centered table-nowrap mb-0 align-middle"  id="excel-table">
+                            <thead class="table-light">
+                               <tr>
+                                    <th *ngFor="let ml of headerArr | keyvalue">
+                                        {{ml.value}}
+                                      
+                                    </th>
+                                   <!-- <th *ngFor="let sl of headerArr1">{{sl}}</th> -->
+                                   
+                                   
+                                </tr>
+                            </thead>
+                            <tbody>
+                              <tr *ngFor="let report of valueArr | keyvalue">
+                                    <td *ngFor = "let i of array">
+                                        {{report.value[i]}}
+                                    </td>
+                                    <!-- <tr>
+                                        <td *ngFor="let report of value2Arr | keyvalue">
+                                            {{report.value | json}}
+                                        </td> -->
+                                   
+                                
+                                    
+                                    <!-- <td><button class="btn btn-success mb-3"  routerLink="/reports/generatereport/{{reports.reports_id}}">Generate</button></td> -->
+                              </tr>
+                            </tbody>
+                        </table>
+  
+                    </div>
+                    <!-- end table -->
+                </div>
+            </div>
+        </div>
+    </div>
+  </div> <!-- container-fluid -->
+  

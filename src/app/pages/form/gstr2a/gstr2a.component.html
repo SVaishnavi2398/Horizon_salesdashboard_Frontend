@@ -1,0 +1,180 @@
+<!-- <div class="container-fluid">
+    <div class="card">
+        <div class="card-body">
+            <div class="mb-3 row">
+                <div class="col-md-4">
+                    <label>Upload Json</label>
+                    <form (ngSubmit)="saveMultipleImage()" enctype="multipart/form-data">
+                        <div class="mb-3 row">
+                            <div class="col-md-8">
+                                <input class="form-control" type='file' (change)="onSelectFile($event)" multiple>
+
+                            </div>
+                            <div class="col-md-4">
+                                <button type="submit" class="btn btn-primary"> <i class="mdi mdi-upload"></i>
+                                    Upload</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="card">
+    
+    <div class="card-body">
+
+        <div class="card-header">
+            <h4 class="card-title">Add New File </h4>
+        </div>
+        <form (ngSubmit)="UploadFiles()">
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <label>Upload Json</label>
+                    <form (ngSubmit)="saveMultipleImage()" enctype="multipart/form-data">
+                        <div class="mb-3 row">
+                            <div class="col-md-8">
+                                <input class="form-control" type='file' (change)="onSelectFile($event)" multiple>
+
+                            </div>
+                            <div class="col-md-4">
+                                <button type="submit" class="btn btn-primary"> <i class="mdi mdi-upload"></i>
+                                    Upload</button>
+                            </div>
+                            <p class="text-danger"> File Name must be this gstr2a.json</p>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-2">
+                    <label>Financial Year</label>
+                    <select class="form-control" name="financial_year" [(ngModel)]="json.financial_year">
+                        <option value="">-- Select Financial Year From --</option>
+                        <option value="2020-2021"> 2020-2021 </option>
+                        <option value="2021-2022"> 2021-2022 </option>
+                        <option value="2022-2023"> 2022-2023 </option>
+                        <option value="2023-2024"> 2023-2024 </option>
+                        <option value="2024-2025"> 2024-2025 </option>
+                        <option value="2025-2026"> 2025-2026 </option>
+
+                    </select>
+                    <span class="text-danger" [hidden]="!error.financial_year">{{error.financial_year}}</span>
+                </div>
+
+                <div class="col-md-2">
+                    <label>Financial Month</label>
+                    <select class="form-control" name="financial_month" [(ngModel)]="json.financial_month">
+                        <option value="">-- Select Month--</option>
+                        <option value="1"> January </option>
+                        <option value="2"> February </option>
+                        <option value="3"> March </option>
+                        <option value="4"> April </option>
+                        <option value="5"> May </option>
+                        <option value="6"> June </option>
+                        <option value="7"> July </option>
+                        <option value="8"> August </option>
+                        <option value="9"> September </option>
+                        <option value="10"> October </option>
+                        <option value="11"> November </option>
+                        <option value="12"> December </option>
+                    </select>
+                    <span class="text-danger" [hidden]="!error.financial_year">{{error.financial_month}}</span>
+                </div>
+                <div class="col-md-2"  style="padding-top: 28px;">
+                    <label></label>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                   
+                </div>
+
+
+            </div>
+        </form>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                
+                <div class="card-body" style="padding: 0 10px 0 10px;">
+                    <div class="card-header">
+                        <h4 class="card-title">Monthly GSTR 2A</h4>
+                    </div>
+                   <div class="table-responsive">
+                        <table class="table table-bordered mb-0">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th colspan="5">B2B Invoice</th>
+                                    <th colspan="4">GSTR 2A</th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th [class.active]="order === 'new_year'" (click)="setOrder('new_year')">
+                                        Month<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                      </th>
+                                      <th [class.active]="order === 'b2bcount'" (click)="setOrder('b2bcount')">
+                                        Sales<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                      </th>
+                                      <th [class.active]="order === 'b2bctotal'" (click)="setOrder('b2bctotal')">
+                                        CGST<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                      </th>
+                                      <th [class.active]="order === 'b2bstotal'" (click)="setOrder('b2bstotal')">
+                                        SGST<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                      </th>
+                                      <th [class.active]="order === 'b2bitotal'" (click)="setOrder('b2bitotal')">
+                                        IGST<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                      </th>
+                                      <th [class.active]="order === 'b2btotal'" (click)="setOrder('b2btotal')">
+                                        Total<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                      </th>
+                                      <th [class.active]="order === 'gstrA2count'" (click)="setOrder('gstrA2count')">
+                                        Sales<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                      </th>
+                                      <th [class.active]="order === 'ctotal'" (click)="setOrder('ctotal')">
+                                        CGST<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                      </th>
+                                      <th [class.active]="order === 'stotal'" (click)="setOrder('stotal')">
+                                        SGST<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                      </th>
+                                      <th [class.active]="order === 'itotal'" (click)="setOrder('itotal')">
+                                        IGST<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                      </th>
+                                      <th [class.active]="order === 'gstr2atotal'" (click)="setOrder('gstr2atotal')">
+                                        Total<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                      </th>
+                                      <!-- <th [class.active]="order === 'SGST_to_IGST'" (click)="setOrder('SGST_to_IGST')">
+                                        Comapre Gst<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                      </th> -->
+                                    </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor='let data of dis_array2 | orderBy: order:reverse:caseInsensitive'>
+                                    <td><a class="text-primary"
+                                            routerLink="/form/gstr2adetails/{{data.new_date}}">{{data.month}}/{{data.new_year}}</a></td>
+                                    <td>{{data.b2bcount}}</td>
+                                    <td>{{data.b2bctotal}}</td>
+                                    <td>{{data.b2bstotal}}</td>
+                                    <td>{{data.b2bitotal}}</td>
+                                    <td [ngClass]="{ ct: data.b2btotal != data.gstr2atotal}">{{data.b2btotal | number: '1.2-2'}}</td>
+                                    <td>{{data.gstrA2count}}</td>
+                                    <td>{{data.ctotal}}</td>
+                                    <td>{{data.stotal}}</td>
+                                    <td>{{data.itotal}}</td>
+                                    <td [ngClass]="{ ct: data.b2btotal != data.gstr2atotal}">{{data.gstr2atotal | number: '1.2-2'}}</td>
+                                    <td [ngClass]="{ ct: data.b2btotal != data.gstr2atotal}">{{data.gstr2atotal  - data.b2btotal | number: '1.2-2'}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    /* .ct {
+    color: red;
+} */
+</style>

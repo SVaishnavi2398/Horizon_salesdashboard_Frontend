@@ -1,0 +1,106 @@
+<div class="container-fluid">
+    <form (ngSubmit)="updatedata()">
+
+        <div class="mb-3 row">
+
+            <div class="col-md-3">
+
+                <label for="example-text-input" class="col-form-label"> Team Leader</label>
+                <select class="form-control" name="user_id" (change)="getState1($event)" placeholder="-- Select Client Name --">
+                <option>Select</option>
+                    <option *ngFor="let cl of teamdetails"  value="{{cl.team_leader_name}}">
+                        {{cl.team_leader_name}}
+                    </option>
+                </select>
+
+            </div>
+
+            <div class="col-md-3">
+                <label for="example-text-input" class="col-form-label">From Date</label>
+                <input class="form-control" type="date" value="" id="from_date" name="from_date" [(ngModel)]="dealdetails.from_date" (change)="getState3($event)">
+                <!-- <span class="text-danger" [hidden]="!error.from_date">{{error.from_date}}</span> -->
+            </div>
+
+            <div class="col-md-3">
+                <label for="example-text-input" class="col-form-label">To Date</label>
+                <input class="form-control" type="date" value="" id="to_date" name="to_date" [(ngModel)]="dealdetails.to_date" (change)="getState2($event)">
+                <!-- <span class="text-danger" [hidden]="!error.to_date">{{error.to_date}}</span> -->
+            </div>
+
+
+
+            <div class="col-md-3">
+                <label for="example-text-input" class="col-form-label">Salary Justify</label>
+                <input class="form-control" type="text" value="{{dealdetails.basic_pay}}" id="salary_justify" name="salary_justify" [(ngModel)]="dealdetails.salary_justify">
+            </div>
+
+            <div class="col-md-3">
+                <label for="example-text-input" class="col-form-label">Business Target</label>
+                <input class="form-control" type="text" value="{{dealdetails.business_target}}" id="business_target" name="business_target" [(ngModel)]="dealdetails.business_target">
+            </div>
+
+            <div class="col-md-3">
+                <label for="example-text-input" class="col-form-label">Leadsource</label>
+                <input class="form-control" type="text" value="{{dealdetails.deal_closing}}" id="deal_closing" name="deal_closing" [(ngModel)]="dealdetails.deal_closing" disabled>
+                <!-- <ng-select name="leadsource" [(ngModel)]="dealdetails.leadsource" required>
+                    <ng-option value="">-- Select Chanel Partner --</ng-option>
+                    <ng-option *ngFor="let ls of leadsourceArr" value="{{ls.leadsource_id}}">
+                        {{ls.leadsource}}
+                    </ng-option>
+                </ng-select> -->
+                <!-- <span class="text-danger" [hidden]="!error.leadsource">{{error.leadsource}}</span> -->
+            </div>
+
+
+            <div class="col-md-3">
+                <label for="example-text-input" class="col-form-label">Status of Target</label>
+                <input class="form-control" type="text" value="{{status}}" id="deal_status" name="deal_status" [(ngModel)]="dealdetails.deal_status">
+            </div>
+
+            <div class="col-md-3">
+                <label for="example-text-input" class="col-form-label">Attented Day</label>
+                <input class="form-control" type="text" value="" id="attented_day" name="attented_day" [(ngModel)]="dealdetails.attented_day">
+            </div>
+
+            <div class="col-md-3">
+                <label for="example-text-input" class="col-form-label">Business Value</label>
+                <input class="form-control" type="text" value="{{business_value}}" id="business_value" name="business_value" [(ngModel)]="dealdetails.business_value">
+                <!-- <span class="text-danger" [hidden]="!error.attented_day">{{error.attented_day}}</span> -->
+            </div>
+
+            <div class="col-md-3">
+                <label for="example-text-input" class="col-form-label">Actual Sales</label>
+                <input class="form-control" type="text" value="" id="actual_sales" name="actual_sales" [(ngModel)]="dealdetails.actual_sales">
+                <!-- <span class="text-danger" [hidden]="!error.attented_day">{{error.attented_day}}</span> -->
+            </div>
+
+            <div class="col-md-3">
+                <label for="example-text-input" class="col-form-label">Walking Closing</label>
+                <input class="form-control" type="text" value="" id="walking_closing" name="walking_closing" [(ngModel)]="dealdetails.walking_closing">
+            </div>
+
+            <div class="col-md-3">
+                <label for="example-text-input" class="col-form-label">Walking Sourcing</label>
+                <input class="form-control" type="text" value="" id="walking_sourcing" name="walking_sourcing" [(ngModel)]="dealdetails.walking_sourcing">
+            </div>
+
+            <div class="col-md-3">
+                <label for="example-text-input" class="col-form-label">Leads Given</label>
+                <input class="form-control" type="text" value="" id="leads_given" name="leads_given" [(ngModel)]="dealdetails.leads_given">
+            </div>
+
+            <div class="col-md-3">
+                <label for="example-text-input" class="col-form-label">Deal Sourcing</label>
+                <input class="form-control" type="text" value="{{dealdetails.deal_sourcing}}" id="deal_sourcing" name="deal_sourcing" [(ngModel)]="dealdetails.deal_sourcing">
+            </div>
+
+            <div class="col-md-3">
+                <label for="example-text-input" class="col-form-label">Deal Closing</label>
+                <input class="form-control" type="text" value="" id="deal_closing" name="deal_closing" [(ngModel)]="dealdetails.deal_closing">
+            </div>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+</div>

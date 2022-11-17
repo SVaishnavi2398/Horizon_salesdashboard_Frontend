@@ -1,0 +1,122 @@
+<div class="container-fluid">
+
+    <form>
+        <div class="row">
+            <div class="row">
+
+                <div class="col-md-8">
+
+                    <app-page-title title="Walkin Deals Report"></app-page-title>
+
+
+                </div>
+
+                <div class="col-md-4">
+                    <ngb-pagination class="d-flex justify-content-center" [(page)]="page" [maxSize]="4" [collectionSize]="walkindata.length" [boundaryLinks]="true" style="justify-content: right!important;"></ngb-pagination>
+                </div>
+
+
+            </div>
+            <div class="col-md-3">
+
+                <label for="example-text-input" class="col-form-label"> Team Leader</label>
+                <select formControlName="name" class="form-control" name="user_id" (change)="getState1($event)" placeholder="-- Select Client Name --">
+        <option>Select</option>
+            <option *ngFor="let cl of leaderArr"  value="{{cl.team_leader_name}}">
+                {{cl.team_leader_name}}
+            </option>
+        </select>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <label for="example-text-input" class="col-form-label"> User Name</label>
+                <select formControlName="name" class="form-control" name="user_id" (change)="getState2($event)" placeholder="-- Select Client Name --">
+        <option>Select</option>
+            <option *ngFor="let cl of usersArr"  value="{{cl.user_id}}">
+                {{cl.firstname}}  {{cl.lastname}}
+            </option>
+        </select>
+
+            </div>
+
+            <div class="col-md-3">
+                <label for="example-text-input" class="col-form-label">From Date</label>
+                <input formControlName="name" class="form-control" type="date" value="{{from_date}}" id="from_date" name="from_date" (change)="getstate3($event)">
+                <!-- <span class="text-danger" [hidden]="!error.from_date">{{error.from_date}}</span> -->
+            </div>
+
+            <div class="col-md-3">
+                <label for="example-text-input" class="col-form-label">To Date</label>
+                <input formControlName="name" class="form-control" type="date" value="{{to_date}}" id="to_date" name="to_date" (change)="getstate4($event)">
+                <!-- <span class=" text-danger " [hidden]="!error.to_date ">{{error.to_date}}</span> -->
+            </div>
+        </div>
+    </form>
+
+    <div class="col-md-3 pt-2">
+
+    </div>
+    <div id="tickets-table_filter" class="dataTables_length"><label class="d-inline-flex align-items-center">Search:
+        <input type="text" name="searchwalkindealslist" class="form-control form-control-sm ms-2"
+          aria-controls="tickets-table" [(ngModel)]="searchwalkindealslist"></label>
+    </div>
+
+
+
+
+    <div class="row pt-2 ">
+        <div class="col-lg-12 ">
+            <div class="card ">
+                <div class="card-body " style="padding: 0 10px 0 10px; ">
+
+                    <div class="table-responsive ">
+                        <table class="table mb-0 ">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Clients Name</th>
+                                    <th>Project Name</th>
+                                    <th>Sourcing</th>
+                                    <th>Closing</th>
+                                    <th>Team</th>
+                                    <th>Team Leader Name</th>
+                                    <th>Revisit</th>
+                                    <th>Video Presentation</th>
+                                    <th>Web Lead</th>
+                                    <th>Remark</th>
+                                    <th>Present With Client</th>
+                                    <th>Closing Ti site</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let walkin of walkindata | searchwalkindealslist:searchwalkindealslist | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+
+                                    <td>{{walkin.date}}</td>
+                                    <td>{{walkin.client_name}}</td>
+                                    <td>{{walkin.project_name}}</td>
+                                    <td>{{walkin.firstname}} {{walkin.lastname}}</td>
+                                    <td>{{walkin.firstname}} {{walkin.lastname}}</td>
+                                    <td>{{walkin.teamname}}</td>
+                                    <td>{{walkin.team_leader_name}}</td>
+                                    <td>{{walkin.revisit}}</td>
+                                    <td>{{walkin.videopresentation}}</td>
+                                    <td>{{walkin.leadsource}}</td>
+                                    <td>{{walkin.remark}}</td>
+                                    <td>{{walkin.presentwithclient}}</td>
+                                    <td>{{walkin.closingtisite}}</td>
+
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

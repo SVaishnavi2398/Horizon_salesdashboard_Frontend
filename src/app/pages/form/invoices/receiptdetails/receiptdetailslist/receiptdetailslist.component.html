@@ -1,0 +1,154 @@
+<style>
+  button.btn.btn-success {
+    padding: 5px 10px;
+  }
+
+  button.btn.btn-info {
+    padding: 5px 10px;
+  }
+
+  button.btn.btn-danger {
+    padding: 4px 10px;
+  }
+
+  td {
+    /* padding: 10px 15px; */
+    padding: 10px 10px;
+  }
+
+  button.btn.btn-primary.mb-3 {
+    padding: 4px 8px;
+  }
+</style>
+
+<div class="container-fluid">
+  <!-- <app-page-title title="Teams List"></app-page-title> -->
+
+  <div class="row">
+    <div class="col-md-4">
+      <div>
+        <app-page-title title="Receipt Details List"></app-page-title>
+
+      </div>
+    </div>
+    <div class="col-md-8" style="text-align: right;">
+      <button type="button" class="btn btn-primary mb-3" routerLink="/form/invoices/receiptdetails/receiptdetails"><i
+          class="mdi mdi-plus me-1"></i>
+        Add Receipt Details</button>
+    </div>
+
+
+    <!-- Search -->
+    <!-- <div class="col-md-12">
+            <div id="tickets-table_filter" class="dataTables_length"><label
+                class="d-inline-flex align-items-center">Search:
+                <input type="text" name="searchcompanylist" class="form-control form-control-sm ms-2"
+                  aria-controls="tickets-table" [(ngModel)]="searchcompanylist"></label>
+              </div>
+        </div> -->
+    <!-- End search -->
+
+    <div class="col-md-8">
+      <!-- <div id="tickets-table_filter" class="dataTables_length"><label class="d-inline-flex align-items-center">Search:
+          <input type="text" name="searchreceiptdetails" class="form-control form-control-sm ms-2"
+            aria-controls="tickets-table" [(ngModel)]="searchreceiptdetails"></label>
+      </div> -->
+    </div>
+    <div class="col-md-4">
+      <ngb-pagination class="d-flex justify-content-center" [(page)]="page" [maxSize]="4"
+        [collectionSize]="receiptdetailsList.length" [boundaryLinks]="true" style="justify-content: right!important;">
+      </ngb-pagination>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-body">
+          <!-- <h4 class="card-title">Registered Roles</h4> -->
+
+          <div class="table-responsive">
+            <table class="table mb-0">
+              <thead>
+                <!-- Sorting -->
+                <tr>
+                  <th [class.active]="order === 'invoice_num'" (click)="setOrder('invoice_num')">
+                    Invoice Number <span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                  </th>
+                  <th [class.active]="order === 'payment_mode'" (click)="setOrder('payment_mode')">
+                    Payment Mode<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                  </th>
+                  <th [class.active]="order === 'instument_no'" (click)="setOrder('instument_no')">
+                    Instument Number<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                  </th>
+                  <th [class.active]="order === 'received_amt'" (click)="setOrder('received_amt')">
+                    Received Amount<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                  </th>
+                  <th [class.active]="order === 'instument_date'" (click)="setOrder('instument_date')">
+                    Instument Date<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                  </th>
+                  <th [class.active]="order === 'received_taxable_amt'" (click)="setOrder('received_taxable_amt')">
+                    Received Taxable Amount<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                  </th>
+
+                </tr>
+                <!-- Sorting End-->
+                <!-- Search -->
+                <tr>
+                  <th>
+                    <input type="text" class="form-control form-control-sm ms-2" aria-controls="tickets-table"
+                      [(ngModel)]="invoice_num_Search">
+                  </th>
+                  <th>
+                    <input type="text" class="form-control form-control-sm ms-2" aria-controls="tickets-table"
+                      [(ngModel)]="payment_mode_Search">
+                  </th>
+                  <th>
+                    <input type="text" class="form-control form-control-sm ms-2" aria-controls="tickets-table"
+                      [(ngModel)]="instument_no_Search">
+                  </th>
+                  <th>
+                    <input type="text" class="form-control form-control-sm ms-2" aria-controls="tickets-table"
+                      [(ngModel)]="received_amt_Search">
+                  </th>
+                  <th>
+                    <input type="date" class="form-control form-control-sm ms-2" aria-controls="tickets-table"
+                      [(ngModel)]="instument_date_Search">
+                  </th>
+                  <th>
+                    <input type="text" class="form-control form-control-sm ms-2" aria-controls="tickets-table"
+                      [(ngModel)]="received_taxable_amt_Search">
+                  </th>
+                </tr>
+                <!-- End search -->
+              </thead>
+              <tbody>
+                <tr
+                  *ngFor="let receiptdetails of receiptdetailsArr | searchreceiptdetails: invoice_num_Search:payment_mode_Search:instument_no_Search:received_amt_Search:instument_date_Search:received_taxable_amt_Search  | orderBy: order:reverse:caseInsensitive | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+                  <!-- <th>{{receiptdetails.receipt_id}}</th> -->
+                  <td scope="row">{{receiptdetails.invoice_num}}</td>
+                  <td>{{receiptdetails.payment_mode}}</td>
+                  <td>{{receiptdetails.instument_no}}</td>
+                  <td>{{receiptdetails.received_amt}}</td>
+                  <td>{{receiptdetails.instument_date}}</td>
+                  <td>{{receiptdetails.received_taxable_amt}}</td>
+                  <td>
+                    <button type="button" class="btn btn-info"
+                      routerLink="/form/invoices/receiptdetails/editreceiptdetails/{{receiptdetails.receipt_id}}"><i
+                        class="uil-pen"></i></button>
+                    &nbsp;&nbsp;
+                    <button type="button" class="btn btn-success"
+                      routerLink="/form/invoices/receiptdetails/receiptdetailsview/{{receiptdetails.receipt_id}}"><i
+                        class="uil-eye"></i></button>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end row -->
+</div>

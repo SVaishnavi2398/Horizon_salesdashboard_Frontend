@@ -1,0 +1,2046 @@
+{
+    "gstin": "27AAFCH2102Q1ZI",
+    "fp": "122021",
+    "b2b": [
+        {
+            "ctin": "27AACCL2441D1ZY",
+            "cfs": "Y",
+            "cfs3b": "Y",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 1406.14,
+                                "rt": 18,
+                                "txval": 15623.72,
+                                "camt": 1406.14,
+                                "iamt": 0
+                            }
+                        }
+                    ],
+                    "val": 18436,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "31-12-2021",
+                    "rchrg": "N",
+                    "inum": "36846-L-MH-2122",
+                    "chksum": "67f3890f4c3b9e1859c5ce10f720c45b109cc2c96f9f914753489be4a3736972"
+                }
+            ],
+            "fldtr1": "10-Jan-22",
+            "flprdr1": "Dec-21"
+        },
+        {
+            "ctin": "27AAJCA1389G1ZJ",
+            "cfs": "Y",
+            "cfs3b": "Y",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 243.48,
+                                "rt": 18,
+                                "txval": 2705.57,
+                                "camt": 243.48,
+                                "iamt": 0
+                            }
+                        }
+                    ],
+                    "val": 3192.52,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "15-12-2021",
+                    "rchrg": "N",
+                    "inum": "A3JVGQGOQOMH4121",
+                    "chksum": "144515dd13e4b98a811194c930ff49bf3e01670bfd30da533169b9b291fbac0e"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 331.23,
+                                "rt": 18,
+                                "txval": 3680.15,
+                                "camt": 331.23,
+                                "iamt": 0
+                            }
+                        }
+                    ],
+                    "val": 4342.6,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "31-12-2021",
+                    "rchrg": "N",
+                    "inum": "A3JVGQGOQOMH4221",
+                    "chksum": "a1d37077f558766c14dbab0c37ff0948e0578856cdfec6cc9419da0f8b63f556"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 285.83,
+                                "rt": 5,
+                                "txval": 11432.33,
+                                "camt": 285.83,
+                                "iamt": 0
+                            }
+                        }
+                    ],
+                    "val": 12003.98,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "15-12-2021",
+                    "rchrg": "N",
+                    "inum": "B3JVGQGOQOMHE412",
+                    "chksum": "ba8816c40c0f2741ed033314bc57914207cedbebd666bafb9c5c838afe47df8c"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 335.08,
+                                "rt": 5,
+                                "txval": 13403.17,
+                                "camt": 335.08,
+                                "iamt": 0
+                            }
+                        }
+                    ],
+                    "val": 14073.33,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "31-12-2021",
+                    "rchrg": "N",
+                    "inum": "B3JVGQGOQOMHE422",
+                    "chksum": "3fe0a7ec82094e0c25cd8ad1022f715d6e0a5bd3d84ad3c1d312e852c8e9864e"
+                }
+            ],
+            "fldtr1": "07-Jan-22",
+            "flprdr1": "Dec-21"
+        },
+        {
+            "ctin": "06AACCG0527D1Z8",
+            "cfs": "Y",
+            "cfs3b": "Y",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "rt": 18,
+                                "txval": 58.23,
+                                "iamt": 10.48
+                            }
+                        }
+                    ],
+                    "val": 68.71,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "31-12-2021",
+                    "rchrg": "N",
+                    "inum": "4045516528",
+                    "chksum": "8e7ded263aac038b6d45610b634a1ad550f793bf4cc0b01c7a86e4b3f67c0a63"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "rt": 18,
+                                "txval": 133302.28,
+                                "iamt": 23994.41
+                            }
+                        }
+                    ],
+                    "val": 157296.69,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "31-12-2021",
+                    "rchrg": "N",
+                    "inum": "4045815276",
+                    "chksum": "b77a247dc5f6dcd357560d0230b3dec1704ce6a777866142d1de9d2730daaee5"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "rt": 18,
+                                "txval": 45202.8,
+                                "iamt": 8136.5
+                            }
+                        }
+                    ],
+                    "val": 53339.3,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "31-12-2021",
+                    "rchrg": "N",
+                    "inum": "4045941445",
+                    "chksum": "e79f14f0d7d430995554a10cbbbb1e683c8f2e065d41f4b6cd1d1f43e0969c53"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "rt": 18,
+                                "txval": 304.7,
+                                "iamt": 54.85
+                            }
+                        }
+                    ],
+                    "val": 359.55,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "31-12-2021",
+                    "rchrg": "N",
+                    "inum": "4046315290",
+                    "chksum": "6bf3cba07a905cae9a664bddf6c14ac160210bf0af1769707910ef2e0bb1abbf"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "rt": 18,
+                                "txval": 67414.84,
+                                "iamt": 12134.67
+                            }
+                        }
+                    ],
+                    "val": 79549.51,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "31-12-2021",
+                    "rchrg": "N",
+                    "inum": "4046378059",
+                    "chksum": "1f0135e1d8655e2ccbbf43bf74f205bfcfd449084edc5160263b372a41037804"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "rt": 18,
+                                "txval": 81111.95,
+                                "iamt": 14600.15
+                            }
+                        }
+                    ],
+                    "val": 95712.1,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "31-12-2021",
+                    "rchrg": "N",
+                    "inum": "4046741366",
+                    "chksum": "216a67b3e3e4dc31c0978c732f45c53ecdeb05b84567940d07ef5fb1706d9298"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "rt": 18,
+                                "txval": 2957.41,
+                                "iamt": 532.33
+                            }
+                        }
+                    ],
+                    "val": 3489.74,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "31-12-2021",
+                    "rchrg": "N",
+                    "inum": "4046890308",
+                    "chksum": "f24d0841bf4d4d2cd76b8ecaa7dd195456f1a440e55d67a879a2965663cbcbc7"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "rt": 18,
+                                "txval": 20898.64,
+                                "iamt": 3761.76
+                            }
+                        }
+                    ],
+                    "val": 24660.4,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "31-12-2021",
+                    "rchrg": "N",
+                    "inum": "4046943707",
+                    "chksum": "2a3187fdc9e9a400050ae5a6e0521671089172eb8e4f4b2063da9031fd2712b2"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "rt": 18,
+                                "txval": 947.7,
+                                "iamt": 170.59
+                            }
+                        }
+                    ],
+                    "val": 1118.29,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "31-12-2021",
+                    "rchrg": "N",
+                    "inum": "4047098907",
+                    "chksum": "99286b88f4abb7f91936a3de16361382290e0cbe928898288652e9dd054d4929"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "rt": 18,
+                                "txval": 1700.11,
+                                "iamt": 306.02
+                            }
+                        }
+                    ],
+                    "val": 2006.13,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "31-12-2021",
+                    "rchrg": "N",
+                    "inum": "4047238896",
+                    "chksum": "28b562dbd0a65f712dce32ec2bbe8c0eaae64031bb4a268d365fd9d78cfb56a5"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "rt": 18,
+                                "txval": 13825.4,
+                                "iamt": 2488.57
+                            }
+                        }
+                    ],
+                    "val": 16313.97,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "31-12-2021",
+                    "rchrg": "N",
+                    "inum": "4047470751",
+                    "chksum": "38095ce6f69ba6fe39d401e69c83c9c851c0165b713514b20ba10865eefea5a9"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "rt": 18,
+                                "txval": 9.83,
+                                "iamt": 1.77
+                            }
+                        }
+                    ],
+                    "val": 11.6,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "31-12-2021",
+                    "rchrg": "N",
+                    "inum": "4047474599",
+                    "chksum": "44c6803a3e0b8aec532e215efd750e4616caac18ead69ee70bc4b9b5d8764310"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "rt": 18,
+                                "txval": 3043.83,
+                                "iamt": 547.89
+                            }
+                        }
+                    ],
+                    "val": 3591.72,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "31-12-2021",
+                    "rchrg": "N",
+                    "inum": "4047819103",
+                    "chksum": "c99da615bed91865652484ecdbfba9d035739246df42f3d408caa6a66b0548ed"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "rt": 18,
+                                "txval": 6498.85,
+                                "iamt": 1169.79
+                            }
+                        }
+                    ],
+                    "val": 7668.64,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "31-12-2021",
+                    "rchrg": "N",
+                    "inum": "4047936422",
+                    "chksum": "7b260a0ce2877712a7130588198e5ee26fbb7c30365ee8670634e23694aee421"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "rt": 18,
+                                "txval": 4268.33,
+                                "iamt": 768.3
+                            }
+                        }
+                    ],
+                    "val": 5036.63,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "31-12-2021",
+                    "rchrg": "N",
+                    "inum": "4047993536",
+                    "chksum": "ecac605011e27048a969c81e67099e1bcb5846d2cebb52858da9df8c6266f201"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "rt": 18,
+                                "txval": 109613.25,
+                                "iamt": 19730.39
+                            }
+                        }
+                    ],
+                    "val": 129343.64,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "31-12-2021",
+                    "rchrg": "N",
+                    "inum": "4048093509",
+                    "chksum": "b1514923d8a5ae0c58b39fa89cd00c166cfdcc62f6ad0c8abc0b79398d0f8cac"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "rt": 18,
+                                "txval": 3075.95,
+                                "iamt": 553.67
+                            }
+                        }
+                    ],
+                    "val": 3629.62,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "31-12-2021",
+                    "rchrg": "N",
+                    "inum": "4048243574",
+                    "chksum": "81cb7842c6bbec8cacd5d2d9ededebdc9597e48d87fd5a2f5f768342b81296a0"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "rt": 18,
+                                "txval": 98541.84,
+                                "iamt": 17737.53
+                            }
+                        }
+                    ],
+                    "val": 116279.37,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "31-12-2021",
+                    "rchrg": "N",
+                    "inum": "4048445614",
+                    "chksum": "cd8a72d03bbf460064588f587b39886b90701a01ee66a14414b9bf5ac1a3cc27"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "rt": 18,
+                                "txval": 101.75,
+                                "iamt": 18.32
+                            }
+                        }
+                    ],
+                    "val": 120.07,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "31-12-2021",
+                    "rchrg": "N",
+                    "inum": "4048547445",
+                    "chksum": "e9d4533ee25744f7e3610e065854a4bce380655db2a642edd5b4e5a44f3af526"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "rt": 18,
+                                "txval": 3576.17,
+                                "iamt": 643.71
+                            }
+                        }
+                    ],
+                    "val": 4219.88,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "31-12-2021",
+                    "rchrg": "N",
+                    "inum": "4048547944",
+                    "chksum": "26f2f141886ed4cdc57f4c5d59fdce890c797bc8aaa7292df9ee066b175720e6"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "rt": 18,
+                                "txval": 1524.24,
+                                "iamt": 274.36
+                            }
+                        }
+                    ],
+                    "val": 1798.6,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "31-12-2021",
+                    "rchrg": "N",
+                    "inum": "4048931870",
+                    "chksum": "3fe9cdadaf493e741648d771536373d783c1b32c9df11c74ab853a0a905645cb"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "rt": 18,
+                                "txval": 86475.32,
+                                "iamt": 15565.56
+                            }
+                        }
+                    ],
+                    "val": 102040.88,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "31-12-2021",
+                    "rchrg": "N",
+                    "inum": "4049216689",
+                    "chksum": "13cac655b88bec68a492eae1202c44537709e59abb09f4481fdc536880e01f58"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "rt": 18,
+                                "txval": 4.89,
+                                "iamt": 0.88
+                            }
+                        }
+                    ],
+                    "val": 5.77,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "31-12-2021",
+                    "rchrg": "N",
+                    "inum": "4049451804",
+                    "chksum": "75fecad6900cd01e141d15d8720e814262bc5cfcdc0a28ecb6ad7af4d8bb2ad2"
+                }
+            ],
+            "fldtr1": "11-Jan-22",
+            "flprdr1": "Dec-21"
+        },
+        {
+            "ctin": "27AAECD1043M1ZP",
+            "cfs": "Y",
+            "cfs3b": "Y",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 256.5,
+                                "rt": 18,
+                                "txval": 2850,
+                                "camt": 256.5,
+                                "iamt": 0
+                            }
+                        }
+                    ],
+                    "val": 3363,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "02-12-2021",
+                    "rchrg": "N",
+                    "inum": "9486123",
+                    "chksum": "0fefe3bf32a09835be41362ef2fb15ae7d5c6f21b305260836644146ec87b58f"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 14.4,
+                                "rt": 18,
+                                "txval": 160,
+                                "camt": 14.4,
+                                "iamt": 0
+                            }
+                        }
+                    ],
+                    "val": 188.8,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "03-12-2021",
+                    "rchrg": "N",
+                    "inum": "9495197",
+                    "chksum": "1e5ed1c03c0b28bc21e5c8f24fa3aa0c425bd9ecba3e04f0bddaf5dbd9f7f2bd"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 0.42,
+                                "rt": 18,
+                                "txval": 4.72,
+                                "camt": 0.42,
+                                "iamt": 0
+                            }
+                        }
+                    ],
+                    "val": 5.56,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "04-12-2021",
+                    "rchrg": "N",
+                    "inum": "9501001",
+                    "chksum": "009057f17872b1fa6527e0ce64c067cc41442a9f5481570a4307641e144caab3"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 36,
+                                "rt": 18,
+                                "txval": 400,
+                                "camt": 36,
+                                "iamt": 0
+                            }
+                        }
+                    ],
+                    "val": 472,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "06-12-2021",
+                    "rchrg": "N",
+                    "inum": "9505982",
+                    "chksum": "2674f0092cb2badcbffad620448ecf6e587b20a1a0524d9e0f3280f51cd2a753"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 42.75,
+                                "rt": 18,
+                                "txval": 475,
+                                "camt": 42.75,
+                                "iamt": 0
+                            }
+                        }
+                    ],
+                    "val": 560.5,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "06-12-2021",
+                    "rchrg": "N",
+                    "inum": "9505983",
+                    "chksum": "db8a54c9ce0d869b2556d4cbb13f9af873949a0e79f6aa6de3a69667ac198fb7"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 219.6,
+                                "rt": 18,
+                                "txval": 2440,
+                                "camt": 219.6,
+                                "iamt": 0
+                            }
+                        }
+                    ],
+                    "val": 2879.2,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "06-12-2021",
+                    "rchrg": "N",
+                    "inum": "9505984",
+                    "chksum": "f3e81e58b1993c683775673d821fcc1d330fb015aa43fd6f9a1b485e66e8f7dc"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 8.89,
+                                "rt": 18,
+                                "txval": 98.8,
+                                "camt": 8.89,
+                                "iamt": 0
+                            }
+                        }
+                    ],
+                    "val": 116.58,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "16-12-2021",
+                    "rchrg": "N",
+                    "inum": "9559381",
+                    "chksum": "39c6cc3d7f242d0df96d047481987f059a14fed4e4ef0734d3c27b4dfe534710"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 7.7,
+                                "rt": 18,
+                                "txval": 85.5,
+                                "camt": 7.7,
+                                "iamt": 0
+                            }
+                        }
+                    ],
+                    "val": 100.9,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "18-12-2021",
+                    "rchrg": "N",
+                    "inum": "9567313",
+                    "chksum": "fcb4e56fe4c6dc3ef8998bf5b072f6995b7cc51e2e3df8e1720ea7f087162125"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 3.24,
+                                "rt": 18,
+                                "txval": 36.05,
+                                "camt": 3.24,
+                                "iamt": 0
+                            }
+                        }
+                    ],
+                    "val": 42.53,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "22-12-2021",
+                    "rchrg": "N",
+                    "inum": "9588082",
+                    "chksum": "af3677f930ef91cf6dfc41e83ab5ade65e51b383f179117ac6afbc5d8c6aff47"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 70.11,
+                                "rt": 18,
+                                "txval": 779,
+                                "camt": 70.11,
+                                "iamt": 0
+                            }
+                        }
+                    ],
+                    "val": 919.22,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "30-12-2021",
+                    "rchrg": "N",
+                    "inum": "9631540",
+                    "chksum": "5d537933baa9a836167f024169115be7fe649bf4980892896ce7ca2b0f2ea4dd"
+                }
+            ],
+            "fldtr1": "11-Jan-22",
+            "flprdr1": "Dec-21"
+        },
+        {
+            "ctin": "33AAJCA1389G1ZQ",
+            "cfs": "Y",
+            "cfs3b": "Y",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 0,
+                                "rt": 5,
+                                "txval": 130.37,
+                                "camt": 0,
+                                "iamt": 6.52
+                            }
+                        }
+                    ],
+                    "val": 136.89,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "31-12-2021",
+                    "rchrg": "N",
+                    "inum": "B3JVGQGOQOMHN422",
+                    "chksum": "b4964b70ab32d2da0c756f54521688e6baaf9108e6f69772b923865429826575"
+                }
+            ],
+            "fldtr1": "07-Jan-22",
+            "flprdr1": "Dec-21"
+        },
+        {
+            "ctin": "07AAJCA9880A1ZL",
+            "cfs": "Y",
+            "cfs3b": "Y",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "samt": 0,
+                                "rt": 18,
+                                "txval": 291.36,
+                                "camt": 0,
+                                "iamt": 52.44
+                            }
+                        }
+                    ],
+                    "val": 343.8,
+                    "inv_typ": "R",
+                    "irn": "ce2677f45f996ed8a8e7bb3f1c1b15e2954f0c9fe6541c2ea8cbc61a0d3ddf67",
+                    "srctyp": "E-Invoice",
+                    "pos": "27",
+                    "idt": "03-12-2021",
+                    "rchrg": "N",
+                    "irngendate": "03-12-2021",
+                    "inum": "AIN2122002394634",
+                    "chksum": "041af9739f212b8dd53bc5255a38d9250f51b117d077dff2f71933cd892e831f"
+                }
+            ],
+            "fldtr1": "11-Jan-22",
+            "flprdr1": "Dec-21"
+        },
+        {
+            "ctin": "23ANFPT5893A1ZX",
+            "cfs": "Y",
+            "cfs3b": "Y",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "rt": 12,
+                                "txval": 400.89,
+                                "iamt": 48.11
+                            }
+                        }
+                    ],
+                    "val": 449,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "12-12-2021",
+                    "rchrg": "N",
+                    "inum": "QWP1-99177",
+                    "chksum": "d1e60e9f7e18854d20d6d6e702c2f8a5775f1adbe071f1de8522bf1b76ec899d"
+                }
+            ],
+            "fldtr1": "11-Jan-22",
+            "flprdr1": "Dec-21"
+        },
+        {
+            "ctin": "08AAFFE9433J1Z5",
+            "cfs": "Y",
+            "cfs3b": "Y",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "rt": 18,
+                                "txval": 1270.34,
+                                "iamt": 228.66
+                            }
+                        }
+                    ],
+                    "val": 1499,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "28-10-2021",
+                    "rchrg": "N",
+                    "inum": "TPLT-3450",
+                    "chksum": "cbb65c6ad619387574ae108aca1c9f6f3d1e5005f5027a9728912b1228df29e9"
+                }
+            ],
+            "fldtr1": "29-Jan-22",
+            "flprdr1": "Dec-21"
+        },
+        {
+            "ctin": "27AAACS8577K2ZO",
+            "cfs": "Y",
+            "cfs3b": "Y",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 1525.42,
+                                "rt": 18,
+                                "txval": 16949.15,
+                                "camt": 1525.42,
+                                "iamt": 0
+                            }
+                        }
+                    ],
+                    "val": 19999.99,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "31-12-2021",
+                    "rchrg": "N",
+                    "inum": "T1221272O18879",
+                    "chksum": "618709c1a67589d0d67738510bd19f040721559d5a5cac7b8f82eac0815cd8cd"
+                }
+            ],
+            "fldtr1": "11-Jan-22",
+            "flprdr1": "Dec-21"
+        },
+        {
+            "ctin": "27AAQCS4259Q1ZA",
+            "cfs": "Y",
+            "cfs3b": "Y",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "samt": 26.73,
+                                "rt": 12,
+                                "txval": 445.54,
+                                "camt": 26.73
+                            }
+                        }
+                    ],
+                    "val": 499,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "12-12-2021",
+                    "rchrg": "N",
+                    "inum": "FBOC-57315",
+                    "chksum": "c3b8b016677cd000e42a7a6189fc183e46cc9a844ab48d4271ee2a70a98613f2"
+                }
+            ],
+            "fldtr1": "11-Jan-22",
+            "flprdr1": "Dec-21"
+        },
+        {
+            "ctin": "27AAAPN9795K1ZX",
+            "cfs": "Y",
+            "cfs3b": "Y",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 3213,
+                                "rt": 12,
+                                "txval": 53550,
+                                "camt": 3213,
+                                "iamt": 0
+                            }
+                        }
+                    ],
+                    "val": 59976,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "27-10-2021",
+                    "rchrg": "N",
+                    "inum": "5348",
+                    "chksum": "9bcfab281e41147e0c6ec51d32a8ffb7fb20578e7aca154f085a89277049c712"
+                }
+            ],
+            "fldtr1": "13-Jan-22",
+            "flprdr1": "Dec-21"
+        },
+        {
+            "ctin": "27AAACB2100P1ZX",
+            "cfs": "Y",
+            "cfs3b": "Y",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 309.69,
+                                "rt": 18,
+                                "txval": 3441,
+                                "camt": 309.69
+                            }
+                        }
+                    ],
+                    "val": 4060.38,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "inum": "MHSO091221629131",
+                    "chksum": "9dfed923b3e1c9c84041af839706906ebf1b93efb720e25ee893bc6b2e8e2e40"
+                }
+            ],
+            "fldtr1": "11-Jan-22",
+            "flprdr1": "Dec-21"
+        },
+        {
+            "ctin": "06AABCF5150G1ZZ",
+            "cfs": "Y",
+            "cfs3b": "Y",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 0,
+                                "rt": 18,
+                                "txval": 4844.25,
+                                "camt": 0,
+                                "iamt": 871.97
+                            }
+                        }
+                    ],
+                    "val": 5716.22,
+                    "inv_typ": "R",
+                    "irn": "54450a3f5372e7d8a50cc8eff6fd2b6fbb4f1861ae64a9be586118b718cbb846",
+                    "srctyp": "E-Invoice",
+                    "pos": "27",
+                    "idt": "01-12-2021",
+                    "rchrg": "N",
+                    "irngendate": "02-12-2021",
+                    "inum": "ADS753-101725390",
+                    "chksum": "23bddb7382a6d4d8f03b10d5e5d0ecbab04539408fdef608b652cb25de967af6"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 0,
+                                "rt": 18,
+                                "txval": 7905.44,
+                                "camt": 0,
+                                "iamt": 1422.98
+                            }
+                        }
+                    ],
+                    "val": 9328.42,
+                    "inv_typ": "R",
+                    "irn": "32ad27106c68aeaf71e5162e35a9c1d519b5281d496822d913a26b0039d933f1",
+                    "srctyp": "E-Invoice",
+                    "pos": "27",
+                    "idt": "02-12-2021",
+                    "rchrg": "N",
+                    "irngendate": "03-12-2021",
+                    "inum": "ADS753-101726867",
+                    "chksum": "f7a79657dd3e611a1d2b86e785347f0565a79d1534a051461151088f6a59992e"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 0,
+                                "rt": 18,
+                                "txval": 4038.11,
+                                "camt": 0,
+                                "iamt": 726.86
+                            }
+                        }
+                    ],
+                    "val": 4764.97,
+                    "inv_typ": "R",
+                    "irn": "fec25a9cfa898803ec836534d1b0374721eb8b4e64db5c7aecf4d63a09946868",
+                    "srctyp": "E-Invoice",
+                    "pos": "27",
+                    "idt": "03-12-2021",
+                    "rchrg": "N",
+                    "irngendate": "05-12-2021",
+                    "inum": "ADS753-101728403",
+                    "chksum": "f28e1f5c3381e79a6beac6a825c5d210f606e1cfbebb37a8be7eff038812b522"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 0,
+                                "rt": 18,
+                                "txval": 5910.55,
+                                "camt": 0,
+                                "iamt": 1063.9
+                            }
+                        }
+                    ],
+                    "val": 6974.45,
+                    "inv_typ": "R",
+                    "irn": "2d2e7533a9dbe10637b21145c2972e2ad262c4979282838d9d62561ac433361d",
+                    "srctyp": "E-Invoice",
+                    "pos": "27",
+                    "idt": "04-12-2021",
+                    "rchrg": "N",
+                    "irngendate": "05-12-2021",
+                    "inum": "ADS753-101729912",
+                    "chksum": "c727ea531c8ac45320ebfa1829d244d12a171ffb8826b8c9e526272441ccb10e"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 0,
+                                "rt": 18,
+                                "txval": 3904.91,
+                                "camt": 0,
+                                "iamt": 702.88
+                            }
+                        }
+                    ],
+                    "val": 4607.79,
+                    "inv_typ": "R",
+                    "irn": "cce5f0c53eb5205d735ae5e87d4464efb2671f7bff5e3dce5e0a7849f051d18e",
+                    "srctyp": "E-Invoice",
+                    "pos": "27",
+                    "idt": "05-12-2021",
+                    "rchrg": "N",
+                    "irngendate": "07-12-2021",
+                    "inum": "ADS753-101731248",
+                    "chksum": "5ab230d81ca86e075700d99252dd856ce6711c3e3976795aee5acb15b2c8ed72"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 0,
+                                "rt": 18,
+                                "txval": 4231.96,
+                                "camt": 0,
+                                "iamt": 761.75
+                            }
+                        }
+                    ],
+                    "val": 4993.71,
+                    "inv_typ": "R",
+                    "irn": "90ae2cda9485ce56e264eb4abf4d3a1d2db8a4f23516db9b17a24b909c60e584",
+                    "srctyp": "E-Invoice",
+                    "pos": "27",
+                    "idt": "06-12-2021",
+                    "rchrg": "N",
+                    "irngendate": "07-12-2021",
+                    "inum": "ADS753-101732571",
+                    "chksum": "435327d2a1c6d8af6c77eb4c5abd2ae39dfad53d12a6a9f1d4cca3f914e01183"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 0,
+                                "rt": 18,
+                                "txval": 8847.47,
+                                "camt": 0,
+                                "iamt": 1592.54
+                            }
+                        }
+                    ],
+                    "val": 10440.01,
+                    "inv_typ": "R",
+                    "irn": "7a4e3e2f72258f97d1f1e8b9c34fd41365c49ee59a0cfb4318f0659ed48cfd1b",
+                    "srctyp": "E-Invoice",
+                    "pos": "27",
+                    "idt": "07-12-2021",
+                    "rchrg": "N",
+                    "irngendate": "08-12-2021",
+                    "inum": "ADS753-101733995",
+                    "chksum": "bef54564d2b8c6f87223ba6b3726a4526dfb2abb1e2b00de1efd615f780de80b"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 0,
+                                "rt": 18,
+                                "txval": 26.84,
+                                "camt": 0,
+                                "iamt": 4.83
+                            }
+                        }
+                    ],
+                    "val": 31.67,
+                    "inv_typ": "R",
+                    "irn": "3efd6653b6ffc493eac2f665efeb05c09924909eaed9ef0fbcbafefe765a6f3d",
+                    "srctyp": "E-Invoice",
+                    "pos": "27",
+                    "idt": "08-12-2021",
+                    "rchrg": "N",
+                    "irngendate": "09-12-2021",
+                    "inum": "ADS753-101735526",
+                    "chksum": "46f308e5f189b12cde4060500b5bb0f352b25efe414fa73836dfbc1a5b851da2"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 0,
+                                "rt": 18,
+                                "txval": 8401.06,
+                                "camt": 0,
+                                "iamt": 1512.19
+                            }
+                        }
+                    ],
+                    "val": 9913.25,
+                    "inv_typ": "R",
+                    "irn": "4bf6658bab621cdf12d8aa2d150bea21a9a94579e040f504e52ead783cf5e999",
+                    "srctyp": "E-Invoice",
+                    "pos": "27",
+                    "idt": "10-12-2021",
+                    "rchrg": "N",
+                    "irngendate": "11-12-2021",
+                    "inum": "ADS753-101738477",
+                    "chksum": "ab60edfb16fad273567688ed087c4758f53f45836fe71f7c72114f9b706b94bd"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 0,
+                                "rt": 18,
+                                "txval": 6912.3,
+                                "camt": 0,
+                                "iamt": 1244.21
+                            }
+                        }
+                    ],
+                    "val": 8156.51,
+                    "inv_typ": "R",
+                    "irn": "c572120a539df06e5da303fe008b62b5fa91ec55ae674c89f6cccfcfa41e75b3",
+                    "srctyp": "E-Invoice",
+                    "pos": "27",
+                    "idt": "11-12-2021",
+                    "rchrg": "N",
+                    "irngendate": "12-12-2021",
+                    "inum": "ADS753-101739943",
+                    "chksum": "4d4cbc83fd52c57d7aa80f117ef9804c02534f0ae4a52ae4a087aab46348e03b"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 0,
+                                "rt": 18,
+                                "txval": 11170.17,
+                                "camt": 0,
+                                "iamt": 2010.63
+                            }
+                        }
+                    ],
+                    "val": 13180.8,
+                    "inv_typ": "R",
+                    "irn": "7088f06a86ddf56167056be2190c2f67bbfbc18692659b2036646ef91ed8acc5",
+                    "srctyp": "E-Invoice",
+                    "pos": "27",
+                    "idt": "12-12-2021",
+                    "rchrg": "N",
+                    "irngendate": "13-12-2021",
+                    "inum": "ADS753-101741329",
+                    "chksum": "7ffbf3245e042df18b580c4efc46e21849680d642c99582cf45743e724418057"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 0,
+                                "rt": 18,
+                                "txval": 6927.86,
+                                "camt": 0,
+                                "iamt": 1247.01
+                            }
+                        }
+                    ],
+                    "val": 8174.87,
+                    "inv_typ": "R",
+                    "irn": "89a6836eabf8ac3eefb708f8d9205e18d924b2443c2f56f042cded6a150dbac8",
+                    "srctyp": "E-Invoice",
+                    "pos": "27",
+                    "idt": "13-12-2021",
+                    "rchrg": "N",
+                    "irngendate": "14-12-2021",
+                    "inum": "ADS753-101742740",
+                    "chksum": "ef181e1747c141ea698fa4bded31d12ca4dedddb64c34b652b6127aaa8d3be4a"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 0,
+                                "rt": 18,
+                                "txval": 2988.94,
+                                "camt": 0,
+                                "iamt": 538.01
+                            }
+                        }
+                    ],
+                    "val": 3526.95,
+                    "inv_typ": "R",
+                    "irn": "4d286515a237f8bf9d2a8de415eb84c0c49cb6d35432d0c9214628a2324f543a",
+                    "srctyp": "E-Invoice",
+                    "pos": "27",
+                    "idt": "14-12-2021",
+                    "rchrg": "N",
+                    "irngendate": "15-12-2021",
+                    "inum": "ADS753-101744253",
+                    "chksum": "08d3d82e354c78e5837df7361042263b6ced87a214c06dc1a6745af18f542ecd"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 0,
+                                "rt": 18,
+                                "txval": 5176.4,
+                                "camt": 0,
+                                "iamt": 931.75
+                            }
+                        }
+                    ],
+                    "val": 6108.15,
+                    "inv_typ": "R",
+                    "irn": "42b4e1eb5a29a8a8de98fbaa3df9e116f10ada048c54b5e7a2cfd741a212986a",
+                    "srctyp": "E-Invoice",
+                    "pos": "27",
+                    "idt": "15-12-2021",
+                    "rchrg": "N",
+                    "irngendate": "18-12-2021",
+                    "inum": "ADS753-101745875",
+                    "chksum": "dc3de5ae0fdc95cf05d82be548d14a25d3e5af16f06f162fc929f7c69c8008a9"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 0,
+                                "rt": 18,
+                                "txval": 10105.12,
+                                "camt": 0,
+                                "iamt": 1818.92
+                            }
+                        }
+                    ],
+                    "val": 11924.04,
+                    "inv_typ": "R",
+                    "irn": "2b934a6dfea75f6373c292ef6e3fa8c55567313e666481dc95c926c99387bee1",
+                    "srctyp": "E-Invoice",
+                    "pos": "27",
+                    "idt": "16-12-2021",
+                    "rchrg": "N",
+                    "irngendate": "17-12-2021",
+                    "inum": "ADS753-101747705",
+                    "chksum": "50e285447d3bbad224013fdc87f7d9060ab85ffada22b167b9474b9708c5c5b9"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 0,
+                                "rt": 18,
+                                "txval": 774.48,
+                                "camt": 0,
+                                "iamt": 139.41
+                            }
+                        }
+                    ],
+                    "val": 913.89,
+                    "inv_typ": "R",
+                    "irn": "87933d3869b52753a85e2febf6be96d7de467d1328e48e364b2f9f8941f97748",
+                    "srctyp": "E-Invoice",
+                    "pos": "27",
+                    "idt": "17-12-2021",
+                    "rchrg": "N",
+                    "irngendate": "19-12-2021",
+                    "inum": "ADS753-101749250",
+                    "chksum": "4ed2b6bfd4b1aadbef796a2e39864b7ad70085082e1cd820d88ecd05e7c744e0"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 0,
+                                "rt": 18,
+                                "txval": 0.21,
+                                "camt": 0,
+                                "iamt": 0.04
+                            }
+                        }
+                    ],
+                    "val": 0.25,
+                    "inv_typ": "R",
+                    "irn": "e9d6453740acfd6bba3538bb7bcdce87ef1ed534fd52504a44b10fb4363e064a",
+                    "srctyp": "E-Invoice",
+                    "pos": "27",
+                    "idt": "18-12-2021",
+                    "rchrg": "N",
+                    "irngendate": "19-12-2021",
+                    "inum": "ADS753-101750656",
+                    "chksum": "aa00b433f114bdc20509f7738fde73ee17a0a21e7d050e8acd2a65681a62ab3f"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 0,
+                                "rt": 18,
+                                "txval": 2952.57,
+                                "camt": 0,
+                                "iamt": 531.46
+                            }
+                        }
+                    ],
+                    "val": 3484.03,
+                    "inv_typ": "R",
+                    "irn": "3ef03f734c524435fc5edbd585cf4bbfe7d110c07479ef13eea5269fdc7c29bc",
+                    "srctyp": "E-Invoice",
+                    "pos": "27",
+                    "idt": "25-12-2021",
+                    "rchrg": "N",
+                    "irngendate": "26-12-2021",
+                    "inum": "ADS753-101760639",
+                    "chksum": "05b4202e48ae6286fbb87396e48aa570d90b80b57f239cd072885b763eb20076"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 0,
+                                "rt": 18,
+                                "txval": 6414.94,
+                                "camt": 0,
+                                "iamt": 1154.69
+                            }
+                        }
+                    ],
+                    "val": 7569.63,
+                    "inv_typ": "R",
+                    "irn": "9e0953c4bb114d6937cb137fa39d0886c36b3184e84553eb943ee29fc7c4c996",
+                    "srctyp": "E-Invoice",
+                    "pos": "27",
+                    "idt": "26-12-2021",
+                    "rchrg": "N",
+                    "irngendate": "27-12-2021",
+                    "inum": "ADS753-101761993",
+                    "chksum": "2ebd2dcfe7aa1d1821c8b53a1b9ce342cf5d75dfed7a6560b8bfde75c16c0b9c"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 0,
+                                "rt": 18,
+                                "txval": 2542.38,
+                                "camt": 0,
+                                "iamt": 457.63
+                            }
+                        }
+                    ],
+                    "val": 3000.01,
+                    "inv_typ": "R",
+                    "irn": "09346cb3d54f8454d6fe2d616ee02ce58b5b7e6adb86e67909668d4a0c27c043",
+                    "srctyp": "E-Invoice",
+                    "pos": "27",
+                    "idt": "28-12-2021",
+                    "rchrg": "N",
+                    "irngendate": "29-12-2021",
+                    "inum": "ADS753-101764786",
+                    "chksum": "63c0a7a9a3e6827265b653c7c4bee1e334b1c7086c254a5caec0486a7279f238"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 0,
+                                "rt": 18,
+                                "txval": 6122.26,
+                                "camt": 0,
+                                "iamt": 1102.01
+                            }
+                        }
+                    ],
+                    "val": 7224.27,
+                    "inv_typ": "R",
+                    "irn": "f41b2f8cf25c4148d8eaf00dd22a383ce7d87afcd858ac375bd5306459900618",
+                    "srctyp": "E-Invoice",
+                    "pos": "27",
+                    "idt": "29-12-2021",
+                    "rchrg": "N",
+                    "irngendate": "30-12-2021",
+                    "inum": "ADS753-101766073",
+                    "chksum": "54decff9bd621fe55f639645ec222fecf456dcef09e760d19f0a2f6477fc5142"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 0,
+                                "rt": 18,
+                                "txval": 5249.11,
+                                "camt": 0,
+                                "iamt": 944.84
+                            }
+                        }
+                    ],
+                    "val": 6193.95,
+                    "inv_typ": "R",
+                    "irn": "0ce2f3cc6d984aaefca1aa84ec18efa01c8172f3c39e93c3ff1b57ec62f90e70",
+                    "srctyp": "E-Invoice",
+                    "pos": "27",
+                    "idt": "30-12-2021",
+                    "rchrg": "N",
+                    "irngendate": "31-12-2021",
+                    "inum": "ADS753-101767164",
+                    "chksum": "de0a99d8feb1af32bdfe6451ac27d15e6a09d3883221515aa8db1c0884f0160f"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 0,
+                                "rt": 18,
+                                "txval": 4193.58,
+                                "camt": 0,
+                                "iamt": 754.84
+                            }
+                        }
+                    ],
+                    "val": 4948.42,
+                    "inv_typ": "R",
+                    "irn": "b09a0462a138f3a1dbf60f3d9868e5805411670a3dc9d75226b4085750361193",
+                    "srctyp": "E-Invoice",
+                    "pos": "27",
+                    "idt": "31-12-2021",
+                    "rchrg": "N",
+                    "irngendate": "01-01-2022",
+                    "inum": "ADS753-101769389",
+                    "chksum": "7603a68a90ce074b195d6ffd551755bf935f6f07683c49c9bffd696f18c6a261"
+                }
+            ],
+            "fldtr1": "10-Jan-22",
+            "flprdr1": "Dec-21"
+        },
+        {
+            "ctin": "09AAACI1838D1ZU",
+            "cfs": "Y",
+            "cfs3b": "Y",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "rt": 18,
+                                "txval": 20000,
+                                "iamt": 3600
+                            }
+                        }
+                    ],
+                    "val": 23600,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "16-12-2021",
+                    "rchrg": "N",
+                    "inum": "NK09I2122/132821",
+                    "chksum": "6715685f21d16e6aa75ddc1b0a28f26f03a9d57fdbcd8d22f8323d2284b831a0"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "rt": 18,
+                                "txval": 150000,
+                                "iamt": 27000
+                            }
+                        }
+                    ],
+                    "val": 177000,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "31-12-2021",
+                    "rchrg": "N",
+                    "inum": "NN09I2122/050519",
+                    "chksum": "2ecd029c7d3909a5f14cc9df98da1ad5dd010c90668b76f3d47997ecd53f9732"
+                }
+            ],
+            "fldtr1": "11-Jan-22",
+            "flprdr1": "Dec-21"
+        },
+        {
+            "ctin": "27AAACL1490J1ZG",
+            "cfs": "Y",
+            "cfs3b": "Y",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "samt": 12904.09,
+                                "rt": 18,
+                                "txval": 143378.82,
+                                "camt": 12904.09,
+                                "iamt": 0
+                            }
+                        }
+                    ],
+                    "val": 169187,
+                    "inv_typ": "R",
+                    "irn": "fa0fb6a1aff5232b96ea47b878fcaeb3a0d8a66d8f940e2e4c865acdefcab3d2",
+                    "srctyp": "E-Invoice",
+                    "pos": "27",
+                    "idt": "16-12-2021",
+                    "rchrg": "N",
+                    "irngendate": "16-12-2021",
+                    "inum": "RD21Z00100000676",
+                    "chksum": "76a2081a4a89a86265d9c3198c3c6e60173e95aa941bc0b23ac0db735bff965c"
+                }
+            ],
+            "fldtr1": "11-Jan-22",
+            "flprdr1": "Dec-21"
+        },
+        {
+            "ctin": "07AAICB2409H1ZW",
+            "cfs": "Y",
+            "cfs3b": "Y",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "rt": 18,
+                                "txval": 750000,
+                                "iamt": 135000
+                            }
+                        }
+                    ],
+                    "val": 885000,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "30-12-2021",
+                    "rchrg": "N",
+                    "inum": "21-22/CP/000037",
+                    "chksum": "b99ecb9ec701dc5021e2bf41e6463dfbc8beecb38dc0994dc8e46bdc204b4117"
+                }
+            ],
+            "fldtr1": "06-Jan-22",
+            "flprdr1": "Dec-21"
+        },
+        {
+            "ctin": "20AAJCA1389G1ZX",
+            "cfs": "Y",
+            "cfs3b": "Y",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 0,
+                                "rt": 5,
+                                "txval": 263.2,
+                                "camt": 0,
+                                "iamt": 13.16
+                            }
+                        }
+                    ],
+                    "val": 276.36,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "31-12-2021",
+                    "rchrg": "N",
+                    "inum": "B3JVGQGOQOMHA422",
+                    "chksum": "042c3c08f6e7d376b469e1a3ef1197942b62360f87739591b2e676a89fcacddc"
+                }
+            ],
+            "fldtr1": "07-Jan-22",
+            "flprdr1": "Dec-21"
+        },
+        {
+            "ctin": "07AAUFP7299Q1ZR",
+            "cfs": "Y",
+            "cfs3b": "Y",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1800,
+                            "itm_det": {
+                                "rt": 18,
+                                "txval": 422.88,
+                                "iamt": 76.12
+                            }
+                        }
+                    ],
+                    "val": 499,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "12-12-2021",
+                    "rchrg": "N",
+                    "inum": "PNQ2-17563",
+                    "chksum": "7f29561bece4d2f8618033fa99b6ac57dff7d71c9502e60e61c1ea97219aecf4"
+                }
+            ],
+            "fldtr1": "24-Jan-22",
+            "flprdr1": "Dec-21"
+        },
+        {
+            "ctin": "09AAJCA1389G1ZH",
+            "cfs": "Y",
+            "cfs3b": "Y",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 0,
+                                "rt": 5,
+                                "txval": 361.15,
+                                "camt": 0,
+                                "iamt": 18.06
+                            }
+                        }
+                    ],
+                    "val": 379.21,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "15-12-2021",
+                    "rchrg": "N",
+                    "inum": "B3JVGQGOQOMHR412",
+                    "chksum": "fe0b3450b4e0bcd3086f4f12607d4238764ed8215c79a828f7a77f69871d7a62"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 0,
+                                "rt": 5,
+                                "txval": 282.41,
+                                "camt": 0,
+                                "iamt": 14.12
+                            }
+                        }
+                    ],
+                    "val": 296.53,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "31-12-2021",
+                    "rchrg": "N",
+                    "inum": "B3JVGQGOQOMHR422",
+                    "chksum": "d84e0b028fdb3cf41d8e32d5c4d6e27b8ac7ec211e8111c394def60fb5bc9836"
+                }
+            ],
+            "fldtr1": "07-Jan-22",
+            "flprdr1": "Dec-21"
+        },
+        {
+            "ctin": "27AADCH5930J1ZG",
+            "cfs": "Y",
+            "cfs3b": "Y",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1801,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 114.33,
+                                "rt": 18,
+                                "txval": 1270.34,
+                                "camt": 114.33
+                            }
+                        }
+                    ],
+                    "val": 1499,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "12-12-2021",
+                    "rchrg": "N",
+                    "inum": "BOM7-19277",
+                    "chksum": "25d192db150cd56b412a1f5684d670e71c513c2b5da6a947e778d9da2a4cf7c7"
+                }
+            ],
+            "fldtr1": "11-Jan-22",
+            "flprdr1": "Dec-21"
+        },
+        {
+            "ctin": "27IEXPS2910J1ZO",
+            "cfs": "Y",
+            "cfs3b": "Y",
+            "inv": [
+                {
+                    "itms": [
+                        {
+                            "num": 1800,
+                            "itm_det": {
+                                "samt": 5770.17,
+                                "rt": 18,
+                                "txval": 64113,
+                                "camt": 5770.17
+                            }
+                        }
+                    ],
+                    "val": 75653,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "12-10-2021",
+                    "rchrg": "N",
+                    "inum": "32",
+                    "chksum": "b0f586f7f43709a573eeddd8f4ac2c52c8832051a2ae4c6f994d05cd8d18f1e8"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1800,
+                            "itm_det": {
+                                "samt": 6941.97,
+                                "rt": 18,
+                                "txval": 77133,
+                                "camt": 6941.97
+                            }
+                        }
+                    ],
+                    "val": 91017,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "02-11-2021",
+                    "rchrg": "N",
+                    "inum": "35",
+                    "chksum": "cb8b36d3ffdb4aba5cb23c67879b1200edb71cbe3b16b72c41b501580fafd4f1"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1800,
+                            "itm_det": {
+                                "samt": 1694.97,
+                                "rt": 18,
+                                "txval": 18833,
+                                "camt": 1694.97
+                            }
+                        }
+                    ],
+                    "val": 22223,
+                    "inv_typ": "R",
+                    "pos": "27",
+                    "idt": "04-12-2021",
+                    "rchrg": "N",
+                    "inum": "39",
+                    "chksum": "845864dca5d6a4bead7f8de77a2dc92bf385eabc316f00a7c514a31921b8aafb"
+                }
+            ],
+            "fldtr1": "21-Jan-22",
+            "flprdr1": "Dec-21"
+        }
+    ],
+    "cdn": [
+        {
+            "cfs": "Y",
+            "ctin": "06AABCF5150G1ZZ",
+            "nt": [
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 0,
+                                "rt": 18,
+                                "txval": 0.03,
+                                "camt": 0,
+                                "iamt": 0.01
+                            }
+                        }
+                    ],
+                    "val": 0.04,
+                    "irn": "330d400d7d5242f80224fd7ec98f8499ecb38d6c2f0971ef028938e4183f23b1",
+                    "d_flag": "Y",
+                    "nt_num": "ADS753-101746145",
+                    "irngendate": "18-12-2021",
+                    "nt_dt": "15-12-2021",
+                    "inv_typ": "R",
+                    "srctyp": "E-Invoice",
+                    "pos": "27",
+                    "ntty": "C",
+                    "rchrg": "N",
+                    "chksum": "615b719eead0f71041e2709b67d70843cf6edb2240ba287841dc2ab2fcccb249"
+                },
+                {
+                    "itms": [
+                        {
+                            "num": 1,
+                            "itm_det": {
+                                "csamt": 0,
+                                "samt": 0,
+                                "rt": 18,
+                                "txval": 0.13,
+                                "camt": 0,
+                                "iamt": 0.02
+                            }
+                        }
+                    ],
+                    "val": 0.15,
+                    "irn": "9d73afd8eef362772c122ec5502700b2e63a33794a13530b1a779aa664fe5125",
+                    "d_flag": "Y",
+                    "nt_num": "ADS753-101746226",
+                    "irngendate": "17-12-2021",
+                    "nt_dt": "16-12-2021",
+                    "inv_typ": "R",
+                    "srctyp": "E-Invoice",
+                    "pos": "27",
+                    "ntty": "C",
+                    "rchrg": "N",
+                    "chksum": "a0bd106170350b0ec3596d335349db02658bd1e3e3513d378a13723a2e483f3e"
+                }
+            ],
+            "cfs3b": "Y",
+            "fldtr1": "10-Jan-22",
+            "flprdr1": "Dec-21"
+        }
+    ]
+}

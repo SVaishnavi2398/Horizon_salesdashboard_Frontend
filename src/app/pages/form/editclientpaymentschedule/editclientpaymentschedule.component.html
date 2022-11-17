@@ -1,0 +1,57 @@
+<div class="container-fluid">
+
+  
+    <app-page-title title="Update Client Payment Schedule"></app-page-title>
+    
+
+
+<form  (ngSubmit)="updateclietpaymentschedule()">
+
+    <div class="mb-3 row">
+  
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Sales ID</label>
+            <select  class="form-control"  name="sales_id"  [(ngModel)]="clientpaymentschedule.sales_id">
+                <option value="">-- Select Status --</option>
+                <option *ngFor="let sl of salesArr"  value="{{sl.sales_id}}"> {{sl.sales_id}}
+                </option>
+            </select>
+        </div>
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">BA1 Amount Date</label>
+            <input class="form-control" type="date" value="" id="BA1_amt_paid"  name="BA1_amt_paid"  [(ngModel)]="clientpaymentschedule.BA1_amt_paid">
+        </div>
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">BA2 Amount Date</label>
+            <input class="form-control" type="date" value="" id="BA2_amt_paid"  name="BA2_amt_paid"  [(ngModel)]="clientpaymentschedule.BA2_amt_paid">
+        </div>
+
+    </div>
+
+
+    <div class="mb-3 row">
+
+        <div class="col-md-6">
+            <label for="example-text-input" class="col-form-label">Registration Date</label>
+            <input class="form-control" type="date" value="" id="registration_date"  name="registration_date"  [(ngModel)]="clientpaymentschedule.registration_date">
+        </div>
+
+        <div class="col-md-6">
+            <label for="example-text-input" class="col-form-label">Updated By</label>
+            <select  class="form-control"  name="updated_by"  [(ngModel)]="clientpaymentschedule.updated_by">
+                <option value="">-- Select Users --</option>
+                <option *ngFor="let ul of usersArr"  value="{{ul.user_id}}"> {{ul.firstname}} {{ul.middlename}}{{ul.lastname}}
+                </option>
+            </select>
+        </div>
+
+    </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+   
+  
+</div> 

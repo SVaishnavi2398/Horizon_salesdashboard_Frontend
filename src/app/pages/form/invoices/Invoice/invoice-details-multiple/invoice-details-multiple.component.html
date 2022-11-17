@@ -1,0 +1,437 @@
+<div class="container-fluid">
+
+  <!-- start page title -->
+  <!-- <app-page-title title="Create Sales Details"></app-page-title> -->
+  <!-- end page title -->
+
+  <div class="page-title-box d-flex align-items-center justify-content-between" style="padding-bottom:0px !important;">
+    <!-- start page title -->
+    <div class="mb-0 font-size-20">
+      <h4>Add Invoice Details</h4>
+    </div>
+
+    <!-- end page title -->
+
+
+  </div>
+
+
+  <form [formGroup]="form" (ngSubmit)="submitInvoicedetails()" >
+
+
+
+
+    <div class="mb-3 row" >
+
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Company Name</label>
+        <select class="form-control" name="company_id" FormControlName="invoicedetails.company_id"
+          (change)="getState1($event)" placeholder="-- Select Company Name --">
+          <option *ngFor="let sl of companylistArr" value="{{sl.debtor_company_det_id}}"> {{sl.cname}}
+          </option>
+        </select>
+        <span class="text-danger" [hidden]="!error.company_id">Company Field Is Required</span>
+
+      </div>
+
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">GST Number</label>
+        <select class="form-control" name="cgst" [(ngModel)]="invoicedetails.cgst"
+          placeholder="-- Select Company Name --">
+          <option>----Selct GST-----</option>
+          <option value="{{invoicedetails.cgst}}" selected> {{invoicedetails.cgst}}
+          </option>
+        </select>
+        <span class="text-danger" [hidden]="!error.cgst">The CGST Field is Required</span>
+
+      </div>
+
+      <!-- <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Invoice Number</label>
+        <input class="form-control" type="text" value="" id="cgst" name="cgst"  [(ngModel)]="invoicedetails.cgst">
+      </div> -->
+
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Invoice Number</label>
+        <input class="form-control" type="text" value="" id="invoice_num" name="invoice_num" (keyup)="getstate9($event)"
+          [(ngModel)]="invoicedetails.invoice_num">
+        <span class="text-danger" [hidden]="!error.invoice_num">{{error.invoice_num}}</span>
+
+      </div>
+
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Invoice Date</label>
+        <input class="form-control" type="date" value="" id="invoice_date" name="invoice_date"
+          (change)="getstate10($event)" [(ngModel)]="invoicedetails.invoice_date">
+        <span class="text-danger" [hidden]="!error.invoice_date">{{error.invoice_date}}</span>
+      </div>
+    </div>
+
+
+
+    <div formArrayName="passenger" style="border-left: none !important;">
+      <div *ngFor="let passengerGroup of passenger?.controls; let i = index" [formGroupName]="i"
+        style="border-left: none !important;margin-bottom: 14px !important;">
+        <div class="mb-3 row">
+          <div class="col-md-3">
+            <select class="form-control" formControlName="client_id" (change)="getState2($event)"
+              placeholder="-- Select Client Name --">
+              <option>----Select Client Name----</option>
+              <option *ngFor="let cl of clientsArr; let i=index;" value="{{cl.client_id}}" [disabled]="cl.client_id == newclient[i]" [ngClass]="cl.client_id == newclient[i] ? 'bordered': ''">
+                {{cl.name}}
+              </option>
+            </select>
+            <span class="text-danger" [hidden]="!error.client_id">{{error.client_id}}</span>
+
+          </div>
+        </div>
+
+
+        <div class="mb-3 row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-centered table-nowrap mb-0 align-middle" id="excel-table">
+                    <thead class="table-light">
+                      <tr>
+                        <th>
+                          Project Name
+                        </th>
+                        <th>
+                          Flat Details
+                        </th>
+                        <th>
+                          Building Name
+                        </th>
+                        <th>
+                          Consideration Value
+                        </th>
+                        <th>
+                          Payout (In %)
+                        </th>
+                        <th>
+                          Taxable Amount
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          {{project_name[i]}}
+                        </td>
+                        <td>
+                          {{flat_no[i]}}, {{wing[i]}}
+                        </td>
+                        <td>
+                          {{building_name[i]}}
+                        </td>
+                        <td>
+                          {{consideration_value[i]}}
+                        </td>
+                        <td>
+                          <!-- {{case_payout_percentage[i]}} -->
+                          <input type="text" class="form-control" formControlName="case_payout_percentage"
+                            (keyup)="getstate11($event)" value="{{case_payout_percentage[i]}}" />
+
+                        </td>
+                        <td>
+                          <input type="text" class="form-control" formControlName="taxable_amt"
+                            (keyup)="getstate3($event)" value="{{taxable_amt[i]}}" />
+
+                        </td>
+                       
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+                <!-- end table -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <button (click)="reset(i)"  class="btn btn-primary">Remove Client</button>
+
+      </div>
+
+      <div class="mb-3 row">
+        <div class="col-md-3">
+          <button (click)="addPassenger()" class="btn btn-primary">Add Client</button>&nbsp;
+        </div>
+      </div>
+
+
+      <div class="col-md-12" style="background-color: white;
+margin-bottom: 18px;
+margin-bottom: 1.25rem;
+box-shadow: 0 2px 4px rgb(15 34 58 / 12%);
+border-radius: 5px;">
+        <div class="card-body">
+          <div class="mb-3 row">
+            <div class="col-md-3">
+              <label for="example-text-input" class="col-form-label">Total Taxable Amount</label>
+              <input class="form-control" type="text" value="" id="taxable_amt" name="taxable_amt"
+                value="{{invoicedetails.sumNumber}}" disabled>
+              <span class="text-danger" [hidden]="!error.taxable_amt">{{error.taxable_amt}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12" style="background-color: white;
+  margin-bottom: 18px;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 2px 4px rgb(15 34 58 / 12%);
+  border-radius: 5px;">
+        <div class="card-body">
+          <div class="mb-3 row">
+            <div class="col-md-3">
+              <label for="example-text-input" class="col-form-label">CGST Amount</label>
+              <input class="form-control" type="text" value="" id="cgst_amt" name="cgst_amt"
+                value="{{invoicedetails.cgst_amt}}" disabled>
+              <span class="text-danger" [hidden]="!error.cgst_amt">{{error.cgst_amt}}</span>
+            </div>
+
+
+
+            <div class="col-md-3">
+              <label for="example-text-input" class="col-form-label">SGST Amount</label>
+              <input class="form-control" type="text" value="" id="sgst_amt" name="sgst_amt"
+                value="{{invoicedetails.sgst_amt}}" disabled>
+              <span class="text-danger" [hidden]="!error.sgst_amt">{{error.sgst_amt}}</span>
+            </div>
+
+
+
+            <div class="col-md-3">
+              <label for="example-text-input" class="col-form-label">IGST Amount</label>
+              <input class="form-control" type="text" value="" id="igst_amt" name="igst_amt"
+                value="{{invoicedetails.igst_amt}}" disabled>
+              <span class="text-danger" [hidden]="!error.igst_amt">{{error.igst_amt}}</span>
+            </div>
+
+            <div class="col-md-3">
+              <label for="example-text-input" class="col-form-label">Total GST Amount</label>
+              <input class="form-control" type="text" value="" id="total_gst_amt" name="total_gst_amt"
+                value="{{invoicedetails.total_gst_amt}}" disabled>
+              <span class="text-danger" [hidden]="!error.total_gst_amt">{{error.total_gst_amt}}</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12" style="background-color: white;
+  margin-bottom: 18px;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 2px 4px rgb(15 34 58 / 12%);
+  border-radius: 5px;">
+        <div class="card-body">
+          <div class="mb-3 row">
+            <div class="col-md-3">
+              <label for="example-text-input" class="col-form-label">Total Invoice Amount</label>
+              <input class="form-control" type="text" value="" id="total_invoice_amt" name="total_invoice_amt"
+                value="{{invoicedetails.total_invoice_amt}}" disabled>
+              <span class="text-danger" [hidden]="!error.total_invoice_amt">{{error.total_invoice_amt}}</span>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-12" style="background-color: white;
+   margin-bottom: 18px;
+   margin-bottom: 1.25rem;
+   box-shadow: 0 2px 4px rgb(15 34 58 / 12%);
+   border-radius: 5px;">
+        <div class="card-body">
+          <div class="mb-3 row">
+            <div class="col-md-3">
+              <label for="example-text-input" class="col-form-label">TDS Rate</label>
+              <input type="text" class="form-control" name="tds_rate" (change)="getstate4($event)"
+                value="{{invoicedetails.tds_rate}}" placeholder="{{invoicedetails.TDS_rate}}" disabled />
+              <span class="text-danger" [hidden]="!error.tds_rate">{{error.tds_rate}}</span>
+            </div>
+
+
+            <div class="col-md-3">
+              <label for="example-text-input" class="col-form-label">Receivable TDS Amount</label>
+              <input class="form-control" type="text" value="" id="taxable_amt" name="receivable_tds_amt"
+                value="{{invoicedetails.receivable_tds_amt}}" disabled>
+              <span class="text-danger" [hidden]="!error.receivable_tds_amt">{{error.receivable_tds_amt}}</span>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12" style="background-color: white; margin-bottom: 18px; margin-bottom: 1.25rem;
+            box-shadow: 0 2px 4px rgb(15 34 58 / 12%); border-radius: 5px;">
+        <div class="card-body">
+          <div class="mb-3 row">
+
+
+            <div class="col-md-3">
+              <label for="example-text-input" class="col-form-label">Receivable Amount</label>
+              <input class="form-control" type="text" value="" id="receivable_amt" name="receivable_amt"
+                value="{{invoicedetails.receivable_amt}}" disabled>
+
+            </div>
+
+
+            <div class="col-md-3">
+              <label for="example-text-input" class="col-form-label">Received Amount</label>
+              <input type="text" class="form-control" name="received_amt" (keyup)="getstate5($event)" />
+            </div>
+
+            <!-- <div class="col-md-3">
+    <label for="example-text-input" class="col-form-label">Suspense Amount</label>
+    <input class="form-control" type="text" value="" id="suspense_amt"  name="suspense_amt" value="{{invoicedetails.suspense_amt}}" disabled>
+  </div> -->
+
+            <div class="col-md-3">
+              <label for="example-text-input" class="col-form-label">Due Amount</label>
+              <input class="form-control" type="text" value="" id="due_amt" name="due_amt"
+                value="{{invoicedetails.due_amt}}" disabled>
+            </div>
+
+
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="col-md-12" style="background-color: white; margin-bottom: 18px; margin-bottom: 1.25rem;
+            box-shadow: 0 2px 4px rgb(15 34 58 / 12%); border-radius: 5px;">
+        <div class="card-body">
+          <div class="mb-3 row">
+            <div class="col-md-3">
+              <label for="example-text-input" class="col-form-label">Invoice Status</label>
+              <select class="form-control" name="inv_status_id" (change)="getstate6($event)"
+                [(ngModel)]="invoicedetails.inv_status_id">
+                <option value="">-- Select Invoice Status --</option>
+                <option *ngFor="let sl of invoicestatusArr" value="{{sl.inv_status_id}}"> {{sl.status}}
+                </option>
+              </select>
+              <span class="text-danger" [hidden]="!error.inv_status_id">Invoice Status Field is required</span>
+            </div>
+
+            <div class="col-md-3">
+              <label for="example-text-input" class="col-form-label">Invoice Submited Date</label>
+              <input class="form-control" type="date" value="" id="inv_submitted_date" name="inv_submitted_date"
+                (change)="getstate7($event)" [(ngModel)]="invoicedetails.inv_submitted_date">
+              <span class="text-danger" [hidden]="!error.inv_submitted_date">{{error.inv_submitted_date}}</span>
+
+            </div>
+
+            <div class="col-md-3">
+              <label for="example-text-input" class="col-form-label">Credit Note Amount</label>
+              <input class="form-control" type="text" value="" id="credit_note_amt" name="credit_note_amt"
+                (keyup)="getstate8($event)" [(ngModel)]="invoicedetails.credit_note_amt">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>&nbsp;
+    <button type="button" class="btn btn-primary" routerLink="/form/invoices/invoice/invoicemultipledetailslist">Cancel</button>  
+  </form>
+
+  <!-- <form [formGroup]="form">
+        <div formArrayName="passenger" style="border-left: none !important;">
+           <div *ngFor="let passengerGroup of passenger?.controls; let i = index"
+             [formGroupName]="i"
+             style="border-left: none !important;margin-bottom: 14px !important;">
+             <div class="mb-3 row">
+               <div class="col-md-12">
+               <select class="form-control" formControlName="client_id" (change)="getState2($event)" placeholder="-- Select Client Name --">
+                <option>----Select Client Name----</option>
+                <option *ngFor="let cl of clientsArr"  value="{{cl.client_id}}">
+               {{cl.name}}
+               </option>
+              </select>
+              </div>
+             </div>
+
+
+             <div class="mb-3 row">
+                <div class="col-md-12">
+                <div class="card">
+                     <div class="card-body">
+                        <div class="table-responsive">
+                                <table class="table table-centered table-nowrap mb-0 align-middle"  id="excel-table">
+                                  <thead class="table-light">
+                                     <tr>
+                                          <th>
+                                             Sales ID
+                                          </th>
+                                          <th>
+                                            Flat Number
+                                          </th> 
+                                          <th>
+                                            Building Name
+                                          </th>  
+                                          <th>
+                                            Payout Value
+                                          </th>
+                                          <th>
+                                            Consideration Value
+                                          </th> 
+                                          <th>
+                                            Taxable Amount
+                                          </th>  
+                                         </tr>
+                                   </thead>
+                                    <tbody>
+                                    <tr>
+                                          <td>
+                                             {{sales_id[i] | json}}
+                                          </td>
+                                          <td>
+                                            {{flat_no[i] | json}}
+                                         </td>
+                                         <td>
+                                          {{building_name[i] | json}}
+                                       </td>
+                                       <td>
+                                        {{payout_value[i] | json}}
+                                     </td>
+                                     <td>
+                                      {{consideration_value[i] | json}}
+                                   </td>
+                                     <td>
+                                      {{taxable_amt[i] | json}}
+                                   </td>
+                                    </tr>
+                                  </tbody>
+                              </table>
+        
+                          </div>
+                         
+                      </div>
+                  </div>
+                  </div>
+              </div>
+              
+          </div>
+        </div>
+        
+       <div class="mb-3 row">
+         <div class="col-md-3">
+          <button (click)="addPassenger()"  class="btn btn-primary">Add Client</button>
+          </div>
+       </div>
+         
+       </form> -->
+
+       <style>
+        .bordered{
+          background-color:red;
+          color:white;
+        }
+       </style>

@@ -1,0 +1,184 @@
+<div class="container-fluid">
+
+    <!-- start page title -->
+    <!-- <app-page-title title="Create Sales Details"></app-page-title> -->
+    <!-- end page title -->
+
+    <div class="page-title-box d-flex align-items-center justify-content-between"  style="padding-bottom:0px !important;"> 
+      <!-- start page title -->
+      <div class="mb-0 font-size-20">
+          <h4>Edit Credit Note Details</h4> 
+      </div>
+      <!-- <app-page-title title="Sales Details"></app-page-title> -->
+      <!-- end page title -->
+
+      <div class="col-md-8"  style="text-align: right;">
+          <!-- <button type="button" class="btn btn-primary mb-3"  (click)="open(content)"  style="margin-right: 10px;"><i class="mdi mdi-plus me-1"></i>Add Client Details</button> -->
+
+          <!-- <button type="button" class="btn btn-primary mb-3"  routerLink="/form/channelpartner"><i class="mdi mdi-plus me-1"></i>Add Channel Partner</button> -->
+          <!-- <button type="button" class="btn btn-primary waves-effect waves-light"  (click)="openModal(content)">Standard modal</button> -->
+
+      </div>
+    </div> 
+
+
+<form  (ngSubmit)="updateCreditnote()">
+
+  
+
+
+  <div class="mb-3 row">
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Invoice ID</label>
+      <select  class="form-control"  name="invoice_id"  [(ngModel)]="creditnotedetails.invoice_id">
+        <option value="">-- Select Subproject Name --</option>
+        <option *ngFor="let sl of invoicedetailsArr"  value="{{sl.invoice_id}}">  {{sl.invoice_num}}
+        </option>
+    </select>
+    </div>
+
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Company Name</label>
+      <select  class="form-control"  name="company_id"  [(ngModel)]="creditnotedetails.company_id">
+        <option value="">-- Select Subproject Name --</option>
+        <option *ngFor="let sl of companylistArr"  value="{{sl.debtor_company_det_id}}">  {{sl.cname}}
+        </option>
+    </select>
+    </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Credit Note Number</label>
+      <input class="form-control" type="text" value="" id="credit_note_num" name="credit_note_num"  [(ngModel)]="creditnotedetails.credit_note_num">
+    </div>
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Credit Note Date</label>
+      <input class="form-control" type="date" value="" id="credit_note_date" name="credit_note_date"  [(ngModel)]="creditnotedetails.credit_note_date">
+    </div>
+
+    
+
+  </div>
+
+
+  <div class="mb-3 row">
+
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Payout Percentage </label>
+      <input class="form-control" type="text" value="" id="payout_percenatge"  name="payout_percenatge"  [(ngModel)]="creditnotedetails.payout_percenatge">
+    </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Taxable Amount</label>
+      <input class="form-control" type="text" value="" id="taxable_amt"  name="taxable_amt"  [(ngModel)]="creditnotedetails.taxable_amt">
+    </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">CGST Amount</label>
+      <input class="form-control" type="text" value="" id="cgst_amt"  name="cgst_amt"  [(ngModel)]="creditnotedetails.cgst_amt">
+    </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">SGST Amount</label>
+      <input class="form-control" type="text" value="" id="sgst_amt"  name="sgst_amt"  [(ngModel)]="creditnotedetails.sgst_amt">
+    </div>
+
+    
+
+  </div>
+
+
+  <div class="mb-3 row">
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">IGST Amount</label>
+      <input class="form-control" type="text" value="" id="igst_amt"  name="igst_amt"  [(ngModel)]="creditnotedetails.igst_amt">
+    </div>
+
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Total GST Amount</label>
+      <input class="form-control" type="text" value="" id="total_gst_amt"  name="total_gst_amt"  [(ngModel)]="creditnotedetails.total_gst_amt">
+    </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Total Credit Note Amount</label>
+      <input class="form-control" type="text" value="" id="total_credit_note_amt"  name="total_credit_note_amt"  [(ngModel)]="creditnotedetails.total_credit_note_amt">
+    </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Icredit Note Status</label>
+      <input class="form-control" type="text" value="" id="icredit_note_status"  name="icredit_note_status"  [(ngModel)]="creditnotedetails.icredit_note_status">
+    </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Credit Note Submitted Date</label>
+      <input class="form-control" type="date" value="" id="credit_note_submitted_date"  name="credit_note_submitted_date"  [(ngModel)]="creditnotedetails.credit_note_submitted_date">
+    </div>
+
+   
+
+
+  </div>
+
+  
+
+  <!-- <div class="mb-3 row">
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Team Name</label>
+      <select  class="form-control"  name="team_id"  [(ngModel)]="creditnotedetails.team_id">
+          <option value="">-- Select Team --</option>
+          <option *ngFor="let tl of teamsArr"  value="{{tl.team_id}}">
+          {{tl.teamname}}
+          </option>
+      </select>
+    </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Leads Source</label>
+      <select  class="form-control"  name="leadsource_id"  [(ngModel)]="creditnotedetails.leadsource_id">
+        <option value="">-- Select Lead Source --</option>
+        <option *ngFor="let tl of leadsourceArr"  value="{{tl.leadsource_id}}">
+        {{tl.leadsource}}
+        </option>
+    </select>
+    </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Booking ID</label>
+      <input class="form-control" type="text" value="" id="booking_id"  name="booking_id"  [(ngModel)]="creditnotedetails.booking_id">
+    </div>
+
+    <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Remark</label>
+        <input class="form-control" type="text" value="" id="remark"  name="remark"  [(ngModel)]="creditnotedetails.remark">
+      </div>
+
+    </div> -->
+
+    
+    <button type="submit" class="btn btn-primary">Submit</button>&nbsp;
+    <button type="submit" class="btn btn-primary" routerLink="/form/invoices/creditnote/creditnotelist">Cancel</button>
+</form>
+  
+  </div> <!-- container-fluid -->
+
+  <!-- Standard Modal -->
+<ng-template #content role="document" let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title mt-0">Create Client Details</h5>
+    <button type="button" class="btn-close" aria-hidden="true" (click)="modal.dismiss('Cross click')">×</button>
+  </div>
+  <div class="modal-body">
+      <app-clientdetails></app-clientdetails>
+  </div>
+  <!-- <div class="modal-footer">
+    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+    <button type="button" class="btn btn-primary">Save changes</button>
+  </div> -->
+</ng-template>
+
+
+

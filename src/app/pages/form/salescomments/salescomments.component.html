@@ -1,0 +1,91 @@
+<div class="container-fluid">
+
+    <!-- start page title -->
+    <app-page-title title="Add Sales Comments"></app-page-title>
+    <!-- <app-page-title title="Project Allocation" [breadcrumbItems]="breadCrumbItems"></app-page-title> -->
+
+    <!-- end page title -->
+  <form (ngSubmit)="submitcomments()">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body">
+  
+                    <div class="mb-3 row">
+                            <label for="first name" class="col-md-2 col-form-label">Sales ID</label>
+                            <div class="col-md-10">
+                                <select  class="form-control"  name="sales_id"  [(ngModel)]="salescomments.sales_id"  disabled>
+                                    <option *ngFor="let sl of salesArr"  value="{{sl.sales_id}}"> {{sl.sales_id}}
+                                    </option>
+                                </select>
+                            </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label for="first name" class="col-md-2 col-form-label">Updated By</label>
+                        <div class="col-md-10">
+                            <select  class="form-control"  name="updated_by"  [(ngModel)]="salescomments.updated_by">
+                                <option value="">-- Select Users --</option>
+                                <option *ngFor="let ul of usersArr"  value="{{ul.user_id}}"> {{ul.firstname}} {{ul.middlename}} {{ul.lastname}}
+                                </option>
+                            </select>
+                        </div>
+                </div>
+
+                   
+
+
+                <div class="mb-3 row">
+                       
+                  <label for="first name" class="col-md-2 col-form-label">Comment</label>
+                  <div class="col-md-10">
+                   <input class="form-control" type="text" value="" id="comment"  name="comment"  [(ngModel)]="salescomments.comment">
+                  </div>
+                </div> 
+          
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+
+          </div>
+        </div>
+      </div> <!-- end col -->
+    </div>
+    <!-- end row -->
+  </form>
+
+  <div class="card">
+    <div class="card-body">
+        <div class="mb-3 row">
+            <div class="col-md-6">
+              <h4>Comments</h4>
+              <table>
+                  <tbody>
+                  <tr *ngFor="let cs of salescommentsArr">
+                          
+                     <td><i class="fas fa-user border" style="font-size: 40px; padding: 6px;"></i></td>
+                     <td>
+                         <tr></tr>
+                     <tr>
+                      {{cs.firstname}} {{cs.middlename}} {{cs.lastname}}
+                        </tr>
+                      <tr>
+                          {{cs.comment}}
+                        </tr>
+                    </td>
+                </tr>
+
+                    
+            
+
+
+
+            </tbody>
+            </table>
+            </div>
+        </div>  
+    </div>
+</div>
+
+  
+  </div> <!-- container-fluid -->

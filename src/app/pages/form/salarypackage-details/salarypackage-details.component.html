@@ -1,0 +1,101 @@
+<form  (ngSubmit)="submitSalarypackage()">
+
+    <div class="mb-3 row">
+        <!-- <div *ngFor="let ul of usersArr">
+            <input type="text" name="user_id" value="{{ul.firstname}}" [(ngModel)]="salarypackage.user_id">{{ul.firstname}}
+            <input class="form-control" type="text" value="{{title}}" name="user_id1"  [(ngModel)]="salarypackage.user_id">
+        </div> -->
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">User Name</label>
+            <select  class="form-control" name="user_id"  [(ngModel)]="salarypackage.user_id">
+                <!-- <option value="">-- Select User Name --</option> -->
+                <option *ngFor="let ul of usersArr" [selected]="ul.firstname" value="{{ul.user_id}}"> {{ul.firstname}} {{ul.lastname}}
+                </option>
+            </select>
+
+            <!-- <select  class="form-control" name="monthly_salary"  [(ngModel)]="salarypackage.monthly_salary">
+                <option  value="{{salarypackage.monthly_salary}}" selected> {{bmi}}
+                 </option>
+             </select> -->
+            <span class="text-danger" [hidden]="!error.user_id">{{error.user_id}}</span>
+        </div>
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">From Date</label>
+            <input class="form-control" type="date" value="" name="from_date"  [(ngModel)]="salarypackage.from_date">
+            <span class="text-danger" [hidden]="!error.from_date">{{error.from_date}}</span>
+        </div>
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">To Date</label>
+            <input class="form-control" type="date" value="" name="to_date"  [(ngModel)]="salarypackage.to_date">
+        </div>
+
+    </div>
+
+
+    <div class="mb-3 row">
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Basic Pay</label>
+            <input class="form-control" type="text" value="" name="basic_pay"  [(ngModel)]="salarypackage.basic_pay"
+            (keypress)="keyPressNumbers($event)">
+            <span class="text-danger" [hidden]="!error.basic_pay">{{error.basic_pay}}</span>
+        </div>
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Variable Pay</label>
+            <input class="form-control" type="text" value="" name="variable_pay"  [(ngModel)]="salarypackage.variable_pay"
+            (keypress)="keyPressNumbers($event)">
+            <span class="text-danger" [hidden]="!error.variable_pay">{{error.variable_pay}}</span>
+        </div>
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Yearly Bonus</label>
+            <input class="form-control" type="text" value="" name="yearly_bonus"  [(ngModel)]="salarypackage.yearly_bonus"
+            (keypress)="keyPressNumbers($event)">
+            <span class="text-danger" [hidden]="!error.yearly_bonus">{{error.yearly_bonus}}</span>
+        </div>
+
+    </div>
+
+    <div class="mb-3 row">
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Monthly Salary</label>
+            <select  class="form-control" name="monthly_salary"  [(ngModel)]="salarypackage.monthly_salary">
+               <option  value="{{salarypackage.monthly_salary}}" selected> {{bmi}}
+                </option>
+            </select>
+            <span class="text-danger" [hidden]="!error.monthly_salary">{{error.monthly_salary}}</span>
+        </div>
+        <!-- <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Monthly Salary</label>
+            <input class="form-control" type="text" value="{{salarypackage.basic_pay--salarypackage.variable_pay}}" name="monthly_salary"  [(ngModel)]="salarypackage.monthly_salary"
+            (keypress)="keyPressNumbers($event)">
+        </div> -->
+        <div class="col-md-4">
+
+            <label for="example-text-input" class="col-form-label">Yearly Salary</label>
+            <select  class="form-control" name="yearly_salary"  [(ngModel)]="salarypackage.yearly_salary">
+               <option  value="{{salarypackage.yearly_salary}}" selected> {{bmi1}}
+                </option>
+            </select>
+            <span class="text-danger" [hidden]="!error.yearly_salary">{{error.yearly_salary}}</span>
+        </div>
+        <!-- <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Yearly Salary</label>
+            <input class="form-control" type="text" value="{{ ((salarypackage.basic_pay--salarypackage.variable_pay) * 12)--salarypackage.yearly_bonus }}" name="yearly_salary"  [(ngModel)]="salarypackage.yearly_salary"
+            (keypress)="keyPressNumbers($event)">
+        </div> -->
+
+        <div class="col-md-4">
+            <label for="example-text-input" class="col-form-label">Remark</label>
+            <input class="form-control" type="text" value="" name="remark"  [(ngModel)]="salarypackage.remark">
+            <span class="text-danger" [hidden]="!error.remark">{{error.remark}}</span>
+        </div>
+  
+      </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>&nbsp;
+  <button type="button" class="btn btn-primary" routerLink="/form/userview/{{usersid}}">Cancel</button>
+</form>

@@ -1,0 +1,346 @@
+<div class="card">
+
+    <div class="card-body">
+
+        <div class="card-header">
+            <h4 class="card-title">Add New File </h4>
+        </div>
+        <form (ngSubmit)="saveMultipleImage()" enctype="multipart/form-data">
+            <div class="row">
+
+                <div class="col-md-5">
+                    <label>Attendance Month</label>
+                    <select class="form-control" name="month" [(ngModel)]="month">
+                        <option value="">-- Select Month --</option>
+                        <option *ngFor="let cl of MonthArr" value="{{cl.id}}">
+                            {{cl.month}}
+                        </option>
+                    </select>
+                </div>
+
+                <div class="col-md-7">
+                    <label>Select Excel</label>
+
+                    <div class="mb-3 row">
+                        <div class="col-md-8">
+                            <input class="form-control" type='file' (change)="addfilevent($event)" #input
+                                accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+
+                        </div>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-primary"> <i class="mdi mdi-upload"></i>
+                                Upload</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+        <!-- <input type="file" (change)="onFileChange($event)" multiple="false" /> -->
+    </div>
+
+</div>
+
+
+<div class="card">
+    <div class="card-body">
+        <div class="card-header">
+            <h4 class="card-title">Generate Report</h4>
+        </div>
+        <form (ngSubmit)="get_data()">
+            <div class="mb-3 row">
+
+                <div class="col-md-5">
+                    <label>Year</label>
+                    <select class="form-control" name="year" [(ngModel)]="emp.year">
+                        <option value="" selected>-- Select Year --</option>
+                        <option value="2020"> 2020 </option>
+                        <option value="2021"> 2021 </option>
+                        <option value="2022"> 2022 </option>
+                        <option value="2023"> 2023 </option>
+                        <option value="2024"> 2024 </option>
+                        <option value="2025"> 2025 </option>
+
+                    </select>
+                </div>
+
+                <div class="col-md-4">
+                    <label>Month</label>
+                    <select class="form-control" name="month" [(ngModel)]="emp.month" placeholder="-- Select Month --">
+                        <option value="">-- Select Month --</option>
+                        <option *ngFor="let cl of MonthArr" value="0{{cl.id}}">
+                            {{cl.month}}
+                        </option>
+                    </select>
+                    <!-- <span class="text-danger" [hidden]="!error.financial_year">{{error.financial_month}}</span> -->
+                </div>
+                <div class="col-md-3" style="padding-top: 28px;">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Monthly Attendance Report</h4>
+
+
+                    <div class="table-responsive">
+
+                        <table class="table mb-0">
+                            <thead>
+                                <!-- <tr>
+                                    <th>Employee Code</th>
+                                    <th>Employee Name</th>
+                                    <th>Attendance Month</th>
+                                    <th>Present Days</th>
+                                    <th>Absent Days</th>
+                                    <th>Half Days</th>
+                                    <th>Edit</th>
+                                </tr> -->
+                                <tr>
+                                    <th [class.active]="order === 'emp_code'" (click)="setOrder('emp_code')">
+                                        Employee Code <span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                    </th>
+                                    <th [class.active]="order === 'emp_name'" (click)="setOrder('emp_name')">
+                                        Employee Name<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                    </th>
+                                    <th [class.active]="order === 'month'" (click)="setOrder('month')">
+                                        Attendance Month<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                    </th>
+                                    <th [class.active]="order === 'present_days'" (click)="setOrder('present_days')">
+                                        Present Days<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                    </th>
+                                    <th [class.active]="order === 'absent_days'" (click)="setOrder('absent_days')">
+                                        Absent Days<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                    </th>
+                                    <th [class.active]="order === 'half_days'" (click)="setOrder('half_days')">
+                                        Half Days <span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                    </th>
+                                    <th [class.active]="order === 'late_marks'" (click)="setOrder('late_marks')">
+                                        Late Marks <span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                    </th>
+                                    <th>Edit</th>
+                                </tr>
+                                 <!-- Search -->
+                               <tr>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2"
+                                        aria-controls="tickets-table" [(ngModel)]="emp_code_Search">
+                                </th>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2"
+                                        aria-controls="tickets-table" [(ngModel)]="emp_name_search">
+                                </th>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2"
+                                        aria-controls="tickets-table" [(ngModel)]="month_search">
+                                </th>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2"
+                                        aria-controls="tickets-table" [(ngModel)]="present_days_Search">
+                                </th>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2"
+                                        aria-controls="tickets-table" [(ngModel)]="absent_days_Search">
+                                </th>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2"
+                                        aria-controls="tickets-table" [(ngModel)]="half_days_search">
+                                </th>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2"
+                                        aria-controls="tickets-table" [(ngModel)]="late_marks_search">
+                                </th>
+                               
+                            </tr>   
+                            <!-- End search -->
+                            </thead>
+                            <tbody>
+                                <tr *ngFor='let emp of empdata |searchattendance: emp_code_Search:emp_name_search:month_search:present_days_Search:absent_days_Search:half_days_search | orderBy: order:reverse:caseInsensitive'>
+                                    <td>{{emp.emp_code}}</td>
+                                    <td>{{emp.emp_name}}</td>
+                                    <td>{{emp.month}}</td>
+                                    <td>{{emp.present_days}}</td>
+                                    <td>{{emp.absent_days}}</td>
+                                    <td>{{emp.half_days}}</td>
+                                    <td>{{emp.late_marks}}</td>
+                                    <td><button type="button" class="btn btn-primary waves-effect waves-light"
+                                            (click)="openModal(content, emp)">Edit</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</div>
+
+<ng-template #content role="document" let-modal>
+    <div class="modal-header">
+        <h5 class="modal-title mt-0">Edit Attendance </h5>
+        <button type="button" class="btn-close" aria-hidden="true" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+        <form (ngSubmit)="update()">
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <label for="example-text-input" class="col-form-label">Employee Name</label>
+                    <input type="text" name="emp_name" [(ngModel)]="attData.emp_name" id="emp_name" class="form-control"
+                        readonly>
+                </div>
+                <div class="col-md-6">
+                    <label for="example-text-input" class="col-form-label">Employee Code</label>
+                    <input type="text" name="emp_code" [(ngModel)]="attData.emp_code" id="emp_code" class="form-control"
+                        readonly>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <div class="col-md-3">
+                    <label for="example-text-input" class="col-form-label">D1</label>
+                    <input type="text" name="d1" [(ngModel)]="attData.d1" id="d1" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label for="example-text-input" class="col-form-label">D2 </label>
+                    <input type="text" name="d2" [(ngModel)]="attData.d2" id="d2" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label for="example-text-input" class="col-form-label">D3 </label>
+                    <input type="text" name="d3" [(ngModel)]="attData.d3" id="d3" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label for="example-text-input" class="col-form-label">D4 </label>
+                    <input type="text" name="d4" [(ngModel)]="attData.d4" id="d4" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label for="example-text-input" class="col-form-label">D5</label>
+                    <input type="text" name="d5" [(ngModel)]="attData.d5" id="d5" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label for="example-text-input" class="col-form-label">D6 </label>
+                    <input type="text" name="d6" [(ngModel)]="attData.d6" id="d6" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label for="example-text-input" class="col-form-label">D7</label>
+                    <input type="text" name="d7" [(ngModel)]="attData.d7" id="d7" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label for="example-text-input" class="col-form-label">D8 </label>
+                    <input type="text" name="d8" [(ngModel)]="attData.d8" id="d8" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label for="example-text-input" class="col-form-label">D9</label>
+                    <input type="text" name="d9" [(ngModel)]="attData.d9" id="d9" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label for="example-text-input" class="col-form-label">D10</label>
+                    <input type="text" name="d10" [(ngModel)]="attData.d10" id="d10" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label for="example-text-input" class="col-form-label">D11</label>
+                    <input type="text" name="d11" [(ngModel)]="attData.d11" id="d11" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label for="example-text-input" class="col-form-label">D12</label>
+                    <input type="text" name="d12" [(ngModel)]="attData.d12" id="d12" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label for="example-text-input" class="col-form-label">D13</label>
+                    <input type="text" name="d13" [(ngModel)]="attData.d13" id="d13" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label for="example-text-input" class="col-form-label">D14</label>
+                    <input type="text" name="d14" [(ngModel)]="attData.d14" id="d14" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label for="example-text-input" class="col-form-label">D15</label>
+                    <input type="text" name="d15" [(ngModel)]="attData.d15" id="d15" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label for="example-text-input" class="col-form-label">D16</label>
+                    <input type="text" name="d16" [(ngModel)]="attData.d16" id="d16" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label for="example-text-input" class="col-form-label">D17</label>
+                    <input type="text" name="d17" [(ngModel)]="attData.d17" id="d17" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label for="example-text-input" class="col-form-label">D18</label>
+                    <input type="text" name="d18" [(ngModel)]="attData.d18" id="d18" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label for="example-text-input" class="col-form-label">D19</label>
+                    <input type="text" name="d19" [(ngModel)]="attData.d19" id="d19" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label for="example-text-input" class="col-form-label">D20</label>
+                    <input type="text" name="d20" [(ngModel)]="attData.d20" id="d20" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label for="example-text-input" class="col-form-label">D21</label>
+                    <input type="text" name="d21" [(ngModel)]="attData.d21" id="d21" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label for="example-text-input" class="col-form-label">D22</label>
+                    <input type="text" name="d22" [(ngModel)]="attData.d22" id="d22" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label for="example-text-input" class="col-form-label">D23</label>
+                    <input type="text" name="d23" [(ngModel)]="attData.d23" id="d23" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label for="example-text-input" class="col-form-label">D24</label>
+                    <input type="text" name="d24" [(ngModel)]="attData.d24" id="d24" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label for="example-text-input" class="col-form-label">D25</label>
+                    <input type="text" name="d25" [(ngModel)]="attData.d25" id="d25" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label for="example-text-input" class="col-form-label">D26</label>
+                    <input type="text" name="d26" [(ngModel)]="attData.d11" id="d26" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label for="example-text-input" class="col-form-label">D27</label>
+                    <input type="text" name="d27" [(ngModel)]="attData.d27" id="d27" class="form-control">
+                </div>
+                <div *ngIf="attData.d28 != null" class="col-md-3">
+                    <label for="example-text-input" class="col-form-label">D28</label>
+                    <input type="text" name="d28" [(ngModel)]="attData.d28" id="d28" class="form-control">
+                </div>
+                <div *ngIf="attData.d29 != null" class="col-md-3">
+                    <label for="example-text-input" class="col-form-label">D29</label>
+                    <input type="text" name="d29" [(ngModel)]="attData.d29" id="d29" class="form-control">
+                </div>
+                <div *ngIf="attData.d30 != null" class="col-md-3">
+                    <label for="example-text-input" class="col-form-label">D30</label>
+                    <input type="text" name="d30" [(ngModel)]="attData.d30" id="d30" class="form-control">
+                </div>
+               
+                <div *ngIf="attData.d31 != null" class="col-md-3">
+                    <label for="example-text-input" class="col-form-label">D31</label>
+                    <input type="text" name="d31" [(ngModel)]="attData.d31" id="d31" class="form-control">
+                </div>
+
+            </div>
+
+            <div class="row justify-content-end">
+                <div class="col-sm-9">
+                    <div>
+                        <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+                        <button type="submit" class="btn btn-primary w-md">Submit</button>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    
+</ng-template>

@@ -1,0 +1,84 @@
+  <div class="container-fluid">
+    <div class="page-title-box d-flex align-items-center justify-content-between">
+        <div class="mb-0 font-size-20">
+          <h4>Salary Package Details</h4> 
+       </div>
+       <div class="col-md-8"  style="text-align: right;">
+        <button type="button" class="btn btn-primary mb-3" (click)="back()" style="text-align: right;"><i class='fas fa-angle-left fa-lg'></i> Back</button>&nbsp;
+        <button type="button" class="btn btn-primary mb-3" routerLink="/form/salary/editsalarypackage/{{salarypackage.salary_package_id}}"><i class='fas fa-edit fa-lg'></i></button>&nbsp;
+        <button type="button" class="btn btn-primary mb-3"  (click)="doSomeLogics()"><i class='fas fa-angle-left fa-lg'></i></button>&nbsp;
+        <button type="button" class="btn btn-primary mb-3"  (click)="doSomeLogic()"><i class='fas fa-angle-right fa-lg'></i></button>
+        </div>
+      
+    </div>
+      <div class="card">
+        <div class="row">
+            <div class="card-body">
+                <div class="col-md-12">
+                <div class="table-responsive">
+                <table class="table" id='tab'>
+                    <!-- <h4> <i class="fas fa-user border" style="font-size: 47px; padding: 9px;"></i> {{users.firstname}} {{users.lastname}}</h4> -->
+                    
+                    <tbody>
+                      
+                        <tr>
+                              <!-- <td scope="col">Salary Package ID</td>
+                              <td><b>{{salarypackage.salary_package_id}}</b></td> -->
+                         
+                              <td scope="col">User Name</td>
+                              <td>  
+                                 <select  class="form-control"  name="user_id" disabled [(ngModel)]="salarypackage.user_id" style="border: none;
+                                 background: white;
+                                 padding: 0px;
+                                 font-weight: 700;">
+                                    <option *ngFor="let ul of usersArr"  value="{{ul.user_id}}"> {{ul.firstname}} {{ul.middlename}} {{ul.lastname}}
+                                    </option>
+                                </select>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td scope="col">From Date</td>
+                              <td><b>{{salarypackage.from_date}}</b></td>
+                             
+                         
+                              <td scope="col">To Date</td>
+                              <td><b>{{salarypackage.to_date}}</b></td>
+                          </tr>
+                          <tr>
+                              <td scope="col">Basic Pay</td>
+                              <td><b>{{salarypackage.basic_pay}}</b></td>
+                         
+                              <td scope="col">Variable Pay</td>
+                              <td><b>{{salarypackage.variable_pay}}</b></td>
+                          </tr>
+                          <tr>
+                              <td scope="col">Yearly Bonus</td>
+                              <td><b>{{salarypackage.yearly_bonus}}</b></td>
+                          
+                              <td scope="col">Monthly Salary</td>
+                              <td><b>{{salarypackage.monthly_salary}}</b></td>
+                          </tr>
+                          <tr>
+                              <td scope="col">Yearly Salary</td>
+                              <td><b>{{salarypackage.yearly_salary}}</b></td>
+                        
+                              <td scope="col">Remark</td>
+                              <td><b>{{salarypackage.remark}}</b></td>
+                           </tr>
+        
+                      </tbody>
+                     
+                </table>
+               
+                </div>
+            </div>
+
+            
+
+
+       
+            </div>
+        </div>
+    </div>
+
+</div>

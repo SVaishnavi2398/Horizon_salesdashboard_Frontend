@@ -1,0 +1,255 @@
+<div class="card">
+    <div class="card-body">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4 class="card-title">Generate Monthly Attendance Report</h4>
+                </div>
+                <div class="col-md-6">
+                        <button type="button" class="btn btn-primary report"  routerLink="/form/salary/monthly-salary-list-view1">
+                       Report</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+   
+<div class="card">
+    <div class="card-body">
+        <div class="card-header">
+            <h4 class="card-title">Monthly Salary</h4>
+        </div>
+        <form (ngSubmit)=get_employee()>
+            <div class="mb-3 row">
+
+                <div class="col-md-5">
+                    <label>Attendance Month</label>
+                    <select class="form-control" name="month" (change)="getMonth($event)" [(ngModel)]="monthlysalary.month">
+                        <option value="">-- Select Month --</option>
+                        <option *ngFor="let cl of monthArr" value="{{cl.month_year}}">
+                            {{cl.month}}/{{cl.month_year.split('-')[0]}}
+                        </option>
+                    </select>
+                </div>
+
+                <div class="col-md-4">
+                    <label>Team </label>
+                    <select class="form-control" name="team_id" [(ngModel)]="monthlysalary.team_id">
+                        <option value="">-- Select Team --</option>
+                        <option *ngFor="let team of teamArr " value="{{team.team_id}}">
+                            {{team.teamname}}
+                        </option>
+                    </select>
+                </div>
+                <div class="col-md-3" style="padding-top: 28px;">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <form (ngSubmit)="salaryDetails1()">
+        <div class="card">
+            <div class="card-body">
+
+                <div class="table-responsive">
+                    <table class="table mb-0">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Present Days</th>
+                                <!-- <th>Salary Package</th> -->
+                                <!-- <th>Basic Pay</th> -->
+                                <th>Monthly Basic Pay</th>
+                                <th>Monthly Variable Pay</th>
+                                <!-- <th>Extra Days</th>
+                                <th>penalty leave days</th>
+                                <th>No of late marks</th> -->
+                                <!-- <th>Basic Salary</th> -->
+                                <th>Salary Month</th>
+                                <th>Reimbursement</th>
+                                <th>Incentives</th>
+                                <th>Liabilities</th>
+                                <th>Total Pay</th>
+                                <th>Deduction</th>
+                                <th>TDS Deduction</th>
+                                <th>Net Salary Paid</th>
+                                <th>Status</th>
+                                <th>Payment Details</th>
+                                <th>Remark</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <td hidden>
+                                <tr *ngFor="let sal of  this.monthlysalary.user_id1; let i = index">
+                                    <input type="text" class="form-control" name="user_id" value="{{monthlysalary.user_id1[i]}}" disabled>
+                                </tr>
+                            </td>
+                            <td hidden>
+                                <tr *ngFor="let sal of  this.monthlysalary.user_id1; let i = index">
+                                    <input type="text" class="form-control" name="month_value" value="{{monthlysalary.month_value1[i]}}" disabled>
+                                </tr>
+                            </td>
+                           
+                            <td>
+                                <tr *ngFor="let sal of  this.monthlysalary.firstname1; let i = index">
+                                    <input type="text" class="form-control" name="firstname" value="{{monthlysalary.firstname1[i]}}" disabled>
+                                    
+                                </tr>
+                            </td>
+                            <td>
+                                <tr *ngFor="let sal of  this.monthlysalary.present_days1; let i = index">
+                                    <input type="text" class="form-control" name="present_days" value="{{monthlysalary.present_days1[i]}}" disabled>
+                                </tr>
+                            </td>
+                            <!-- <td>
+                                <tr *ngFor="let sal of  this.monthlysalary.salary_package; let i = index">
+                                    <input type="text" class="input" name="salary_package" value="{{monthlysalary.salary_package[i]}}" disabled>
+                                </tr>
+                            </td> -->
+                            <td hidden>
+                                <tr *ngFor="let sal of  this.monthlysalary.basic_pay1; let i = index">
+                                    <input type="text" class="form-control" name="basic_pay" value="{{monthlysalary.basic_pay1[i]}}"disabled >
+                                </tr>
+                            </td>
+                            <td>
+                                <tr *ngFor="let sal of  this.monthlysalary.monthly_basic_salary1; let i = index">
+                                    <input type="text" class="form-control" name="monthly_basic_salary" value="{{monthlysalary.monthly_basic_salary1[i]}}"disabled >
+                                </tr>
+                            </td>
+                            <td>
+                                <tr *ngFor="let sal of  this.monthlysalary.monthly_variable_pay1; let i = index">
+                                    <input type="text" class="form-control" name="monthly_variable_pay" 
+                                    value="{{monthlysalary.monthly_variable_pay1[i]}}">
+                                </tr>
+                            </td>
+                            <!-- <td>
+                                <tr *ngFor="let sal of  this.monthlysalary.firstname1; let i = index">
+                                    <input type="text" class="input" name="extra_days1" value="" [(ngModel)]="extra_days1[i]">
+                                </tr>
+                            </td>
+                            <td>
+                                <tr *ngFor="let sal of  this.monthlysalary.user_id1; let i = index">
+                                    <input type="text" class="input" name="penalty_leave_days1" value="" [(ngModel)]="penalty_leave_days1[i]">
+                                </tr>
+                            </td>
+                            <td>
+                                <tr *ngFor="let sal of  this.monthlysalary.user_id1; let i = index">
+                                    <input type="text" class="input" name="no_of_late_marks1" value="" [(ngModel)]="no_of_late_marks1[i]">
+                                </tr>
+                            </td> -->
+                            <!-- <td>
+                                <tr *ngFor="let sal of  this.monthlysalary.monthly_basic_salary1; let i = index">
+                                    <input type="text" class="input" name="monthly_basic_salary1" value="{{monthlysalary.monthly_basic_salary1[i]}}">
+                                </tr>
+                            </td> -->
+                            
+                            
+                            <td>
+                                <tr *ngFor="let sal of  this.monthlysalary.firstname1; let i = index">
+                                    <input type="text" class="form-control" name="salary_month" value="{{month}}" [(ngModel)]="monthlysalary.salary_month1[i]">
+                                </tr>
+                            </td>
+                            <td>
+                                <tr *ngFor="let sal of  this.monthlysalary.firstname1; let i = index">
+                                    <input type="text" class="form-control" name="reimbursement" value="" [(ngModel)]="monthlysalary.reimbursement1[i]" (keyup)="keyPressNumbers($event)">
+                                </tr>
+                            </td>
+
+                            <!-- <td>
+                                <tr *ngFor="let sal of  this.monthlysalary.incentives1; let i = index">
+                                    <input type="text" class="input" name="incentives1" 
+                                    value="{{monthlysalary.incentives1[i]}}" >
+                                </tr>
+                            </td> -->
+
+                            <td>
+                                <tr *ngFor="let sal of  this.monthlysalary.firstname1; let i = index">
+                                    <input type="text" class="form-control" name="incentives" value="" [(ngModel)]="monthlysalary.incentives1[i]" (keyup)="keyPressNumbers($event)">
+                                </tr>
+                            </td>
+                            <td>
+                                <tr *ngFor="let sal of  this.monthlysalary.firstname1; let i = index">
+                                    <input type="text" class="form-control" name="liabilities" value="" [(ngModel)]="monthlysalary.liabilities1[i]" (keyup)="keyPressNumbers($event)">
+                                </tr>
+                            </td>
+                            <td>
+                                <tr *ngFor="let sal of  this.monthlysalary.total_pay1; let i = index">
+                                    <input type="text" class="form-control" name="total_pay" value="{{monthlysalary.total_pay1[i]}}" [(ngModel)]="monthlysalary.total_pay1[i]">
+                                </tr>
+                                <!-- <select  class="form-control" name="total_pay"  [(ngModel)]="monthlysalary.total_pay1[i]">
+                                    <option   value="{{monthlysalary.total_pay1}}" selected> {{bmi2}}
+                                     </option>
+                                 </select> -->
+                            </td>
+
+                            <td>
+                                <tr *ngFor="let sal of  this.monthlysalary.firstname1; let i = index">
+                                    <input type="text" class="form-control" name="deduction" value=""  [(ngModel)]="monthlysalary.deduction1[i]" (keyup)="keyPressNumbers($event)" >
+                                </tr>
+                            </td>
+                          
+
+                            <td>
+                                <tr *ngFor="let sal of  this.monthlysalary.tds_deducted1; let i = index">
+                                    <input type="text" class="form-control" name="tds_deducted" value="{{monthlysalary.tds_deducted1[i]}}" [(ngModel)]="monthlysalary.tds_deducted1[i]">
+                                </tr>
+                            </td>
+
+                            <!-- <td>
+                                <tr *ngFor="let sal of  this.monthlysalary.firstname1; let i = index">
+                                    <input type="text" class="input" name="tds_paid" value="" [(ngModel)]="monthlysalary.tds_paid1[i]">
+                                </tr>
+                            </td> -->
+                            
+
+                            <td>
+                                <tr *ngFor="let sal of  this.monthlysalary.net_salary_paid1; let i = index">
+                                    <input type="text" class="form-control" name="net_salary_paid" value="{{monthlysalary.net_salary_paid1[i]}}" [(ngModel)]="monthlysalary.net_salary_paid1[i]">
+                                </tr>
+                            </td>
+
+                            <td>
+                                <!-- <label for="example-text-input" class="col-form-label">Status</label> -->
+                                <tr *ngFor="let sal of  this.monthlysalary.firstname1; let i = index">
+                                    <select  class="form-control" name="status"  [(ngModel)]="monthlysalary.status1[i]">
+                                        <option value="">-- Select User Name --</option>
+                                        <option value="Paid"> Paid </option>
+                                        <option value="Hold"> Hold </option>
+                                        <option value="Echeck Preferred"> Echeque Preferred  </option>
+                                        <option value="Pending"> Pending </option>
+                                    
+                                    </select>
+                            </tr>
+                            </td>
+
+                            <td>
+                                <tr *ngFor="let sal of  this.monthlysalary.firstname1; let i = index">
+                                    <input type="text" class="form-control" name="payment_details" value="" [(ngModel)]="monthlysalary.payment_details1[i]">
+                                </tr>
+                            </td>
+                            <td>
+                                <tr *ngFor="let sal of  this.monthlysalary.firstname1; let i = index">
+                                    <input type="text" class="form-control" name="remark" value="" [(ngModel)]="monthlysalary.remark1[i]">
+                                </tr>
+                            </td>
+                            
+                            
+                               
+                            
+
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
+        </div>
+        <button type="submit " class="btn btn-primary">Submit</button>
+    </form>
+    </div>
+</div>

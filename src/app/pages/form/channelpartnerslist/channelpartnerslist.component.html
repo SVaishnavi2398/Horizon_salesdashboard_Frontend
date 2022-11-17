@@ -1,0 +1,145 @@
+<style>
+
+    button.btn.btn-success {
+        padding: 5px 10px;
+    }
+
+    button.btn.btn-info {
+        padding: 5px 10px;
+    }
+
+    button.btn.btn-danger {
+        padding: 4px 10px;
+    }
+    
+    td {
+        /* padding: 10px 15px; */
+        padding: 10px 10px;
+    }
+    
+    button.btn.btn-primary.mb-3 {
+        padding: 4px 8px;
+    }
+    
+</style>
+
+<div class="container-fluid">
+    <!-- <app-page-title title="Teams List"></app-page-title> -->
+   
+    <div class="row">
+        <div class="col-md-4">
+          <div>
+            <app-page-title title="Channel Partners List"></app-page-title>
+
+          </div>
+        </div>
+        <div class="col-md-8"  style="text-align: right;">
+                <button type="button" class="btn btn-primary mb-3"  routerLink="/form/channelpartner"><i class="mdi mdi-plus me-1"></i>
+                Add Channel Partner</button>
+        </div>
+        <!-- Search -->
+        <div class="col-md-8">
+           
+        </div>
+      <!-- End search -->
+        <div class="col-md-4">
+                <ngb-pagination class="d-flex justify-content-center" [(page)]="page" [maxSize]="4" [collectionSize]="channelpartnerList.length" [boundaryLinks]="true"  style="justify-content: right!important;"></ngb-pagination>
+        </div>
+
+      
+  <div class="row">
+      <div class="col-lg-12">
+          <div class="card">
+              <div class="card-body"    style="padding: 0 10px 0 10px;">
+                  <!-- <h4 class="card-title">Registered Roles</h4> -->
+    
+                  <div class="table-responsive">
+                      <table class="table table-centered table-nowrap mb-0 align-middle">
+                          <thead>
+                             <!-- Sorting -->
+                             <tr>
+                              <th [class.active]="order === 'cp_name'" (click)="setOrder('cp_name')">
+                                  Channel Partner Name <span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                </th>
+                                <th [class.active]="order === 'catrgory_id'" (click)="setOrder('catrgory_id')">
+                                  Category<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                </th>
+                                <th [class.active]="order === 'occupation_id'" (click)="setOrder('occupation_id')">
+                                  Occupation<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                </th>
+                                <th [class.active]="order === 'address'" (click)="setOrder('address')">
+                                  Address<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                </th>
+                                <th [class.active]="order === 'date_of_birth'" (click)="setOrder('date_of_birth')">
+                                  Date Of Birth<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                </th>
+                                <th [class.active]="order === 'mobile1'" (click)="setOrder('mobile1')">
+                                  Conatct No<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                </th>
+                                <th [class.active]="order === 'email1'" (click)="setOrder('email1')">
+                                  Official Email<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                </th>
+                              
+                            </tr>
+                             <!--End of Sorting -->
+                            <!-- Search -->
+                            <tr>
+                              <th>
+                                  <input type="text" name="cp_name" class="form-control form-control-sm ms-2" aria-controls="tickets-table"
+                                      [(ngModel)]="cp_nameSearch">
+                              </th>
+                              <th>
+                                  <input type="text" class="form-control form-control-sm ms-2" aria-controls="tickets-table"
+                                      [(ngModel)]="catrgory_idSearch">
+                              </th>
+                              <th>
+                                  <input type="text" class="form-control form-control-sm ms-2" aria-controls="tickets-table"
+                                      [(ngModel)]="occupation_idSearch">
+                              </th>
+                              <th>
+                                  <input type="text" class="form-control form-control-sm ms-2" aria-controls="tickets-table"
+                                      [(ngModel)]="address_Search">
+                              </th>
+                              <th>
+                                  <input type="date" class="form-control form-control-sm ms-2" aria-controls="tickets-table"
+                                      [(ngModel)]="date_of_birthSearch">
+                              </th>
+                              <th>
+                                  <input type="text" class="form-control form-control-sm ms-2" aria-controls="tickets-table"
+                                      [(ngModel)]="mobile1Search">
+                              </th>
+                              <th>
+                                <input type="text" class="form-control form-control-sm ms-2" aria-controls="tickets-table"
+                                    [(ngModel)]="email1Search">
+                            </th>
+                          </tr>
+                            <!-- End search -->
+                          </thead>
+                          <tbody>
+                              <tr  *ngFor="let channelpartnerlist of channelpartnerlistArr  | searchchannelpartner: cp_nameSearch:catrgory_idSearch:occupation_idSearch:address_Search:date_of_birthSearch:mobile1Search:email1Search | orderBy: order:reverse:caseInsensitive | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+                                    <!-- <th scope="row">{{channelpartnerlist.cp_id}}</th> -->
+                                    <td>{{channelpartnerlist.cp_name}}</td>
+                                    <td>{{channelpartnerlist.catrgory_id}}</td>
+                                    <td>{{channelpartnerlist.occupation_id}}</td>
+                                    <td>{{channelpartnerlist.address}}</td>
+                                    <td>{{channelpartnerlist.date_of_birth}}</td>
+                                    <td>{{channelpartnerlist.mobile1}}</td>
+                                    <td>{{channelpartnerlist.email1}}</td>
+                                    <td>
+                                        <button type="button" class="btn btn-info"  routerLink="/form/editchannelpartner/{{channelpartnerlist.cp_id}}"><i class="uil-pen"></i></button>
+                                        &nbsp;
+                                        <button type="button" class="btn btn-success"  routerLink="/form/channelpartnerview/{{channelpartnerlist.cp_id}}"><i class="uil-eye"></i></button>
+                                    </td>
+                              </tr>
+                             
+                          </tbody>
+                      </table>
+                  </div>
+  
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- end row -->
+  </div>
+  

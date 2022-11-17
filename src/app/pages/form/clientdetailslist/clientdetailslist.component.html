@@ -1,0 +1,150 @@
+<style>
+
+    button.btn.btn-success {
+        padding: 5px 10px;
+    }
+
+    button.btn.btn-info {
+        padding: 5px 10px;
+    }
+
+    button.btn.btn-danger {
+        padding: 4px 10px;
+    }
+    
+    td {
+        /* padding: 10px 15px; */
+        padding: 10px 10px;
+    }
+    
+    button.btn.btn-primary.mb-3 {
+        padding: 4px 8px;
+    }
+    
+</style>
+    
+<div class="container-fluid">
+    <!-- <app-page-title title="Teams List"></app-page-title> -->
+   
+    <div class="row">
+        <div class="col-md-4">
+            <app-page-title title="Client Details List"></app-page-title>
+        </div>
+        <div class="col-md-8"  style="text-align: right;">
+                <button type="button" class="btn btn-primary mb-3"  routerLink="/form/clientdetails"><i class="mdi mdi-plus me-1"></i>
+                Add Client Details</button>
+        </div>
+        <!-- Search -->
+        <div class="col-md-8">
+            <!-- <div id="tickets-table_filter" class="dataTables_length"><label
+                class="d-inline-flex align-items-center">Search:
+                <input type="text" name="searchclientdetails" class="form-control form-control-sm ms-2"
+                  aria-controls="tickets-table" [(ngModel)]="searchclientdetails"></label>
+              </div> -->
+        </div>
+      <!-- End search -->
+      <div class="col-md-4">
+        <ngb-pagination class="d-flex justify-content-center" [(page)]="page" [maxSize]="4" [collectionSize]="clientdetailsList.length" [boundaryLinks]="true"  style="justify-content: right!important;"></ngb-pagination>
+      </div>
+
+      
+  <div class="row">
+      <div class="col-lg-12">
+          <div class="card">
+              <div class="card-body"    style="padding: 0 10px 0 10px;">
+                  <!-- <h4 class="card-title">Registered Roles</h4> -->
+    
+                  <div class="table-responsive">
+                      <table class="table mb-0">
+                          <thead>
+                              <tr>
+                                  <!-- <th>ID</th> -->
+                                  <th [class.active]="order === 'name'" (click)="setOrder('name')">
+                                    Client Name <span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th [class.active]="order === 'catrgory_id'" (click)="setOrder('catrgory_id')">
+                                    Category <span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th [class.active]="order === 'occupation_id'" (click)="setOrder('occupation_id')">
+                                    Occupation <span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th [class.active]="order === 'address'" (click)="setOrder('address')">
+                                    Address <span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th [class.active]="order === 'date_of_birth'" (click)="setOrder('date_of_birth')">
+                                    Date Of Birth <span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th [class.active]="order === 'mobile1'" (click)="setOrder('mobile1')">
+                                    Conatct No<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th [class.active]="order === 'email1'" (click)="setOrder('email1')">
+                                    Official Email<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th>Action</th>
+                              </tr>
+                              <tr>
+                                <th>
+                                    <input type="text" name="name" class="form-control form-control-sm ms-2" aria-controls="tickets-table"
+                                        [(ngModel)]="nameSearch">
+                                </th>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2" aria-controls="tickets-table"
+                                        [(ngModel)]="catrgory_id_Search">
+                                </th>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2" aria-controls="tickets-table"
+                                        [(ngModel)]="occupation_id_Search">
+                                </th>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2" aria-controls="tickets-table"
+                                        [(ngModel)]="address_Search">
+                                </th>
+                                <th>
+                                    <input type="date" class="form-control form-control-sm ms-2" aria-controls="tickets-table"
+                                        [(ngModel)]="date_of_birth_Search">
+                                </th>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2" aria-controls="tickets-table"
+                                        [(ngModel)]="mobile1_Search">
+                                </th>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2" aria-controls="tickets-table"
+                                        [(ngModel)]="email1_Search">
+                                </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                              <tr  *ngFor="let clientdetaillist of clientdetaillistArr | searchclientdetails: nameSearch:catrgory_id_Search:occupation_id_Search:address_Search:date_of_birth_Search:mobile1_Search:email1_Search | orderBy: order:reverse:caseInsensitive | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+                                    <!-- <th scope="row">{{clientdetaillist.client_id}}</th> -->
+                                    <td>{{clientdetaillist.name}}</td>
+                                    <td>{{clientdetaillist.catrgory_id}}</td>
+                                    <td>{{clientdetaillist.occupation_id}}</td>
+                                    <td>{{clientdetaillist.address}}</td>
+                                    <td>{{clientdetaillist.date_of_birth}}</td>
+                                    <td>{{clientdetaillist.mobile1}}</td>
+                                    <td>{{clientdetaillist.email1}}</td>
+                                    <td>
+                                        <button type="button" class="btn btn-info"  routerLink="/form/editclientdetails/{{clientdetaillist.client_id}}"><i class="uil-pen"></i></button>
+                                        &nbsp;
+                                        <button type="button" class="btn btn-success"  routerLink="/form/clientdetailsview/{{clientdetaillist.client_id}}"><i class="uil-eye"></i></button>
+                                    </td>
+                              </tr>
+                             
+                          </tbody>
+                      </table>
+                      <!-- <div class="ps-scrollbar-x-rail" style="width: 1275px; left: 0px; bottom: 0px;">
+                        <div class="ps-scrollbar-x" style="left: 0px; width: 724px;">
+                        </div>
+                      </div> -->
+                     
+
+                      
+                  </div>
+                 
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- end row -->
+  </div>
+  

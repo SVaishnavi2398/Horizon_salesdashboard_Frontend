@@ -1,0 +1,219 @@
+<div class="container-fluid">
+    <form (ngSubmit)="submitDetails12()">
+
+        <div class="mb-3 row">
+
+            <div class="col-md-3">
+
+                <label for="example-text-input" class="col-form-label"> Team Leader</label>
+                <select class="form-control" name="user_id" (change)="getState1($event)" placeholder="-- Select Client Name --">
+                <option>Select</option>
+                    <option *ngFor="let cl of teamdetails"  value="{{cl.team_leader_name}}">
+                        {{cl.team_leader_name}}
+                    </option>
+                </select>
+
+            </div>
+
+            <!-- <div class="col-md-3">
+
+                <label for="example-text-input" class="col-form-label"> Month</label>
+                <select class="form-control" name="month" (change)="getState4($event)" placeholder="-- Select Month --">
+                    <option>Select</option>
+                    <option *ngFor="let mon of months" value="{{mon.month_id}}">
+                        {{mon.month_name}}
+                    </option>
+                </select>
+
+            </div> -->
+
+            <!-- <div class="col-md-3">
+
+                <label for="example-text-input" class="col-form-label"> Year</label>
+                <input type="text" class="form-control" name="datepicker" id="datepicker" />
+            </div> -->
+
+            <div class="col-md-3">
+                <label for="example-text-input" class="col-form-label">From Date</label>
+                <input class="form-control" type="date" value="{{first_date}}" id="from_date" name="from_date" [(ngModel)]="dealdetails.from_date" (change)="getState3($event)">
+                <!-- <span class="text-danger" [hidden]="!error.from_date">{{error.from_date}}</span> -->
+            </div>
+
+            <div class="col-md-3">
+                <label for="example-text-input" class="col-form-label">To Date</label>
+                <input class="form-control" type="date" value="{{end_date}}" id="to_date" name="to_date" [(ngModel)]="dealdetails.to_date" (change)="getState2($event)">
+                <!-- <span class="text-danger" [hidden]="!error.to_date">{{error.to_date}}</span> -->
+            </div>
+
+
+
+        </div>
+
+
+        <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- <h4 class="card-title">Registered Roles</h4> -->
+
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <thead>
+
+                                    <tr>
+                                        <th>
+                                            User Name
+                                        </th>
+
+                                        <th hidden>
+                                            Salary Justify
+                                        </th>
+
+                                        <th hidden>
+                                            Business Target
+                                        </th>
+
+                                        <th hidden>
+                                            Lead Source
+                                        </th>
+
+                                        <th hidden>
+                                            Status of Target
+                                        </th>
+
+                                        <th>
+                                            Attented Day
+                                        </th>
+
+                                        <th hidden>
+                                            Business Value
+                                        </th>
+
+                                        <th hidden>
+                                            Actual Sales
+                                        </th>
+
+                                        <th>
+                                            Walkin Sourcing
+                                        </th>
+
+                                        <th>
+                                            Walkin Closing
+                                        </th>
+
+                                        <th>
+                                            Leads Given
+                                        </th>
+
+                                        <th hidden>
+                                            Deal Sourcing
+                                        </th>
+
+                                        <th hidden>
+                                            Deal Closing
+                                        </th>
+
+
+                                    </tr>
+
+
+
+                                </thead>
+
+                                <tbody>
+                                    <td>
+                                        <tr *ngFor="let sal of userdata; let i = index">
+                                            <!-- {{userdata[i].firstname}} {{userdata[i].lastname}} -->
+                                            <input type="text" class="input" name="user_id" value="{{userdata[i].firstname}} {{userdata[i].lastname}}" disabled>
+                                            <!-- <input type="text" class="input" name="user_id" [(ngModel)]="dealdetails.user_id" value="{{userdata.user_id}}" disabled> -->
+                                        </tr>
+
+                                    </td>
+
+                                    <td hidden>
+                                        <tr *ngFor="let sal of salary_justify; let i = index">
+
+                                            <input type="text" class="input" name="salary_justify" value="{{salary_justify[i]}}" >
+                                        </tr>
+                                    </td>
+
+                                    <td hidden>
+                                        <tr *ngFor="let business of dealdetails.business_target; let i = index">
+                                            <input type="text" class="input" name="business_target" value=" {{dealdetails.business_target[i]}}" disabled>
+                                        </tr>
+                                    </td>
+
+                                    <td >
+                                        <tr *ngFor="let leadsource of dealdetails.leadsource_count; let i = index">
+                                            <input type="text" class="input" name="leadsource" value=" {{dealdetails.leadsource_count[i]}}" >{{dealdetails.leadsource_count[i]}}
+                                        </tr>
+                                    </td>
+
+                                    <td >
+                                        <tr *ngFor="let status of dealdetails.deal_status1; let i = index">
+                                            <input type="text" class="input" name="deal_status" value="{{dealdetails.deal_status1[i]}}" >
+                                        </tr>
+                                    </td>
+
+                                    <td>
+                                        <tr *ngFor="let att of dealdetails.attendance;let i = index">
+                                            <input type="text" class="input" name="attented_day" value="{{dealdetails.attendance[i]}}">
+                                        </tr>
+                                    </td>
+
+                                    <td hidden>
+                                        <tr *ngFor="let value of dealdetails.business_value; let i = index">
+                                            <input type="text" name="business_value" class="input" value="{{dealdetails.business_value[i]}}" disabled>
+                                        </tr>
+                                    </td>
+
+                                    <td hidden>
+                                        <tr *ngFor="let sales of dealdetails.sales_value; let i = index">
+                                            <input type="text" class="input" name="actual_sales" value="{{dealdetails.sales_value[i]}}" disabled>
+                                        </tr>
+                                    </td>
+
+                                    <td>
+                                        <tr *ngFor="let sales of userdata; let i = index">
+                                            <input type="text" name="walking_sourcing" class="input" value="" [(ngModel)]="source_walk[i]">
+                                        </tr>
+                                    </td>
+
+                                    <td>
+                                        <tr *ngFor="let val of userdata; let i = index">
+                                            <input type="text" name="walking_closing" class="input" value="" [(ngModel)]="walking[i]">
+                                        </tr>
+                                    </td>
+
+                                    <td>
+                                        <tr *ngFor="let sales of userdata; let i = index">
+                                            <input type="text" name="leads_given" class="input " value="" [(ngModel)]="leads[i]">
+                                        </tr>
+                                    </td>
+
+                                    <td hidden>
+                                        <tr *ngFor="let source of dealdetails.sourcing_emp_id; let i = index">
+                                            <input type="text " class="input " name="deal_sourcing " value="{{dealdetails.sourcing_emp_id[i]}} " disabled>
+                                        </tr>
+                                    </td>
+
+                                    <td hidden>
+                                        <tr *ngFor="let deal of dealdetails.closing_emp_id; let i = index">
+                                            <input type="text " class="input " name="deal_closing " value="{{dealdetails.closing_emp_id[i]}} " disabled>
+                                        </tr>
+                                    </td>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="submit " class="btn btn-primary ">Submit</button>
+    </form>
+</div>

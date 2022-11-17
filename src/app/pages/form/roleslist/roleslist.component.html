@@ -1,0 +1,40 @@
+<div class="container-fluid">
+    <app-page-title title="Roles List"></app-page-title>
+   
+  <div class="row">
+      <div class="col-lg-12">
+          <div class="card">
+              <div class="card-body">
+                  <!-- <h4 class="card-title">Registered Users</h4> -->
+    
+                  <div class="table-responsive">
+                      <table class="table mb-0">
+                          <thead>
+                              <tr>
+                                  <th>ID</th>
+                                  <th>Slug</th>
+                                  <th>Role Name</th>
+                                  <th>Actions</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr *ngFor="let role of rolesArr">
+                                  <th scope="row">{{role.id}}</th>
+                                  <td>{{role.slug}}</td>
+                                  <td>{{role.name}}</td>
+                                  <td><button type="button" class="btn btn-danger"  (click)="deleteRolesData(role.id)">Delete</button> 
+                                        &nbsp;
+                                       <button type="button" class="btn btn-success"  routerLink="/form/editroles/{{role.id}}">Edit</button>
+                                    </td>
+                              </tr>
+                            </tbody>
+                      </table>
+                  </div>
+  
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- end row -->
+  </div>
+  

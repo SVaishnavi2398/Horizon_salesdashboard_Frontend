@@ -1,0 +1,73 @@
+<div class="container-fluid">
+
+  <!-- start page title -->
+  <app-page-title title="Update Leader"></app-page-title>
+  <!-- end page title -->
+
+
+<form  (ngSubmit)="updateteamleaders()">
+
+  <div class="mb-3 row">
+  
+    <div class="col-md-6">
+      <label for="example-text-input" class="col-form-label">Team Name</label>
+      <select  class="form-control"  name="team_id"  [(ngModel)]="team_leaders.team_id"   disabled>
+          <option value="">-- Select Team Name --</option>
+          <option *ngFor="let tl of teamsArr"  value="{{tl.team_id}}">  {{tl.teamname}}
+          </option>
+      </select>
+    </div>
+
+    <div class="col-md-6">
+          <label for="example-text-input" class="col-form-label">Team Leader Name</label>
+          <select  class="form-control" name="user_id"  [(ngModel)]="team_leaders.user_id"  disabled>
+              <option value="">-- Select Team Leader Name --</option>
+              <option *ngFor="let ul of usersArr"  value="{{ul.user_id}}"> {{ul.firstname}} {{ul.middlename}} {{ul.lastname}}
+              </option>
+          </select>
+    </div>
+
+  </div>
+
+  <div class="mb-3 row">
+
+    <div class="col-md-4">
+      <label for="example-text-input" class="col-form-label">Status</label>
+      <select  class="form-control"  name="status"  [(ngModel)]="team_leaders.status">
+        <option value="">Select Project Name</option>
+        <option *ngFor="let sl of statusArr"  value="{{sl.team_status_id}}">
+        {{sl.teamstatus}}
+        </option>
+    </select>
+    </div>
+
+    <div class="col-md-4">
+      <label for="example-text-input" class="col-form-label">From Date</label>
+      <input class="form-control" type="date" value="" name="from_date"  [(ngModel)]="team_leaders.from_date"  disabled>
+    </div>
+
+    <div class="col-md-4">
+      <label for="example-text-input" class="col-form-label">To Date</label>
+      <input class="form-control" type="date" value="" name="to_date"  [(ngModel)]="team_leaders.to_date">
+    </div>
+    
+  </div>
+
+
+  <!-- <div class="mb-3 row">
+
+    <div class="col-md-4">
+      <label for="example-text-input" class="col-form-label">Status</label>
+      <input class="form-control" type="text" placeholder="Enter Team Name" name="status" [(ngModel)]="team_leaders.status">
+    </div>
+
+  </div> -->
+  <button type="submit" class="btn btn-primary" routerLink="/form/teamleaderslist">Cancel</button>
+  &nbsp;
+
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+ 
+
+</div> <!-- container-fluid -->

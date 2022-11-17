@@ -1,0 +1,105 @@
+<div class="container-fluid">
+
+    <!-- start page title -->
+    <app-page-title title="Advance Deduction"></app-page-title>
+    <!-- end page title -->
+
+
+<form  (ngSubmit)="submitAdvanceemi()">
+
+    <div class="mb-3 row">
+
+        <!-- <div class="col-md-3" hidden>
+            <label for="example-text-input" class="col-form-label">Advance Salary Id</label>
+            <select  class="form-control" name="advance_salary_id"  [(ngModel)]="advanceemi.advance_salary_id">
+                <option value="">-- Select User Name --</option>
+                <option *ngFor="let al of advancesalArr"  value="{{al.advance_salary_id}}"> {{al.advance_salary_id}}
+                </option>
+            </select>
+            <span class="text-danger" [hidden]="!error.advance_salary_id">{{error.advance_salary_id}}</span>
+        </div> -->
+
+        <!-- <div class="col-md-3">
+            <label for="example-text-input" class="col-form-label"> Name</label>
+            <select  class="form-control" name="user_id"  [(ngModel)]="advanceemi.advance_salary_id">
+                <option value="">-- Select User Name --</option>
+                <option *ngFor="let al of advancesalArr"  value="{{al.advance_salary_id}}"> {{al.firstname}} {{al.middlename}} {{al.lastname}}
+                </option>
+            </select>
+            <span class="text-danger" [hidden]="!error.user_id">{{error.user_id}}</span>
+        </div> -->
+
+        <div class="col-md-3">
+            <label for="example-text-input" class="col-form-label">User Name</label>
+            <select  class="form-control" name="user_id" (change)="getuserdata($event)" [(ngModel)]="advanceemi.user_id">
+                <option value="">-- Select User Name --</option>
+                <option *ngFor="let ul of usersArr"  value="{{ul.user_id}}"> {{ul.firstname}} {{ul.middlename}} {{ul.lastname}}
+                </option>
+            </select>
+            <span class="text-danger" [hidden]="!error.user_id">The user name field is required</span>
+        </div>
+
+        <div class="col-md-3">
+            <label for="example-text-input" class="col-form-label">Date</label>
+            <input class="form-control" type="date" value="" name="emi_deduct_date"  [(ngModel)]="advanceemi.emi_deduct_date">
+            <span class="text-danger" [hidden]="!error.emi_deduct_date">{{error.emi_deduct_date}}</span>
+        </div>
+
+        <div class="col-md-3">
+            <label for="example-text-input" class="col-form-label">Advance Code</label>
+            <select class="form-control" name="adv_code"  (change)="getuseremi($event)"[(ngModel)]="advanceemi.adv_code">
+                <option value="">-- Advance Code --</option>
+                <option *ngFor="let cl of advcode" value="{{cl.adv_code}}">
+                    {{cl.adv_code}}
+                </option>
+            </select>
+            <span class="text-danger" [hidden]="!error.adv_code">The Adance Code field is required</span>
+        </div>
+
+         
+
+        <div class="col-md-3">
+            <label for="example-text-input" class="col-form-label">  Deductable Amount</label>
+            <input class="form-control" type="text" value="" name="deduction_amount"  [(ngModel)]="advanceemi.deduction_amount"
+            (keyup)="keyPressNumbers($event)">
+            <!-- <div class="form-text text-danger"  formControlName="deduction_amount">
+               
+            </div> -->
+            <span class="text-danger" [hidden]="!error.deduction_amount">{{error.deduction_amount}}</span>
+            <span class="text-danger" >{{amountexceederror}}</span>
+        </div>
+ 
+        <div class="col-md-3">
+            <label for="example-text-input" class="col-form-label">Paid</label>
+            <input class="form-control" type="text" value="{{paid1}}" name="paid"  [(ngModel)]="advanceemi.paid"
+            (keyup)="keyPressNumbers($event)" readonly>
+            
+            <span class="text-danger" [hidden]="!error.paid">{{error.paid}}{{amountexceederror}}</span>
+           
+        </div>
+
+        <div class="col-md-3">
+            <label for="example-text-input" class="col-form-label">Pending Amount</label>
+            <input class="form-control" type="text" value="{{amount2}}" name="pending_amount" [(ngModel)]="advanceemi.pending_amount"
+            (keyup)="keyPressNumbers($event)" readonly>
+            <span class="text-danger" [hidden]="!error.pending_amount">{{error.pending_amount}}</span>
+            <span class="text-danger" >{{amountexceederror}}</span>
+        </div>
+
+        <div class="col-md-3">
+            <label for="example-text-input" class="col-form-label">Remark</label>
+            <input class="form-control" type="text" value="" name="remark"  [(ngModel)]="advanceemi.remark">
+            <span class="text-danger" [hidden]="!error.remark">{{error.remark}}</span>
+        </div>
+
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    &nbsp;
+    <button type="submit" class="btn btn-primary" routerLink="/form/salary/advancesalarylist">Cancel</button>
+</form>
+
+   
+  
+  </div> <!-- container-fluid -->

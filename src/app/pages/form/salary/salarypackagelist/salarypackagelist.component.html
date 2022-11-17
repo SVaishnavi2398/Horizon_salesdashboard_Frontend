@@ -1,0 +1,140 @@
+<style>
+
+    button.btn.btn-success {
+        padding: 5px 10px;
+    }
+
+    button.btn.btn-info {
+        padding: 5px 10px;
+    }
+
+    button.btn.btn-danger {
+        padding: 4px 10px;
+    }
+    
+    td {
+        /* padding: 10px 15px; */
+        padding: 10px 10px;
+    }
+    
+    button.btn.btn-primary.mb-3 {
+        padding: 4px 8px;
+    }
+    
+</style>
+
+<div class="container-fluid">
+    <!-- <app-page-title title="Teams List"></app-page-title> -->
+   
+    <div class="row">
+        <div class="col-md-4">
+          <div>
+            <app-page-title title="Salary Package List"></app-page-title>
+
+          </div>
+        </div>
+        <div class="col-md-8"  style="text-align: right;">
+                <button type="button" class="btn btn-primary mb-3"  routerLink="/form/salary/salarypackage"><i class="mdi mdi-plus me-1"></i>
+                Add Salary Package</button>
+        </div>
+        <!-- Search -->
+        <!-- <div class="col-md-12">
+            <div id="tickets-table_filter" class="dataTables_length"><label
+                class="d-inline-flex align-items-center">Search:
+                <input type="text" name="searchteamleaderslist" class="form-control form-control-sm ms-2"
+                  aria-controls="tickets-table"  [(ngModel)]="searchteamleaderslist"></label>
+              </div>
+        </div> -->
+      <!-- End search -->
+      <div class="col-md-8">
+        <!-- <div id="tickets-table_filter" class="dataTables_length"><label
+            class="d-inline-flex align-items-center">Search:
+            <input type="text" name="searchsalarypackage" class="form-control form-control-sm ms-2"
+              aria-controls="tickets-table" [(ngModel)]="searchsalarypackage"></label>
+          </div> -->
+    </div>
+    <div class="col-md-4">
+      <ngb-pagination class="d-flex justify-content-center" [(page)]="page" [maxSize]="4" [collectionSize]="salarypackageList.length" [boundaryLinks]="true"  style="justify-content: right!important;"></ngb-pagination>
+     </div>
+    </div>
+      
+  <div class="row">
+      <div class="col-lg-12">
+          <div class="card">
+              <div class="card-body"  style="padding: 0 10px 0 10px;">
+                  <!-- <h4 class="card-title">Registered Roles</h4> -->
+    
+                  <div class="table-responsive">
+                      <table class="table mb-0">
+                          <thead>
+                              <tr>
+                                <th [class.active]="order === 'firstname'" (click)="setOrder('firstname')">
+                                    User Name <span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th [class.active]="order === 'from_date'" (click)="setOrder('from_date')">
+                                    From Date<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th [class.active]="order === 'basic_pay'" (click)="setOrder('basic_pay')">
+                                    Basic Pay<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th [class.active]="order === 'monthly_salary'" (click)="setOrder('monthly_salary')">
+                                    Monthly Salary<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th [class.active]="order === 'yearly_salary'" (click)="setOrder('yearly_salary')">
+                                    Yearly Salary<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                  </th>
+                                  <th>Actions</th>
+                              </tr>
+                              <!-- Search -->
+                             <tr>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2"
+                                        aria-controls="tickets-table" [(ngModel)]="firstname_Search">
+                                </th>
+                                <th>
+                                    <input type="date" class="form-control form-control-sm ms-2"
+                                        aria-controls="tickets-table" [(ngModel)]="from_date_Search">
+                                </th>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2"
+                                        aria-controls="tickets-table" [(ngModel)]="basic_pay_Search">
+                                </th>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2"
+                                        aria-controls="tickets-table" [(ngModel)]="monthly_salary_Search">
+                                </th>
+                                <th>
+                                    <input type="text" class="form-control form-control-sm ms-2"
+                                        aria-controls="tickets-table" [(ngModel)]="yearly_salary_Search">
+                                </th>
+                            </tr> 
+                            <!-- End search -->
+                          </thead>
+                          <tbody>
+                              <tr  *ngFor="let salarypackage of salarypackageArr | searchsalarypackage:firstname_Search:from_date_Search:basic_pay_Search:monthly_salary_Search:yearly_salary_Search | orderBy: order:reverse:caseInsensitive | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+                                    <!-- <th scope="row">{{salarypackage.salary_package_id}}</th> -->
+                                    <td>{{salarypackage.firstname}} {{salarypackage.middlename}} {{salarypackage.lastname}}</td>
+                                    <td>{{salarypackage.from_date}}</td>
+                                    <td>{{salarypackage.basic_pay}}</td>
+                                    <td>{{salarypackage.monthly_salary}}</td>
+                                    <td>{{salarypackage.yearly_salary}}</td>
+                                    <td>
+                                        <button type="button" class="btn btn-info"  routerLink="/form/salary/editsalarypackage/{{salarypackage.salary_package_id}}"><i class="uil-pen"></i></button>
+                                        &nbsp;
+                                        <button type="button" class="btn btn-success"  routerLink="/form/salary/salarypackageview/{{salarypackage.salary_package_id}}"><i class="uil-eye"></i></button>
+                                        &nbsp;
+                                        <button type="button" class="btn btn-danger"  (click)="deleteSalarypackageData(salarypackage.salary_package_id)"><i class="uil-trash-alt"></i></button>
+                                    </td>
+                              </tr>
+                             
+                          </tbody>
+                      </table>
+                  </div>
+  
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- end row -->
+  </div>
+  

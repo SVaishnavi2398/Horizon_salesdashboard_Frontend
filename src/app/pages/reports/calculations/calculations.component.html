@@ -1,0 +1,75 @@
+<div class="container-fluid">
+
+    <!-- start page title -->
+    <app-page-title title="Calculations" ></app-page-title>
+    <!-- end page title -->
+  <form  (ngSubmit)="updateReports()">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body">
+  
+            <div class="mb-3 row" hidden>
+                <label for="first name" class="col-md-2 col-form-label">Report ID</label>
+                <div class="col-md-10">
+                    <select  class="form-control"  name="report_id"  disabled>
+                         <!-- <option value="">-- Select Subproject Name --</option>  -->
+                        <option *ngFor="let rl of reportArr"  value="{{rl.reports_id}" selected>  {{rl.reports_id}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-centered table-nowrap mb-0 align-middle"  id="excel-table">
+                  <thead class="table-light">
+                      <tr>
+                           <th>Columns</th>
+                           <th>Sum</th>
+                           <th>Average</th>
+                           <!-- <th>Columns</th>
+                           <th>Columns</th> -->
+                       </tr>
+                   </thead>
+                   <tbody>
+                          <tr *ngFor="let column of arrayvalue1">
+                              <td>{{column.calculation_header}}</td>
+                            
+                              <td><input  type="checkbox" (change)="GetCalsum($event)" value="{{column.calculation_table_field}}" name="{{column.calculation_table_field}}"  ng-Model="reports.cal_sum">
+                              </td>
+                              <td><input  type="checkbox" (change)="GetCalavg($event)" value="{{column.calculation_table_field}}" name="{{column.calculation_table_field}}"  ng-Model="reports.cal_avg">
+                              </td>
+                          </tr>
+                          <tr *ngFor="let column of arrayvalue;">
+                            <td>{{column.calculation_header}}</td>
+                          
+                            <td><input  type="checkbox" (change)="GetCalsum($event)" value="{{column.calculation_table_field}}" name="{{column.calculation_table_field}}"  ng-Model="reports.cal_sum">
+                            </td>
+                            <td><input  type="checkbox" (change)="GetCalavg($event)" value="{{column.calculation_table_field}}" name="{{column.calculation_table_field}}"  ng-Model="reports.cal_avg">
+                            </td>
+                          </tr>
+                  </tbody>
+                </table>
+
+            </div>
+            <!-- end table -->
+
+            
+
+
+           
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+  
+  
+          </div>
+        </div>
+      </div> <!-- end col -->
+    </div>
+    <!-- end row -->
+  </form>
+  
+  </div> <!-- container-fluid -->
+  
+  

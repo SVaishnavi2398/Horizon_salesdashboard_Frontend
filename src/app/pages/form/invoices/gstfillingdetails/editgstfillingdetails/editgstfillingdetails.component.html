@@ -1,0 +1,129 @@
+<div class="container-fluid">
+
+    <!-- start page title -->
+    <!-- <app-page-title title="Create Sales Details"></app-page-title> -->
+    <!-- end page title -->
+
+    <div class="page-title-box d-flex align-items-center justify-content-between"  style="padding-bottom:0px !important;"> 
+      <!-- start page title -->
+      <div class="mb-0 font-size-20">
+          <h4>Add GST Filling Details</h4> 
+      </div>
+      <!-- <app-page-title title="Sales Details"></app-page-title> -->
+      <!-- end page title -->
+
+      <div class="col-md-8"  style="text-align: right;">
+          <!-- <button type="button" class="btn btn-primary mb-3"  (click)="open(content)"  style="margin-right: 10px;"><i class="mdi mdi-plus me-1"></i>Add Client Details</button> -->
+
+          <!-- <button type="button" class="btn btn-primary mb-3"  routerLink="/form/channelpartner"><i class="mdi mdi-plus me-1"></i>Add Channel Partner</button> -->
+          <!-- <button type="button" class="btn btn-primary waves-effect waves-light"  (click)="openModal(content)">Standard modal</button> -->
+
+      </div>
+    </div> 
+
+
+<form  (ngSubmit)="UpdateGstfillingdetails()">
+
+  
+
+
+  <div class="mb-3 row">
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Invoice ID</label>
+      <select  class="form-control"  name="invoice_id"  [(ngModel)]="gstfillingdetails.invoice_id">
+        <option value="">-- Select Subproject Name --</option>
+        <option *ngFor="let sl of invoicedetailsArr"  value="{{sl.invoice_id}}">  {{sl.invoice_num}}
+        </option>
+    </select>
+    </div>
+
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Invoice Type</label>
+      <input class="form-control" type="text" value="" id="inv_type" name="inv_type"  [(ngModel)]="gstfillingdetails.inv_type">
+    </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">GSTR1 Month</label>
+      <input class="form-control" type="text" value="" id="gstr1_month" name="gstr1_month"  [(ngModel)]="gstfillingdetails.gstr1_month">
+    </div>
+    <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">GSTR1 Amount</label>
+        <input class="form-control" type="text" value="" id="gstr1_amount"  name="gstr1_amount"  [(ngModel)]="gstfillingdetails.gstr1_amount">
+      </div>
+    
+
+  </div>
+
+
+  <div class="mb-3 row">
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Filed Status</label>
+      <input class="form-control" type="text" value="" id="filed_status"  name="filed_status"  [(ngModel)]="gstfillingdetails.filed_status">
+    </div>
+
+  </div>
+
+  
+
+  <!-- <div class="mb-3 row">
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Team Name</label>
+      <select  class="form-control"  name="team_id"  [(ngModel)]="gstfillingdetails.team_id">
+          <option value="">-- Select Team --</option>
+          <option *ngFor="let tl of teamsArr"  value="{{tl.team_id}}">
+          {{tl.teamname}}
+          </option>
+      </select>
+    </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Leads Source</label>
+      <select  class="form-control"  name="leadsource_id"  [(ngModel)]="gstfillingdetails.leadsource_id">
+        <option value="">-- Select Lead Source --</option>
+        <option *ngFor="let tl of leadsourceArr"  value="{{tl.leadsource_id}}">
+        {{tl.leadsource}}
+        </option>
+    </select>
+    </div>
+
+    <div class="col-md-3">
+      <label for="example-text-input" class="col-form-label">Booking ID</label>
+      <input class="form-control" type="text" value="" id="booking_id"  name="booking_id"  [(ngModel)]="gstfillingdetails.booking_id">
+    </div>
+
+    <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Remark</label>
+        <input class="form-control" type="text" value="" id="remark"  name="remark"  [(ngModel)]="gstfillingdetails.remark">
+      </div>
+
+    </div> -->
+
+    
+    <button type="submit" class="btn btn-primary" routerLink="/form/invoices/gstfillingdetails/gstfillingdetailslist">Cancel</button>
+    &nbsp;
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+  
+  </div> <!-- container-fluid -->
+
+  <!-- Standard Modal -->
+<ng-template #content role="document" let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title mt-0">Create Client Details</h5>
+    <button type="button" class="btn-close" aria-hidden="true" (click)="modal.dismiss('Cross click')">×</button>
+  </div>
+  <div class="modal-body">
+      <app-clientdetails></app-clientdetails>
+  </div>
+  <!-- <div class="modal-footer">
+    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+    <button type="button" class="btn btn-primary">Save changes</button>
+  </div> -->
+</ng-template>
+
+
+

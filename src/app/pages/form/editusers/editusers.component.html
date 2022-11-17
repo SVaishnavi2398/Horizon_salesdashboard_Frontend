@@ -1,0 +1,189 @@
+<div class="container-fluid">
+<!-- <ng-container *ngFor="let users of usersArr"> -->
+    <!-- start page title -->
+    <app-page-title title="User Registration"></app-page-title>
+    <!-- end page title -->
+
+<form (ngSubmit)="updateUsers()">
+ 
+    <div class="mb-3 row">
+  
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">First Name</label>
+        <input class="form-control" type="text" value="" id="firstname"  name="firstname"  [(ngModel)]="users.firstname">
+      </div>
+
+     
+
+
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Middle Name</label>
+        <input class="form-control" type="text" value="" id="middlename"  name="middlename"  [(ngModel)]="users.middlename">
+      </div>
+
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Last Name</label>
+        <input class="form-control" type="text" value="" id="lastname"  name="lastname"  [(ngModel)]="users.lastname">
+      </div>
+
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Mobile No</label>
+        <input class="form-control" type="text" value="" id="mobile_no"  name="mobile_no"  [(ngModel)]="users.mobile_no">
+      </div>
+
+    </div>
+
+
+    <div class="mb-3 row">
+
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Email</label>
+        <input class="form-control" type="email" value="" id="email"  name="email"  [(ngModel)]="users.email">
+      </div>
+
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Date of Birth</label>
+        <input class="form-control" type="date" value="" id="date_of_birth"  name="date_of_birth"  [(ngModel)]="users.date_of_birth">
+      </div>
+
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Pan No</label>
+        <input class="form-control" type="text" value="" id="pan_no"  name="pan_no"  [(ngModel)]="users.pan_no">
+      </div>
+
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Qualification</label>
+        <input class="form-control" type="text" value="" id="qualification"  name="qualification"  [(ngModel)]="users.qualification">
+      </div>
+
+
+      <!-- <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Password</label>
+        <input class="form-control" type="password" value="" id="password"  name="password"  [(ngModel)]="users.password">
+      </div>
+
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Conform Password</label>
+        <input class="form-control" type="password" value="" id="password_confirmation"  name="password_confirmation"  [(ngModel)]="users.password_confirmation">
+      </div> -->
+
+    </div>
+
+
+    <div class="mb-3 row">
+
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Marital Status</label>
+        <select class="form-select"  id="marital_status"  name="marital_status"  [(ngModel)]="users.marital_status">
+          <option>Select</option>
+          <option>Married</option>
+          <option>Unmarried</option>
+        </select>
+      </div>
+
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label"> Permanant Address</label>
+        <input class="form-control" type="text" value="" id="permanant_address"  name="permanant_address"  [(ngModel)]="users.permanant_address">
+      </div>
+  
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label"> Current Address</label>
+        <input class="form-control" type="text" value="" id="current_address"  name="current_address"  [(ngModel)]="users.current_address">
+      </div>
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label"> Home Contact Number</label>
+        <input class="form-control" type="text" value="" id="home_contactno"  name="home_contactno"  [(ngModel)]="users.home_contactno">
+      </div>
+
+    </div>
+
+
+    <div class="mb-3 row">
+
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Joining Date</label>
+        <input class="form-control" type="date" value="" id="joining_date"  name="joining_date"  [(ngModel)]="users.joining_date">
+      </div>
+
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Experience in Year</label>
+        <input class="form-control" type="text" value="" id="experience_in_year"  name="experience_in_year"  [(ngModel)]="users.experience_in_year">
+      </div>
+
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Last Package</label>
+        <input class="form-control" type="text" value="" id="last_package"  name="last_package"  [(ngModel)]="users.last_package">
+      </div>
+
+    <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Designation</label>
+        <select  class="form-control"  name="designation"  [(ngModel)]="users.designation">
+            <option value="">Select Project Name</option>
+            <option *ngFor="let dl of designationArr"  value="{{dl.designation_id}}">
+            {{dl.designation}}
+            </option>
+        </select>
+      </div> 
+
+    </div>
+
+    <div class="mb-3 row">
+
+    
+      
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Resignation Date</label>
+        <input class="form-control" type="date" value="" id="resignation_date"  name="resignation_date"  [(ngModel)]="users.resignation_date">
+      </div>
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Experience In Months</label>
+        <input class="form-control" type="text" value="" id="experience_in_months"  name="experience_in_months"  [(ngModel)]="users.experience_in_months">
+      </div>
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Previous Company Name</label>
+        <input class="form-control" type="text" value="" id="privious_company_contactname	"  name="privious_company_contactname	"  [(ngModel)]="users.privious_company_contactname">
+      </div>
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Previous Company Contact Number</label>
+        <input class="form-control" type="text" value="" id="privious_company_contact	"  name="privious_company_contact	"  [(ngModel)]="users.privious_company_contact">
+      </div>
+  
+  
+    </div>
+
+    <div class="mb-3 row">
+
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Employee Status</label>
+        <select  class="form-control"  name="status_id"  [(ngModel)]="users.status_id">
+            <option value="">Select Status</option>
+            <option *ngFor="let st of empstatusArr"  value="{{st.emp_status_id}}">
+            {{st.empstatus}}
+            </option>
+        </select>
+      </div>
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Source</label>
+        <input class="form-control" type="text" value="" id="source"  name="source"  [(ngModel)]="users.source">
+      </div>
+
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Source By</label>
+        <input class="form-control" type="text" value="" id="source_by"  name="source_by"  [(ngModel)]="users.source_by">
+      </div>
+
+      <div class="col-md-3">
+        <label for="example-text-input" class="col-form-label">Remark by HR</label>
+        <input class="form-control" type="text" value="" id="remark_by_HR"  name="remark_by_HR"  [(ngModel)]="users.remark_by_HR">
+      </div>
+     
+      </div>
+  
+      <button type="submit" class="btn btn-primary" routerLink="/form/users">Cancel</button>
+      &nbsp;
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+   
+<!-- </ng-container> -->
+  </div> <!-- container-fluid -->

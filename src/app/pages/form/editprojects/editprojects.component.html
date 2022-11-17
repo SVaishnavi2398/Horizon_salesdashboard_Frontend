@@ -1,0 +1,112 @@
+<div class="container-fluid">
+
+    <!-- start page title -->
+    <app-page-title title="Update Project" ></app-page-title>
+    <!-- end page title -->
+  <form  (ngSubmit)="updatecproject()">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body">
+
+            <div class="mb-3 row">
+
+                  <div class="col-md-4">
+                      <label for="example-text-input" class="col-form-label">Project Name</label>
+                      <input class="form-control" type="text"  id="project_name" placeholder="Enter Project Name" name="project_name" [(ngModel)]="projects.project_name"  disabled>
+                  </div>
+
+                  <div class="col-md-4">
+                    <label for="example-text-input" class="col-form-label">RERA No.</label>
+                    <input class="form-control" type="text"  id="rera" placeholder="Enter Rere No" name="rera" [(ngModel)]="projects.rera"
+                    (keypress)="keyPressAlphanumeric($event)"
+                    maxlength="12">
+                  </div>
+
+                  <div class="col-md-4">
+                    <label for="example-text-input" class="col-form-label">Location</label>
+                    <input class="form-control" type="text"  id="location" placeholder="Enter Location" name="location" [(ngModel)]="projects.location"  disabled>
+                  </div>
+
+            </div>
+
+            <div class="mb-3 row">
+
+                  <div class="col-md-4">
+                    <label for="example-text-input" class="col-form-label">Region Name</label>
+                    <select  class="form-control"  name="region_id" [(ngModel)]="projects.region_id"  disabled>
+                      <option value="">-- Select Status --</option>
+                      <option *ngFor="let rl of regionsArr"  value="{{rl.region_id}}"> {{rl.region_name}}
+                      </option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-4">
+                    <label for="example-text-input" class="col-form-label">Subregion Name</label>
+                    <select  class="form-control"  name="subregion_id"  [(ngModel)]="projects.subregion_id"  disabled>
+                      <option value="">-- Select Status --</option>
+                      <option *ngFor="let sl of subregionsArr"  value="{{sl.subregion_id}}"> {{sl.subregion_name}}
+                      </option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-4">
+                    <label for="example-text-input" class="col-form-label">Company Name</label>
+                    <select  class="form-control"  name="company_id"  [(ngModel)]="projects.company_id"  disabled>
+                      <option value="">-- Select Status --</option>
+                      <option *ngFor="let cl of companyArr"  value="{{cl.debtor_company_det_id}}"> {{cl.cname}}
+                      </option> 
+                    </select>
+                    
+                    <!-- <button (click)="toggleData()"  style="float: right; margin-top: 10px;">SEARCH LIST</button>
+
+                    <div *ngIf="toDisplay">
+                      <input type="text" name="searchcompany" class="form-control form-control-sm ms-2"
+                      aria-controls="tickets-table"  [(ngModel)]="project_name">
+                    </div> -->
+                      
+                  </div>
+                  <div class="mb-3 row">
+
+                    <div class="col-md-4">
+                      <label for="example-text-input" class="col-form-label">Profile Score</label> &nbsp; &nbsp;&nbsp;
+                      <input type="radio" id="profile_score" name="profile_score" [value]="1" [(ngModel)]="projects.profile_score"> &nbsp;
+                      <label for="example-text-input" class="col-form-label"> 1 </label> &nbsp;
+                      <input type="radio" id="profile_score" name="profile_score" [value]="5" [(ngModel)]="projects.profile_score"> &nbsp;
+                      <label for="example-text-input" class="col-form-label"> 5 </label>&nbsp;
+                      <input type="radio" id="profile_score" name="profile_score" [value]="10" [(ngModel)]="projects.profile_score"> &nbsp;
+                      <label for="example-text-input" class="col-form-label"> 10 </label>
+                    </div>
+      
+                  </div>
+            </div>
+            
+              
+            
+         
+   
+  
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary" routerLink="/form/projectslist">Cancel</button>
+              &nbsp;
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+  
+  
+          </div>
+        </div>
+      </div> <!-- end col -->
+    </div>
+    <!-- end row -->
+  </form>
+  
+  </div> <!-- container-fluid -->
+
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script>
+      $("#rera").on('input', function() {
+        $(this).val($(this).val().replace(new RegExp(",", "g"), ""));
+        $(this).val( $(this).val().replace(/(\d{3})/g, "$1,") ); 
+    });
+
+  </script> -->
