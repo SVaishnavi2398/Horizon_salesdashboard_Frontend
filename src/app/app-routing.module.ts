@@ -22,8 +22,8 @@ const routes: Routes = [
 
   { path: '', redirectTo : '/login', pathMatch :'full' },
 
-  { path:'login', component : LoginComponent},
-  // { path: '', component: DefaultComponent},
+  { path:'login', component : LoginComponent, canActivate: [AuthGuard]},
+  { path: '', component: DefaultComponent},
 
   { path: '', component : LayoutComponent, loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule) },
 

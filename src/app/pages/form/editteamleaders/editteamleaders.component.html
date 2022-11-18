@@ -11,7 +11,7 @@
   
     <div class="col-md-6">
       <label for="example-text-input" class="col-form-label">Team Name</label>
-      <select  class="form-control"  name="team_id"  [(ngModel)]="team_leaders.team_id"   disabled>
+      <select  class="form-control"  name="team_id"  [(ngModel)]="team_leaders.team_id">
           <option value="">-- Select Team Name --</option>
           <option *ngFor="let tl of teamsArr"  value="{{tl.team_id}}">  {{tl.teamname}}
           </option>
@@ -62,10 +62,10 @@
     </div>
 
   </div> -->
-  <button type="submit" class="btn btn-primary" routerLink="/form/teamleaderslist">Cancel</button>
+  <button type="submit" class="btn btn-primary">Submit</button>
   &nbsp;
+  <button type="submit" class="btn btn-primary" routerLink="/form/teamleaderslist">Cancel</button>
 
-<button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
  

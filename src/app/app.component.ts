@@ -27,13 +27,13 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit(){
-    if(this.Token.loggedIn()){
-      this.router.navigate(["dashboard"]);
+    if(!this.Token.loggedIn()){
+      this.router.navigate(["/login"]);
     }
-    else
-    {
-      this.router.navigate(["login"]);
-    }
+    // else
+    // {
+    //   this.router.navigate(["login"]);
+    // }
 
   }
 }
