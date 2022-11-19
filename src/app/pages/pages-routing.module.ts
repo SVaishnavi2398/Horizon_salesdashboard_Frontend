@@ -22,7 +22,6 @@ const routes: Routes = [
   { path: 'reports/calculations', component: CalculationsComponent },
   { path: 'reports/generatereport/:id', component: GeneratereportComponent },
   { path: 'dashboards', loadChildren: () => import('./dashboards/dashboards.module').then(m => m.DashboardsModule) },
-  { path: 'ecommerce', loadChildren: () => import('./ecommerce/ecommerce.module').then(m => m.EcommerceModule) },
   { path: 'email', loadChildren: () => import('./email/email.module').then(m => m.EmailModule) },
   { path: 'invoices', loadChildren: () => import('./invoices/invoices.module').then(m => m.InvoicesModule) },
   { path: 'contacts', loadChildren: () => import('./contacts/contacts.module').then(m => m.ContactsModule) },  

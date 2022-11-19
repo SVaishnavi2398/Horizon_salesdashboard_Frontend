@@ -84,17 +84,17 @@
 </div>
 
 <div class="row">
-        <div class="col-lg-12">
-            <div class="card">
-                <div class="card-body">
-                    <h4 class="card-title">Monthly Attendance Report</h4>
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Monthly Attendance Report</h4>
 
 
-                    <div class="table-responsive">
+                <div class="table-responsive">
 
-                        <table class="table mb-0">
-                            <thead>
-                                <!-- <tr>
+                    <table class="table mb-0">
+                        <thead>
+                            <!-- <tr>
                                     <th>Employee Code</th>
                                     <th>Employee Name</th>
                                     <th>Attendance Month</th>
@@ -103,32 +103,32 @@
                                     <th>Half Days</th>
                                     <th>Edit</th>
                                 </tr> -->
-                                <tr>
-                                    <th [class.active]="order === 'emp_code'" (click)="setOrder('emp_code')">
-                                        Employee Code <span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
-                                    </th>
-                                    <th [class.active]="order === 'emp_name'" (click)="setOrder('emp_name')">
-                                        Employee Name<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
-                                    </th>
-                                    <th [class.active]="order === 'month'" (click)="setOrder('month')">
-                                        Attendance Month<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
-                                    </th>
-                                    <th [class.active]="order === 'present_days'" (click)="setOrder('present_days')">
-                                        Present Days<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
-                                    </th>
-                                    <th [class.active]="order === 'absent_days'" (click)="setOrder('absent_days')">
-                                        Absent Days<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
-                                    </th>
-                                    <th [class.active]="order === 'half_days'" (click)="setOrder('half_days')">
-                                        Half Days <span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
-                                    </th>
-                                    <th [class.active]="order === 'late_marks'" (click)="setOrder('late_marks')">
-                                        Late Marks <span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
-                                    </th>
-                                    <th>Edit</th>
-                                </tr>
-                                 <!-- Search -->
-                               <tr>
+                            <tr>
+                                <th [class.active]="order === 'emp_code'" (click)="setOrder('emp_code')">
+                                    Employee Code <span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                </th>
+                                <th [class.active]="order === 'emp_name'" (click)="setOrder('emp_name')">
+                                    Employee Name<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                </th>
+                                <th [class.active]="order === 'month'" (click)="setOrder('month')">
+                                    Attendance Month<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                </th>
+                                <th [class.active]="order === 'present_days'" (click)="setOrder('present_days')">
+                                    Present Days<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                </th>
+                                <th [class.active]="order === 'absent_days'" (click)="setOrder('absent_days')">
+                                    Absent Days<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                </th>
+                                <th [class.active]="order === 'half_days'" (click)="setOrder('half_days')">
+                                    Half Days <span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                </th>
+                                <th [class.active]="order === 'late_marks'" (click)="setOrder('late_marks')">
+                                    Late Marks <span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+                                </th>
+                                <th>Edit</th>
+                            </tr>
+                            <!-- Search -->
+                            <tr>
                                 <th>
                                     <input type="text" class="form-control form-control-sm ms-2"
                                         aria-controls="tickets-table" [(ngModel)]="emp_code_Search">
@@ -157,29 +157,30 @@
                                     <input type="text" class="form-control form-control-sm ms-2"
                                         aria-controls="tickets-table" [(ngModel)]="late_marks_search">
                                 </th>
-                               
-                            </tr>   
-                            <!-- End search -->
-                            </thead>
-                            <tbody>
-                                <tr *ngFor='let emp of empdata |searchattendance: emp_code_Search:emp_name_search:month_search:present_days_Search:absent_days_Search:half_days_search | orderBy: order:reverse:caseInsensitive'>
-                                    <td>{{emp.emp_code}}</td>
-                                    <td>{{emp.emp_name}}</td>
-                                    <td>{{emp.month}}</td>
-                                    <td>{{emp.present_days}}</td>
-                                    <td>{{emp.absent_days}}</td>
-                                    <td>{{emp.half_days}}</td>
-                                    <td>{{emp.late_marks}}</td>
-                                    <td><button type="button" class="btn btn-primary waves-effect waves-light"
-                                            (click)="openModal(content, emp)">Edit</button></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
 
+                            </tr>
+                            <!-- End search -->
+                        </thead>
+                        <tbody>
+                            <tr
+                                *ngFor='let emp of empdata |searchattendance: emp_code_Search:emp_name_search:month_search:present_days_Search:absent_days_Search:half_days_search | orderBy: order:reverse:caseInsensitive'>
+                                <td>{{emp.emp_code}}</td>
+                                <td>{{emp.emp_name}}</td>
+                                <td>{{emp.month}}</td>
+                                <td>{{emp.present_days}}</td>
+                                <td>{{emp.absent_days}}</td>
+                                <td>{{emp.half_days}}</td>
+                                <td>{{emp.late_marks}}</td>
+                                <td><button type="button" class="btn btn-primary waves-effect waves-light"
+                                        (click)="openModal(content, emp)">Edit</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
+
             </div>
         </div>
+    </div>
 
 </div>
 
@@ -323,7 +324,7 @@
                     <label for="example-text-input" class="col-form-label">D30</label>
                     <input type="text" name="d30" [(ngModel)]="attData.d30" id="d30" class="form-control">
                 </div>
-               
+
                 <div *ngIf="attData.d31 != null" class="col-md-3">
                     <label for="example-text-input" class="col-form-label">D31</label>
                     <input type="text" name="d31" [(ngModel)]="attData.d31" id="d31" class="form-control">
@@ -342,5 +343,5 @@
 
         </form>
     </div>
-    
+
 </ng-template>

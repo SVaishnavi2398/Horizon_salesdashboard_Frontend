@@ -12,7 +12,7 @@ import { TokenService } from 'src/app/service/token.service';
   providedIn: 'root',
 })
 export class AuthGuard implements CanActivate {
-  constructor(private router: Router, private auth: AuthService, private Token:TokenService) {}
+  constructor(private router: Router, private auth: AuthService, private Token: TokenService) { }
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
@@ -24,8 +24,8 @@ export class AuthGuard implements CanActivate {
     if (!this.Token.loggedIn()) {
       this.router.navigate(['/login']);
       return false;
-    }else{
-    return true;
+    } else {
+      return true;
     }
   }
 }

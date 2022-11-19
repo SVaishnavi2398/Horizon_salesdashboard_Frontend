@@ -38,20 +38,20 @@ export class B2binvocesComponent implements OnInit {
   sortedCollection: any[];
   caseInsensitive: boolean = false;
 
-   /***Searching***/
-   party_name_Search: "";
-   inv_no_Search: "";
-   inv_val_Search: "";
-   total_tax_amt_Search: "";
-   total_tax_val_Search: "";
-   inv_dt_Search: "";
+  /***Searching***/
+  party_name_Search: "";
+  inv_no_Search: "";
+  inv_val_Search: "";
+  total_tax_amt_Search: "";
+  total_tax_val_Search: "";
+  inv_dt_Search: "";
 
   constructor(
     private http: HttpClient,
     private dataservice: DataService,
     private router: Router,
     orderPipe: OrderPipe
-  ) { 
+  ) {
     this.sortedCollection = orderPipe.transform(this.B2bData, 'info.name');
 
   }
@@ -79,7 +79,7 @@ export class B2binvocesComponent implements OnInit {
       var workbook = XLSX.read(bstr, { type: "binary" });
       var first_sheet_name = workbook.SheetNames[0];
       var worksheet = workbook.Sheets[first_sheet_name];
-      console.log(XLSX.utils.sheet_to_json(worksheet,{raw:true}));
+      console.log(XLSX.utils.sheet_to_json(worksheet, { raw: true }));
       this.filelist = XLSX.utils.sheet_to_json(worksheet, { raw: true });
 
       for (let i = 0; i < this.filelist.length; i++) {
@@ -113,7 +113,7 @@ export class B2binvocesComponent implements OnInit {
         // );
       }
       if (this.invoice.inv_no == undefined) {
-        this.invalidata= "Invalid File Selected";
+        this.invalidata = "Invalid File Selected";
       }
       else {
         this.show();
@@ -171,7 +171,7 @@ export class B2binvocesComponent implements OnInit {
     this.router.onSameUrlNavigation = 'reload';
     this.router.navigate([currentUrl]);
   }
-  
+
   setOrder(value: string) {
     if (this.order === value) {
       this.reverse = !this.reverse;

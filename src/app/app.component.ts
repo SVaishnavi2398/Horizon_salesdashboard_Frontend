@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TokenService } from './service/token.service';
 
@@ -8,32 +8,27 @@ import { TokenService } from './service/token.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
 
 
   public form = {
-    email :null,
-    password : null
+    email: null,
+    password: null
   };
 
   constructor(
     private Token: TokenService,
     private router: Router
-  ){}
+  ) { }
 
 
-  onSubmit(){
+  onSubmit() {
 
   }
 
-  ngOnInit(){
-    if(!this.Token.loggedIn()){
+  ngOnInit() {
+    if (!this.Token.loggedIn()) {
       this.router.navigate(["/login"]);
     }
-    // else
-    // {
-    //   this.router.navigate(["login"]);
-    // }
-
   }
 }

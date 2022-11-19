@@ -24,12 +24,6 @@ export class ChannelpartnerComponent implements OnInit {
 
   submitchannelpartner(editForm){
     this.dataservice.registerChannelpartner(this.channelpartner).subscribe(
-      //console.log(res);
-      //Swal.fire('Added!', 'Channel Partner has been added.', 'success'); 
-      //this.route.navigate(['/form/channelpartnerslist']);
-      //console.log(res);
-      // editForm.reset();
-      // this.reloadComponent();
       data=>this.handleResponse(data),
       error=>this.handleError(error)
     );

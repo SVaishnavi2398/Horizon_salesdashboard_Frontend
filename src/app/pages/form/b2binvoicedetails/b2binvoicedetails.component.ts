@@ -64,7 +64,7 @@ export class B2binvoicedetailsComponent implements OnInit {
     this.router.navigate([currentUrl]);
   }
 
-  doSomeLogic() { 
+  doSomeLogic() {
     this.url = '/form/b2binvoicedetails/' + this.id1;
     error => this.handleError(error);
     this.reloadComponent(this.url);
@@ -74,8 +74,8 @@ export class B2binvoicedetailsComponent implements OnInit {
     error => this.handleError(error);
     this.reloadComponent(this.url);
   }
- 
-  goback(){
+
+  goback() {
     this.url = '/form/b2binvoices/';
     this.reloadComponent(this.url);
   }

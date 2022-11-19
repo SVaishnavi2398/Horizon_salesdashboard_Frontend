@@ -1,7 +1,5 @@
 
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { DataService } from 'src/app/service/data.service';
 import { JarwisService } from 'src/app/service/jarwis.service';
 import { TokenService } from 'src/app/service/token.service';
 import {Router} from '@angular/router';

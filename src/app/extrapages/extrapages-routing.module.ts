@@ -28,10 +28,6 @@ const routes: Routes = [
         path: '500',
         component: Page500Component
     },
-    // {
-    //     path: 'login-1',
-    //     component: LoginComponent
-    // },
     {
         path: 'register-1',
         component: Register1Component

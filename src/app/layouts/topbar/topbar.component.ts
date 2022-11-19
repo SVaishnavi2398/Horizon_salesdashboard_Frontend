@@ -1,13 +1,7 @@
 import { Component, OnInit, Output, EventEmitter, Inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
-
-//import { AuthenticationService } from '../../core/services/auth.service';
-//import { AuthfakeauthenticationService } from '../../core/services/authfake.service';
-import { environment } from '../../../environments/environment';
-
 import { CookieService } from 'ngx-cookie-service';
-//import { LanguageService } from '../../core/services/language.service';
 import { TranslateService } from '@ngx-translate/core';
 import { AuthService } from 'src/app/service/auth.service';
 import { TokenService } from 'src/app/service/token.service';
@@ -24,7 +18,7 @@ import { DataService } from 'src/app/service/data.service';
  */
 export class TopbarComponent implements OnInit {
 
-  public loggedIn : boolean;
+  public loggedIn: boolean;
 
   element;
   configData;
@@ -46,7 +40,7 @@ export class TopbarComponent implements OnInit {
     private Token: TokenService,
     private dataservice: DataService
 
-    ) {
+  ) {
   }
 
   listLang = [
@@ -64,7 +58,7 @@ export class TopbarComponent implements OnInit {
 
   ngOnInit() {
 
-   this.Auth.authStatus.subscribe(value => this.loggedIn = value);
+    this.Auth.authStatus.subscribe(value => this.loggedIn = value);
     this.openMobileMenu = false;
     this.element = document.documentElement;
 
@@ -124,12 +118,12 @@ export class TopbarComponent implements OnInit {
   //   }
   //   this.router.navigate(['/account/login']);
   // }
-logout(event :MouseEvent){
-  event.preventDefault();
-  this.Token.remove();
-this.Auth.changeAuthStatus(true);
-this.router.navigateByUrl('/login');
-}
+  logout(event: MouseEvent) {
+    event.preventDefault();
+    this.Token.remove();
+    this.Auth.changeAuthStatus(true);
+    this.router.navigateByUrl('/login');
+  }
   /**
    * Fullscreen method
    */
@@ -153,15 +147,15 @@ this.router.navigateByUrl('/login');
     }
   }
 
-  profile(){
+  profile() {
     this.userDisplayName = sessionStorage.getItem('loggedUser');
-     this.dataservice.getOneUser(this.userDisplayName).subscribe(res=>{
-       this.userdata = res;
-       this.user = this.userdata[0].firstname;
-       this.user1 = this.userdata[0].middlename;
-       this.user2 = this.userdata[0].lastname;
+    this.dataservice.getOneUser(this.userDisplayName).subscribe(res => {
+      this.userdata = res;
+      this.user = this.userdata[0].firstname;
+      this.user1 = this.userdata[0].middlename;
+      this.user2 = this.userdata[0].lastname;
       //console.log(this.userdata);
-         
-     })
-   }
+
+    })
+  }
 }

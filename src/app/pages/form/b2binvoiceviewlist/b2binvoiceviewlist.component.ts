@@ -27,7 +27,6 @@ export class B2binvoiceviewlistComponent implements OnInit {
     this.dataservice.getB2bInvData(this.inv_no).subscribe(res=>{
       this.data= res;
        this.b2bDetails = this.data[0];
-      //console.log(res);
     });
   }
 

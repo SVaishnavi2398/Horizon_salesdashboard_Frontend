@@ -12,49 +12,49 @@ import { TokenService } from 'src/app/service/token.service';
 })
 export class ClientpaymentscheduleComponent implements OnInit {
 
-  salesArr : any;
-  usersArr : any;
+  salesArr: any;
+  usersArr: any;
   clientpaymentschedule = new Clientpaymentschedule();
   error = new Clientpaymentschedule();
 
   constructor(private dataservice: DataService,
     private route: Router,
-    private Token:TokenService) { }
+    private Token: TokenService) { }
 
   ngOnInit(): void {
     this.getSalesData();
     this.getUserData();
   }
 
-  getSalesData(){
-    this.dataservice.getSaleslist().subscribe(res=>{
+  getSalesData() {
+    this.dataservice.getSaleslist().subscribe(res => {
       //console.log(res);
       this.salesArr = res;
     })
   }
 
-  getUserData(){
-    this.dataservice.getUsers().subscribe(res=>{
+  getUserData() {
+    this.dataservice.getUsers().subscribe(res => {
       this.usersArr = res;
     })
   }
 
-  submitclietpaymentschedule(){
-    this.dataservice.registerClientpaymentschedule(this.clientpaymentschedule).subscribe( 
-        data=>this.handleResponse(data),
-        error=>this.handleError(error)
-  );
-}
+  submitclietpaymentschedule() {
+    this.dataservice.registerClientpaymentschedule(this.clientpaymentschedule).subscribe(
+      data => this.handleResponse(data),
+      error => this.handleError(error)
+    );
+  }
 
-handleResponse(data){
-  this.Token.handle(data.access_token);
-  Swal.fire('Added!', 'Client Payment Schedule has been added.', 'success'); 
-  this.route.navigateByUrl('/form/clientpaymentschedulelist');
-}
+  handleResponse(data) {
+    this.Token.handle(data.access_token);
+    Swal.fire('Added!', 'Client Payment Schedule has been added.', 'success');
+    this.route.navigateByUrl('/form/clientpaymentschedulelist');
+  }
 
- 
-handleError(error){
-  this.error = error.error.errors;
-}
+
+  handleError(error) {
+    this.error = error.error.errors;
+  }
 
 }

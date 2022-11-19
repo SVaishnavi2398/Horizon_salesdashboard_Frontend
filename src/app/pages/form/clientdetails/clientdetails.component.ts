@@ -35,13 +35,6 @@ export class ClientdetailsComponent implements OnInit {
 
   submitclientdetails(editForm){
     this.dataservice.registerClientdetails(this.clientdetails).subscribe(
-      //console.log(res);
-      // Swal.fire('Added!', 'Team has been added.', 'success'); 
-      // this.router.navigate(['/form/clientdetailslist']);
-      // console.log(res);
-      // editForm.reset();
-      // this.reloadComponent();
-
       data=>this.handleResponse(data),
       error=>this.handleError(error)
     );

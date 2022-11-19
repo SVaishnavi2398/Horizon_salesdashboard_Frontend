@@ -269,24 +269,26 @@
             <!-- Menu data -->
             <ng-container *ngFor="let item of menuItems">
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle arrow-none side-nav-link-ref" href="javascript: void(0);" id="topnav-components"
-                (click)="onMenuClick($event)" [routerLink]="item.link" role="button">
+                <a class="nav-link dropdown-toggle arrow-none side-nav-link-ref" href="javascript: void(0);"
+                  id="topnav-components" (click)="onMenuClick($event)" [routerLink]="item.link" role="button">
                   <i class="bx {{item.icon}} me-2"></i>{{ item.label | translate }} <div class="arrow-down"
                     *ngIf="hasItems(item)"></div>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="topnav-dashboard" *ngIf="hasItems(item)">
                   <ng-template ngFor let-i="index" let-subitem [ngForOf]="item.subItems">
-                    <a class="col dropdown-item side-nav-link-ref" *ngIf="!hasItems(subitem)" (click)="onMenuClick($event)"
-                      [routerLink]="subitem.link" href="javascript: void(0);" routerLinkActive="active">{{subitem.label
+                    <a class="col dropdown-item side-nav-link-ref" *ngIf="!hasItems(subitem)"
+                      (click)="onMenuClick($event)" [routerLink]="subitem.link" href="javascript: void(0);"
+                      routerLinkActive="active">{{subitem.label
                       | translate }}</a>
 
                     <div class="dropdown" *ngIf="hasItems(subitem)">
-                      <a class="dropdown-item" href="javascript: void(0);" (click)="onMenuClick($event)">{{ subitem.label | translate }}
+                      <a class="dropdown-item" href="javascript: void(0);" (click)="onMenuClick($event)">{{
+                        subitem.label | translate }}
                         <div class="arrow-down"></div>
                       </a>
                       <div class="dropdown-menu">
                         <ng-template ngFor let-subSubitem [ngForOf]="subitem.subItems">
-                          <a class="dropdown-item side-nav-link-ref" [routerLink]="subSubitem.link" 
+                          <a class="dropdown-item side-nav-link-ref" [routerLink]="subSubitem.link"
                             routerLinkActive="active">{{ subSubitem.label | translate }}</a>
                         </ng-template>
                       </div>
@@ -307,7 +309,7 @@
                   'MENUITEMS.LAYOUTS.LIST.LIGHTTOPBAR' | translate}}</a>
                 <a href="javascript: void(0);" class="dropdown-item" (click)="boxedWidth()">{{
                   'MENUITEMS.LAYOUTS.LIST.BOXED' | translate}}</a>
-             
+
               </div>
             </li>
           </ul>

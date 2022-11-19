@@ -20,16 +20,12 @@ import { AuthGuard } from './guards/auth/auth.guard';
 
 const routes: Routes = [
 
-  { path: '', redirectTo : '/login', pathMatch :'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
 
-  { path:'login', component : LoginComponent, canActivate: [AuthGuard]},
-  { path: '', component: DefaultComponent},
+  { path: 'login', component: LoginComponent, canActivate: [AuthGuard] },
+  { path: '', component: DefaultComponent },
 
-  { path: '', component : LayoutComponent, loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule) },
-
-  //{ path: 'users', component : UsersComponent },
-
-  //{ path: '', component: LayoutComponent, loadChildren: () => import('./layouts/layouts.model') },
+  { path: '', component: LayoutComponent, loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule) },
 
 ];
 

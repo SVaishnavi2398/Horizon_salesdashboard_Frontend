@@ -91,7 +91,7 @@ export class AttendanceComponent implements OnInit {
     orderPipe: OrderPipe
   ) {
     this.sortedCollection = orderPipe.transform(this.empdata, 'info.name');
-   }
+  }
 
   ngOnInit(): void {
     this.getMonth();
@@ -123,11 +123,11 @@ export class AttendanceComponent implements OnInit {
         if (this.filelist1.__EMPTY_1 != null && this.filelist1.__EMPTY != "EmpCode") {
           this.year = new Date().getFullYear();
           this.emp.month = this.month;
-         this.mn =  this.emp.month.toString().length
-          if (this.mn != 2){
-          this.emp.year = this.year + '-' + '0'+ this.month;
-          }else{
-          this.emp.year = this.year + '-' + this.month;
+          this.mn = this.emp.month.toString().length
+          if (this.mn != 2) {
+            this.emp.year = this.year + '-' + '0' + this.month;
+          } else {
+            this.emp.year = this.year + '-' + this.month;
           }
           this.emp.emp_code = this.filelist1.__EMPTY;
           this.emp.emp_name = this.filelist1.__EMPTY_1;
@@ -165,7 +165,7 @@ export class AttendanceComponent implements OnInit {
           this.presentArr = [this.emp.d1, this.emp.d2, this.emp.d3, this.emp.d4, this.emp.d5,
           this.emp.d6, this.emp.d7, this.emp.d8, this.emp.d9, this.emp.d10, this.emp.d11, this.emp.d12,
           this.emp.d13, this.emp.d14, this.emp.d15, this.emp.d16, this.emp.d17, this.emp.d18, this.emp.d19, this.emp.d20,
-          this.emp.d21, this.emp.d22, this.emp.d23, this.emp.d24, this.emp.d25, this.emp.d26, this.emp.d27, this.emp.d28, this.emp.d29, this.emp.d30,this.emp.d31]
+          this.emp.d21, this.emp.d22, this.emp.d23, this.emp.d24, this.emp.d25, this.emp.d26, this.emp.d27, this.emp.d28, this.emp.d29, this.emp.d30, this.emp.d31]
           const counts = {};
 
           for (const num of this.presentArr) {
@@ -197,7 +197,7 @@ export class AttendanceComponent implements OnInit {
           // if (this.emp.present_days == undefined) {
           //   this.emp.present_days = 0;
           // }
-           //console.log(this.emp);
+          //console.log(this.emp);
           this.dataservice.add_emp_attentance(this.emp).subscribe(
             data => this.handleResponse(data),
             error => this.handleError(error)
@@ -227,12 +227,12 @@ export class AttendanceComponent implements OnInit {
   handleError(error: any) {
     this.error = error.error.errors;
     this.cancel();
-     Swal.fire(
-        'Cancelled',
-        'Please Delete Empty Columns Of Excel File',
-        'error'
-      );
-    
+    Swal.fire(
+      'Cancelled',
+      'Please Delete Empty Columns Of Excel File',
+      'error'
+    );
+
     // console.log(this.error);
   }
   show() {
@@ -263,9 +263,9 @@ export class AttendanceComponent implements OnInit {
     this.router.navigate([currentUrl]);
   }
   get_data() {
-    
+
     this.emp.month1 = this.emp.year + '-' + this.emp.month;
-    console.log( this.emp)
+    console.log(this.emp)
     this.dataservice.get_attendance_monthwise(this.emp).subscribe(res => {
       this.empdata = res;
       //console.log(this.empdata);
@@ -281,7 +281,7 @@ export class AttendanceComponent implements OnInit {
   openModal(content: any, data: any) {
 
     this.attData = data;
-     console.log(this.attData);
+    console.log(this.attData);
     this.modalService.open(content, this.attData);
   }
 
@@ -292,11 +292,11 @@ export class AttendanceComponent implements OnInit {
     this.attData.d13, this.attData.d14, this.attData.d15, this.attData.d16, this.attData.d17, this.attData.d18, this.attData.d19, this.attData.d20,
     this.attData.d21, this.attData.d22, this.attData.d23, this.attData.d24, this.attData.d25, this.attData.d26, this.attData.d27, this.attData.d28, this.attData.d29, this.attData.d30]
     const counts = {};
-   console.log(this.presentArr);
+    console.log(this.presentArr);
     for (const num of this.presentArr) {
       counts[num] = counts[num] ? counts[num] + 1 : 1;
     }
-    
+
     this.attData.present_days = counts["P"];
     const counts1 = {};
 
@@ -310,9 +310,9 @@ export class AttendanceComponent implements OnInit {
       counts2[num2] = counts2[num2] ? counts2[num2] + 1 : 1;
     }
     this.attData.half_days = counts2["P/2"];
-    
+
     this.attData.late_marks = counts["L"];
-   
+
     console.log(this.attData);
 
     this.empid = this.attData.emp_code;

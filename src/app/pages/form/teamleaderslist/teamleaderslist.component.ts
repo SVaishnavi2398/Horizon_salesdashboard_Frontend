@@ -13,8 +13,8 @@ export class TeamleaderslistComponent implements OnInit {
   public page = 1;
   public pageSize = 10;
   public teamleaderList: Array<Teamleaders> = [];
-  teamleadersArr:any;
-  searchteamleaderslist : string;
+  teamleadersArr: any;
+  searchteamleaderslist: string;
   totalCount: any;
   /***Sorting***/
   order: string = 'info.name';
@@ -22,14 +22,14 @@ export class TeamleaderslistComponent implements OnInit {
   sortedCollection: any[];
   caseInsensitive: boolean = false;
 
-   /***Searching***/
-   teamname_Search: "";
-   firstname_search:"";
-   teamstatus_search: "";
-   from_date_Search: "";
-   to_date_Search: "";
+  /***Searching***/
+  teamname_Search: "";
+  firstname_search: "";
+  teamstatus_search: "";
+  from_date_Search: "";
+  to_date_Search: "";
 
-  constructor(private dataservice:DataService, orderPipe: OrderPipe) { 
+  constructor(private dataservice: DataService, orderPipe: OrderPipe) {
     this.sortedCollection = orderPipe.transform(this.teamleadersArr, 'info.name');
 
   }
@@ -38,10 +38,10 @@ export class TeamleaderslistComponent implements OnInit {
     this.getTeamlesdersData();
   }
 
-  getTeamlesdersData(){
-    this.dataservice.getTeamleaderslist().subscribe(res=>{
-      this.teamleadersArr=res;
-      this.totalCount= this.teamleadersArr.length;
+  getTeamlesdersData() {
+    this.dataservice.getTeamleaderslist().subscribe(res => {
+      this.teamleadersArr = res;
+      this.totalCount = this.teamleadersArr.length;
       this.teamleaderList = this.getTeamleader(this.totalCount);
     })
   }
@@ -49,17 +49,17 @@ export class TeamleaderslistComponent implements OnInit {
   getTeamleader(count) {
 
     let list = [];
-  
-  
+
+
     //console.log(count);
 
     for (let index = 0; index < count; index++) {
-      list.push({random: Math.random()});
+      list.push({ random: Math.random() });
     }
     return list;
   }
 
-  deleteteamleadersData(team_leader_id){
+  deleteteamleadersData(team_leader_id) {
     Swal.fire({
       title: 'Are you sure?',
       //text: 'You won\'t be able to revert this!',
@@ -70,16 +70,16 @@ export class TeamleaderslistComponent implements OnInit {
       confirmButtonText: 'Yes, delete it!'
     }).then(res => {
       if (res.value) {
-  
-        this.dataservice.deleteTeamleader(team_leader_id).subscribe(res=>{
-        Swal.fire('Deleted!', 'Team has been deleted.', 'success'); 
-        this.getTeamlesdersData();
+
+        this.dataservice.deleteTeamleader(team_leader_id).subscribe(res => {
+          Swal.fire('Deleted!', 'Team has been deleted.', 'success');
+          this.getTeamlesdersData();
         });
-  
+
       }
     })
-  
-  
+
+
   }
   setOrder(value: string) {
     if (this.order === value) {
@@ -88,6 +88,6 @@ export class TeamleaderslistComponent implements OnInit {
 
     this.order = value;
   }
-  
+
 
 }
