@@ -46,14 +46,9 @@ export class AdvancesalaryviewComponent implements OnInit {
 
     this.id = Number(this.advancesalaryid) + Number(1);
     this.id1 = Number(this.advancesalaryid) - Number(1);
-        this.getUsers();
+    this.getUsers();
 
     this.getAdvancesalaryData();
-    //this.getAdvanceemiData();
-
-    //this.getAdvancesalaryEmi();
-    //this.getuseremidata();
-   //this.getalldataview();
   }
 
   getUsers(){
@@ -67,9 +62,7 @@ export class AdvancesalaryviewComponent implements OnInit {
   
 
   getAdvancesalaryData(){
-    //console.log(this.advancesalaryid);
     this.dataservice.getOneAdvancesalary(this.advancesalaryid).subscribe(
-    //console.log(res);
     data=>this.handleResponse(data),
     error=>this.handleError(error)
   );
@@ -116,16 +109,9 @@ export class AdvancesalaryviewComponent implements OnInit {
 
     this.dataservice.getadvlistview2(id).subscribe(res=>{
       this.advanceemiArr = res;
-      console.log('Hello',this.advanceemiArr);
-
-      
-      
+      console.log('Hello',this.advanceemiArr); 
     })
   }
-
- 
-
- 
 
   reloadComponent(url) {
     let currentUrl = url;
@@ -143,4 +129,7 @@ export class AdvancesalaryviewComponent implements OnInit {
       this.reloadComponent(this.url);
     }
 
+    back() {
+      window.history.back();
+    }
 }

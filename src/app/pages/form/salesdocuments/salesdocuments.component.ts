@@ -27,6 +27,7 @@ export class SalesdocumentsComponent implements OnInit {
   sales_id : any;
   https: any;
   httpclient: any;
+  usersArr:any;
   //salesdetails: any;
 
   constructor(

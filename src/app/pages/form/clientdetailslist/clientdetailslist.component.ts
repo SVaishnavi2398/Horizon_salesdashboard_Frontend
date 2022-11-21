@@ -22,10 +22,10 @@ export class ClientdetailslistComponent implements OnInit {
   nameSearch: "";
   catrgory_id_Search: "";
   occupation_id_Search: "";
+  address_Search: "";
   date_of_birth_Search: "";
   mobile1_Search: "";
   email1_Search: "";
-  address_Search: "";
   
    /***Sorting***/
    order: string = 'info.name';

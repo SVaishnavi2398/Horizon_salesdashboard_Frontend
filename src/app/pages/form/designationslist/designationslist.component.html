@@ -23,6 +23,18 @@
       <!-- End search -->
       </div>
 
+      <div class="row">
+        <div class="col-md-6">
+            <div id="tickets-table_filter" class="dataTables_length"><label class="d-inline-flex align-items-center">Search:
+                <input type="text" name="searchdesignationslist" class="form-control form-control-sm ms-2"
+                  aria-controls="tickets-table" [(ngModel)]="searchdesignationslist"></label>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <ngb-pagination class="d-flex justify-content-center" [(page)]="page" [maxSize]="4" [collectionSize]="designation.length" [boundaryLinks]="true"  style="justify-content: right!important;"></ngb-pagination>
+        </div>
+      </div>
+
   <div class="row">
       <div class="col-lg-12">
           <div class="card">
@@ -41,7 +53,8 @@
                               </tr>
                           </thead>
                           <tbody>
-                              <tr *ngFor="let designation of designationsArr">
+                              <tr *ngFor="let designation of designationsArr  | searchdesignationslist:searchdesignationslist | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+                                <!-- <th scope="row">{{companylist.debtor_company_det_id}}</th> -->
                                   <!-- <th scope="row">{{designation.designation_id}}</th> -->
                                   <td>{{designation.designation}}</td>
                                   <td><button type="button" class="btn btn-info"  routerLink="/form/editdesignations/{{designation.designation_id}}"><i class="uil-pen"></i></button> 

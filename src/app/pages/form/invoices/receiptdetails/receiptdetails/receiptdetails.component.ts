@@ -73,6 +73,7 @@ export class ReceiptdetailsComponent implements OnInit {
     this.dataservice.getOneInvoiceMultidetails(this.invoice_multi).subscribe(res => {
       this.invoice = res;
       this.invoice_num1 = this.invoice[0].invoice_num;
+      console.log(this.invoice_num1,"aaaaaaa");
       var selectedOption = this.invoice[0].receivable_amt;
       this.receiptdetails.receivable_amt = this.invoice[0].receivable_amt;
       this.invoiceArr = res;
@@ -85,6 +86,8 @@ export class ReceiptdetailsComponent implements OnInit {
     var client_id = event.target.value;
     this.dataservice.getreceiptdata(client_id).subscribe(res => {
       this.DataArr = res;
+      console.log(this.DataArr,"aaaaaaa");
+      
       for (var i = 0; i < this.DataArr.length; i++) {
         this.invoice_num = this.DataArr[i].invoice_num;
         this.suspense_amount = this.DataArr[i].suspense_amount;

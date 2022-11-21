@@ -42,7 +42,7 @@
             <button type="button" class="btn btn-primary mb-4"  routerLink="/form/salary/advancesalaryreport">
             Report</button>
         </div>
-        <div class="col-md-8"  style="text-align: right;">
+        <div class="col-md-6">
                 <button type="button" class="btn btn-primary mb-3"  routerLink="/form/salary/advancesalary"><i class="mdi mdi-plus me-1"></i>
                 Add Advance Salary Details</button>
         </div>
@@ -55,15 +55,9 @@
               </div>
         </div> -->
       <!-- End search -->
-      <div class="col-md-8">
-        <div id="tickets-table_filter" class="dataTables_length"><label
-            class="d-inline-flex align-items-center">Search:
-            <input type="text" name="searchadvancesalary" class="form-control form-control-sm ms-2"
-              aria-controls="tickets-table" [(ngModel)]="searchadvancesalary"></label>
-          </div>
-    </div>
+
      <!-- End search -->
-    <div class="col-md-4">
+    <div class="col-md-6">
       <ngb-pagination class="d-flex justify-content-center" [(page)]="page" [maxSize]="4" [collectionSize]="advancesalaryList.length" [boundaryLinks]="true"  style="justify-content: right!important;"></ngb-pagination>
       </div>
       </div>

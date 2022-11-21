@@ -14,7 +14,7 @@ export class AdvancesalarylistComponent implements OnInit {
   public page = 1;
   public pageSize = 10;
   public advancesalaryList: Array<Advancesalary> = [];
-  searchadvancesalary:string;
+  searchadvancesalary:any;
   advancesalaryArr:any;
   totalCount: any;
 
