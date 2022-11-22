@@ -123,8 +123,8 @@ export class InvoiceMultiViewComponent implements OnInit {
     }
 
     onSubmit(){
+      console.log(this.invoicedetails,"res");
       this.dataservice.addinvoiceComments(this.invoicedetails).subscribe(res=>{
-         // console.log(res);
           Swal.fire('Added!', 'comment has been added.', 'success'); 
           let currentUrl = this.router.url;
           this.router.routeReuseStrategy.shouldReuseRoute = () => false;
