@@ -147,6 +147,11 @@ import { MonthlySalarylistView1Component } from './salary/monthly-salarylist-vie
 import { SalarypackageDetailsComponent } from './salarypackage-details/salarypackage-details.component';
 
 
+import { LeadsgivenComponent } from './leadsgiven/leadsgiven.component';
+import { LeadsgivenlistComponent } from './leadsgivenlist/leadsgivenlist.component';
+import { WeeklyleadslistComponent } from './weeklyleadslist/weeklyleadslist.component';
+
+
 const routes: Routes = [
     {
         path: 'roles',
@@ -708,6 +713,20 @@ const routes: Routes = [
      {
         path: 'salary/monthly-salary-list-view1',
         component: MonthlySalarylistView1Component
+    },
+
+
+    {
+        path: 'leadsgiven',
+        component: LeadsgivenComponent
+    },
+    {
+        path: 'leadsgivenlist',
+        component: LeadsgivenlistComponent
+    },
+    {
+        path: 'weeklyleadslist',
+        component: WeeklyleadslistComponent
     }
 
     

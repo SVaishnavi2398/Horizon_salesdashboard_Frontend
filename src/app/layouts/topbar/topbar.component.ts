@@ -154,8 +154,6 @@ export class TopbarComponent implements OnInit {
       this.user = this.userdata[0].firstname;
       this.user1 = this.userdata[0].middlename;
       this.user2 = this.userdata[0].lastname;
-      //console.log(this.userdata);
-
     })
   }
 }

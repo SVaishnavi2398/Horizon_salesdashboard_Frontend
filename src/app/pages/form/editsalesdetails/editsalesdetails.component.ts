@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, AfterContentChecked , Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DataService } from 'src/app/service/data.service';
 import { Salesdetails, InceData, AddInce, QuarData, QuarAarry, HalfYearInce, QuarInce, halfInce, HalfYearAarry, YearInce, YearInceData, YearInceArr } from '../salesdetails/salesdetails.model';
@@ -12,7 +12,7 @@ import { DatePipe } from '@angular/common';
   templateUrl: './editsalesdetails.component.html',
   styleUrls: ['./editsalesdetails.component.scss']
 })
-export class EditsalesdetailsComponent implements OnInit {
+export class EditsalesdetailsComponent implements OnInit, AfterContentChecked {
 
   salesdetailsid: any;
   salesdetails = new Salesdetails;
@@ -98,7 +98,8 @@ export class EditsalesdetailsComponent implements OnInit {
     private route: ActivatedRoute,
     private dataservice: DataService,
     private router: Router,
-    private datePipe: DatePipe
+    private datePipe: DatePipe,
+    private ref: ChangeDetectorRef
   ) { }
 
   ngOnInit(): void {
@@ -115,6 +116,10 @@ export class EditsalesdetailsComponent implements OnInit {
     this.getLeadsourceData();
     this.getCompanyData();
   }
+
+  ngAfterContentChecked() {
+    this.ref.detectChanges();
+}
 
   getSalesdetailsData() {
     this.dataservice.getOneSalesdetails(this.salesdetailsid).subscribe(res => {

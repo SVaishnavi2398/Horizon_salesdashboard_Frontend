@@ -25,14 +25,12 @@ export class RightsidebarComponent implements OnInit {
   }
 
   enableLightMode(){
-    console.log("Clicked for light menu");
     this.hide();
     document.body.setAttribute('data-sidebar', 'light');
     document.body.setAttribute('data-topbar', 'light');
   }
 
   enableDarkMode(){
-    console.log("Clicked for dark menu");
     this.hide();
     document.body.setAttribute('data-sidebar', 'dark');
     document.body.setAttribute('data-topbar', 'dark');
@@ -41,11 +39,6 @@ export class RightsidebarComponent implements OnInit {
     document.body.removeAttribute('data-keep-enlarged');
     document.body.classList.remove('vertical-collpsed');
   }
-
-  enableRTLMode(){
-    console.log("Clicked for rtl menu");
-  }
-
 }
 
 

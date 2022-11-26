@@ -20,7 +20,7 @@
             <div class="col-md-3">
 
                 <label for="example-text-input" class="col-form-label"> Team Leader</label>
-                <select formControlName="name" class="form-control" name="user_id" (change)="getState1($event)" placeholder="-- Select Client Name --">
+                <select class="form-control" name="user_id" (change)="getState1($event)" placeholder="-- Select Client Name --">
         <option>Select</option>
             <option *ngFor="let cl of leaderArr"  value="{{cl.team_leader_name}}">
                 {{cl.team_leader_name}}
@@ -32,7 +32,7 @@
             <div class="col-md-3">
 
                 <label for="example-text-input" class="col-form-label"> User Name</label>
-                <select formControlName="name" class="form-control" name="user_id" (change)="getState2($event)" placeholder="-- Select Client Name --">
+                <select class="form-control" name="user_id" (change)="getState2($event)" placeholder="-- Select Client Name --">
         <option>Select</option>
             <option *ngFor="let cl of usersArr"  value="{{cl.user_id}}">
                 {{cl.firstname}}  {{cl.lastname}}
@@ -43,13 +43,13 @@
 
             <div class="col-md-3">
                 <label for="example-text-input" class="col-form-label">From Date</label>
-                <input formControlName="name" class="form-control" type="date" value="{{from_date}}" id="from_date" name="from_date" (change)="getstate3($event)">
+                <input class="form-control" type="date" value="{{from_date}}" id="from_date" name="from_date" (change)="getstate3($event)">
                 <!-- <span class="text-danger" [hidden]="!error.from_date">{{error.from_date}}</span> -->
             </div>
 
             <div class="col-md-3">
                 <label for="example-text-input" class="col-form-label">To Date</label>
-                <input formControlName="name" class="form-control" type="date" value="{{to_date}}" id="to_date" name="to_date" (change)="getstate4($event)">
+                <input class="form-control" type="date" value="{{to_date}}" id="to_date" name="to_date" (change)="getstate4($event)">
                 <!-- <span class=" text-danger " [hidden]="!error.to_date ">{{error.to_date}}</span> -->
             </div>
         </div>

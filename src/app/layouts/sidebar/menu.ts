@@ -50,6 +50,18 @@ export const MENU: MenuItem[] = [
                 label: 'Walkin Deals List',
                 link: 'form/walkindealslist',
                 parentId: 3
+            },
+            {
+                id: 44,
+                label: 'Monthly Leads',
+                link: 'form/leadsgivenlist',
+                parentId: 3
+            },
+            {
+                id: 45,
+                label: 'Weekly Leads',
+                link: 'form/weeklyleadslist',
+                parentId: 3
             }
         ]
     },
@@ -95,7 +107,7 @@ export const MENU: MenuItem[] = [
                 label: 'Invoice With Multiple Clients',
                 link: 'form/invoices/invoice/invoicemultipledetailslist',
                 parentId: 8
-            },
+            }
         ]
     },
     {

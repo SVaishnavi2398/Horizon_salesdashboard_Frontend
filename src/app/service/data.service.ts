@@ -1370,4 +1370,117 @@ updateInvoiceDetails(id,data){
           getNewDataSal(){
             return this.httpClient.get('http://127.0.0.1:8000/api/getUpdateSal');
           }
+
+
+
+
+
+
+          addleadgiven(data){
+            return this.httpClient.post('http://127.0.0.1:8000/api/leadsgiven',data);
+          }
+        
+          addweeklyleads(data){
+            return this.httpClient.post('http://127.0.0.1:8000/api/weeklyleads',data);
+          }
+        
+          getdata(){
+            return this.httpClient.get('http://127.0.0.1:8000/api/leadsgiven/');
+          }
+        
+          getalldata(){
+            return this.httpClient.get('http://127.0.0.1:8000/api/weeklyleads/');
+          }
+        
+          addmonthlyleads(data){
+            return this.httpClient.post('http://127.0.0.1:8000/api/leadsgiven',data);
+          }
+        
+          addweekleads(data){
+            return this.httpClient.post('http://127.0.0.1:8000/api/weeklyleads',data);
+          }
+        
+          getteamsdata(){
+            return this.httpClient.get('http://127.0.0.1:8000/api/leadsgivenview');
+          }
+        
+          getweekleadsdata(){
+            return this.httpClient.get('http://127.0.0.1:8000/api/weeklyleadsview');
+          }
+        
+          updateleadsdata(id,data){
+            return this.httpClient.patch('http://127.0.0.1:8000/api/leadsgiven/'+id,data);
+          }
+        
+          updateweekdata(id,data){
+            return this.httpClient.patch('http://127.0.0.1:8000/api/weeklyleads/'+id,data);
+          }
+        
+          getuserleads(id){
+            return this.httpClient.get('http://127.0.0.1:8000/api/getempdetails/'+id);
+          }
+        
+          getuseremp(id){
+            return this.httpClient.get('http://127.0.0.1:8000/api/singleemp/'+id);
+          }
+        
+          getempinfo(id){
+            return this.httpClient.get('http://127.0.0.1:8000/api/single_emp/'+id);
+          }
+        
+          getleadsdate(data){
+            return this.httpClient.post('http://127.0.0.1:8000/api/datesorting/',data);
+          }
+         
+         getuserData2(id){
+            return this.httpClient.get('http://127.0.0.1:8000/api/teamwise/'+id);
+          }
+        
+          getteamuser(id){
+            return this.httpClient.get('http://127.0.0.1:8000/api/leadsteams/'+id);
+          }
+        
+          getallteams(id){
+            return this.httpClient.get('http://127.0.0.1:8000/api/allteamsdata/'+id);
+          }
+        
+          getsingleuser(id){
+            return this.httpClient.get('http://127.0.0.1:8000/api/single_emp_data/'+id);
+          }
+        
+          getweekuser(id){
+            return this.httpClient.get('http://127.0.0.1:8000/api/weeklyteams/'+id);
+          }
+        
+          getsingleemp(id){
+            return this.httpClient.get('http://127.0.0.1:8000/api/single_emp_weekly/'+id);
+          }
+        
+          getallleads(id){
+            return this.httpClient.get('http://127.0.0.1:8000/api/allleadsdata/'+id);
+          }
+        
+          getalldates(data){
+            return this.httpClient.post('http://127.0.0.1:8000/api/weekwise/',data);
+          }
+        
+          getweeksdata(data){
+            return this.httpClient.post('http://127.0.0.1:8000/api/weekdata/',data);
+          }
+        
+          getteamemp(id){
+            return this.httpClient.get('http://127.0.0.1:8000/api/allteamsdata/'+id);
+          }
+        
+          getuserteam(id){
+            return this.httpClient.get('http://127.0.0.1:8000/api/leadsteams/'+id)
+          }
+        
+          getteamsorting(id){
+            return this.httpClient.get('http://127.0.0.1:8000/api/allteamsdata/'+id);
+          }
+        
+          getteamemployee(id){
+            return this.httpClient.get('http://127.0.0.1:8000/api/leadsteams/'+id);
+          }
 }

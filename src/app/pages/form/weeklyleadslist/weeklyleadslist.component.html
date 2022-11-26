@@ -1,0 +1,87 @@
+<div class="container-fluid">
+
+    <form>
+        <div class="row">
+            <app-page-title title="Weekly Leads List"></app-page-title>
+
+
+            <div class="col-md-12" style="text-align: right;">
+                <button type="button" class="btn btn-primary mb-3" routerLink="/form/leadsgiven"><i
+                    class="mdi mdi-plus me-1"></i>
+                Add Leads</button>
+            </div>
+
+            <div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <label for="example-text-input" class="col-form-label">Team Name</label>
+                <select class="form-control" name="team_id" (change)="teamname($event)" placeholder="-- Select Team Name --">
+                <option>Select</option>
+                <option *ngFor="let tl of teamsArr"  value="{{tl.team_id}}">
+                    {{tl.teamname}}
+                 </option>
+                 </select>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <label for="example-text-input" class="col-form-label"> User Name</label>
+                <select class="form-control" name="user_id" (change)="empname($event)" placeholder="-- Select Emp Name --">
+                <option>Select</option>
+                <option *ngFor="let cl of userdata5"  value="{{cl.user_id}}">
+                {{cl.firstname}}  {{cl.lastname}}
+                 </option>
+                 </select>
+
+            </div>
+
+            <div class="col-md-3">
+                <label for="example-text-input" class="col-form-label">From Date</label>
+                <input class="form-control" type="date" value="" id="week" name="week" (change)="getfromdate($event)" style="width:218px;">
+                <!-- <span class="text-danger" [hidden]="!error.from_date">{{error.from_date}}</span> -->
+            </div>
+
+            <div class="col-md-3">
+                <label for="example-text-input" class="col-form-label">To Date</label>
+                <input class="form-control" type="date" value="" id="to_date" name="to_date" (change)="gettodate($event)" style=" width:218px; ">
+                <!-- <span class=" text-danger " [hidden]="!error.to_date ">{{error.to_date}}</span> -->
+            </div>
+        </div>
+    </form>
+
+    <div class="row pt-2 ">
+        <div class="col-lg-12 ">
+            <div class="card ">
+                <div class="card-body " style="padding: 0 10px 0 10px; ">
+                    <div class="table-responsive ">
+                        <table class="table mb-0 ">
+                            <thead>
+                                <tr>
+                                    <th>Employee Name</th>
+                                    <th>From Date</th>
+                                    <th>To Date</th>
+                                    <th>Weekly Lead Count</th>
+                                    <th>Weekly Lead Count Valid</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let leaddetails of userdata">
+                                    <!-- <td>{{leaddetails.teamname}}</td> -->
+                                    <td>{{leaddetails.firstname}} {{leaddetails.lastname}}</td>
+                                    <td>{{leaddetails.week_date | date : 'd-M-yyyy'}}</td>
+                                    <td>{{leaddetails.to_date | date : 'd-M-yyyy'}}</td>
+                                    <td>{{leaddetails.weekly_lead_count}}</td>
+                                    <td>{{leaddetails.weekly_lead_count_valid}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

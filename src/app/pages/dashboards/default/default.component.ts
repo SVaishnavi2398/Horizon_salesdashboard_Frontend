@@ -128,8 +128,6 @@ export class DefaultComponent implements OnInit {
       this.Count16 = this.sourcecount[15];
       this.Count17 = this.sourcecount[16];
 
-      //console.log(this.Count1);
-
       this.ChartType = {
         chart: {
           height: 320,
@@ -172,47 +170,24 @@ export class DefaultComponent implements OnInit {
           borderColor: '#5b73e8'
         }
       };
-
-
-
-
-
     })
-
   }
 
   monthnumber1(event) {
-    console.log(event.target.value);
     this.date1 = event.target.value;
     var date = new Date(event.target.value);
-    console.log(date);
-
     var firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
     var lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
-
-    console.log(firstDay.getFullYear());
-    console.log(firstDay.getMonth() + 1);
-    console.log(firstDay.getDate());
-    //console.log(this.date1);
-    console.log(firstDay);
-    console.log(lastDay);
   }
 
   monthnumber2(event) {
-    //console.log(event.target.value);
     this.date2 = event.target.value
-    //console.log(this.date2);
   }
 
   getApply() {
-
     this.variable = [this.date1, this.date2]
-    console.log(this.variable);
-
     this.dataservice.getcount1(this.variable).subscribe(res => {
       this.countArr = res;
-      console.log(res);
-
       this.Count1 = this.countArr[0];
       this.Count2 = this.countArr[1];
       this.Count3 = this.countArr[2];
@@ -230,8 +205,6 @@ export class DefaultComponent implements OnInit {
       this.Count15 = this.countArr[14];
       this.Count16 = this.countArr[15];
       this.Count17 = this.countArr[16];
-
-      //console.log(this.Count1);
 
       this.ChartType = {
         chart: {

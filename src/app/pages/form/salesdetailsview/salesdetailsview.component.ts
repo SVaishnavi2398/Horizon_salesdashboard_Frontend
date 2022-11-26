@@ -204,7 +204,7 @@ export class SalesdetailsviewComponent implements OnInit {
 
   submitcomments(){
     this.dataservice.registerSalescomments(this.salescomments).subscribe(res =>{
-      //console.log(res);
+      console.log(res,"ddddd");
       this.reloadComponent();
       //Swal.fire('Added!', 'Sales Details been added.', 'success'); 
       //this.router.navigate(['/form/salesdetailslist']);

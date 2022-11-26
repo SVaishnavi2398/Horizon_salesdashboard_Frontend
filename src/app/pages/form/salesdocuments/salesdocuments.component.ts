@@ -45,24 +45,21 @@ export class SalesdocumentsComponent implements OnInit {
 
   getSales(){
     this.dataservice.getSaleslist().subscribe(res=>{
-      //console.log(res);
       this.salesArr = res;
     })
   }
 
   getSalesdocumentsData(){
     this.dataservice.getclientname(this.salesdocumentsid).subscribe(res=>{
-    console.log(res);
-    this.data=res;
-    this.salesdocuments=this.data;
-    this.salesdocuments.name=this.data[0].name;
-    this.salesdocuments.sales_id=this.data[0].sales_id;
+      this.data=res;
+      this.salesdocuments=this.data;
+      this.salesdocuments.name=this.data[0].name;
+      this.salesdocuments.sales_id=this.data[0].sales_id;
     })
   }
 
 
   imageUpload1(event){
-    //console.log(event);
     this.files1 = event.target.files[0];
     console.log(this.files1);
   }

@@ -100,7 +100,7 @@
                                     <th>Action</th>
                                 </tr>
                             </thead>
-                            <tbody formControlName="name">
+                            <tbody>
                                 <tr *ngFor="let dealdetails of userdata| searchdealdetaillist:searchdealdetaillist | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
                                     <!-- <th scope=" row ">{{salesdetails.sales_id}}</th> -->
                                     <td>{{dealdetails.firstname}} {{dealdetails.lastname}}</td>

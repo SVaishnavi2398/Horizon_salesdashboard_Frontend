@@ -35,7 +35,6 @@ constructor(
 
   onSubmit(){
     this.userdata = this.form;
-    // console.log(this.userdata);  
     this.Jarwis.login(this.form).subscribe(
       data => this.handleResponse(data,this.userdata),
      error=>this.handleError(error)
@@ -44,7 +43,6 @@ constructor(
 
   handleResponse(data: any,data1:any){
     this.loggername = data1.email;
-    // console.log(this.loggername);
     this.Token.handle(data.access_token);
     this.auth.changeAuthStatus(true);
     sessionStorage.setItem('loggedUser', this.loggername);

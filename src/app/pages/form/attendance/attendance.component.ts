@@ -101,7 +101,6 @@ export class AttendanceComponent implements OnInit {
 
 
   saveMultipleImage() {
-    // console.log(this.month);
     let fileReader = new FileReader();
     fileReader.readAsArrayBuffer(this.file);
     fileReader.onload = (e) => {
@@ -114,12 +113,8 @@ export class AttendanceComponent implements OnInit {
       var first_sheet_name = workbook.SheetNames[0];
       var worksheet = workbook.Sheets[first_sheet_name];
       this.filelist = XLSX.utils.sheet_to_json(worksheet, { raw: true });
-      //console.log(this.filelist);
       for (let j = 0; j < this.filelist.length; j++) {
-
         this.filelist1 = this.filelist[j];
-        //console.log(this.filelist1);
-
         if (this.filelist1.__EMPTY_1 != null && this.filelist1.__EMPTY != "EmpCode") {
           this.year = new Date().getFullYear();
           this.emp.month = this.month;
@@ -193,11 +188,6 @@ export class AttendanceComponent implements OnInit {
           if (this.emp.half_days == undefined) {
             this.emp.half_days = 0;
           }
-
-          // if (this.emp.present_days == undefined) {
-          //   this.emp.present_days = 0;
-          // }
-          //console.log(this.emp);
           this.dataservice.add_emp_attentance(this.emp).subscribe(
             data => this.handleResponse(data),
             error => this.handleError(error)

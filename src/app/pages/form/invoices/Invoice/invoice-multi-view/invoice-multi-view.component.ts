@@ -123,8 +123,10 @@ export class InvoiceMultiViewComponent implements OnInit {
     }
 
     onSubmit(){
-      console.log(this.invoicedetails,"res");
+      console.log("yyyyyyyyy",this.invoicedetails);
+      
       this.dataservice.addinvoiceComments(this.invoicedetails).subscribe(res=>{
+        console.log(this.invoicedetails,"res");
           Swal.fire('Added!', 'comment has been added.', 'success'); 
           let currentUrl = this.router.url;
           this.router.routeReuseStrategy.shouldReuseRoute = () => false;
@@ -136,6 +138,8 @@ export class InvoiceMultiViewComponent implements OnInit {
     getInvcomments(){
       this.dataservice.getinvoiceComments(this.invoiceid).subscribe(res=>{
         this.incommArr = res;
+        console.log(this.incommArr,"ggggg");
+        
           console.log(res);
         });
     }

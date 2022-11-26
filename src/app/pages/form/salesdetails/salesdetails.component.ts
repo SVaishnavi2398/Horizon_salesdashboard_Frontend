@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/service/data.service';
-import { Salesdetails, InceData, fetchSourcing, AddInce, QuarData, QuarAarry, HalfYearInce, QuarInce, halfInce, HalfYearAarry, YearInce, YearInceData, YearInceArr } from './salesdetails.model';
+import { Salesdetails, InceData, AddInce, QuarData, QuarAarry, HalfYearInce, QuarInce, halfInce, HalfYearAarry, YearInce, YearInceData, YearInceArr } from './salesdetails.model';
 import { ActivatedRoute, Router } from '@angular/router';
 import Swal from 'sweetalert2';
-import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { TokenService } from 'src/app/service/token.service';
 import * as moment from 'moment';
 import { DatePipe } from '@angular/common';
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
+import {ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-salesdetails',
@@ -112,7 +112,8 @@ export class SalesdetailsComponent implements OnInit {
     private modalService: NgbModal,
     private Token: TokenService,
     private datePipe: DatePipe,
-    private router: Router
+    private router: Router,
+    private cdref: ChangeDetectorRef
   ) { }
 
   ngOnInit(): void {
@@ -134,6 +135,11 @@ export class SalesdetailsComponent implements OnInit {
     this.salesdetails.shared_payout_value = 0;
     this.salesdetails.extra_payout_value = 0;
   }
+
+  ngAfterContentChecked() {
+    this.cdref.detectChanges();
+  }
+  
   getSalesdetails(){
     this.dataservice.getbookingid().subscribe(res=>{
       console.log(res);
@@ -343,7 +349,7 @@ console.log(str1);
     
       this.dataservice.getClosSaleInce(this.closingD).subscribe(res => {
         this.closinginceAmt =res;
-        // console.log(res,'hii');
+        console.log(res,'hii');
 
       this.addInce.gi_closing_amt = this.closinginceAmt;
       this.addInce.gi_no_of_closing = this.gi_no_of_closing;

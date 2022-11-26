@@ -19,6 +19,8 @@ export class DocumentslistComponent implements OnInit {
   getSalesdetailsData(){
     this.dataservice.getDocuments().subscribe(res=>{
       this.salesdocumentsArr=res;
+      console.log(this.salesdocumentsArr,"res");
+      
     })
   }
 

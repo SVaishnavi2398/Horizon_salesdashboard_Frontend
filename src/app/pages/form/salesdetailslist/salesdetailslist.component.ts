@@ -53,7 +53,7 @@ export class SalesdetailslistComponent implements OnInit {
   getSalesdetailsData(){
     this.dataservice.getSalesdetails().subscribe(res=>{
       this.salesdetailsArr=res;
-      // console.log(this.salesdetailsArr);
+      console.log(this.salesdetailsArr);
       this.totalCount= this.salesdetailsArr.length;
       this.salesdetailsList = this.getSalesdetailsData1(this.totalCount);
     })

@@ -1,0 +1,367 @@
+<div class="container-fluid">
+    <div>
+        <app-page-title title="Leads Given"></app-page-title>
+    </div>
+    <div class="tab">
+        <ul style="border-radius: 9px;background: #5b73e8;">
+            <li id="mission" [class.color]="id  === 'mission'" (click)="tabChange('mission')">Monthly Leads</li>
+            <li id="vision" [class.color]="id  === 'vision'" (click)="tabChange('vision')">Weekly Leads</li>
+        </ul>
+
+        <div class="content">
+            <div class="content-value" *ngIf="id  === 'mission'">
+                <div class="container-fluid" *ngIf="ReadMore">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2>Monthly Leads</h2>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-md-12" style="text-align: right;">
+                                <button type="button" class="btn btn-primary mb-3" routerlink="/form/leadsgivenlist">
+                                    View Monthly Leads</button>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <form [formGroup]="form">
+                    <div class=" row">                       
+                        <div class="col-md-3">
+                            <label for="example-text-input" class=""> Team Name</label>
+                            <select class="form-control" (change)="teamsname($event)" value="{{team_id}}" formControlName="name" style="width:190px;">
+                            <option value="">-- Select Team --</option>
+                            <option *ngFor="let tl of teamsArr" value="{{tl.team_id}}">
+                                {{tl.teamname}}
+                            </option>
+                        </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="start">Month</label>
+                            <input type="month" class="form-control" formControlName="date" value="{{month}}" id="month" name="month" (change)="getdate($event)" min="2018-03" value="2018-05">
+                        </div>
+                        <div class="col-md-3 addbutton">
+                            <button (click)="addPassenger();" class="btn btn-primary">+</button>
+                        </div>
+                        <div class="col-md-3 view">
+                            <button (click)="leadsview();onclick()" class="btn btn-primary">View</button>&nbsp;
+                        </div> 
+                    </div>
+                    </form>
+
+
+
+
+                    <form [formGroup]="form" (ngSubmit)="Submitdata()">
+                        <div formArrayName="passenger" style="border-left: none !important;">
+                            <div>
+                                <div class="mb-3 row">
+                                    <div class="col-md-12">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <table class="table table-centered table-nowrap mb-0 align-middle" id="excel-table">
+                                                    <thead class="table-light">
+                                                        <tr>                                                     
+                                                            <th>
+                                                                Employees Name
+                                                            </th>                                                      
+                                                            <th>
+                                                                Leads Given To
+                                                            </th>
+                                                            <th>
+                                                                Valid Leads Count
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr *ngFor="let passengerGroup of passenger?.controls;let i = index" [formGroupName]="i" style="border-left: none !important;margin-bottom: 14px !important;">                                                  
+                                                            <td>
+                                                                <ng-select class="form-control" formControlName="emp_id" style="width:225px;" required>
+                                                                    <ng-option value="">-- Select Employees --</ng-option>
+                                                                    <ng-option *ngFor="let ul of userdatas" value="{{ul.user_id}}">
+                                                                        {{ul.firstname}} {{ul.middlename}} {{ul.lastname}}
+                                                                    </ng-option>
+                                                                </ng-select>
+                                                            </td>
+                                                            <td>
+                                                                <input class="form-control" type="text" formControlName="leads_given_to" id="" value="" style="width:140px;">
+                                                            </td>
+                                                            <td>
+                                                                <input class="form-control" type="text" formControlName="valid_lead_count" id="" value="" style="width:140px;">
+                                                            </td>                                                       
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Submit</button>&nbsp;
+                        <button type="reset" (click)="completedata()" class="btn btn-primary">Reset</button>
+                    </form>
+                </div>
+
+                <!--Monthly Leads View Page-->
+
+                <div class="container-fluid" *ngIf="visible">
+                    <button type="button" *ngIf="visible" (click)="leadsview();onclick()" class="btn btn-primary ">Back</button>&nbsp;
+
+                    <div class="row">
+                    <div class="col-md-6 pt-2">
+                        <div id="tickets-table_filter" class="dataTables_length"><label class="d-inline-flex align-items-center">Search:
+                            <input type="text" name="searchleads" class="form-control form-control-sm ms-2"
+                              aria-controls="tickets-table" [(ngModel)]="searchleads"></label>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-4 pt-2">
+                        <div class="leadback">
+                        <button type="button" *ngIf="visible" (click)="leadsview();onclick()" class="btn btn-primary ">Back</button>&nbsp;
+                    </div>
+                </div> -->
+                    
+                    <div class="col-md-6 pt-2">
+                        <div class="">
+                        <ngb-pagination class="d-flex justify-content-center" [(page)]="page" [maxSize]="4" [collectionSize]="leadsarr?.length" [boundaryLinks]="true" style="justify-content: right!important;"></ngb-pagination>
+                    </div>
+                </div>
+                </div>
+                    <div class="row pt-2 ">
+                        <div class="col-lg-12 ">
+                            <div class="card ">
+                                <div class="card-body">
+
+                                    <div class="table-responsive ">
+                                        <table class="table mb-0 ">
+                                            <thead>
+                                                <th>Team Name</th>
+                                                <th>Employee Name</th>
+                                                <th>Leads Given To</th>
+                                                <th>Valid Lead Count</th>
+                                                <th>Action</th>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr *ngFor="let leads of leadsarr | searchleads:searchleads | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+                                                    <td>{{leads.teamname}}</td>
+                                                    <td>{{leads.firstname}} {{leads.lastname}}</td>
+                                                    <td>
+                                                        <input class="form-control" type="text" name="leads_given_to" [(ngModel)]="leads.leads_given_to" id="" style="width:140px;" [disabled]="!(edit == leads.leads_given_id)">
+                                                    </td>
+                                                    <td>
+                                                        <input class="form-control" type="text" name="valid_lead_count" [(ngModel)]="leads.valid_lead_count" id="" style="width:140px;" [disabled]="!(edit == leads.leads_given_id)">
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" value="{{leads.leads_given_id}}" (click)="editmonthly($event)" class="btn btn-primary">Edit</button> &nbsp;&nbsp;
+                                                        <button type="submit" (click)="Updatedata(leads)" class="btn btn-primary">Submit</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Monthly Leads View Page-->
+            </div>
+
+
+
+            <div class="content-value" *ngIf="id  === 'vision'">
+                    <div class="container-fluid" *ngIf="ReadMore">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h2>Weekly Leads</h2>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="col-md-12" style="text-align: right;">
+                                    <button type="button" class="btn btn-primary mb-3" routerLink="/form/weeklyleadslist">
+                                    View Weekly Leads</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <form [formGroup]="form1">
+                            <div class="row">                       
+                                <div class="col-md-3">
+                                    <label for="example-text-input" class=""> Team Name</label>
+                                <select class="form-control" (change)="teamsdata($event)" formControlName="name1" value="{{team_id}}" style="width:190px;">
+                            <option value="">-- Select Team --</option>
+                            <option *ngFor="let tl of teamsArr" value="{{tl.team_id}}">
+                                {{tl.teamname}}
+                            </option>
+                            </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="start" class=""> Date</label>
+                                    <input type="date" class="form-control" formControlName="date1" value="{{month}}" id="month" name="month" (change)="formatDates($event)" min="2018-03" value="2018-05">
+                                </div> 
+                                <div class="col-md-3 addbutton">
+                                    <button type="button" (click)="addPassenger1();" class="btn btn-primary">+</button>
+                                </div>
+                                <div class="col-md-3 view">
+                                    <button type="button" (click)="weeklyleadsview();onclick()" class="btn btn-primary">View</button>&nbsp;
+
+                                </div> 
+                            </div>
+                    </form>
+
+
+                        <form [formGroup]="form1" (ngSubmit)="Submitdata1()">
+
+                            <div formArrayName="passenger1" style="border-left: none !important;">
+                                <div>
+                                    <div class="mb-3 row">
+
+                                        <div class="col-md-12">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <!-- <div class="table-responsive"> -->
+
+                                                    <!-- <p>Week Count:{{anydate | date:'W'}}</p>
+                                                    <p>Yearly Week Count:{{anydate | date:'w'}}</p> -->
+                                                    <table class="table table-centered table-nowrap mb-0 align-middle" id="excel-table">
+                                                        <thead class="table-light">
+                                                            <tr>
+                                                                <!-- <th>
+                                                                    Team
+                                                                </th> -->
+                                                                <th>
+                                                                    Employees Name
+                                                                </th>
+                                                                <!-- <th>
+                                                                    Week
+                                                                </th> -->
+                                                                <th hidden>
+                                                                    Week Count
+                                                                </th>
+                                                                <th hidden>
+                                                                    Yearly Week Count
+                                                                </th>
+                                                                <th>
+                                                                    Weekly Leads Count
+                                                                </th>
+
+                                                                <th>
+                                                                    Weekly Leads Count Valid
+                                                                </th>
+
+                                                            </tr>
+                                                        </thead>
+
+                                                        <tbody>
+                                                            <tr *ngFor="let passengerGroup of passenger1?.controls;let i = index" [formGroupName]="i" style="border-left: none !important;margin-bottom: 14px !important;">
+                                                                <td>
+                                                                    <ng-select class="form-control" formControlName="emp_id" style="width:225px;" required>
+                                                                        <ng-option value="">-- Select Employees --</ng-option>
+                                                                        <ng-option *ngFor="let ul of userdetails" value="{{ul.user_id}}">
+                                                                            {{ul.firstname}} {{ul.middlename}} {{ul.lastname}}
+                                                                        </ng-option>
+                                                                    </ng-select>
+                                                                </td>
+                                                                <!-- <td>
+                                                                <input class="form-control" type="date" formControlName="month" id="" value="" style="width:140px;">
+                                                            </td> -->
+                                                                <!-- <td>
+                                                                    <input class="form-control" formControlName="week" (change)="formatDates($event)" type="date" id="" value="" style="width:170px;">
+                                                                </td> -->
+                                                                <td hidden>
+                                                                    <input class="form-control" formControlName="week_count" type="text" id="" value="{{weekdata.week_count}}" style="width:170px;">
+                                                                </td>
+                                                                <td hidden>
+                                                                    <input class="form-control" formControlName="yearly_week_count" type="text" id="" value="{{weekdata.yearly_week_count}}" style="width:170px;">
+                                                                </td>
+                                                                <td>
+                                                                    <input class="form-control" formControlName="weekly_lead_count" type="text" id="" value="" style="width:170px;">
+                                                                </td>
+                                                                <td>
+                                                                    <input class="form-control" formControlName="weekly_lead_count_valid" type="text" id="" value="" style="width:170px;">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <!-- </div> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary" [disabled]="!form1.valid">Submit</button>&nbsp;
+                            <button type="reset" class="btn btn-primary" (click)="completedata1($event)">Reset</button>
+                        </form>
+                    </div>
+                
+
+
+                <div class="container-fluid" *ngIf="visible">
+                    <button (click)="weeklyleadsview();onclick()" class="btn btn-primary">Back </button>&nbsp;
+
+                    <div class="row">
+                        <div class="col-md-6 pt-2">
+                            <div id="tickets-table_filter" class="dataTables_length"><label class="d-inline-flex align-items-center">Search:
+                                <input type="text" name="searchleads" class="form-control form-control-sm ms-2"
+                                  aria-controls="tickets-table" [(ngModel)]="searchleads"></label>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 pt-2">
+                            <div class="">
+                            <ngb-pagination class="d-flex justify-content-center" [(page)]="page" [maxSize]="4" [collectionSize]="leadsarr?.length" [boundaryLinks]="true" style="justify-content: right!important;"></ngb-pagination>
+                        </div>
+                    </div>
+                    </div>
+                    
+
+                    <div class="col-md-4">
+                    </div>
+                    <div class="row pt-2 ">
+                        <div class="col-lg-12 ">
+                            <div class="card ">
+                                <div class="card-body">
+
+                                    <div class="table-responsive ">
+                                        <table class="table mb-0 ">
+                                            <thead>
+                                                <th>Team Name</th>
+                                                <th>Employee Name</th>
+                                                <th>Weekly Lead Count</th>
+                                                <th>Weekly Lead Count Valid</th>
+                                                <th>Action</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr *ngFor="let weekly of weeklyarr | searchleads:searchleads | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+                                                    <td>{{weekly.teamname}}</td>
+                                                    <td>{{weekly.firstname}} {{weekly.lastname}}</td>
+                                                    <!-- <td>{{weekly.weekly_lead_count}}</td>
+                                                    <td>{{weekly.weekly_lead_count_valid}}</td> -->
+                                                    <!-- <td>
+                                                        <button type="button" class=" btn btn-info "><i class="uil-pen "></i></button> &nbsp;&nbsp;
+                                                    </td> -->
+                                                    <td>
+                                                        <input class="form-control" type="text" name="weekly_lead_count" [(ngModel)]="weekly.weekly_lead_count" id="" style="width:140px;" [disabled]="!(edit1 == weekly.id)">
+                                                    </td>
+                                                    <td>
+                                                        <input class="form-control" type="text" name="weekly_lead_count_valid" [(ngModel)]="weekly.weekly_lead_count_valid" id="" style="width:140px;" [disabled]="!(edit1 == weekly.id)">
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" value="{{weekly.id}}" (click)="editweekly($event)" class="btn btn-primary">Edit</button> &nbsp;&nbsp;
+                                                        <button type="submit" (click)="Updatedata1(weekly)" class="btn btn-primary">Submit</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
