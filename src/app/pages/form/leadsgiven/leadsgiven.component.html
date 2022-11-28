@@ -17,7 +17,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="col-md-12" style="text-align: right;">
-                                <button type="button" class="btn btn-primary mb-3" routerlink="/form/leadsgivenlist">
+                                <button type="button" class="btn btn-primary mb-3" routerLink="/form/leadsgivenlist">
                                     View Monthly Leads</button>
                             </div>
                         </div>
@@ -104,7 +104,7 @@
                 <!--Monthly Leads View Page-->
 
                 <div class="container-fluid" *ngIf="visible">
-                    <button type="button" *ngIf="visible" (click)="leadsview();onclick()" class="btn btn-primary ">Back</button>&nbsp;
+                    <button type="button" *ngIf="visible" (click)="leadsview();onclick()" class="btn btn-primary ">Add</button>&nbsp;
 
                     <div class="row">
                     <div class="col-md-6 pt-2">
@@ -298,7 +298,7 @@
 
 
                 <div class="container-fluid" *ngIf="visible">
-                    <button (click)="weeklyleadsview();onclick()" class="btn btn-primary">Back </button>&nbsp;
+                    <button (click)="weeklyleadsview();onclick()" class="btn btn-primary">Add </button>&nbsp;
 
                     <div class="row">
                         <div class="col-md-6 pt-2">

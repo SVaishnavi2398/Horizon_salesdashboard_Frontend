@@ -53,7 +53,7 @@ export class GstfillingdetailsComponent implements OnInit {
   handleResponse(data){
     this.Token.handle(data.access_token);
     Swal.fire('Added!', 'Gst Filling Details been added.', 'success'); 
-    this.route.navigate(['/form/gstfillingdetails/gstfillingdetailslist']);
+    this.route.navigate(['/form/invoices/gstfillingdetails/gstfillingdetailslist']);
   }
 
    

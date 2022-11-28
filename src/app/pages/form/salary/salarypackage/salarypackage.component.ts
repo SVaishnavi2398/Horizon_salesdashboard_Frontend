@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Salarypackage } from './salarypackage.model';
 import Swal from 'sweetalert2';
 import { TokenService } from 'src/app/service/token.service';
+import {ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-salarypackage',
@@ -20,11 +21,16 @@ export class SalarypackageComponent implements OnInit {
   constructor(
     private dataservice: DataService,
     private router: Router,
-    private Token:TokenService
+    private Token:TokenService,
+    private cdref: ChangeDetectorRef
   ) { }
 
   ngOnInit(): void {
     this.getUsers();
+  }
+
+  ngAfterContentChecked() {
+    this.cdref.detectChanges();
   }
 
   getUsers(){
