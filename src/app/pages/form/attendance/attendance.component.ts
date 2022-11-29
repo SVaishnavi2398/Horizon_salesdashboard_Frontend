@@ -223,7 +223,6 @@ export class AttendanceComponent implements OnInit {
       'error'
     );
 
-    // console.log(this.error);
   }
   show() {
     Swal
@@ -255,10 +254,8 @@ export class AttendanceComponent implements OnInit {
   get_data() {
 
     this.emp.month1 = this.emp.year + '-' + this.emp.month;
-    console.log(this.emp)
     this.dataservice.get_attendance_monthwise(this.emp).subscribe(res => {
       this.empdata = res;
-      //console.log(this.empdata);
     })
   }
 
@@ -269,9 +266,7 @@ export class AttendanceComponent implements OnInit {
   }
 
   openModal(content: any, data: any) {
-
     this.attData = data;
-    console.log(this.attData);
     this.modalService.open(content, this.attData);
   }
 
@@ -282,7 +277,6 @@ export class AttendanceComponent implements OnInit {
     this.attData.d13, this.attData.d14, this.attData.d15, this.attData.d16, this.attData.d17, this.attData.d18, this.attData.d19, this.attData.d20,
     this.attData.d21, this.attData.d22, this.attData.d23, this.attData.d24, this.attData.d25, this.attData.d26, this.attData.d27, this.attData.d28, this.attData.d29, this.attData.d30]
     const counts = {};
-    console.log(this.presentArr);
     for (const num of this.presentArr) {
       counts[num] = counts[num] ? counts[num] + 1 : 1;
     }
@@ -302,9 +296,6 @@ export class AttendanceComponent implements OnInit {
     this.attData.half_days = counts2["P/2"];
 
     this.attData.late_marks = counts["L"];
-
-    console.log(this.attData);
-
     this.empid = this.attData.emp_code;
     this.dataservice.updateAttendance(this.empid, this.attData).subscribe(
       data => this.handleResponse1(data),
@@ -323,12 +314,10 @@ export class AttendanceComponent implements OnInit {
       showConfirmButton: false,
       timer: 1500,
     });
-    // console.log(data);
   }
 
   handleError2(error: any) {
     this.error = error.error.errors;
-    //console.log(this.error);
   }
 
   closeModal(content: any) {

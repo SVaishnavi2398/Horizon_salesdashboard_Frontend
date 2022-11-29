@@ -2,7 +2,6 @@ import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup, FormsModule  } from '@angular/forms';
 import { Router } from '@angular/router';
-//import { Console } from 'console';
 import { DataService } from 'src/app/service/data.service';
 import { TokenService } from 'src/app/service/token.service';
 import Swal from 'sweetalert2';

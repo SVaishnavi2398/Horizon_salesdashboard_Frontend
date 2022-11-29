@@ -25,7 +25,6 @@ export class DesignationsComponent implements OnInit {
 
   submitdesignation(){
     this.dataservice.registerDesignations(this.designations).subscribe(
-        //console.log(res);
         data=>this.handleResponse(data),
         error=>this.handleError(error)
       );

@@ -34,10 +34,7 @@ export class ClientpaymentschedulelistComponent implements OnInit {
   }
 
   getClientpaymentscheduleData1(count) {
-
     let list = [];
-    //console.log(count);
-
     for (let index = 0; index < count; index++) {
       list.push({random: Math.random()});
     }

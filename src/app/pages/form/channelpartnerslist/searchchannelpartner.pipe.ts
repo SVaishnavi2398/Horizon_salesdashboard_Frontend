@@ -8,7 +8,6 @@ export class SearchchannelpartnerPipe implements PipeTransform {
 
 transform(items: any, cp_nameSearch: string, catrgory_idSearch: string, address_Search: string, date_of_birth_Search: string, mobile1_Search: string, occupation_id_Search:string, email1_Search:string){
   if (items && items.length){
-    // console.log(items);
       return items.filter(item =>{
           if (cp_nameSearch && item.cp_name.toLowerCase().indexOf(cp_nameSearch.toLowerCase()) === -1){
               return false;

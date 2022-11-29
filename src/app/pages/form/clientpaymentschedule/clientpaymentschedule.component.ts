@@ -28,7 +28,6 @@ export class ClientpaymentscheduleComponent implements OnInit {
 
   getSalesData() {
     this.dataservice.getSaleslist().subscribe(res => {
-      //console.log(res);
       this.salesArr = res;
     })
   }

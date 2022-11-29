@@ -26,7 +26,6 @@ export class EdigroupsComponent implements OnInit {
 
   getGroupData(){
     this.dataservice.getOneGroups(this.groupid).subscribe(res=>{
-      //console.log(res);
       this.data=res;
       this.groups=this.data;
   })
@@ -34,12 +33,8 @@ export class EdigroupsComponent implements OnInit {
 
   updategroups(){
     this.dataservice.updateGroups(this.groupid,this.groups).subscribe(res=>{
-          //console.log(res);
           //this.data=res;
           //this.roles=this.data;
     })
   }
-
-
-
 }

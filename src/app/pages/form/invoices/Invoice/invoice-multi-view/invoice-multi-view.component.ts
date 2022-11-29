@@ -10,7 +10,7 @@ import { Invoicedetails } from '../invoicedetailsnew/invoicedetailsnew.model';
   styleUrls: ['./invoice-multi-view.component.scss']
 })
 export class InvoiceMultiViewComponent implements OnInit {
-
+  
   invoiceid:any;
   data:any;
   companylistArr:any;
@@ -42,8 +42,12 @@ export class InvoiceMultiViewComponent implements OnInit {
   ngOnInit(): void {
 
     this.invoiceid=this.route.snapshot.params.id;
+    console.log(this.invoiceid,"dataaa");
+    
     this.id = Number(this.invoiceid) + Number(1);
+    console.log(this.id,"dataaa0");
     this.id1 = Number(this.invoiceid) - Number(1);
+    console.log(this.id1,"dataaa1");
     this.getInvoicedetailsData();
     this.getCompanyData();
     this.getClientData();
@@ -91,7 +95,7 @@ export class InvoiceMultiViewComponent implements OnInit {
     handleError(error){
       console.log(this.invoiceid);
      if(this.invoiceid != '0'){
-       this.url = '/form/invoices/invoice/invoicedetailsview/'+1;
+       this.url = '/form/invoices/invoice/invoicemultipledetailsview/'+1;
       this.reloadComponent(this.url);
      }
      else{
@@ -100,7 +104,7 @@ export class InvoiceMultiViewComponent implements OnInit {
       console.log(res);
       var lastid = this.data[0].invoice_id;
       console.log(this.data[0].invoice_id);
-      this.url = '/form/invoices/invoice/invoicedetailsview/'+lastid;
+      this.url = '/form/invoices/invoice/invoicemultipledetailsview/'+lastid;
       this.reloadComponent(this.url);
       })
     }
@@ -114,11 +118,11 @@ export class InvoiceMultiViewComponent implements OnInit {
     }
 
     doSomeLogic(){
-      this.url = '/form/invoices/invoice/invoicedetailsview/'+this.id;
+      this.url = '/form/invoices/invoice/invoicemultipledetailsview/'+this.id;
       this.reloadComponent(this.url);
     }
     doSomeLogics(){
-      this.url = '/form/invoices/invoice/invoicedetailsview/'+this.id1;
+      this.url = '/form/invoices/invoice/invoicemultipledetailsview/'+this.id1;
       this.reloadComponent(this.url);
     }
 

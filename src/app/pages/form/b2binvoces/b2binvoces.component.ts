@@ -79,7 +79,6 @@ export class B2binvocesComponent implements OnInit {
       var workbook = XLSX.read(bstr, { type: "binary" });
       var first_sheet_name = workbook.SheetNames[0];
       var worksheet = workbook.Sheets[first_sheet_name];
-      console.log(XLSX.utils.sheet_to_json(worksheet, { raw: true }));
       this.filelist = XLSX.utils.sheet_to_json(worksheet, { raw: true });
 
       for (let i = 0; i < this.filelist.length; i++) {

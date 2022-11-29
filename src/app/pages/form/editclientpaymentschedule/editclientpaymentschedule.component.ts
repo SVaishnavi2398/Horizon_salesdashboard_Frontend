@@ -33,21 +33,18 @@ export class EditclientpaymentscheduleComponent implements OnInit {
 
   getSales(){
     this.dataservice.getSaleslist().subscribe(res=>{
-      //console.log(res);
       this.salesArr = res;
     })
   }
 
   getUsers(){
     this.dataservice.getUsers().subscribe(res=>{
-      //console.log(res);
       this.usersArr = res;
     })
   }
 
   getClientpaymentscheduleData(){
     this.dataservice.getOneClientpaymentschedule(this.clientpaymentscheduleid).subscribe(res=>{
-    //console.log(res);
     this.data=res;
     this.clientpaymentschedule=this.data;
     })
@@ -55,7 +52,6 @@ export class EditclientpaymentscheduleComponent implements OnInit {
 
   updateclietpaymentschedule(){
     this.dataservice.updateClientpaymentschedule(this.clientpaymentscheduleid,this.clientpaymentschedule).subscribe(res=>{
-      console.log(res);
       Swal.fire('Updated!', 'Client Payment Schedule has been updated.', 'success'); 
       this.router.navigate(['/form/clientpaymentschedulelist']);
       })

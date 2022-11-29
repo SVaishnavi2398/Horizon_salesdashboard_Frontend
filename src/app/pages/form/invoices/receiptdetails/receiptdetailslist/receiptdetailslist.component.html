@@ -67,7 +67,7 @@
           <!-- <h4 class="card-title">Registered Roles</h4> -->
 
           <div class="table-responsive">
-            <table class="table mb-0">
+            <table class="table table-centered table-nowrap mb-0 align-middle">
               <thead>
                 <!-- Sorting -->
                 <tr>
@@ -89,7 +89,7 @@
                   <th [class.active]="order === 'received_taxable_amt'" (click)="setOrder('received_taxable_amt')">
                     Received Taxable Amount<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
                   </th>
-
+                  <th>Action</th>
                 </tr>
                 <!-- Sorting End-->
                 <!-- Search -->
@@ -135,7 +135,7 @@
                     <button type="button" class="btn btn-info"
                       routerLink="/form/invoices/receiptdetails/editreceiptdetails/{{receiptdetails.receipt_id}}"><i
                         class="uil-pen"></i></button>
-                    &nbsp;&nbsp;
+                    &nbsp;
                     <button type="button" class="btn btn-success"
                       routerLink="/form/invoices/receiptdetails/receiptdetailsview/{{receiptdetails.receipt_id}}"><i
                         class="uil-eye"></i></button>

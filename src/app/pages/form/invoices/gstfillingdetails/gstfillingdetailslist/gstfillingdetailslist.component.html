@@ -44,7 +44,7 @@
           <!-- <h4 class="card-title">Registered Roles</h4> -->
 
           <div class="table-responsive">
-            <table class="table mb-0">
+            <table class="table table-centered table-nowrap mb-0 align-middle">
               <thead>
                 <tr>
                   <th [class.active]="order === 'invoice_num'" (click)="setOrder('invoice_num')">
@@ -62,7 +62,7 @@
                   <th [class.active]="order === 'filed_status'" (click)="setOrder('filed_status')">
                     Filed Status<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
                   </th>
-
+                  <th>Action</th>
                 </tr>
                 <!-- Search -->
                 <tr>

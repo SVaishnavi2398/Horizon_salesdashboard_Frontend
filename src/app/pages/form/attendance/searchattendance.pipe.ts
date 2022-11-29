@@ -8,7 +8,6 @@ export class SearchattendancePipe implements PipeTransform {
 
 transform(items: any, emp_code_Search: string, emp_name_search: string, month_search: string, present_days_Search: string, absent_days_Search: string, half_days_search:string, late_marks_search:string){
   if (items && items.length){
-    // console.log(items);
       return items.filter(item =>{
           if (emp_code_Search && item.emp_code.toLowerCase().indexOf(emp_code_Search.toLowerCase()) === -1){
               return false;

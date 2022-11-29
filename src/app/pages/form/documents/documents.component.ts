@@ -61,30 +61,7 @@ empdocuments = new Documents;
 
   }
 
-  // handleFileInput(file : FileList){
-  // this.fileToUpload = file.item(0);
-
-  // var reader = new FileReader();
-  // reader.onload = (event:any)=>{
-  //   this.imageUrl=event.target.result;
-  // }
-  //  reader.readAsDataURL(this.fileToUpload);
-  // }
-  
-
-  // onSubmit(){
-
-  //   this.dataservice.registerDocuments(this.users).subscribe(res=>{
-      
-  //     data=>this.handleResponse(data);
-  //     error=>this.handleError(error);
-     
-  //    } );
-
-  // }
   handleResponse(data){
-    //this.router.navigateByUrl('/form/users');
-    console.log(data);
   }
 
 
@@ -97,7 +74,6 @@ empdocuments = new Documents;
 
   getUsers(){
     this.dataservice.getOneUser(this.usersid).subscribe(res=>{
-      console.log(res);
       this.data=[res];
       this.usersArr=this.data;
       var selecteoption = this.usersArr[0].firstname;
@@ -109,7 +85,6 @@ empdocuments = new Documents;
 
   getalluser(){
     this.dataservice.getUsers().subscribe(res=>{
-      //console.log(res);
       //this.data=res;
       //this.usersArr=res;
   
@@ -118,37 +93,20 @@ empdocuments = new Documents;
 
   
   imageUpload1(event){
-    //console.log(event);
     this.files1 = event.target.files[0];
-    // if(event.target.files){
-    //   var render =  new FileReader;
-    //   render.readAsDataURL(event.target.files[0]);
-    //   render.onload=(event:any)=>{
-    //     this.imageUrl=event.target.result;
-    //   }
-    // }
-    console.log(this.files1);
   }
 
   imageUpload2(event){
-    //console.log(event);
     this.files2 = event.target.files[0];
-    console.log(this.files2);
   }
   imageUpload3(event){
-    //console.log(event);
     this.files3 = event.target.files[0];
-    console.log(this.files3);
   }
   imageUpload4(event){
-    //console.log(event);
     this.files4 = event.target.files[0];
-    console.log(this.files4);
   }
   imageUpload5(event){
-    console.log(event);
     this.files5 = event.target.files[0];
-    console.log(this.files5);
   }
 
   /* Upload button functioanlity */
@@ -171,15 +129,6 @@ empdocuments = new Documents;
         Swal.fire('Added!', 'Documents has been added.', 'success'); 
         this.router.navigate(['/form/userview/'+this.usersid]);
       });
-
-    //   this.http.post('https://www.horizonfp.in/salesbackend1/api/emp_documents',empdocuments).subscribe(res=>{
-    //   Swal.fire('Added!', 'Documents has been added.', 'success'); 
-    //   this.router.navigate(['/form/documentslist']);
-    // });
-      
-     //Check success message
-     //sweetalert message popup
-     
     };  
 }
 

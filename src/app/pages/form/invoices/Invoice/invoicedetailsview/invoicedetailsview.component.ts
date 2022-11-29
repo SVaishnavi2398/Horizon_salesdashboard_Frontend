@@ -43,8 +43,13 @@ export class InvoicedetailsviewComponent implements OnInit {
   ngOnInit(): void {
 
     this.invoiceid=this.route.snapshot.params.id;
+    console.log(this.invoiceid,"hhhhh");
+    
     this.id = Number(this.invoiceid) + Number(1);
+    console.log(this.id,"this.id");
+    
     this.id1 = Number(this.invoiceid) - Number(1);
+    console.log(this.id1,"this.id");
     this.getInvoicedetailsData();
     this.getCompanyData();
     this.getClientData();
@@ -81,7 +86,7 @@ export class InvoicedetailsviewComponent implements OnInit {
   }
 
   handleResponse(data){
-    console.log(data);
+    console.log(data,"fffffffffffffffff");
     this.invoicedetails=data[0];
     this.clientsarr =data;
     this.invoicedetails .client_id= data[0].client_id;

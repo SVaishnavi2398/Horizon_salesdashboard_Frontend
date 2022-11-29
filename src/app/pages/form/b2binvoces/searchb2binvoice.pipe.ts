@@ -7,7 +7,6 @@ export class Searchb2binvoicePipe implements PipeTransform {
 
   transform(items: any, party_name_Search: string, inv_no_Search: string, inv_val_Search: string,  total_tax_amt_Search: string, total_tax_val_Search:string, inv_dt_Search:string): any{
     if (items && items.length){
-      // console.log(items);
         return items.filter(item =>{
             if (party_name_Search && item.party_name.toLowerCase().indexOf(party_name_Search.toLowerCase()) === -1){
                 return false;

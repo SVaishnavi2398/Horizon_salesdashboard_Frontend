@@ -24,11 +24,7 @@ export class CompanyComponent implements OnInit {
   }
 
   submitcompnay(editForm){
-    console.log(this.company);
     this.dataservice.registerCompany(this.company).subscribe(
-        //console.log(res);
-       
-     // this.route.navigate(['/form/salesdetailslist']);
      data=>this.handleResponse(data),
      error=>this.handleError(error)
    );
@@ -43,12 +39,6 @@ export class CompanyComponent implements OnInit {
  handleError(error){
     this.error = error.error.errors;
   }
-  // reloadComponent() {
-  //   let currentUrl = this.router.url;
-  //       this.router.routeReuseStrategy.shouldReuseRoute = () => false;
-  //       this.router.onSameUrlNavigation = 'reload';
-  //       this.router.navigate([currentUrl]);
-  // }
 
   keyPressAlphanumeric(event) {
 

@@ -59,7 +59,7 @@
                   <!-- <h4 class="card-title">Registered Roles</h4> -->
     
                   <div class="table-responsive">
-                      <table class="table mb-0">
+                      <table class="table table-centered table-nowrap mb-0 align-middle">
                           <thead>
                             <tr>
                                 <th [class.active]="order === 'cname'" (click)="setOrder('cname')">
@@ -74,7 +74,7 @@
                                   <th [class.active]="order === 'total_gst_amt'" (click)="setOrder('total_gst_amt')">
                                     GST Amount<span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
                                   </th>
-                                
+                                  <th>Action</th>
                               </tr>
                               <!-- Search -->
                               <tr>
@@ -110,7 +110,7 @@
                                     <td style="padding:7px 1px !important;">
 
                                         <button type="button" class="btn btn-info"  routerLink="/form/invoices/invoice/EditDetailsMultiple/{{invoicedetails.invoice_multi_id}}"><i class="uil-pen"></i></button>
-                                        &nbsp;&nbsp;
+                                        &nbsp;
                                         <button type="button" class="btn btn-success"  routerLink="/form/invoices/invoice/invoicemultipledetailsview/{{invoicedetails.invoice_multi_id}}"><i class="uil-eye"></i></button>
                                     </td>
                               </tr>

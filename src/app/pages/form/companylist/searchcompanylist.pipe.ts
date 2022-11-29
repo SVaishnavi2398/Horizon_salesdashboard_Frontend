@@ -8,7 +8,6 @@ export class SearchcompanylistPipe implements PipeTransform {
  
   transform(items: any, cname_Search: string, cpan_search: string, cgst_Search:string, registered_address_Search: string, contact1_Search: string, email1_Search:string): any{
     if (items && items.length) {
-      // console.log(items);
       return items.filter(item => {
         if (cname_Search && item.cname.toLowerCase().indexOf(cname_Search.toLowerCase()) === -1) {
           return false;

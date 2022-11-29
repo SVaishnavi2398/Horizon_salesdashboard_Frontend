@@ -29,7 +29,6 @@ export class EditclientdetailsComponent implements OnInit {
 
   getClientdetailsData(){
     this.dataservice.getOneClientdetails(this.clientdetailsid).subscribe(res=>{
-      //console.log(res);
       this.data=res;
       this.clientdetails=this.data;
   })
@@ -37,10 +36,8 @@ export class EditclientdetailsComponent implements OnInit {
 
   updateclientdetails(){
     this.dataservice.updateClientdetails(this.clientdetailsid,this.clientdetails).subscribe(res=>{
-      //console.log(res);
       Swal.fire('Edited!', 'Client Details has been edited.', 'success'); 
       this.router.navigate(['/form/clientdetailslist']);
-      //console.log(res);
       //this.data=res;
       //this.roles=this.data;
     })

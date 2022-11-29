@@ -29,7 +29,6 @@ export class EditchannelpartnerComponent implements OnInit {
 
   getChannelpartnerData(){
     this.dataservice.getOneChannelpartner(this.channelpartnerid).subscribe(res=>{
-      //console.log(res);
       this.data=res;
       this.channelpartner=this.data;
   })
@@ -37,10 +36,8 @@ export class EditchannelpartnerComponent implements OnInit {
 
   updatechannelpartner(){
     this.dataservice.updateChannelpartner(this.channelpartnerid,this.channelpartner).subscribe(res=>{
-      //console.log(res);
       Swal.fire('Edited!', 'Channel Partner has been edited.', 'success'); 
       this.router.navigate(['/form/channelpartnerslist']);
-      //console.log(res);
       //this.data=res;
       //this.roles=this.data;
     })

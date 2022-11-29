@@ -31,8 +31,6 @@ export class CompanylistviewComponent implements OnInit {
 
   getCompanylistView(){
     this.dataservice.getCompanyview(this.companylistviewid).subscribe(
-      //console.log(res);
-   
       data=>this.handleResponse(data),
       error=>this.handleError(error)
     );

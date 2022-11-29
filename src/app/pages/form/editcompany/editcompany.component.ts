@@ -29,7 +29,6 @@ export class EditcompanyComponent implements OnInit {
 
   getCompanyData(){
     this.dataservice.getOneCompany(this.companyid).subscribe(res=>{
-      console.log(res);
       this.data=res;
       this.company=this.data;
   })

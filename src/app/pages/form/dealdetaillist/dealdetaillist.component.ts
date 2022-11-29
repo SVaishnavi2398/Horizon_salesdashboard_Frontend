@@ -67,32 +67,23 @@ export class DealdetaillistComponent implements OnInit {
 
   }
   getdata(){
-    // const data = this.userdata;
-    // const blob = new Blob([data], { type: 'application/octet-stream' });
-
-    // this.fileUrl = this.sanitizer.bypassSecurityTrustResourceUrl(window.URL.createObjectURL(blob));
   }
 
   Dealdetaillist12(){
     this.dataservice.getname().subscribe( res=>{
       this.dealsData=res;
-      // console.log(this.dealsData);
     });
   }
 
   getUsersdetails(){
     this.dataservice.getTeamleader().subscribe( res=>{
       this.teamdetails=res;
-      console.log('Team Leader',res);
     });
   }
   getState1(event){
-    console.log(event.target.value);
    this.team_leader_name = event.target.value;
-  //  console.log('temleadername',this.team_leader_name);
    this.dataservice.getuserdata(this.team_leader_name).subscribe( res=>{
-      this.userdata=res;
-      // console.log('new_data',this.userdata);
+   this.userdata=res;
 
       for (let i = 0; i < this.userdata.length; i++){
      
@@ -113,48 +104,35 @@ export class DealdetaillistComponent implements OnInit {
         this.userdata2.deal_status[i]=this.userdata[i].deal_status;
         this.userdata2.walking_closing[i]=this.userdata[i].walking_closing;
         this.userdata2.walking_sourcing[i]=this.userdata[i].walking_sourcing;
-
-
       }
-      // console.log('hi1',this.userdata2);
     
     
     this.dataservice.getuserData1(this.team_leader_name).subscribe( res=>{
       this.userDetails=res;
-    // console.log('single2335',res); 
     })
    } )
  }
 
 
   getState2(event){
-    console.log(event.target.value);
     this.user_id = event.target.value;
-    
     this.dataservice.getuserinfo(this.user_id).subscribe( res=>{
       this.userdata=res;
-      // console.log('single2',res); 
     })
     
   }
   getstate5(event){
-    console.log(event.target.value);
     this.from_date = event.target.value;
-    console.log('from_date',this.from_date);
    }
    
    getstate6(event){
-    console.log(event.target.value);
     this.to_date = event.target.value;
-
     this.datedata.from_date=this.from_date;
     this.datedata.to_date=this.to_date;
     this.datedata.user_id=this.user_id;
 
       this.dataservice.getDealdate(this.datedata).subscribe( res=>{
         this.userdata=res;
-        console.log('date7771',res);
-  
        })
 
      
@@ -163,10 +141,8 @@ export class DealdetaillistComponent implements OnInit {
 
   getState3(event){
     this.month_id = event.target.value;
-    console.log('month',this.month_id);
     this.dataservice.getdate(this.month_id).subscribe( res=>{
       this.userdate=res;
-      console.log('date',res);
     })
   }
 
@@ -188,7 +164,6 @@ export class DealdetaillistComponent implements OnInit {
         this.Dealdetaillist12();
       }
     })
-  // this.reloadComponent();
   
   }
   reloadComponent() {
@@ -198,9 +173,6 @@ export class DealdetaillistComponent implements OnInit {
         this.router.navigate([currentUrl]);
   }
   resetForm() {
-    // this.myForm.reset({
-    //   name: ''
-    // })
     this.myForm.reset();
     this.userdata = [];
   }

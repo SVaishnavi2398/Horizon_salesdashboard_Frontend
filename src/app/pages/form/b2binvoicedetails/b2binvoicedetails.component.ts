@@ -40,7 +40,6 @@ export class B2binvoicedetailsComponent implements OnInit {
   }
   handleResponse(data: any) {
     this.B2Bdetails = data;
-    //console.log(this.B2Bdetails);
   }
   handleError(error) {
     if (this.b2bid != '0') {
